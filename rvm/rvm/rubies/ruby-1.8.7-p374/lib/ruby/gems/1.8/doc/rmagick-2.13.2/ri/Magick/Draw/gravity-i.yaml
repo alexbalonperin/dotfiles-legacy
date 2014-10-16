@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "Specify the text positioning gravity, one of: NorthWest, North, NorthEast, West, Center, East, SouthWest, South, SouthEast"
+full_name: Magick::Draw#gravity
+is_singleton: false
+name: gravity
+params: (grav)
+visibility: public

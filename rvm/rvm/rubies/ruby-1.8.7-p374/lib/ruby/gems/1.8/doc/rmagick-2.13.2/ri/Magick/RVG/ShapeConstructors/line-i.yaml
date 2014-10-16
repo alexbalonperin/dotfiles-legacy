@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Draws a line from [<tt>x1</tt>, <tt>y1</tt>] to [<tt>x2</tt>, <tt>y2</tt>].
+full_name: Magick::RVG::ShapeConstructors#line
+is_singleton: false
+name: line
+params: (x1=0, y1=0, x2=0, y2=0)
+visibility: public

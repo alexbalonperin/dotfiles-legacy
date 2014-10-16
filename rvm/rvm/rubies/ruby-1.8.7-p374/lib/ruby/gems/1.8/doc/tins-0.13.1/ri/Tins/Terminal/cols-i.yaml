@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Tins::Terminal#cols
+is_singleton: false
+name: cols
+params: ()
+visibility: public

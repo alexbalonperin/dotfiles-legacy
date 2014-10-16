@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Creates a new SpecFetcher. Ordinarily you want to use the default fetcher from Gem::SpecFetcher::fetcher which uses the Gem.sources.
+- !ruby/struct:SM::Flow::P 
+  body: If you need to retrieve specifications from a different <tt>source</tt>, you can send it as an argument.
+full_name: Gem::SpecFetcher::new
+is_singleton: true
+name: new
+params: (sources = nil)
+visibility: public

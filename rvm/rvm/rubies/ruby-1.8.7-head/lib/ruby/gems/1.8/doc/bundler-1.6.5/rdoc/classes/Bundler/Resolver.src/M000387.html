@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>resolve_conflict (Bundler::Resolver)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/bundler/resolver.rb, line 237</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">resolve_conflict</span>(<span class="ruby-identifier">current</span>, <span class="ruby-identifier">states</span>)
+      <span class="ruby-comment cmt"># Find the state where the conflict has occurred</span>
+      <span class="ruby-identifier">state</span> = <span class="ruby-identifier">find_conflict_state</span>(<span class="ruby-identifier">current</span>, <span class="ruby-identifier">states</span>)
+
+      <span class="ruby-identifier">debug</span> { <span class="ruby-node">&quot;    -&gt; Going to: #{current.name} state&quot;</span> } <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">current</span>
+
+      <span class="ruby-comment cmt"># Resolve the conflicts by rewinding the state</span>
+      <span class="ruby-comment cmt"># when the conflicted gem was activated</span>
+      <span class="ruby-identifier">reqs</span>, <span class="ruby-identifier">activated</span>, <span class="ruby-identifier">depth</span>, <span class="ruby-identifier">conflicts</span> = <span class="ruby-identifier">resolve_for_conflict</span>(<span class="ruby-identifier">state</span>)
+
+      <span class="ruby-comment cmt"># Keep the state around if it still has other possibilities</span>
+      <span class="ruby-identifier">states</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">state</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">possibles</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-identifier">clear_search_cache</span>
+
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">reqs</span>, <span class="ruby-identifier">activated</span>, <span class="ruby-identifier">depth</span>, <span class="ruby-identifier">conflicts</span>
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

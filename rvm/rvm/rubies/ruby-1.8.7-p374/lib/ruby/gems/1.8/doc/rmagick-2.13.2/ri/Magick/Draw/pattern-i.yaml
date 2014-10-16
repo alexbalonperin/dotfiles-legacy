@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Define a pattern. In the block, call primitive methods to draw the pattern. Reference the pattern by using its name as the argument to the 'fill' or 'stroke' methods
+full_name: Magick::Draw#pattern
+is_singleton: false
+name: pattern
+params: (name, x, y, width, height) {|| ...}
+visibility: public

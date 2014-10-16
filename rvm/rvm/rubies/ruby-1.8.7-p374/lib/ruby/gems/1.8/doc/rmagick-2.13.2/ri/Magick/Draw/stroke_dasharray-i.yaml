@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Specify a stroke dash pattern
+full_name: Magick::Draw#stroke_dasharray
+is_singleton: false
+name: stroke_dasharray
+params: (*list)
+visibility: public

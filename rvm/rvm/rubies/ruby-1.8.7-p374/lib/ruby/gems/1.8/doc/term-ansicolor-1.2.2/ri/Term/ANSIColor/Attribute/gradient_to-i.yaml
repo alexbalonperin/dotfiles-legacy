@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Term::ANSIColor::Attribute#gradient_to
+is_singleton: false
+name: gradient_to
+params: (other, options = {})
+visibility: public

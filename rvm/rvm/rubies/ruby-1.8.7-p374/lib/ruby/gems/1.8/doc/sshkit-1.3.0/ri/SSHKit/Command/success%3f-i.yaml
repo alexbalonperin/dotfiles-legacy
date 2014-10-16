@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+- !ruby/object:RI::AliasName 
+  name: successful?
+block_params: 
+comment: 
+full_name: SSHKit::Command#success?
+is_singleton: false
+name: success?
+params: ()
+visibility: public

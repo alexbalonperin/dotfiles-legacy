@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>check! (Capistrano::Deploy::Strategy::Base)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/capistrano/recipes/deploy/strategy/base.rb, line 30</span>
+        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">check!</span>
+          <span class="ruby-constant">Dependencies</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">configuration</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">d</span><span class="ruby-operator">|</span>
+            <span class="ruby-identifier">d</span>.<span class="ruby-identifier">remote</span>.<span class="ruby-identifier">directory</span>(<span class="ruby-identifier">configuration</span>[<span class="ruby-identifier">:releases_path</span>]).<span class="ruby-identifier">or</span>(<span class="ruby-node">&quot;`#{configuration[:releases_path]}' does not exist. Please run `cap deploy:setup'.&quot;</span>)
+            <span class="ruby-identifier">d</span>.<span class="ruby-identifier">remote</span>.<span class="ruby-identifier">writable</span>(<span class="ruby-identifier">configuration</span>[<span class="ruby-identifier">:deploy_to</span>]).<span class="ruby-identifier">or</span>(<span class="ruby-node">&quot;You do not have permissions to write to `#{configuration[:deploy_to]}'.&quot;</span>)
+            <span class="ruby-identifier">d</span>.<span class="ruby-identifier">remote</span>.<span class="ruby-identifier">writable</span>(<span class="ruby-identifier">configuration</span>[<span class="ruby-identifier">:releases_path</span>]).<span class="ruby-identifier">or</span>(<span class="ruby-node">&quot;You do not have permissions to write to `#{configuration[:releases_path]}'.&quot;</span>)
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

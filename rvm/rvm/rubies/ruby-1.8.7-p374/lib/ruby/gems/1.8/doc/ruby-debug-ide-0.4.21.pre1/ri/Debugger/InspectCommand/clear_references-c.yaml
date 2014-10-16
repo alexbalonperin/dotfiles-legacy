@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Debugger::InspectCommand::clear_references
+is_singleton: true
+name: clear_references
+params: ()
+visibility: public

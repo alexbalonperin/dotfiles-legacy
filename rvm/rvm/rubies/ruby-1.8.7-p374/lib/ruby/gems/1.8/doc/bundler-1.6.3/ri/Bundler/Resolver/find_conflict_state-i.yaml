@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Bundler::Resolver#find_conflict_state
+is_singleton: false
+name: find_conflict_state
+params: (conflict, states)
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Invoke the command with the given list of normal arguments and additional build arguments.
+full_name: Gem::Command#invoke_with_build_args
+is_singleton: false
+name: invoke_with_build_args
+params: (args, build_args)
+visibility: public

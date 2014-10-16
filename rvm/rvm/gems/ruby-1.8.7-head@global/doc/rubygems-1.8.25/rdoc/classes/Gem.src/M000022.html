@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>try_activate (Gem)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/rubygems.rb, line 200</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">try_activate</span> <span class="ruby-identifier">path</span>
+    <span class="ruby-comment cmt"># TODO: deprecate when 1.9.3 comes out.</span>
+    <span class="ruby-comment cmt"># finds the _latest_ version... regardless of loaded specs and their deps</span>
+
+    <span class="ruby-comment cmt"># TODO: use find_all and bork if ambiguous</span>
+
+    <span class="ruby-identifier">spec</span> = <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Specification</span>.<span class="ruby-identifier">find_by_path</span> <span class="ruby-identifier">path</span>
+    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">spec</span>
+
+    <span class="ruby-keyword kw">begin</span>
+      <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">activate</span>
+    <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">LoadError</span> <span class="ruby-comment cmt"># this could fail due to gem dep collisions, go lax</span>
+      <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Specification</span>.<span class="ruby-identifier">find_by_name</span>(<span class="ruby-identifier">spec</span>.<span class="ruby-identifier">name</span>).<span class="ruby-identifier">activate</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>line_event (Debugger::EventProcessor)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/ruby-debug-ide/event_processor.rb, line 43</span>
+     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">line_event</span>(<span class="ruby-identifier">context</span>, <span class="ruby-identifier">file</span>, <span class="ruby-identifier">line</span>)
+       <span class="ruby-ivar">@line</span> = <span class="ruby-identifier">line</span>
+       <span class="ruby-ivar">@file</span> = <span class="ruby-identifier">file</span>
+       <span class="ruby-ivar">@context</span> = <span class="ruby-identifier">context</span>
+       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@last_breakpoint</span>
+         <span class="ruby-comment cmt"># followed after #at_breakpoint in the same thread. Print breakpoint</span>
+         <span class="ruby-comment cmt"># now when @line, @file and @context are correctly set to prevent race</span>
+         <span class="ruby-comment cmt"># condition with `control thread'.</span>
+         <span class="ruby-identifier">n</span> = <span class="ruby-constant">Debugger</span>.<span class="ruby-identifier">breakpoints</span>.<span class="ruby-identifier">index</span>(<span class="ruby-ivar">@last_breakpoint</span>) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+         <span class="ruby-ivar">@printer</span>.<span class="ruby-identifier">print_breakpoint</span> <span class="ruby-identifier">n</span>, <span class="ruby-ivar">@last_breakpoint</span>
+         <span class="ruby-ivar">@last_breakpoint</span> = <span class="ruby-keyword kw">nil</span>
+       <span class="ruby-keyword kw">end</span>
+       <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;DebuggerThread are not supposed to be traced (#{context.thread})&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">context</span>.<span class="ruby-identifier">thread</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Debugger</span><span class="ruby-operator">::</span><span class="ruby-constant">DebugThread</span>)
+       <span class="ruby-ivar">@printer</span>.<span class="ruby-identifier">print_debug</span>(<span class="ruby-value str">&quot;Stopping Thread %s (%s)&quot;</span>, <span class="ruby-identifier">context</span>.<span class="ruby-identifier">thread</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-constant">Process</span>.<span class="ruby-identifier">pid</span>.<span class="ruby-identifier">to_s</span>)
+       <span class="ruby-ivar">@printer</span>.<span class="ruby-identifier">print_debug</span>(<span class="ruby-value str">&quot;Threads equal: %s&quot;</span>, <span class="ruby-constant">Thread</span>.<span class="ruby-identifier">current</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">context</span>.<span class="ruby-identifier">thread</span>)
+       <span class="ruby-constant">IdeCommandProcessor</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@interface</span>).<span class="ruby-identifier">process_commands</span>
+       <span class="ruby-constant">InspectCommand</span>.<span class="ruby-identifier">clear_references</span>
+       <span class="ruby-ivar">@printer</span>.<span class="ruby-identifier">print_debug</span>(<span class="ruby-value str">&quot;Resumed Thread %s&quot;</span>, <span class="ruby-identifier">context</span>.<span class="ruby-identifier">thread</span>.<span class="ruby-identifier">to_s</span>)
+       <span class="ruby-ivar">@line</span> = <span class="ruby-keyword kw">nil</span>
+       <span class="ruby-ivar">@file</span> = <span class="ruby-keyword kw">nil</span>
+       <span class="ruby-ivar">@context</span> = <span class="ruby-keyword kw">nil</span>
+     <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

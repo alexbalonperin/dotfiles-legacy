@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Define a circle with radius <tt>r</tt> and centered at [<tt>cx</tt>, <tt>cy</tt>]. Use the RVG::ShapeConstructors#circle method to create Circle objects in a container.
+full_name: Magick::RVG::Circle::new
+is_singleton: true
+name: new
+params: (r, cx=0, cy=0)
+visibility: public

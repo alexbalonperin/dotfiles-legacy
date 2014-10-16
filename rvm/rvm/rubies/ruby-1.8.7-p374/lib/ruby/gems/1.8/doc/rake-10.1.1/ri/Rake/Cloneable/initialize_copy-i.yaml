@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: The hook that invoked by 'clone' and 'dup' methods.
+full_name: Rake::Cloneable#initialize_copy
+is_singleton: false
+name: initialize_copy
+params: (source)
+visibility: public

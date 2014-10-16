@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>setup (I18n::Tests::Lookup)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/i18n/tests/lookup.rb, line 6</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">setup</span>
+        <span class="ruby-keyword kw">super</span>
+        <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">backend</span>.<span class="ruby-identifier">store_translations</span>(<span class="ruby-identifier">:en</span>, <span class="ruby-identifier">:foo</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-identifier">:bar</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'bar'</span>, <span class="ruby-identifier">:baz</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'baz'</span> }, <span class="ruby-identifier">:falsy</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>, <span class="ruby-identifier">:truthy</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>,
+          <span class="ruby-identifier">:string</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;a&quot;</span>, <span class="ruby-identifier">:array</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-node">%w(a b c)</span>, <span class="ruby-identifier">:hash</span> =<span class="ruby-operator">&gt;</span> { <span class="ruby-value str">&quot;a&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;b&quot;</span> })
+      <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

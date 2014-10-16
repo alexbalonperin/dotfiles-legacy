@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Returns path to the extensions directory.
+full_name: Gem::BasicSpecification#extensions_dir
+is_singleton: false
+name: extensions_dir
+params: ()
+visibility: public

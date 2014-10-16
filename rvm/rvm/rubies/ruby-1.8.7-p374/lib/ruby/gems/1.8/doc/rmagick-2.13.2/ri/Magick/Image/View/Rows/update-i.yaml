@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: A pixel has been modified. Tell the view.
+full_name: Magick::Image::View::Rows#update
+is_singleton: false
+name: update
+params: (pixel)
+visibility: public

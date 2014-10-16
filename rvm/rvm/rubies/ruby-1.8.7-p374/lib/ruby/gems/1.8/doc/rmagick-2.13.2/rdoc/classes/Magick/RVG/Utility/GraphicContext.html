@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Magick::RVG::Utility::GraphicContext</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Magick::RVG::Utility::GraphicContext</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../../files/lib/rvg/misc_rb.html">
+                lib/rvg/misc.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000107">affine</a>&nbsp;&nbsp;
+      <a href="#M000108">baseline_shift</a>&nbsp;&nbsp;
+      <a href="#M000104">degrees_to_radians</a>&nbsp;&nbsp;
+      <a href="#M000109">font</a>&nbsp;&nbsp;
+      <a href="#M000110">font_family</a>&nbsp;&nbsp;
+      <a href="#M000111">font_size</a>&nbsp;&nbsp;
+      <a href="#M000112">font_stretch</a>&nbsp;&nbsp;
+      <a href="#M000113">font_style</a>&nbsp;&nbsp;
+      <a href="#M000114">font_weight</a>&nbsp;&nbsp;
+      <a href="#M000115">glyph_orientation_horizontal</a>&nbsp;&nbsp;
+      <a href="#M000116">glyph_orientation_vertical</a>&nbsp;&nbsp;
+      <a href="#M000117">inspect</a>&nbsp;&nbsp;
+      <a href="#M000118">letter_spacing</a>&nbsp;&nbsp;
+      <a href="#M000106">method_missing</a>&nbsp;&nbsp;
+      <a href="#M000105">new</a>&nbsp;&nbsp;
+      <a href="#M000120">pop</a>&nbsp;&nbsp;
+      <a href="#M000119">push</a>&nbsp;&nbsp;
+      <a href="#M000121">rotate</a>&nbsp;&nbsp;
+      <a href="#M000122">scale</a>&nbsp;&nbsp;
+      <a href="#M000123">shadow</a>&nbsp;&nbsp;
+      <a href="#M000124">skewX</a>&nbsp;&nbsp;
+      <a href="#M000125">skewY</a>&nbsp;&nbsp;
+      <a href="#M000126">stroke_width</a>&nbsp;&nbsp;
+      <a href="#M000127">text</a>&nbsp;&nbsp;
+      <a href="#M000128">text_anchor</a>&nbsp;&nbsp;
+      <a href="#M000129">text_decoration</a>&nbsp;&nbsp;
+      <a href="#M000130">translate</a>&nbsp;&nbsp;
+      <a href="#M000131">word_spacing</a>&nbsp;&nbsp;
+      <a href="#M000132">writing_mode</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">FONT_STRETCH</td>
+          <td>=</td>
+          <td class="context-item-value">{:normal          =&gt; Magick::NormalStretch,                                    :ultra_condensed =&gt; Magick::UltraCondensedStretch,                                    :extra_condensed =&gt; Magick::ExtraCondensedStretch,                                    :condensed       =&gt; Magick::CondensedStretch,                                    :semi_condensed  =&gt; Magick::SemiCondensedStretch,                                    :semi_expanded   =&gt; Magick::SemiExpandedStretch,                                    :expanded        =&gt; Magick::ExpandedStretch,                                    :extra_expanded  =&gt; Magick::ExtraExpandedStretch,                                    :ultra_expanded  =&gt; Magick::UltraExpandedStretch}</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">FONT_STYLE</td>
+          <td>=</td>
+          <td class="context-item-value">{:normal  =&gt; Magick::NormalStyle,                                    :italic  =&gt; Magick::ItalicStyle,                                    :oblique =&gt; Magick::ObliqueStyle}</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">FONT_WEIGHT</td>
+          <td>=</td>
+          <td class="context-item-value">{'normal'  =&gt; Magick::NormalWeight,                                    'bold'    =&gt; Magick::BoldWeight,                                    'bolder'  =&gt; Magick::BolderWeight,                                    'lighter' =&gt; Magick::LighterWeight}</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">TEXT_ANCHOR</td>
+          <td>=</td>
+          <td class="context-item-value">{:start  =&gt; Magick::StartAnchor,                                    :middle =&gt; Magick::MiddleAnchor,                                    :end    =&gt; Magick::EndAnchor}</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">ANCHOR_TO_ALIGN</td>
+          <td>=</td>
+          <td class="context-item-value">{:start  =&gt; Magick::LeftAlign,                                    :middle =&gt; Magick::CenterAlign,                                    :end    =&gt; Magick::RightAlign}</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">TEXT_DECORATION</td>
+          <td>=</td>
+          <td class="context-item-value">{:none         =&gt; Magick::NoDecoration,                                    :underline    =&gt; Magick::UnderlineDecoration,                                    :overline     =&gt; Magick::OverlineDecoration,                                    :line_through =&gt; Magick::LineThroughDecoration}</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">TEXT_STRATEGIES</td>
+          <td>=</td>
+          <td class="context-item-value">{'lr-tb'=&gt;LRTextStrategy, 'lr'=&gt;LRTextStrategy,                                     'rt-tb'=&gt;RLTextStrategy, 'rl'=&gt;RLTextStrategy,                                     'tb-rl'=&gt;TBTextStrategy, 'tb'=&gt;TBTextStrategy}</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+    <div id="attribute-list">
+      <h3 class="section-bar">Attributes</h3>
+
+      <div class="name-list">
+        <table>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">gc</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">text_attrs</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000104" class="method-detail">
+        <a name="M000104"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000104.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000104.html');return false;">
+          <span class="method-name">degrees_to_radians</span><span class="method-args">(deg)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000105" class="method-detail">
+        <a name="M000105"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000105.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000105.html');return false;">
+          <span class="method-name">new</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000107" class="method-detail">
+        <a name="M000107"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000107.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000107.html');return false;">
+          <span class="method-name">affine</span><span class="method-args">(sx, rx, ry, sy, tx, ty)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000108" class="method-detail">
+        <a name="M000108"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000108.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000108.html');return false;">
+          <span class="method-name">baseline_shift</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000109" class="method-detail">
+        <a name="M000109"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000109.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000109.html');return false;">
+          <span class="method-name">font</span><span class="method-args">(name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000110" class="method-detail">
+        <a name="M000110"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000110.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000110.html');return false;">
+          <span class="method-name">font_family</span><span class="method-args">(name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000111" class="method-detail">
+        <a name="M000111"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000111.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000111.html');return false;">
+          <span class="method-name">font_size</span><span class="method-args">(points)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000112" class="method-detail">
+        <a name="M000112"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000112.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000112.html');return false;">
+          <span class="method-name">font_stretch</span><span class="method-args">(stretch)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000113" class="method-detail">
+        <a name="M000113"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000113.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000113.html');return false;">
+          <span class="method-name">font_style</span><span class="method-args">(style)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000114" class="method-detail">
+        <a name="M000114"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000114.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000114.html');return false;">
+          <span class="method-name">font_weight</span><span class="method-args">(weight)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000115" class="method-detail">
+        <a name="M000115"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000115.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000115.html');return false;">
+          <span class="method-name">glyph_orientation_horizontal</span><span class="method-args">(deg)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000116" class="method-detail">
+        <a name="M000116"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000116.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000116.html');return false;">
+          <span class="method-name">glyph_orientation_vertical</span><span class="method-args">(deg)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000117" class="method-detail">
+        <a name="M000117"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000117.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000117.html');return false;">
+          <span class="method-name">inspect</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000118" class="method-detail">
+        <a name="M000118"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000118.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000118.html');return false;">
+          <span class="method-name">letter_spacing</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000106" class="method-detail">
+        <a name="M000106"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000106.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000106.html');return false;">
+          <span class="method-name">method_missing</span><span class="method-args">(methID, *args, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000120" class="method-detail">
+        <a name="M000120"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000120.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000120.html');return false;">
+          <span class="method-name">pop</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000119" class="method-detail">
+        <a name="M000119"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000119.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000119.html');return false;">
+          <span class="method-name">push</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000121" class="method-detail">
+        <a name="M000121"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000121.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000121.html');return false;">
+          <span class="method-name">rotate</span><span class="method-args">(degrees)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000122" class="method-detail">
+        <a name="M000122"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000122.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000122.html');return false;">
+          <span class="method-name">scale</span><span class="method-args">(sx, sy)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000123" class="method-detail">
+        <a name="M000123"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000123.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000123.html');return false;">
+          <span class="method-name">shadow</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000124" class="method-detail">
+        <a name="M000124"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000124.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000124.html');return false;">
+          <span class="method-name">skewX</span><span class="method-args">(degrees)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000125" class="method-detail">
+        <a name="M000125"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000125.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000125.html');return false;">
+          <span class="method-name">skewY</span><span class="method-args">(degrees)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000126" class="method-detail">
+        <a name="M000126"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000126.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000126.html');return false;">
+          <span class="method-name">stroke_width</span><span class="method-args">(width)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000127" class="method-detail">
+        <a name="M000127"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000127.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000127.html');return false;">
+          <span class="method-name">text</span><span class="method-args">(x, y, text)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000128" class="method-detail">
+        <a name="M000128"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000128.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000128.html');return false;">
+          <span class="method-name">text_anchor</span><span class="method-args">(anchor)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000129" class="method-detail">
+        <a name="M000129"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000129.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000129.html');return false;">
+          <span class="method-name">text_decoration</span><span class="method-args">(decoration)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000130" class="method-detail">
+        <a name="M000130"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000130.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000130.html');return false;">
+          <span class="method-name">translate</span><span class="method-args">(tx, ty)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000131" class="method-detail">
+        <a name="M000131"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000131.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000131.html');return false;">
+          <span class="method-name">word_spacing</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000132" class="method-detail">
+        <a name="M000132"></a>
+
+        <div class="method-heading">
+          <a href="GraphicContext.src/M000132.html" target="Code" class="method-signature"
+            onclick="popupCode('GraphicContext.src/M000132.html');return false;">
+          <span class="method-name">writing_mode</span><span class="method-args">(mode)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

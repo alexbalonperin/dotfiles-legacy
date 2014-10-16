@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Get a sorted list of files matching the pattern. This method should be prefered to Dir[pattern] and Dir.glob(pattern) because the files returned are guaranteed to be sorted.
+full_name: Rake::FileList::glob
+is_singleton: true
+name: glob
+params: (pattern, *args)
+visibility: public

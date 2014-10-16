@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Sets files to <tt>files</tt>, ensuring it is an array.
+full_name: Gem::Specification#files=
+is_singleton: false
+name: files=
+params: (files)
+visibility: public

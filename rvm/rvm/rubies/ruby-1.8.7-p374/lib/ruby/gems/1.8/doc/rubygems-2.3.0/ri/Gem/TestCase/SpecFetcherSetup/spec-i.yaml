@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Creates a spec with <tt>name</tt>, <tt>version</tt> and <tt>deps</tt>. The created gem can be downloaded and installed.
+- !ruby/struct:SM::Flow::P 
+  body: The specification will be yielded before creation for customization, but only the block or the dependencies may be set, not both.
+full_name: Gem::TestCase::SpecFetcherSetup#spec
+is_singleton: false
+name: spec
+params: (name, version, dependencies = nil, &block)
+visibility: public

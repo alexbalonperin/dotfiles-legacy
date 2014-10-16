@@ -1,0 +1,15 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+- !ruby/object:RI::AliasName 
+  name: stroke_color
+- !ruby/object:RI::AliasName 
+  name: stroke_pattern
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Specify the object stroke, a color name or pattern name.
+full_name: Magick::Draw#stroke
+is_singleton: false
+name: stroke
+params: (colorspec)
+visibility: public

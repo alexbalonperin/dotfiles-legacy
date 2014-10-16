@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Gem::Request::new
+is_singleton: true
+name: new
+params: (uri, request_class, last_modified, pool)
+visibility: public

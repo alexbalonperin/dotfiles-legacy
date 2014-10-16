@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>investigation (Rake::Task)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>     <span class="ruby-comment cmt"># File lib/rake/task.rb, line 282</span>
+282:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">investigation</span>
+283:       <span class="ruby-identifier">result</span> = <span class="ruby-value str">&quot;------------------------------\n&quot;</span>
+284:       <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;Investigating #{name}\n&quot;</span>
+285:       <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;class: #{self.class}\n&quot;</span>
+286:       <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span>  <span class="ruby-node">&quot;task needed: #{needed?}\n&quot;</span>
+287:       <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span>  <span class="ruby-node">&quot;timestamp: #{timestamp}\n&quot;</span>
+288:       <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;pre-requisites: \n&quot;</span>
+289:       <span class="ruby-identifier">prereqs</span> = <span class="ruby-identifier">prerequisite_tasks</span>
+290:       <span class="ruby-identifier">prereqs</span>.<span class="ruby-identifier">sort!</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">timestamp</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">timestamp</span>}
+291:       <span class="ruby-identifier">prereqs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+292:         <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;--#{p.name} (#{p.timestamp})\n&quot;</span>
+293:       <span class="ruby-keyword kw">end</span>
+294:       <span class="ruby-identifier">latest_prereq</span> = <span class="ruby-identifier">prerequisite_tasks</span>.<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">pre</span><span class="ruby-operator">|</span> <span class="ruby-identifier">pre</span>.<span class="ruby-identifier">timestamp</span> }.<span class="ruby-identifier">max</span>
+295:       <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span>  <span class="ruby-node">&quot;latest-prerequisite time: #{latest_prereq}\n&quot;</span>
+296:       <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;................................\n\n&quot;</span>
+297:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">result</span>
+298:     <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

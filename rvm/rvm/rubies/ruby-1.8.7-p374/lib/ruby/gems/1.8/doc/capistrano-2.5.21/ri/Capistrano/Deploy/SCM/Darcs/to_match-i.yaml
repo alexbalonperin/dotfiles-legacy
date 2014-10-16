@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Capistrano::Deploy::SCM::Darcs#to_match
+is_singleton: false
+name: to_match
+params: (revision)
+visibility: public

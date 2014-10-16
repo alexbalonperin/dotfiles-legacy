@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>handle_data (Capistrano::Deploy::SCM::Perforce)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/capistrano/recipes/deploy/scm/perforce.rb, line 69</span>
+        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">handle_data</span>(<span class="ruby-identifier">state</span>, <span class="ruby-identifier">stream</span>, <span class="ruby-identifier">text</span>)
+          <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">text</span>
+          <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/\(P4PASSWD\) invalid or unset\./i</span>
+                  <span class="ruby-identifier">raise</span> <span class="ruby-constant">Capistrano</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>, <span class="ruby-value str">&quot;scm_password (or p4passwd) is incorrect or unset&quot;</span>
+          <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/Can.t create a new user.*/i</span>
+                  <span class="ruby-identifier">raise</span> <span class="ruby-constant">Capistrano</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>, <span class="ruby-value str">&quot;scm_username (or p4user) is incorrect or unset&quot;</span>
+          <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/Perforce client error\:/i</span>        
+                  <span class="ruby-identifier">raise</span> <span class="ruby-constant">Capistrano</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>, <span class="ruby-value str">&quot;p4port is incorrect or unset&quot;</span>
+          <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/Client \'[\w\-\_\.]+\' unknown.*/i</span>
+                  <span class="ruby-identifier">raise</span> <span class="ruby-constant">Capistrano</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>, <span class="ruby-value str">&quot;p4client is incorrect or unset&quot;</span>
+          <span class="ruby-keyword kw">end</span>                
+        <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

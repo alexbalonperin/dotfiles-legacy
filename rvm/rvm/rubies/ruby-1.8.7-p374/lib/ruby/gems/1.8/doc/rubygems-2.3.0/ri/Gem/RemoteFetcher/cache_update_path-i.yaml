@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Downloads <tt>uri</tt> to <tt>path</tt> if necessary. If no path is given, it just passes the data.
+full_name: Gem::RemoteFetcher#cache_update_path
+is_singleton: false
+name: cache_update_path
+params: (uri, path = nil, update = true)
+visibility: public

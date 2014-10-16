@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Add an <tt>arc</tt> command. If <tt>abs</tt> is <tt>true</tt> the coordinates are absolute, otherwise the coordinates are relative.
+full_name: Magick::RVG::PathData#arc
+is_singleton: false
+name: arc
+params: (abs, rx, ry, x_axis_rotation, large_arc_flag, sweep_flag, x, y)
+visibility: public

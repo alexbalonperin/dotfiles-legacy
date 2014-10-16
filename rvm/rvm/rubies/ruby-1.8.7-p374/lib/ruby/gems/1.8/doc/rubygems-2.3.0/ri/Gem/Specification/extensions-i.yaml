@@ -1,0 +1,20 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Extensions to build when installing the gem, specifically the paths to extconf.rb-style files used to compile extensions.
+- !ruby/struct:SM::Flow::P 
+  body: "These files will be run when the gem is installed, causing the C (or whatever) code to be compiled on the user\xE2\x80\x99s machine."
+- !ruby/struct:SM::Flow::P 
+  body: "Usage:"
+- !ruby/struct:SM::Flow::VERB 
+  body: " spec.extensions &lt;&lt; 'ext/rmagic/extconf.rb'\n"
+- !ruby/struct:SM::Flow::P 
+  body: See Gem::Ext::Builder for information about writing extensions for gems.
+full_name: Gem::Specification#extensions
+is_singleton: false
+name: extensions
+params: ()
+visibility: public

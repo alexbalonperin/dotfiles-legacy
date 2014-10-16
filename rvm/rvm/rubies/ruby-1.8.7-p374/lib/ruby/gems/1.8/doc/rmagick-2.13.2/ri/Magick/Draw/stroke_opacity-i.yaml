@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Specify opacity of stroke drawing color
+- !ruby/struct:SM::Flow::VERB 
+  body: " (use &quot;xx%&quot; to indicate percentage)\n"
+full_name: Magick::Draw#stroke_opacity
+is_singleton: false
+name: stroke_opacity
+params: (value)
+visibility: public

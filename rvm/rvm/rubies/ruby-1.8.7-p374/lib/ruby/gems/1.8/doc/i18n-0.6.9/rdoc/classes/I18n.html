@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: I18n</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">I18n</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/i18n/backend/base_rb.html">
+                lib/i18n/backend/base.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/backend/cache_rb.html">
+                lib/i18n/backend/cache.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/backend/cascade_rb.html">
+                lib/i18n/backend/cascade.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/backend/chain_rb.html">
+                lib/i18n/backend/chain.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/backend/fallbacks_rb.html">
+                lib/i18n/backend/fallbacks.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/backend/flatten_rb.html">
+                lib/i18n/backend/flatten.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/backend/gettext_rb.html">
+                lib/i18n/backend/gettext.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/backend/interpolation_compiler_rb.html">
+                lib/i18n/backend/interpolation_compiler.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/backend/key_value_rb.html">
+                lib/i18n/backend/key_value.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/backend/memoize_rb.html">
+                lib/i18n/backend/memoize.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/backend/metadata_rb.html">
+                lib/i18n/backend/metadata.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/backend/pluralization_rb.html">
+                lib/i18n/backend/pluralization.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/backend/simple_rb.html">
+                lib/i18n/backend/simple.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/backend/transliterator_rb.html">
+                lib/i18n/backend/transliterator.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/backend_rb.html">
+                lib/i18n/backend.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/config_rb.html">
+                lib/i18n/config.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/exceptions_rb.html">
+                lib/i18n/exceptions.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/gettext/helpers_rb.html">
+                lib/i18n/gettext/helpers.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/gettext_rb.html">
+                lib/i18n/gettext.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/interpolate/ruby_rb.html">
+                lib/i18n/interpolate/ruby.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/locale/fallbacks_rb.html">
+                lib/i18n/locale/fallbacks.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/locale/tag/parents_rb.html">
+                lib/i18n/locale/tag/parents.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/locale/tag/rfc4646_rb.html">
+                lib/i18n/locale/tag/rfc4646.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/locale/tag/simple_rb.html">
+                lib/i18n/locale/tag/simple.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/locale/tag_rb.html">
+                lib/i18n/locale/tag.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/locale_rb.html">
+                lib/i18n/locale.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/tests/basics_rb.html">
+                lib/i18n/tests/basics.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/tests/defaults_rb.html">
+                lib/i18n/tests/defaults.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/tests/interpolation_rb.html">
+                lib/i18n/tests/interpolation.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/tests/link_rb.html">
+                lib/i18n/tests/link.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/tests/localization/date_rb.html">
+                lib/i18n/tests/localization/date.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/tests/localization/date_time_rb.html">
+                lib/i18n/tests/localization/date_time.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/tests/localization/procs_rb.html">
+                lib/i18n/tests/localization/procs.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/tests/localization/time_rb.html">
+                lib/i18n/tests/localization/time.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/tests/localization_rb.html">
+                lib/i18n/tests/localization.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/tests/lookup_rb.html">
+                lib/i18n/tests/lookup.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/tests/pluralization_rb.html">
+                lib/i18n/tests/pluralization.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/tests/procs_rb.html">
+                lib/i18n/tests/procs.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/tests_rb.html">
+                lib/i18n/tests.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n/version_rb.html">
+                lib/i18n/version.rb
+                </a>
+        <br />
+                <a href="../files/lib/i18n_rb.html">
+                lib/i18n.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+encoding: utf-8
+</p>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M001313">cache_namespace</a>&nbsp;&nbsp;
+      <a href="#M001314">cache_namespace=</a>&nbsp;&nbsp;
+      <a href="#M001311">cache_store</a>&nbsp;&nbsp;
+      <a href="#M001312">cache_store=</a>&nbsp;&nbsp;
+      <a href="#M001320">config</a>&nbsp;&nbsp;
+      <a href="#M001321">config=</a>&nbsp;&nbsp;
+      <a href="#M001334">enforce_available_locales!</a>&nbsp;&nbsp;
+      <a href="#M001327">exists?</a>&nbsp;&nbsp;
+      <a href="#M001316">fallbacks</a>&nbsp;&nbsp;
+      <a href="#M001317">fallbacks=</a>&nbsp;&nbsp;
+      <a href="#M001318">interpolate</a>&nbsp;&nbsp;
+      <a href="#M001319">interpolate_hash</a>&nbsp;&nbsp;
+      <a href="#M001330">l</a>&nbsp;&nbsp;
+      <a href="#M001333">locale_available?</a>&nbsp;&nbsp;
+      <a href="#M001329">localize</a>&nbsp;&nbsp;
+      <a href="#M001332">normalize_keys</a>&nbsp;&nbsp;
+      <a href="#M001315">perform_caching?</a>&nbsp;&nbsp;
+      <a href="#M001322">reload!</a>&nbsp;&nbsp;
+      <a href="#M001324">t</a>&nbsp;&nbsp;
+      <a href="#M001326">t!</a>&nbsp;&nbsp;
+      <a href="#M001323">translate</a>&nbsp;&nbsp;
+      <a href="#M001325">translate!</a>&nbsp;&nbsp;
+      <a href="#M001328">transliterate</a>&nbsp;&nbsp;
+      <a href="#M001331">with_locale</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Module <a href="I18n/Backend.html" class="link">I18n::Backend</a><br />
+Module <a href="I18n/Gettext.html" class="link">I18n::Gettext</a><br />
+Module <a href="I18n/Locale.html" class="link">I18n::Locale</a><br />
+Module <a href="I18n/Tests.html" class="link">I18n::Tests</a><br />
+Class <a href="I18n/ArgumentError.html" class="link">I18n::ArgumentError</a><br />
+Class <a href="I18n/Config.html" class="link">I18n::Config</a><br />
+Class <a href="I18n/ExceptionHandler.html" class="link">I18n::ExceptionHandler</a><br />
+Class <a href="I18n/InvalidLocale.html" class="link">I18n::InvalidLocale</a><br />
+Class <a href="I18n/InvalidLocaleData.html" class="link">I18n::InvalidLocaleData</a><br />
+Class <a href="I18n/InvalidPluralizationData.html" class="link">I18n::InvalidPluralizationData</a><br />
+Class <a href="I18n/MissingInterpolationArgument.html" class="link">I18n::MissingInterpolationArgument</a><br />
+Class <a href="I18n/MissingTranslation.html" class="link">I18n::MissingTranslation</a><br />
+Class <a href="I18n/MissingTranslationData.html" class="link">I18n::MissingTranslationData</a><br />
+Class <a href="I18n/ReservedInterpolationKey.html" class="link">I18n::ReservedInterpolationKey</a><br />
+Class <a href="I18n/UnknownFileType.html" class="link">I18n::UnknownFileType</a><br />
+
+    </div>
+
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">INTERPOLATION_PATTERN</td>
+          <td>=</td>
+          <td class="context-item-value">Regexp.union(     /%%/,     /%\{(\w+)\}/,                               # matches placeholders like &quot;%{foo}&quot;     /%&lt;(\w+)&gt;(.*?\d*\.?\d*[bBdiouxXeEfgGcps])/  # matches placeholders like &quot;%&lt;foo&gt;.d&quot;</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">VERSION</td>
+          <td>=</td>
+          <td class="context-item-value">&quot;0.6.9&quot;</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">RESERVED_KEYS</td>
+          <td>=</td>
+          <td class="context-item-value">[:scope, :default, :separator, :resolve, :object, :fallback, :format, :cascade, :throw, :raise, :rescue_format]</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">RESERVED_KEYS_PATTERN</td>
+          <td>=</td>
+          <td class="context-item-value">/%\{(#{RESERVED_KEYS.join(&quot;|&quot;)})\}/</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M001313" class="method-detail">
+        <a name="M001313"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001313.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001313.html');return false;">
+          <span class="method-name">cache_namespace</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M001314" class="method-detail">
+        <a name="M001314"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001314.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001314.html');return false;">
+          <span class="method-name">cache_namespace=</span><span class="method-args">(namespace)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M001311" class="method-detail">
+        <a name="M001311"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001311.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001311.html');return false;">
+          <span class="method-name">cache_store</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M001312" class="method-detail">
+        <a name="M001312"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001312.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001312.html');return false;">
+          <span class="method-name">cache_store=</span><span class="method-args">(store)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M001316" class="method-detail">
+        <a name="M001316"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001316.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001316.html');return false;">
+          <span class="method-name">fallbacks</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the current <a href="I18n.html#M001316">fallbacks</a>
+implementation. Defaults to +<a
+href="I18n/Locale/Fallbacks.html">I18n::Locale::Fallbacks</a>+.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M001317" class="method-detail">
+        <a name="M001317"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001317.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001317.html');return false;">
+          <span class="method-name">fallbacks=</span><span class="method-args">(fallbacks)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the current <a href="I18n.html#M001316">fallbacks</a> implementation.
+Use this to set a different <a href="I18n.html#M001316">fallbacks</a>
+implementation.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M001318" class="method-detail">
+        <a name="M001318"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001318.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001318.html');return false;">
+          <span class="method-name">interpolate</span><span class="method-args">(string, values)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return <a href="String.html">String</a> or raises <a
+href="I18n/MissingInterpolationArgument.html">MissingInterpolationArgument</a>
+exception. Missing argument&#8216;s logic is handled by <a
+href="I18n.html#M001320">I18n.config</a>.missing_interpolation_argument_handler.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M001319" class="method-detail">
+        <a name="M001319"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001319.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001319.html');return false;">
+          <span class="method-name">interpolate_hash</span><span class="method-args">(string, values)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M001315" class="method-detail">
+        <a name="M001315"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001315.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001315.html');return false;">
+          <span class="method-name">perform_caching?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M001320" class="method-detail">
+        <a name="M001320"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001320.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001320.html');return false;">
+          <span class="method-name">config</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets <a href="I18n.html">I18n</a> configuration object.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M001321" class="method-detail">
+        <a name="M001321"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001321.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001321.html');return false;">
+          <span class="method-name">config=</span><span class="method-args">(value)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets <a href="I18n.html">I18n</a> configuration object.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M001334" class="method-detail">
+        <a name="M001334"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001334.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001334.html');return false;">
+          <span class="method-name">enforce_available_locales!</span><span class="method-args">(locale)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Raises an <a href="I18n/InvalidLocale.html">InvalidLocale</a> exception
+when the passed locale is not included in I18n.available_locales. Returns
+false otherwise
+</p>
+        </div>
+      </div>
+
+      <div id="method-M001327" class="method-detail">
+        <a name="M001327"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001327.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001327.html');return false;">
+          <span class="method-name">exists?</span><span class="method-args">(key, locale = config.locale)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns true if a translation exists for a given key, otherwise returns
+false.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M001330" class="method-detail">
+        <a name="M001330"></a>
+
+        <div class="method-heading">
+          <span class="method-name">l</span><span class="method-args">(object, options = nil)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="I18n.html#M001329">localize</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M001333" class="method-detail">
+        <a name="M001333"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001333.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001333.html');return false;">
+          <span class="method-name">locale_available?</span><span class="method-args">(locale)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns true when the passed locale is in I18.available_locales. Returns
+false otherwise. Compare with Strings as `locale` may be coming from user
+input
+</p>
+        </div>
+      </div>
+
+      <div id="method-M001329" class="method-detail">
+        <a name="M001329"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001329.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001329.html');return false;">
+          <span class="method-name">localize</span><span class="method-args">(object, options = nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Localizes certain objects, such as dates and numbers to local formatting.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M001332" class="method-detail">
+        <a name="M001332"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001332.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001332.html');return false;">
+          <span class="method-name">normalize_keys</span><span class="method-args">(locale, key, scope, separator = nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Merges the given locale, key and scope into a single array of keys. Splits
+keys that contain dots into multiple keys. Makes sure all keys are Symbols.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M001322" class="method-detail">
+        <a name="M001322"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001322.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001322.html');return false;">
+          <span class="method-name">reload!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Tells the backend to reload translations. Used in situations like the Rails
+development environment. Backends can implement whatever strategy is
+useful.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M001324" class="method-detail">
+        <a name="M001324"></a>
+
+        <div class="method-heading">
+          <span class="method-name">t</span><span class="method-args">(*args)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="I18n.html#M001323">translate</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M001326" class="method-detail">
+        <a name="M001326"></a>
+
+        <div class="method-heading">
+          <span class="method-name">t!</span><span class="method-args">(key, options={})</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="I18n.html#M001323">translate</a>!
+</p>
+        </div>
+      </div>
+
+      <div id="method-M001323" class="method-detail">
+        <a name="M001323"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001323.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001323.html');return false;">
+          <span class="method-name">translate</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Translates, pluralizes and interpolates a given key using a given locale,
+scope, and default, as well as interpolation values.
+</p>
+<p>
+<b>LOOKUP</b>
+</p>
+<p>
+Translation data is organized as a nested hash using the upper-level keys
+as namespaces. <em>E.g.</em>, ActionView ships with the translation:
+<tt>:date =&gt; {:formats =&gt; {:short =&gt; &quot;%b %d&quot;}}</tt>.
+</p>
+<p>
+Translations can be looked up at any level of this hash using the key
+argument and the scope option. <em>E.g.</em>, in this example <tt><a
+href="I18n.html#M001324">I18n.t</a> :date</tt> returns the whole
+translations hash <tt>{:formats =&gt; {:short =&gt; &quot;%b
+%d&quot;}}</tt>.
+</p>
+<p>
+Key can be either a single key or a dot-separated key (both Strings and
+Symbols work). <em>E.g.</em>, the short format can be looked up using both:
+</p>
+<pre>
+  I18n.t 'date.formats.short'
+  I18n.t :'date.formats.short'
+</pre>
+<p>
+Scope can be either a single key, a dot-separated key or an array of keys
+or dot-separated keys. Keys and scopes can be combined freely. So these
+examples will all look up the same short date format:
+</p>
+<pre>
+  I18n.t 'date.formats.short'
+  I18n.t 'formats.short', :scope =&gt; 'date'
+  I18n.t 'short', :scope =&gt; 'date.formats'
+  I18n.t 'short', :scope =&gt; %w(date formats)
+</pre>
+<p>
+<b>INTERPOLATION</b>
+</p>
+<p>
+Translations can contain interpolation variables which will be replaced by
+values passed to <a href="I18n.html#M001323">translate</a> as part of the
+options hash, with the keys matching the interpolation variable names.
+</p>
+<p>
+<em>E.g.</em>, with a translation <tt>:foo =&gt; &quot;foo
+%{bar}&quot;</tt> the option value for the key <tt>bar</tt> will be
+interpolated into the translation:
+</p>
+<pre>
+  I18n.t :foo, :bar =&gt; 'baz' # =&gt; 'foo baz'
+</pre>
+<p>
+<b>PLURALIZATION</b>
+</p>
+<p>
+Translation data can contain pluralized translations. Pluralized
+translations are arrays of singluar/plural versions of translations like
+<tt>[&#8216;Foo&#8217;, &#8216;Foos&#8217;]</tt>.
+</p>
+<p>
+Note that <tt><a
+href="I18n/Backend/Simple.html">I18n::Backend::Simple</a></tt> only
+supports an algorithm for English pluralization rules. Other algorithms can
+be supported by custom backends.
+</p>
+<p>
+This returns the singular version of a pluralized translation:
+</p>
+<pre>
+  I18n.t :foo, :count =&gt; 1 # =&gt; 'Foo'
+</pre>
+<p>
+These both return the plural version of a pluralized translation:
+</p>
+<pre>
+  I18n.t :foo, :count =&gt; 0 # =&gt; 'Foos'
+  I18n.t :foo, :count =&gt; 2 # =&gt; 'Foos'
+</pre>
+<p>
+The <tt>:count</tt> option can be used both for pluralization and
+interpolation. <em>E.g.</em>, with the translation <tt>:foo =&gt;
+[&#8217;%{count} foo&#8217;, &#8217;%{count} foos&#8217;]</tt>, count will
+be interpolated to the pluralized translation:
+</p>
+<pre>
+  I18n.t :foo, :count =&gt; 1 # =&gt; '1 foo'
+</pre>
+<p>
+<b>DEFAULTS</b>
+</p>
+<p>
+This returns the translation for <tt>:foo</tt> or <tt>default</tt> if no
+translation was found:
+</p>
+<pre>
+  I18n.t :foo, :default =&gt; 'default'
+</pre>
+<p>
+This returns the translation for <tt>:foo</tt> or the translation for
+<tt>:bar</tt> if no translation for <tt>:foo</tt> was found:
+</p>
+<pre>
+  I18n.t :foo, :default =&gt; :bar
+</pre>
+<p>
+Returns the translation for <tt>:foo</tt> or the translation for
+<tt>:bar</tt> or <tt>default</tt> if no translations for <tt>:foo</tt> and
+<tt>:bar</tt> were found.
+</p>
+<pre>
+  I18n.t :foo, :default =&gt; [:bar, 'default']
+</pre>
+<p>
+*BULK LOOKUP*
+</p>
+<p>
+This returns an array with the translations for <tt>:foo</tt> and
+<tt>:bar</tt>.
+</p>
+<pre>
+  I18n.t [:foo, :bar]
+</pre>
+<p>
+Can be used with dot-separated nested keys:
+</p>
+<pre>
+  I18n.t [:'baz.foo', :'baz.bar']
+</pre>
+<p>
+Which is the same as using a scope option:
+</p>
+<pre>
+  I18n.t [:foo, :bar], :scope =&gt; :baz
+</pre>
+<p>
+<b>LAMBDAS</b>
+</p>
+<p>
+Both translations and defaults can be given as Ruby lambdas. Lambdas will
+be called and passed the key and options.
+</p>
+<p>
+E.g. assuming the key <tt>:salutation</tt> resolves to:
+</p>
+<pre>
+  lambda { |key, options| options[:gender] == 'm' ? &quot;Mr. %{options[:name]}&quot; : &quot;Mrs. %{options[:name]}&quot; }
+</pre>
+<p>
+Then &lt;tt&gt;<a href="I18n.html#M001324">I18n.t</a>(:salutation, :gender
+=&gt; &#8216;w&#8217;, :name =&gt; &#8216;Smith&#8217;) will result in
+&quot;Mrs. Smith&quot;.
+</p>
+<p>
+It is recommended to use/implement lambdas in an &quot;idempotent&quot;
+way. E.g. when a cache layer is put in front of <a
+href="I18n.html#M001323">I18n.translate</a> it will generate a cache key
+from the argument values passed to <a
+href="I18n.html#M001323">translate</a>. Therefor your lambdas should always
+return the same translations/values per unique combination of argument
+values.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M001325" class="method-detail">
+        <a name="M001325"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001325.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001325.html');return false;">
+          <span class="method-name">translate!</span><span class="method-args">(key, options={})</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Wrapper for <tt><a href="I18n.html#M001323">translate</a></tt> that adds
+<tt>:raise =&gt; true</tt>. With this option, if no translation is found,
+it will raise <tt><a
+href="I18n/MissingTranslationData.html">I18n::MissingTranslationData</a></tt>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M001328" class="method-detail">
+        <a name="M001328"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001328.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001328.html');return false;">
+          <span class="method-name">transliterate</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Transliterates UTF-8 characters to ASCII. By default this method will <a
+href="I18n.html#M001328">transliterate</a> only Latin strings to an ASCII
+approximation:
+</p>
+<pre>
+   I18n.transliterate(&quot;Ærøskøbing&quot;)
+   # =&gt; &quot;AEroskobing&quot;
+
+   I18n.transliterate(&quot;日本語&quot;)
+   # =&gt; &quot;???&quot;
+</pre>
+<p>
+It&#8216;s also possible to add support for per-locale transliterations. <a
+href="I18n.html">I18n</a> expects transliteration rules to be stored at
+<tt>i18n.transliterate.rule</tt>.
+</p>
+<p>
+Transliteration rules can either be a <a href="Hash.html">Hash</a> or a
+Proc. Procs must accept a single string argument. <a
+href="Hash.html">Hash</a> rules inherit the default transliteration rules,
+while Procs do not.
+</p>
+<p>
+<b>Examples</b>
+</p>
+<p>
+Setting a <a href="Hash.html">Hash</a> in &lt;locale&gt;.yml:
+</p>
+<pre>
+   i18n:
+     transliterate:
+       rule:
+         ü: &quot;ue&quot;
+         ö: &quot;oe&quot;
+</pre>
+<p>
+Setting a <a href="Hash.html">Hash</a> using Ruby:
+</p>
+<pre>
+    store_translations(:de, :i18n =&gt; {
+      :transliterate =&gt; {
+        :rule =&gt; {
+          &quot;ü&quot; =&gt; &quot;ue&quot;,
+          &quot;ö&quot; =&gt; &quot;oe&quot;
+        }
+      }
+    )
+</pre>
+<p>
+Setting a Proc:
+</p>
+<pre>
+    translit = lambda {|string| MyTransliterator.transliterate(string) }
+    store_translations(:xx, :i18n =&gt; {:transliterate =&gt; {:rule =&gt; translit})
+</pre>
+<p>
+Transliterating strings:
+</p>
+<pre>
+    I18n.locale = :en
+    I18n.transliterate(&quot;Jürgen&quot;) # =&gt; &quot;Jurgen&quot;
+    I18n.locale = :de
+    I18n.transliterate(&quot;Jürgen&quot;) # =&gt; &quot;Juergen&quot;
+    I18n.transliterate(&quot;Jürgen&quot;, :locale =&gt; :en) # =&gt; &quot;Jurgen&quot;
+    I18n.transliterate(&quot;Jürgen&quot;, :locale =&gt; :de) # =&gt; &quot;Juergen&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M001331" class="method-detail">
+        <a name="M001331"></a>
+
+        <div class="method-heading">
+          <a href="I18n.src/M001331.html" target="Code" class="method-signature"
+            onclick="popupCode('I18n.src/M001331.html');return false;">
+          <span class="method-name">with_locale</span><span class="method-args">(tmp_locale = nil) {|| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Executes block with given I18n.locale set.
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

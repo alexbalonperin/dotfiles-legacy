@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Retrieve IPTC information by record number:dataset tag constant defined in Magick::IPTC, above.
+full_name: Magick::Image#get_iptc_dataset
+is_singleton: false
+name: get_iptc_dataset
+params: (ds)
+visibility: public

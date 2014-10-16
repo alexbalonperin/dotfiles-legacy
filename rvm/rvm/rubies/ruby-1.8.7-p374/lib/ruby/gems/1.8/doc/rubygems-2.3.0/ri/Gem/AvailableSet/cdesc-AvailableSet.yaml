@@ -1,0 +1,54 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: set
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Tuple
+  value: Struct.new(:spec, :source)
+full_name: Gem::AvailableSet
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: Enumerable
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: "<<"
+- !ruby/object:RI::MethodSummary 
+  name: add
+- !ruby/object:RI::MethodSummary 
+  name: all_specs
+- !ruby/object:RI::MethodSummary 
+  name: each
+- !ruby/object:RI::MethodSummary 
+  name: each_spec
+- !ruby/object:RI::MethodSummary 
+  name: empty?
+- !ruby/object:RI::MethodSummary 
+  name: find_all
+- !ruby/object:RI::MethodSummary 
+  name: inject_into_list
+- !ruby/object:RI::MethodSummary 
+  name: match_platform!
+- !ruby/object:RI::MethodSummary 
+  name: pick_best!
+- !ruby/object:RI::MethodSummary 
+  name: prefetch
+- !ruby/object:RI::MethodSummary 
+  name: remove_installed!
+- !ruby/object:RI::MethodSummary 
+  name: size
+- !ruby/object:RI::MethodSummary 
+  name: sorted
+- !ruby/object:RI::MethodSummary 
+  name: source_for
+- !ruby/object:RI::MethodSummary 
+  name: to_request_set
+name: AvailableSet
+superclass: Object

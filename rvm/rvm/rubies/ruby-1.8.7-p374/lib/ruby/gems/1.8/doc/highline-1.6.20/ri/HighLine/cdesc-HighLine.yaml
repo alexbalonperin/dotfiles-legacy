@@ -1,0 +1,220 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The indentation level
+  name: indent_level
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The indentation size
+  name: indent_size
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Indentation over multiple lines
+  name: multi_indent
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The current row setting for paging output.
+  name: page_at
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The current column setting for wrapping output.
+  name: wrap_at
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: String
+- !ruby/object:RI::MethodSummary 
+  name: Style
+- !ruby/object:RI::MethodSummary 
+  name: color
+- !ruby/object:RI::MethodSummary 
+  name: color_code
+- !ruby/object:RI::MethodSummary 
+  name: color_scheme
+- !ruby/object:RI::MethodSummary 
+  name: color_scheme=
+- !ruby/object:RI::MethodSummary 
+  name: colorize_strings
+- !ruby/object:RI::MethodSummary 
+  name: const_missing
+- !ruby/object:RI::MethodSummary 
+  name: new
+- !ruby/object:RI::MethodSummary 
+  name: supports_rgb_color?
+- !ruby/object:RI::MethodSummary 
+  name: track_eof=
+- !ruby/object:RI::MethodSummary 
+  name: track_eof?
+- !ruby/object:RI::MethodSummary 
+  name: uncolor
+- !ruby/object:RI::MethodSummary 
+  name: use_color=
+- !ruby/object:RI::MethodSummary 
+  name: use_color?
+- !ruby/object:RI::MethodSummary 
+  name: using_color_scheme?
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: A HighLine object is a &quot;high-level line oriented&quot; shell over an input and an output stream. HighLine simplifies common console interaction, effectively replacing puts() and gets(). User code can simply specify the question to ask and any details about user interaction, then leave the rest of the work to HighLine. When HighLine.ask() returns, you'll have the answer you requested, even if HighLine had to ask many times, validate results, perform range checking, convert types, etc.
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The version of the installed library.
+  name: VERSION
+  value: "\"1.6.20\".freeze"
+- !ruby/object:RI::Constant 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Embed in a String to clear all previous ANSI sequences. This <b>MUST</b> be done before the program exits!
+  name: ERASE_LINE_STYLE
+  value: Style.new(:name=>:erase_line, :builtin=>true, :code=>"\e[K")
+- !ruby/object:RI::Constant 
+  comment: 
+  name: ERASE_CHAR_STYLE
+  value: Style.new(:name=>:erase_char, :builtin=>true, :code=>"\e[P")
+- !ruby/object:RI::Constant 
+  comment: 
+  name: CLEAR_STYLE
+  value: Style.new(:name=>:clear,      :builtin=>true, :code=>"\e[0m")
+- !ruby/object:RI::Constant 
+  comment: 
+  name: RESET_STYLE
+  value: Style.new(:name=>:reset,      :builtin=>true, :code=>"\e[0m")
+- !ruby/object:RI::Constant 
+  comment: 
+  name: BOLD_STYLE
+  value: Style.new(:name=>:bold,       :builtin=>true, :code=>"\e[1m")
+- !ruby/object:RI::Constant 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: for example bold black. Bold without a color displays the system-defined bold color (e.g. red on Mac iTerm)
+  name: DARK_STYLE
+  value: Style.new(:name=>:dark,       :builtin=>true, :code=>"\e[2m")
+- !ruby/object:RI::Constant 
+  comment: 
+  name: UNDERLINE_STYLE
+  value: Style.new(:name=>:underline,  :builtin=>true, :code=>"\e[4m")
+- !ruby/object:RI::Constant 
+  comment: 
+  name: UNDERSCORE_STYLE
+  value: Style.new(:name=>:underscore, :builtin=>true, :code=>"\e[4m")
+- !ruby/object:RI::Constant 
+  comment: 
+  name: BLINK_STYLE
+  value: Style.new(:name=>:blink,      :builtin=>true, :code=>"\e[5m")
+- !ruby/object:RI::Constant 
+  comment: 
+  name: REVERSE_STYLE
+  value: Style.new(:name=>:reverse,    :builtin=>true, :code=>"\e[7m")
+- !ruby/object:RI::Constant 
+  comment: 
+  name: CONCEALED_STYLE
+  value: Style.new(:name=>:concealed,  :builtin=>true, :code=>"\e[8m")
+- !ruby/object:RI::Constant 
+  comment: 
+  name: STYLES
+  value: "%w{CLEAR RESET BOLD DARK UNDERLINE UNDERSCORE BLINK REVERSE CONCEALED}"
+- !ruby/object:RI::Constant 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: These RGB colors are approximate; see http://en.wikipedia.org/wiki/ANSI_escape_code
+  name: BLACK_STYLE
+  value: Style.new(:name=>:black,      :builtin=>true, :code=>"\e[30m", :rgb=>[  0,  0,  0])
+- !ruby/object:RI::Constant 
+  comment: 
+  name: RED_STYLE
+  value: Style.new(:name=>:red,        :builtin=>true, :code=>"\e[31m", :rgb=>[128,  0,  0])
+- !ruby/object:RI::Constant 
+  comment: 
+  name: GREEN_STYLE
+  value: Style.new(:name=>:green,      :builtin=>true, :code=>"\e[32m", :rgb=>[  0,128,  0])
+- !ruby/object:RI::Constant 
+  comment: 
+  name: BLUE_STYLE
+  value: Style.new(:name=>:blue,       :builtin=>true, :code=>"\e[34m", :rgb=>[  0,  0,128])
+- !ruby/object:RI::Constant 
+  comment: 
+  name: YELLOW_STYLE
+  value: Style.new(:name=>:yellow,     :builtin=>true, :code=>"\e[33m", :rgb=>[128,128,  0])
+- !ruby/object:RI::Constant 
+  comment: 
+  name: MAGENTA_STYLE
+  value: Style.new(:name=>:magenta,    :builtin=>true, :code=>"\e[35m", :rgb=>[128,  0,128])
+- !ruby/object:RI::Constant 
+  comment: 
+  name: CYAN_STYLE
+  value: Style.new(:name=>:cyan,       :builtin=>true, :code=>"\e[36m", :rgb=>[  0,128,128])
+- !ruby/object:RI::Constant 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: On Mac OSX Terminal, white is actually gray
+  name: WHITE_STYLE
+  value: Style.new(:name=>:white,      :builtin=>true, :code=>"\e[37m", :rgb=>[192,192,192])
+- !ruby/object:RI::Constant 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Alias for WHITE, since WHITE is actually a light gray on Macs
+  name: GRAY_STYLE
+  value: Style.new(:name=>:gray,       :builtin=>true, :code=>"\e[37m", :rgb=>[192,192,192])
+- !ruby/object:RI::Constant 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: On Mac OSX Terminal, this is black foreground, or bright white background. Also used as base for RGB colors, if available
+  name: NONE_STYLE
+  value: Style.new(:name=>:none,       :builtin=>true, :code=>"\e[38m", :rgb=>[  0,  0,  0])
+- !ruby/object:RI::Constant 
+  comment: 
+  name: BASIC_COLORS
+  value: "%w{BLACK RED GREEN YELLOW BLUE MAGENTA CYAN WHITE GRAY NONE}"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: COLORS
+  value: colors
+full_name: HighLine
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: HighLine::SystemExtensions
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: agree
+- !ruby/object:RI::MethodSummary 
+  name: ask
+- !ruby/object:RI::MethodSummary 
+  name: choose
+- !ruby/object:RI::MethodSummary 
+  name: color
+- !ruby/object:RI::MethodSummary 
+  name: color_code
+- !ruby/object:RI::MethodSummary 
+  name: indent
+- !ruby/object:RI::MethodSummary 
+  name: indentation
+- !ruby/object:RI::MethodSummary 
+  name: list
+- !ruby/object:RI::MethodSummary 
+  name: newline
+- !ruby/object:RI::MethodSummary 
+  name: output_cols
+- !ruby/object:RI::MethodSummary 
+  name: output_rows
+- !ruby/object:RI::MethodSummary 
+  name: page_at=
+- !ruby/object:RI::MethodSummary 
+  name: say
+- !ruby/object:RI::MethodSummary 
+  name: uncolor
+- !ruby/object:RI::MethodSummary 
+  name: wrap_at=
+name: HighLine
+superclass: Object

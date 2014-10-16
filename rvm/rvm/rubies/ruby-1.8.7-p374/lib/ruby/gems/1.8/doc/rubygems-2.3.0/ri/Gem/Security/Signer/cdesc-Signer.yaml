@@ -1,0 +1,36 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The chain of certificates for signing including the signing certificate
+  name: cert_chain
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The digest algorithm used to create the signature
+  name: digest_algorithm
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The private key for the signing certificate
+  name: key
+  rw: RW
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Basic OpenSSL-based package signing class.
+constants: []
+
+full_name: Gem::Security::Signer
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: sign
+name: Signer
+superclass: Object

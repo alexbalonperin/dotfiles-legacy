@@ -1,0 +1,15 @@
+[2014-01-15 17:26:40] requirements_osx_brew_install_custom
+requirements_osx_brew_install_custom () 
+{ 
+    typeset __tap;
+    for __tap in "$@";
+    do
+        brew tap "${__tap}" || return $?;
+    done
+}
+current path: /Users/abalonperin
+PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/abalonperin/.rvm/bin
+command(2): requirements_osx_brew_install_custom homebrew/versions
+Cloning into '/usr/local/Library/Taps/homebrew-versions'...
+Checking connectivity... done
+Tapped 127 formula

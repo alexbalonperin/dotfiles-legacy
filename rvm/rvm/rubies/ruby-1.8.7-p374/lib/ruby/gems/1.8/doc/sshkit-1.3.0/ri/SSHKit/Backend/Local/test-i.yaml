@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: SSHKit::Backend::Local#test
+is_singleton: false
+name: test
+params: (*args)
+visibility: public

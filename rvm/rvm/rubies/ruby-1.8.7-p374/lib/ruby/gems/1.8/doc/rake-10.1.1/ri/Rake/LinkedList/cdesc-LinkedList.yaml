@@ -1,0 +1,46 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: head
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: tail
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: cons
+- !ruby/object:RI::MethodSummary 
+  name: empty
+- !ruby/object:RI::MethodSummary 
+  name: make
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Polylithic linked list structure used to implement several data structures in Rake.
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: EMPTY
+  value: EmptyLinkedList.new
+full_name: Rake::LinkedList
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: Enumerable
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: ==
+- !ruby/object:RI::MethodSummary 
+  name: conj
+- !ruby/object:RI::MethodSummary 
+  name: each
+- !ruby/object:RI::MethodSummary 
+  name: empty?
+- !ruby/object:RI::MethodSummary 
+  name: inspect
+- !ruby/object:RI::MethodSummary 
+  name: to_s
+name: LinkedList
+superclass: Object

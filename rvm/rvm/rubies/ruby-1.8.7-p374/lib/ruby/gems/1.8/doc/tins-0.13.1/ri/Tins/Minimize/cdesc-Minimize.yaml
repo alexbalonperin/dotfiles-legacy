@@ -1,0 +1,40 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: This module can be mixed into all classes, whose instances respond to the
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: ""
+    body: and size-methods, like for example Array. The returned elements from []
+  type: :LABELED
+- !ruby/struct:SM::Flow::P 
+  body: should respond to the succ method.
+constants: []
+
+full_name: Tins::Minimize
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: minimize
+- !ruby/object:RI::MethodSummary 
+  name: minimize
+- !ruby/object:RI::MethodSummary 
+  name: minimize!
+- !ruby/object:RI::MethodSummary 
+  name: minimize!
+- !ruby/object:RI::MethodSummary 
+  name: unminimize
+- !ruby/object:RI::MethodSummary 
+  name: unminimize
+- !ruby/object:RI::MethodSummary 
+  name: unminimize!
+- !ruby/object:RI::MethodSummary 
+  name: unminimize!
+name: Minimize
+superclass: 

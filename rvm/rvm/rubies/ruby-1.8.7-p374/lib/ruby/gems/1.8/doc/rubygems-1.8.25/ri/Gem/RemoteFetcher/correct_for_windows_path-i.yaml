@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Gem::RemoteFetcher#correct_for_windows_path
+is_singleton: false
+name: correct_for_windows_path
+params: (path)
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Returns the full path to an executable named <tt>name</tt> in this gem.
+full_name: Gem::Specification#bin_file
+is_singleton: false
+name: bin_file
+params: (name)
+visibility: public

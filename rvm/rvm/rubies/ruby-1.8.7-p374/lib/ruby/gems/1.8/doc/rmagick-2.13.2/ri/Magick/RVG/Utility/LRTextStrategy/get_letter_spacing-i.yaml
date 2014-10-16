@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Magick::RVG::Utility::LRTextStrategy#get_letter_spacing
+is_singleton: false
+name: get_letter_spacing
+params: (glyph)
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Magick::HatchFill::new
+is_singleton: true
+name: new
+params: (bgcolor, hatchcolor="white", dist=10)
+visibility: public

@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: self if block_given?
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "Creates a RequestSet for a list of Gem::Dependency objects, <tt>deps</tt>. You can then #resolve and #install the resolved list of dependencies."
+- !ruby/struct:SM::Flow::VERB 
+  body: "  nokogiri = Gem::Dependency.new 'nokogiri', '~&gt; 1.6'\n  pg = Gem::Dependency.new 'pg', '~&gt; 0.14'\n\n  set = Gem::RequestSet.new nokogiri, pg\n"
+full_name: Gem::RequestSet::new
+is_singleton: true
+name: new
+params: (*deps) {|self if block_given?| ...}
+visibility: public

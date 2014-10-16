@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Tins::::examine
+is_singleton: true
+name: examine
+params: (binding = TOPLEVEL_BINDING)
+visibility: public

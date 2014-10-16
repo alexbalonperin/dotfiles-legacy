@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Finds all gems matching <tt>dep</tt> in this set.
+full_name: Gem::TestCase::StaticSet#find_all
+is_singleton: false
+name: find_all
+params: (dep)
+visibility: public

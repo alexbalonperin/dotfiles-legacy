@@ -1,0 +1,55 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The sources in this list
+  name: sources
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: from
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "The SourceList represents the sources rubygems has been configured to use. A source may be created from an array of sources:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  Gem::SourceList.from %w[https://rubygems.example https://internal.example]\n"
+- !ruby/struct:SM::Flow::P 
+  body: "Or by adding them:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  sources = Gem::SourceList.new\n  sources.add 'https://rubygems.example'\n"
+- !ruby/struct:SM::Flow::P 
+  body: The most common way to get a SourceList is Gem.sources.
+constants: []
+
+full_name: Gem::SourceList
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: Enumerable
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: "<<"
+- !ruby/object:RI::MethodSummary 
+  name: clear
+- !ruby/object:RI::MethodSummary 
+  name: delete
+- !ruby/object:RI::MethodSummary 
+  name: each
+- !ruby/object:RI::MethodSummary 
+  name: each_source
+- !ruby/object:RI::MethodSummary 
+  name: empty?
+- !ruby/object:RI::MethodSummary 
+  name: first
+- !ruby/object:RI::MethodSummary 
+  name: include?
+- !ruby/object:RI::MethodSummary 
+  name: replace
+- !ruby/object:RI::MethodSummary 
+  name: to_a
+- !ruby/object:RI::MethodSummary 
+  name: to_ary
+name: SourceList
+superclass: Object

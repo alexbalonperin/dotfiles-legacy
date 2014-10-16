@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Magick::RVG::Utility::TextAttributes#text_anchor=
+is_singleton: false
+name: text_anchor=
+params: (anchor)
+visibility: public

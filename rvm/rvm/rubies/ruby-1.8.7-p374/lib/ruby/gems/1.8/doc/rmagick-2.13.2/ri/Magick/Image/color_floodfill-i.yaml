@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Set all pixels that have the same color as the pixel at x,y and are neighbors to the fill color
+full_name: Magick::Image#color_floodfill
+is_singleton: false
+name: color_floodfill
+params: (x, y, fill)
+visibility: public

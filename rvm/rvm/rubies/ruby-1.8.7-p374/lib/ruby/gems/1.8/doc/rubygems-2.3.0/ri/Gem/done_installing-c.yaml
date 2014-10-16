@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Adds a post-installs hook that will be passed a Gem::DependencyInstaller and a list of installed specifications when Gem::DependencyInstaller#install is complete
+full_name: Gem::done_installing
+is_singleton: true
+name: done_installing
+params: (&hook)
+visibility: public

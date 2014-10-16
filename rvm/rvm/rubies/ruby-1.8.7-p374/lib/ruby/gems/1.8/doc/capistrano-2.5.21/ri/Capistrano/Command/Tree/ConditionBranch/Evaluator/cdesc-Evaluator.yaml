@@ -1,0 +1,32 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: condition
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: configuration
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: server
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: []
+
+full_name: Capistrano::Command::Tree::ConditionBranch::Evaluator
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: in?
+- !ruby/object:RI::MethodSummary 
+  name: method_missing
+- !ruby/object:RI::MethodSummary 
+  name: result
+name: Evaluator
+superclass: Object

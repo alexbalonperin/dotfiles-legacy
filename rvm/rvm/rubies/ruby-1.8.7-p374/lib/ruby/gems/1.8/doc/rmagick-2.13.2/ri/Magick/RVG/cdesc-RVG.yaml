@@ -1,0 +1,106 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The background fill color specified by background_fill=
+  name: background_fill
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The background fill color opacity specified by background_fill_opacity=
+  name: background_fill_opacity
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The background image specified by background_image=
+  name: background_image
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The background image layout specified by background_position=
+  name: background_position
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The image after drawing has completed
+  name: canvas
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: dpi
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: height
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: width
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: For embedded RVG objects, the x-axis coordinate of the upper-left corner
+  name: x
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: For embedded RVG objects, the x-axis coordinate of the upper-left corner
+  name: y
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: convert_one_to_float
+- !ruby/object:RI::MethodSummary 
+  name: convert_to_float
+- !ruby/object:RI::MethodSummary 
+  name: dpi=
+- !ruby/object:RI::MethodSummary 
+  name: fmsg
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: WORD_SEP
+  value: / /
+full_name: Magick::RVG
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: Stylable
+- !ruby/object:RI::IncludedModule 
+  name: Transformable
+- !ruby/object:RI::IncludedModule 
+  name: Stretchable
+- !ruby/object:RI::IncludedModule 
+  name: Embellishable
+- !ruby/object:RI::IncludedModule 
+  name: Describable
+- !ruby/object:RI::IncludedModule 
+  name: Duplicatable
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: background_fill=
+- !ruby/object:RI::MethodSummary 
+  name: background_fill_opacity=
+- !ruby/object:RI::MethodSummary 
+  name: background_image=
+- !ruby/object:RI::MethodSummary 
+  name: background_pattern=
+- !ruby/object:RI::MethodSummary 
+  name: background_position=
+- !ruby/object:RI::MethodSummary 
+  name: deep_equal
+- !ruby/object:RI::MethodSummary 
+  name: deep_equal
+- !ruby/object:RI::MethodSummary 
+  name: draw
+name: RVG
+superclass: Object

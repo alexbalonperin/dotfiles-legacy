@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"pending_requests:ETI"(Net::SFTP::Session#pending_requests;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"NThe hash of pending requests. Any requests that have been sent and which ;TI"Bthe server has not yet responded to will be represented here.;T:
+@fileI"lib/net/sftp/session.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Net::SFTP::Session;FcRDoc::NormalClass0

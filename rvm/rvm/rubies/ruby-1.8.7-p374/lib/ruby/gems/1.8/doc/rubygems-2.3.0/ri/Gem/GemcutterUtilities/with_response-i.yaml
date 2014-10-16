@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: response
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: If <tt>response</tt> is an HTTP Success (2XX) response, yields the response if a block was given or shows the response body to the user.
+- !ruby/struct:SM::Flow::P 
+  body: If the response was not successful, shows an error to the user including the <tt>error_prefix</tt> and the response body.
+full_name: Gem::GemcutterUtilities#with_response
+is_singleton: false
+name: with_response
+params: (response, error_prefix = nil) {|response| ...}
+visibility: public

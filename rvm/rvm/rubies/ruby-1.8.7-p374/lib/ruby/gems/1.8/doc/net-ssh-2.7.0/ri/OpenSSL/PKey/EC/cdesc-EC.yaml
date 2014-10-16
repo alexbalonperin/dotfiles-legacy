@@ -1,0 +1,32 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: read_keyblob
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: This class is originally defined in the OpenSSL module. As needed, methods have been added to it by the Net::SSH module for convenience in dealing with SSH functionality.
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: CurveNameAlias
+  value: "{           \"nistp256\" => \"prime256v1\",           \"nistp384\" => \"secp384r1\",           \"nistp521\" => \"secp521r1\",         }"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: CurveNameAliasInv
+  value: "{           \"prime256v1\" => \"nistp256\",           \"secp384r1\" => \"nistp384\",           \"secp521r1\" => \"nistp521\",         }"
+full_name: OpenSSL::PKey::EC
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: ssh_do_sign
+- !ruby/object:RI::MethodSummary 
+  name: ssh_do_verify
+- !ruby/object:RI::MethodSummary 
+  name: ssh_type
+- !ruby/object:RI::MethodSummary 
+  name: to_blob
+name: EC
+superclass: Object

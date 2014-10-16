@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Magick::ImageList#concat
+is_singleton: false
+name: concat
+params: (other)
+visibility: public

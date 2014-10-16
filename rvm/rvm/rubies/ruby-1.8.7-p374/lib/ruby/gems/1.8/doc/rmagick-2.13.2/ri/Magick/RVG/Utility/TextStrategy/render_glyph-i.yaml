@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Magick::RVG::Utility::TextStrategy#render_glyph
+is_singleton: false
+name: render_glyph
+params: (glyph_orientation, x, y, glyph)
+visibility: public

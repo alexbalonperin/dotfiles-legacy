@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Installs the provided default specs including writing the spec file
+full_name: Gem::TestCase#install_default_gems
+is_singleton: false
+name: install_default_gems
+params: (*specs)
+visibility: public

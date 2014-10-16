@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Reset the list of known specs, running pre and post reset hooks registered in Gem.
+full_name: Gem::Specification::reset
+is_singleton: true
+name: reset
+params: ()
+visibility: public

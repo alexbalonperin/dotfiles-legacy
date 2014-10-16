@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Debugger::EventProcessor#at_breakpoint
+is_singleton: false
+name: at_breakpoint
+params: (context, breakpoint)
+visibility: public

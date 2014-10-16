@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: unless options[:in]
+comment: 
+full_name: SSHKit::Command#within
+is_singleton: false
+name: within
+params: (&block) {|unless options[:in]| ...}
+visibility: public

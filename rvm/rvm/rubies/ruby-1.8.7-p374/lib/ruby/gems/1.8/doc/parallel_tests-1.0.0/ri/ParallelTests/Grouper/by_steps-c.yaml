@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ParallelTests::Grouper::by_steps
+is_singleton: true
+name: by_steps
+params: (tests, num_groups, options)
+visibility: public

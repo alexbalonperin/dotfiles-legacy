@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>load_yaml (Gem)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/rubygems.rb, line 650</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">load_yaml</span>
+    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@yaml_loaded</span>
+
+    <span class="ruby-identifier">test_syck</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'TEST_SYCK'</span>]
+
+    <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">test_syck</span>
+      <span class="ruby-keyword kw">begin</span>
+        <span class="ruby-identifier">gem</span> <span class="ruby-value str">'psych'</span>, <span class="ruby-value str">'~&gt; 1.2'</span>, <span class="ruby-value str">'&gt;= 1.2.1'</span>
+      <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">LoadError</span>
+        <span class="ruby-comment cmt"># It's OK if the user does not have the psych gem installed.  We will</span>
+        <span class="ruby-comment cmt"># attempt to require the stdlib version</span>
+      <span class="ruby-keyword kw">end</span>
+
+      <span class="ruby-keyword kw">begin</span>
+        <span class="ruby-comment cmt"># Try requiring the gem version *or* stdlib version of psych.</span>
+        <span class="ruby-identifier">require</span> <span class="ruby-value str">'psych'</span>
+      <span class="ruby-keyword kw">rescue</span> <span class="ruby-operator">::</span><span class="ruby-constant">LoadError</span>
+        <span class="ruby-comment cmt"># If we can't load psych, thats fine, go on.</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-comment cmt"># If 'yaml' has already been required, then we have to</span>
+        <span class="ruby-comment cmt"># be sure to switch it over to the newly loaded psych.</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-constant">YAML</span><span class="ruby-operator">::</span><span class="ruby-constant">ENGINE</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">YAML</span><span class="ruby-operator">::</span><span class="ruby-constant">ENGINE</span>.<span class="ruby-identifier">yamler</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;psych&quot;</span>
+          <span class="ruby-constant">YAML</span><span class="ruby-operator">::</span><span class="ruby-constant">ENGINE</span>.<span class="ruby-identifier">yamler</span> = <span class="ruby-value str">&quot;psych&quot;</span>
+        <span class="ruby-keyword kw">end</span>
+
+        <span class="ruby-identifier">require</span> <span class="ruby-value str">'rubygems/psych_additions'</span>
+        <span class="ruby-identifier">require</span> <span class="ruby-value str">'rubygems/psych_tree'</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-identifier">require</span> <span class="ruby-value str">'yaml'</span>
+
+    <span class="ruby-comment cmt"># If we're supposed to be using syck, then we may have to force</span>
+    <span class="ruby-comment cmt"># activate it via the YAML::ENGINE API.</span>
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">test_syck</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-constant">YAML</span><span class="ruby-operator">::</span><span class="ruby-constant">ENGINE</span>)
+      <span class="ruby-constant">YAML</span><span class="ruby-operator">::</span><span class="ruby-constant">ENGINE</span>.<span class="ruby-identifier">yamler</span> = <span class="ruby-value str">&quot;syck&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">YAML</span><span class="ruby-operator">::</span><span class="ruby-constant">ENGINE</span>.<span class="ruby-identifier">syck?</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-comment cmt"># Now that we're sure some kind of yaml library is loaded, pull</span>
+    <span class="ruby-comment cmt"># in our hack to deal with Syck's DefaultKey ugliness.</span>
+    <span class="ruby-identifier">require</span> <span class="ruby-value str">'rubygems/syck_hack'</span>
+
+    <span class="ruby-ivar">@yaml_loaded</span> = <span class="ruby-keyword kw">true</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

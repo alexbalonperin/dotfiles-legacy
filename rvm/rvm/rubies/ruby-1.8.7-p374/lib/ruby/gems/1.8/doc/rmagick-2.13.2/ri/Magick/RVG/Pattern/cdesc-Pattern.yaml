@@ -1,0 +1,54 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Return upper-left corner, width, height of viewport in user coordinates. Usually these are the values specified when the Pattern object is created, but they can be changed by a call to the viewbox method.
+  name: height
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Return upper-left corner, width, height of viewport in user coordinates. Usually these are the values specified when the Pattern object is created, but they can be changed by a call to the viewbox method.
+  name: width
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Return upper-left corner, width, height of viewport in user coordinates. Usually these are the values specified when the Pattern object is created, but they can be changed by a call to the viewbox method.
+  name: x
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Return upper-left corner, width, height of viewport in user coordinates. Usually these are the values specified when the Pattern object is created, but they can be changed by a call to the viewbox method.
+  name: y
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: []
+
+full_name: Magick::RVG::Pattern
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: StructureConstructors
+- !ruby/object:RI::IncludedModule 
+  name: UseConstructors
+- !ruby/object:RI::IncludedModule 
+  name: ShapeConstructors
+- !ruby/object:RI::IncludedModule 
+  name: TextConstructors
+- !ruby/object:RI::IncludedModule 
+  name: ImageConstructors
+- !ruby/object:RI::IncludedModule 
+  name: Stretchable
+- !ruby/object:RI::IncludedModule 
+  name: Duplicatable
+- !ruby/object:RI::IncludedModule 
+  name: Stylable
+instance_methods: []
+
+name: Pattern
+superclass: Object

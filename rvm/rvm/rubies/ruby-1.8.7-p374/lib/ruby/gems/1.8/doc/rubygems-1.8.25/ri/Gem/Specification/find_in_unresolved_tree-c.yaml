@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Search through all unresolved deps and sub-dependencies and return specs that contain the file matching <tt>path</tt>.
+full_name: Gem::Specification::find_in_unresolved_tree
+is_singleton: true
+name: find_in_unresolved_tree
+params: (path)
+visibility: public

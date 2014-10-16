@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: finds all tests and partitions them into groups
+full_name: ParallelTests::Test::Runner::tests_in_groups
+is_singleton: true
+name: tests_in_groups
+params: (tests, num_groups, options={})
+visibility: public

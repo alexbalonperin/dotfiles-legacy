@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: string_extensions.rb</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>string_extensions.rb</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>lib/highline/string_extensions.rb
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Fri Jan 31 19:23:48 +0900 2014</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+Extensions for class <a href="../../../classes/String.html">String</a>
+</p>
+<p>
+<a href="../../../classes/HighLine/String.html">HighLine::String</a> is a
+subclass of <a href="../../../classes/String.html">String</a> with
+convenience methods added for colorization.
+</p>
+<p>
+Available convenience methods include:
+</p>
+<pre>
+  * 'color' method         e.g.  highline_string.color(:bright_blue, :underline)
+  * colors                 e.g.  highline_string.magenta
+  * RGB colors             e.g.  highline_string.rgb_ff6000
+                            or   highline_string.rgb(255,96,0)
+  * background colors      e.g.  highline_string.on_magenta
+  * RGB background colors  e.g.  highline_string.on_rgb_ff6000
+                            or   highline_string.on_rgb(255,96,0)
+  * styles                 e.g.  highline_string.underline
+</pre>
+<p>
+Additionally, convenience methods can be chained, for instance the
+following are equivalent:
+</p>
+<pre>
+  highline_string.bright_blue.blink.underline
+  highline_string.color(:bright_blue, :blink, :underline)
+  HighLine.color(highline_string, :bright_blue, :blink, :underline)
+</pre>
+<p>
+For those less squeamish about possible conflicts, the same convenience
+methods can be added to the built-in <a
+href="../../../classes/String.html">String</a> class, as follows:
+</p>
+<pre>
+ require 'highline'
+ Highline.colorize_strings
+</pre>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

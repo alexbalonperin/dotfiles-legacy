@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: The API key from the command options or from the user's configuration.
+full_name: Gem::GemcutterUtilities#api_key
+is_singleton: false
+name: api_key
+params: ()
+visibility: public

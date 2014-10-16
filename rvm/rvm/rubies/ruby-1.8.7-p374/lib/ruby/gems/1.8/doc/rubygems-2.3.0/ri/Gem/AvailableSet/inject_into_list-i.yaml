@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Gem::AvailableSet#inject_into_list
+is_singleton: false
+name: inject_into_list
+params: (dep_list)
+visibility: public

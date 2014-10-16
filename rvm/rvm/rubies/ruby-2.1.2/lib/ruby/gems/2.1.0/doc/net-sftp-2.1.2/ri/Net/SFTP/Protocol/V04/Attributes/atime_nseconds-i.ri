@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"atime_nseconds:ETI"8Net::SFTP::Protocol::V04::Attributes#atime_nseconds;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"1The nanosecond component of the access time.;T:
+@fileI"+lib/net/sftp/protocol/04/attributes.rb;T:0@omit_headings_from_table_of_contents_below0F@I")Net::SFTP::Protocol::V04::Attributes;FcRDoc::NormalClass0

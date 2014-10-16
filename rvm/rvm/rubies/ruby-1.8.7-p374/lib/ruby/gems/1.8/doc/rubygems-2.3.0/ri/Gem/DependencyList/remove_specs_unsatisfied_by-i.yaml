@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Remove everything in the DependencyList that matches but doesn't satisfy items in <tt>dependencies</tt> (a hash of gem names to arrays of dependencies).
+full_name: Gem::DependencyList#remove_specs_unsatisfied_by
+is_singleton: false
+name: remove_specs_unsatisfied_by
+params: (dependencies)
+visibility: public

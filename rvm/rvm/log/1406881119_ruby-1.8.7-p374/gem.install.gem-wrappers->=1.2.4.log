@@ -1,0 +1,9 @@
+[2014-08-01 17:18:39] gem
+current path: /Users/abalonperin/dotfiles/rvm/rvm/src/rvm
+GEM_HOME=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-1.8.7-p374
+PATH=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-1.8.7-p374/bin:/Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-p374/bin:/Users/abalonperin/dotfiles/rvm/rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+GEM_PATH=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-1.8.7-p374
+command(6): gem install /Users/abalonperin/dotfiles/rvm/rvm/gem-cache/gem-wrappers-1.2.4.gem --local --no-ri --no-rdoc
+Building native extensions.  This could take a while...
+Successfully installed gem-wrappers-1.2.4
+1 gem installed

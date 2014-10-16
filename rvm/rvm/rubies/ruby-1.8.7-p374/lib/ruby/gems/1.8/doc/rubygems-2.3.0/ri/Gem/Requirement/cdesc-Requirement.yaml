@@ -1,0 +1,56 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: create
+- !ruby/object:RI::MethodSummary 
+  name: default
+- !ruby/object:RI::MethodSummary 
+  name: new
+- !ruby/object:RI::MethodSummary 
+  name: parse
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: A Requirement is a set of one or more version restrictions. It supports a few (<tt>=, !=, &gt;, &lt;, &gt;=, &lt;=, ~&gt;</tt>) different restriction operators.
+- !ruby/struct:SM::Flow::P 
+  body: See Gem::Version for a description on how versions and requirements work together in RubyGems.
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: OPS
+  value: "{ #:nodoc:     \"=\"  =>  lambda { |v, r| v == r },     \"!=\" =>  lambda { |v, r| v != r },     \">\"  =>  lambda { |v, r| v >  r },     \"<\"  =>  lambda { |v, r| v <  r },     \">=\" =>  lambda { |v, r| v >= r },     \"<=\" =>  lambda { |v, r| v <= r },     \"~>\" =>  lambda { |v, r| v >= r && v.release < r.bump }"
+- !ruby/object:RI::Constant 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: A regular expression that matches a requirement
+  name: PATTERN
+  value: /\A#{PATTERN_RAW}\z/
+- !ruby/object:RI::Constant 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The default requirement matches any version
+  name: DefaultRequirement
+  value: "[\">=\", Gem::Version.new(0)]"
+full_name: Gem::Requirement
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: ===
+- !ruby/object:RI::MethodSummary 
+  name: =~
+- !ruby/object:RI::MethodSummary 
+  name: concat
+- !ruby/object:RI::MethodSummary 
+  name: exact?
+- !ruby/object:RI::MethodSummary 
+  name: none?
+- !ruby/object:RI::MethodSummary 
+  name: prerelease?
+- !ruby/object:RI::MethodSummary 
+  name: satisfied_by?
+- !ruby/object:RI::MethodSummary 
+  name: specific?
+name: Requirement
+superclass: Object

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>handle_data (Capistrano::Deploy::SCM::Subversion)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/capistrano/recipes/deploy/scm/subversion.rb, line 70</span>
+        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">handle_data</span>(<span class="ruby-identifier">state</span>, <span class="ruby-identifier">stream</span>, <span class="ruby-identifier">text</span>)
+          <span class="ruby-identifier">host</span> = <span class="ruby-identifier">state</span>[<span class="ruby-identifier">:channel</span>][<span class="ruby-identifier">:host</span>]
+                <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;[#{host} :: #{stream}] #{text}&quot;</span>
+          <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">text</span>
+          <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/\bpassword.*:/i</span>
+            <span class="ruby-comment cmt"># subversion is prompting for a password</span>
+            <span class="ruby-node">&quot;#{scm_password_prompt}\n&quot;</span>
+          <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">%r{\(yes/no\)}</span>
+            <span class="ruby-comment cmt"># subversion is asking whether or not to connect</span>
+            <span class="ruby-value str">&quot;yes\n&quot;</span>
+          <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/passphrase/i</span>
+            <span class="ruby-comment cmt"># subversion is asking for the passphrase for the user's key</span>
+            <span class="ruby-node">&quot;#{variable(:scm_passphrase)}\n&quot;</span>
+          <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/The entry \'(.+?)\' is no longer a directory/</span>
+            <span class="ruby-identifier">raise</span> <span class="ruby-constant">Capistrano</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;subversion can't update because directory '#{$1}' was replaced. Please add it to svn:ignore.&quot;</span>
+          <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/accept \(t\)emporarily/</span>
+            <span class="ruby-comment cmt"># subversion is asking whether to accept the certificate</span>
+            <span class="ruby-value str">&quot;t\n&quot;</span>
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

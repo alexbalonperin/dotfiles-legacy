@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ParallelTests::Gherkin::Runner::runtime_logging
+is_singleton: true
+name: runtime_logging
+params: ()
+visibility: public

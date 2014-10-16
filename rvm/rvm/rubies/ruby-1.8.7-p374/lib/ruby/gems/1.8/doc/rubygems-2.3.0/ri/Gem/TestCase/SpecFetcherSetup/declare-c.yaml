@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: setup
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Executes a SpecFetcher setup block. Yields an instance then creates the gems and specifications defined in the instance.
+full_name: Gem::TestCase::SpecFetcherSetup::declare
+is_singleton: true
+name: declare
+params: (test, repository) {|setup| ...}
+visibility: public

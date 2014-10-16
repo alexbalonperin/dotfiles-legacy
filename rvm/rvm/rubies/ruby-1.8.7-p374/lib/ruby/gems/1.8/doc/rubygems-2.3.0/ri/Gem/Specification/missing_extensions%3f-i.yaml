@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Is this specification missing its extensions? When this returns true you probably want to build_extensions
+full_name: Gem::Specification#missing_extensions?
+is_singleton: false
+name: missing_extensions?
+params: ()
+visibility: public

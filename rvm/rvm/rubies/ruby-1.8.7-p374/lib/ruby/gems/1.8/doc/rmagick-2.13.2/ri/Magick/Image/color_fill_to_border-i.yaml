@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Set all pixels that are neighbors of x,y and are not the border color to the fill color
+full_name: Magick::Image#color_fill_to_border
+is_singleton: false
+name: color_fill_to_border
+params: (x, y, fill)
+visibility: public

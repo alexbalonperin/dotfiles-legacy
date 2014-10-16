@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Parallel::Worker::new
+is_singleton: true
+name: new
+params: (read, write, pid)
+visibility: public

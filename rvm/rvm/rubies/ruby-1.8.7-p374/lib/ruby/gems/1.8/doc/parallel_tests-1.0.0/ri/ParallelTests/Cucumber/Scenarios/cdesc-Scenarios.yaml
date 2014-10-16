@@ -1,0 +1,16 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: all
+comment: 
+constants: []
+
+full_name: ParallelTests::Cucumber::Scenarios
+includes: []
+
+instance_methods: []
+
+name: Scenarios
+superclass: Object

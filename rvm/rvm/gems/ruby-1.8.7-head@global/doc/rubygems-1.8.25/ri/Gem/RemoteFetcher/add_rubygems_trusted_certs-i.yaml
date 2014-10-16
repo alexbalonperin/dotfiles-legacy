@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Gem::RemoteFetcher#add_rubygems_trusted_certs
+is_singleton: false
+name: add_rubygems_trusted_certs
+params: (store)
+visibility: public

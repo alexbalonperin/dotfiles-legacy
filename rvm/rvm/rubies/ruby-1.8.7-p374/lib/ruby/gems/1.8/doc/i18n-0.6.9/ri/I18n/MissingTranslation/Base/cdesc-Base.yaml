@@ -1,0 +1,38 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: key
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: locale
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: options
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: []
+
+full_name: I18n::MissingTranslation::Base
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: html_message
+- !ruby/object:RI::MethodSummary 
+  name: keys
+- !ruby/object:RI::MethodSummary 
+  name: message
+- !ruby/object:RI::MethodSummary 
+  name: titleize
+- !ruby/object:RI::MethodSummary 
+  name: to_exception
+- !ruby/object:RI::MethodSummary 
+  name: to_s
+name: Base
+superclass: 

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Specify text drawing font
+full_name: Magick::Draw#font
+is_singleton: false
+name: font
+params: (name)
+visibility: public

@@ -1,0 +1,9 @@
+[2014-01-15 17:33:02] __rvm_patch
+__rvm_patch () 
+{ 
+    \patch "$@" || return $?
+}
+current path: /Users/abalonperin/.rvm/src/ruby-1.8.7-p374
+PATH=/usr/local/opt/pkg-config/bin:/usr/local/opt/libtool/bin:/usr/local/opt/automake/bin:/usr/local/opt/autoconf/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/abalonperin/.rvm/bin
+command(8): __rvm_patch -F 25 -p1 -N -f -i /Users/abalonperin/.rvm/patches/ruby/1.8.7/stdout-rouge-fix.patch
+patching file lib/mkmf.rb

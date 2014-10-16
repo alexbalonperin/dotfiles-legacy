@@ -1,0 +1,12 @@
+prefix=/Users/abalonperin/dotfiles/rvm/rvm/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: OpenSSL-libcrypto
+Description: OpenSSL cryptography library
+Version: 1.0.1g
+Requires: 
+Libs: -L${libdir} -lcrypto
+Libs.private: -L/Users/abalonperin/dotfiles/rvm/rvm/usr/lib  -lz
+Cflags: -I${includedir} 

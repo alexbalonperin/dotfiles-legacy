@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Magick::RVG::Utility::GraphicContext#font_size
+is_singleton: false
+name: font_size
+params: (points)
+visibility: public

@@ -1,0 +1,42 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: collect
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: ignore_tag_pattern
+  rw: W
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: []
+
+full_name: ParallelTests::Gherkin::Listener
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: background
+- !ruby/object:RI::MethodSummary 
+  name: eof
+- !ruby/object:RI::MethodSummary 
+  name: examples
+- !ruby/object:RI::MethodSummary 
+  name: feature
+- !ruby/object:RI::MethodSummary 
+  name: method_missing
+- !ruby/object:RI::MethodSummary 
+  name: reset_counters!
+- !ruby/object:RI::MethodSummary 
+  name: scenario
+- !ruby/object:RI::MethodSummary 
+  name: scenario_outline
+- !ruby/object:RI::MethodSummary 
+  name: step
+- !ruby/object:RI::MethodSummary 
+  name: uri
+name: Listener
+superclass: Object

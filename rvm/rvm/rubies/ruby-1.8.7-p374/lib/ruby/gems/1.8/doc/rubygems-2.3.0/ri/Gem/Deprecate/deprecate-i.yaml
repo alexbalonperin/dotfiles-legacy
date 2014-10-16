@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Simple deprecation method that deprecates <tt>name</tt> by wrapping it up in a dummy method. It warns on each call to the dummy method telling the user of <tt>repl</tt> (unless <tt>repl</tt> is :none) and the year/month that it is planned to go away.
+full_name: Gem::Deprecate#deprecate
+is_singleton: false
+name: deprecate
+params: (name, repl, year, month)
+visibility: public

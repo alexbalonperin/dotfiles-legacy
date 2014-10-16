@@ -1,0 +1,13 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+- !ruby/object:RI::AliasName 
+  name: eql?
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Compare with <tt>other</tt>. Supports another NameTuple or an Array in the [name, version, platform] format.
+full_name: Gem::NameTuple#==
+is_singleton: false
+name: ==
+params: (other)
+visibility: public

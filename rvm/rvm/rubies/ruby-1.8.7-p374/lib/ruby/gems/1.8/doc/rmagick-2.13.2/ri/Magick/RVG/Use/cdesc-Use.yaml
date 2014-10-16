@@ -1,0 +1,23 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: A Use object allows the re-use of RVG and RVG::Group objects within a container. Create a Use object with the RVG::UseConstructors#use method.
+constants: []
+
+full_name: Magick::RVG::Use
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: Stylable
+- !ruby/object:RI::IncludedModule 
+  name: Transformable
+- !ruby/object:RI::IncludedModule 
+  name: Duplicatable
+instance_methods: []
+
+name: Use
+superclass: Object

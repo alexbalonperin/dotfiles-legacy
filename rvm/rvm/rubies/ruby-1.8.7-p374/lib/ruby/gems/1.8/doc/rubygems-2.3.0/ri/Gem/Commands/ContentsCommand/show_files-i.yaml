@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Gem::Commands::ContentsCommand#show_files
+is_singleton: false
+name: show_files
+params: (files)
+visibility: public

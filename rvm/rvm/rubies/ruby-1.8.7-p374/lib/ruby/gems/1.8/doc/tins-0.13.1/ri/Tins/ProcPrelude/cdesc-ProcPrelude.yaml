@@ -1,0 +1,74 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Tins::ProcPrelude
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: apply
+- !ruby/object:RI::MethodSummary 
+  name: apply
+- !ruby/object:RI::MethodSummary 
+  name: array
+- !ruby/object:RI::MethodSummary 
+  name: array
+- !ruby/object:RI::MethodSummary 
+  name: call
+- !ruby/object:RI::MethodSummary 
+  name: call
+- !ruby/object:RI::MethodSummary 
+  name: const
+- !ruby/object:RI::MethodSummary 
+  name: const
+- !ruby/object:RI::MethodSummary 
+  name: first
+- !ruby/object:RI::MethodSummary 
+  name: first
+- !ruby/object:RI::MethodSummary 
+  name: from
+- !ruby/object:RI::MethodSummary 
+  name: from
+- !ruby/object:RI::MethodSummary 
+  name: head
+- !ruby/object:RI::MethodSummary 
+  name: head
+- !ruby/object:RI::MethodSummary 
+  name: id1
+- !ruby/object:RI::MethodSummary 
+  name: id1
+- !ruby/object:RI::MethodSummary 
+  name: last
+- !ruby/object:RI::MethodSummary 
+  name: last
+- !ruby/object:RI::MethodSummary 
+  name: map_apply
+- !ruby/object:RI::MethodSummary 
+  name: map_apply
+- !ruby/object:RI::MethodSummary 
+  name: nth
+- !ruby/object:RI::MethodSummary 
+  name: nth
+- !ruby/object:RI::MethodSummary 
+  name: rotate
+- !ruby/object:RI::MethodSummary 
+  name: rotate
+- !ruby/object:RI::MethodSummary 
+  name: second
+- !ruby/object:RI::MethodSummary 
+  name: second
+- !ruby/object:RI::MethodSummary 
+  name: swap
+- !ruby/object:RI::MethodSummary 
+  name: swap
+- !ruby/object:RI::MethodSummary 
+  name: tail
+- !ruby/object:RI::MethodSummary 
+  name: tail
+name: ProcPrelude
+superclass: 

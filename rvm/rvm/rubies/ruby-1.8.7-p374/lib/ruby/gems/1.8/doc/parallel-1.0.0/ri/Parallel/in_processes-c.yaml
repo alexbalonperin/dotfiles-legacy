@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Parallel::in_processes
+is_singleton: true
+name: in_processes
+params: (options = {}, &block)
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Run the given block with the thread startup and shutdown.
+full_name: Rake::Application#run_with_threads
+is_singleton: false
+name: run_with_threads
+params: () {|| ...}
+visibility: public

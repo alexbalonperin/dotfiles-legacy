@@ -1,0 +1,7 @@
+[2014-08-01 17:35:40] git
+current path: /Users/abalonperin/dotfiles/rvm/rvm/src
+GEM_HOME=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2
+PATH=/usr/local/opt/pkg-config/bin:/usr/local/opt/libtool/bin:/usr/local/opt/automake/bin:/usr/local/opt/autoconf/bin:/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2/bin:/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2/bin:/Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/abalonperin/dotfiles/rvm/rvm/bin
+GEM_PATH=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2
+command(4): git clone git://github.com/ruby/ruby.git /Users/abalonperin/dotfiles/rvm/rvm/repos/ruby
+Cloning into '/Users/abalonperin/dotfiles/rvm/rvm/repos/ruby'...

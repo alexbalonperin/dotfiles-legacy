@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+full_name: Tins::Once#only_once
+is_singleton: false
+name: only_once
+params: (lock_filename = nil, locking_constant = nil) {|| ...}
+visibility: public

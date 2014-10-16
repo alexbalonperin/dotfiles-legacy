@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Converts this AvailableSet into a RequestSet that can be used to install gems.
+- !ruby/struct:SM::Flow::P 
+  body: If <tt>development</tt> is :none then no development dependencies are installed. Other options are :shallow for only direct development dependencies of the gems in this set or :all for all development dependencies.
+full_name: Gem::AvailableSet#to_request_set
+is_singleton: false
+name: to_request_set
+params: (development = :none)
+visibility: public

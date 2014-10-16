@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Backend::Fallbacks#extract_non_symbol_default!
+is_singleton: false
+name: extract_non_symbol_default!
+params: (options)
+visibility: public

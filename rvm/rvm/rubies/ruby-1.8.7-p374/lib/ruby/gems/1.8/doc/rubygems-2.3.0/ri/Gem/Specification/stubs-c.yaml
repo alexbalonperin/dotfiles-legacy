@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Returns a Gem::StubSpecification for every installed gem
+full_name: Gem::Specification::stubs
+is_singleton: true
+name: stubs
+params: ()
+visibility: public

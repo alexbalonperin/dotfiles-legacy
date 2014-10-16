@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Creates a new UnsatisfiableDependencyError for the unsatisfiable Gem::Resolver::DependencyRequest <tt>dep</tt>
+full_name: Gem::UnsatisfiableDependencyError::new
+is_singleton: true
+name: new
+params: (dep, platform_mismatch=nil)
+visibility: public

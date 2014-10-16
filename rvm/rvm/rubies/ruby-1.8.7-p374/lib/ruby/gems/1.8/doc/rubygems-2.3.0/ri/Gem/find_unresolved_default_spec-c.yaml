@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Find a Gem::Specification of default gem from <tt>path</tt>
+full_name: Gem::find_unresolved_default_spec
+is_singleton: true
+name: find_unresolved_default_spec
+params: (path)
+visibility: public

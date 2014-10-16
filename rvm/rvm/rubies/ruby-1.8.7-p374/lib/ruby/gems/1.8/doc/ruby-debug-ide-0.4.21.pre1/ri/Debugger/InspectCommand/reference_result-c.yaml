@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Debugger::InspectCommand::reference_result
+is_singleton: true
+name: reference_result
+params: (result)
+visibility: public

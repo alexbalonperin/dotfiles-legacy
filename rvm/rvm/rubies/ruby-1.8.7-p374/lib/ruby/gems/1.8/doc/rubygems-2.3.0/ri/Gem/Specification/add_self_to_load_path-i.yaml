@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Adds this spec's require paths to LOAD_PATH, in the proper location.
+full_name: Gem::Specification#add_self_to_load_path
+is_singleton: false
+name: add_self_to_load_path
+params: ()
+visibility: public

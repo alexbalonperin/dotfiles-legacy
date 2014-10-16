@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>create_or_reuse_connection (SSHKit::Backend::ConnectionPool)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/sshkit/backends/connection_pool.rb, line 17</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_or_reuse_connection</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">new_connection_args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+        <span class="ruby-comment cmt"># Optimization: completely bypass the pool if idle_timeout is zero.</span>
+        <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">new_connection_args</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">idle_timeout</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+
+        <span class="ruby-identifier">key</span> = <span class="ruby-identifier">new_connection_args</span>.<span class="ruby-identifier">to_s</span>
+        <span class="ruby-identifier">entry</span> = <span class="ruby-identifier">find_and_reject_invalid</span>(<span class="ruby-identifier">key</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">expired?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">closed?</span> }
+
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">nil?</span>
+          <span class="ruby-identifier">entry</span> = <span class="ruby-identifier">store_entry</span>(<span class="ruby-identifier">key</span>, <span class="ruby-keyword kw">yield</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">new_connection_args</span>))
+        <span class="ruby-keyword kw">end</span>
+
+        <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">expires_at</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">idle_timeout</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">idle_timeout</span>
+        <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">connection</span>
+      <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

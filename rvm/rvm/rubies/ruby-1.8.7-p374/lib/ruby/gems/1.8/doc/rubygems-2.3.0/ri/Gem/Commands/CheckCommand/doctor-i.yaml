@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Gem::Commands::CheckCommand#doctor
+is_singleton: false
+name: doctor
+params: ()
+visibility: public

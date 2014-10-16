@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: An English description of the error.
+full_name: Gem::SourceFetchProblem#wordy
+is_singleton: false
+name: wordy
+params: ()
+visibility: public

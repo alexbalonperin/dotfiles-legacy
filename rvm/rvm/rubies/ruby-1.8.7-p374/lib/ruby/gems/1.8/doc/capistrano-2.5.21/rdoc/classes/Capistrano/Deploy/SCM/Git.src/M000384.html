@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>handle_data (Capistrano::Deploy::SCM::Git)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/capistrano/recipes/deploy/scm/git.rb, line 239</span>
+        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">handle_data</span>(<span class="ruby-identifier">state</span>, <span class="ruby-identifier">stream</span>, <span class="ruby-identifier">text</span>)
+          <span class="ruby-identifier">host</span> = <span class="ruby-identifier">state</span>[<span class="ruby-identifier">:channel</span>][<span class="ruby-identifier">:host</span>]
+          <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;[#{host} :: #{stream}] #{text}&quot;</span>
+          <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">text</span>
+          <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/\bpassword.*:/i</span>
+            <span class="ruby-comment cmt"># git is prompting for a password</span>
+            <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">pass</span> = <span class="ruby-identifier">variable</span>(<span class="ruby-identifier">:scm_password</span>)
+              <span class="ruby-identifier">pass</span> = <span class="ruby-constant">Capistrano</span><span class="ruby-operator">::</span><span class="ruby-constant">CLI</span>.<span class="ruby-identifier">password_prompt</span>
+            <span class="ruby-keyword kw">end</span>
+            <span class="ruby-node">&quot;#{pass}\n&quot;</span>
+          <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">%r{\(yes/no\)}</span>
+            <span class="ruby-comment cmt"># git is asking whether or not to connect</span>
+            <span class="ruby-value str">&quot;yes\n&quot;</span>
+          <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/passphrase/i</span>
+            <span class="ruby-comment cmt"># git is asking for the passphrase for the user's key</span>
+            <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">pass</span> = <span class="ruby-identifier">variable</span>(<span class="ruby-identifier">:scm_passphrase</span>)
+              <span class="ruby-identifier">pass</span> = <span class="ruby-constant">Capistrano</span><span class="ruby-operator">::</span><span class="ruby-constant">CLI</span>.<span class="ruby-identifier">password_prompt</span>
+            <span class="ruby-keyword kw">end</span>
+            <span class="ruby-node">&quot;#{pass}\n&quot;</span>
+          <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/accept \(t\)emporarily/</span>
+            <span class="ruby-comment cmt"># git is asking whether to accept the certificate</span>
+            <span class="ruby-value str">&quot;t\n&quot;</span>
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

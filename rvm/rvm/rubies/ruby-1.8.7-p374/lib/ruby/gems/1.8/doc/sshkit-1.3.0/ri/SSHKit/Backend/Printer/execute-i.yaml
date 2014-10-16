@@ -1,0 +1,17 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+- !ruby/object:RI::AliasName 
+  name: upload!
+- !ruby/object:RI::AliasName 
+  name: download!
+- !ruby/object:RI::AliasName 
+  name: test
+- !ruby/object:RI::AliasName 
+  name: invoke
+block_params: 
+comment: 
+full_name: SSHKit::Backend::Printer#execute
+is_singleton: false
+name: execute
+params: (*args)
+visibility: public

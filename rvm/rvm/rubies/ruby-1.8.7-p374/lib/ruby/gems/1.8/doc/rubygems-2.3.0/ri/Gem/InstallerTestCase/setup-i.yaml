@@ -1,0 +1,25 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: "@gem:"
+    body: the path to a built gem from @spec
+  - !ruby/struct:SM::Flow::LI 
+    label: "@user_spec:"
+    body: the path to a built gem from @user_spec
+  - !ruby/struct:SM::Flow::LI 
+    label: "@installer:"
+    body: a Gem::Installer for the @spec that installs into @gemhome
+  - !ruby/struct:SM::Flow::LI 
+    label: "@user_installer:"
+    body: a Gem::Installer for the @user_spec that installs into Gem.user_dir
+  type: :NOTE
+full_name: Gem::InstallerTestCase#setup
+is_singleton: false
+name: setup
+params: ()
+visibility: public

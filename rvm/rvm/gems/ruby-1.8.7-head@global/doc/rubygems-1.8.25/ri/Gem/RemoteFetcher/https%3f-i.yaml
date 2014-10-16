@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Gem::RemoteFetcher#https?
+is_singleton: false
+name: https?
+params: (uri)
+visibility: public

@@ -1,0 +1,25 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: examine
+- !ruby/object:RI::MethodSummary 
+  name: examine
+comment: 
+constants: []
+
+full_name: "Tins::"
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: CountBy
+- !ruby/object:RI::IncludedModule 
+  name: UniqBy
+- !ruby/object:RI::IncludedModule 
+  name: CountBy
+- !ruby/object:RI::IncludedModule 
+  name: UniqBy
+instance_methods: []
+
+name: ""
+superclass: 

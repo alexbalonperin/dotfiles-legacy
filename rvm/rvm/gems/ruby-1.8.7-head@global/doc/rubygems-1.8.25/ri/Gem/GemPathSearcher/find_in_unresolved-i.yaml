@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Gem::GemPathSearcher#find_in_unresolved
+is_singleton: false
+name: find_in_unresolved
+params: (glob)
+visibility: public

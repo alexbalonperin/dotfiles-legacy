@@ -1,0 +1,17 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Raised by Gem::Validator when something is not right in a gem.
+constants: []
+
+full_name: Gem::VerificationError
+includes: []
+
+instance_methods: []
+
+name: VerificationError
+superclass: Gem::Exception

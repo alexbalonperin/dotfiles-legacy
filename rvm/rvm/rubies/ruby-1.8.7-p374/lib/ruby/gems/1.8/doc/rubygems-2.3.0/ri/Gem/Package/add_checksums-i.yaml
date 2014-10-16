@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Adds a checksum for each entry in the gem to checksums.yaml.gz.
+full_name: Gem::Package#add_checksums
+is_singleton: false
+name: add_checksums
+params: (tar)
+visibility: public

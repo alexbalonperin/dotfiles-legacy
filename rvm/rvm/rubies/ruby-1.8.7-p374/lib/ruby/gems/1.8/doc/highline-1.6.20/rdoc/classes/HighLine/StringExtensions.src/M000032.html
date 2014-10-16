@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>included (HighLine::StringExtensions)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/highline/string_extensions.rb, line 32</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">included</span>(<span class="ruby-identifier">base</span>)
+      <span class="ruby-constant">HighLine</span><span class="ruby-operator">::</span><span class="ruby-constant">COLORS</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">color</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">color</span> = <span class="ruby-identifier">color</span>.<span class="ruby-identifier">downcase</span>
+        <span class="ruby-identifier">base</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-value str">&quot;undef :\#{color} if method_defined? :\#{color}\ndef \#{color}\ncolor(:\#{color})\nend\n&quot;</span>
+
+        <span class="ruby-identifier">base</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-value str">&quot;undef :on_\#{color} if method_defined? :on_\#{color}\ndef on_\#{color}\non(:\#{color})\nend\n&quot;</span>
+        <span class="ruby-constant">HighLine</span><span class="ruby-operator">::</span><span class="ruby-constant">STYLES</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">style</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">style</span> = <span class="ruby-identifier">style</span>.<span class="ruby-identifier">downcase</span>
+          <span class="ruby-identifier">base</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-value str">&quot;undef :\#{style} if method_defined? :\#{style}\ndef \#{style}\ncolor(:\#{style})\nend\n&quot;</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+
+      <span class="ruby-identifier">base</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword kw">do</span>
+        <span class="ruby-keyword kw">undef</span> <span class="ruby-identifier">:color</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">method_defined?</span> <span class="ruby-identifier">:color</span>
+        <span class="ruby-keyword kw">undef</span> <span class="ruby-identifier">:foreground</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">method_defined?</span> <span class="ruby-identifier">:foreground</span>
+        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">color</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+          <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">HighLine</span>.<span class="ruby-identifier">color</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>))
+        <span class="ruby-keyword kw">end</span>
+        <span class="ruby-identifier">alias_method</span> <span class="ruby-identifier">:foreground</span>, <span class="ruby-identifier">:color</span>
+
+        <span class="ruby-keyword kw">undef</span> <span class="ruby-identifier">:on</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">method_defined?</span> <span class="ruby-identifier">:on</span>
+        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">on</span>(<span class="ruby-identifier">arg</span>)
+          <span class="ruby-identifier">color</span>((<span class="ruby-value str">'on_'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">to_s</span>).<span class="ruby-identifier">to_sym</span>)
+        <span class="ruby-keyword kw">end</span>
+
+        <span class="ruby-keyword kw">undef</span> <span class="ruby-identifier">:uncolor</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">method_defined?</span> <span class="ruby-identifier">:uncolor</span>
+        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">uncolor</span>
+          <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">HighLine</span>.<span class="ruby-identifier">uncolor</span>(<span class="ruby-keyword kw">self</span>))
+        <span class="ruby-keyword kw">end</span>
+
+        <span class="ruby-keyword kw">undef</span> <span class="ruby-identifier">:rgb</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">method_defined?</span> <span class="ruby-identifier">:rgb</span>
+        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rgb</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">colors</span>)
+          <span class="ruby-identifier">color_code</span> = <span class="ruby-identifier">colors</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">color</span><span class="ruby-operator">|</span> <span class="ruby-identifier">color</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Numeric</span>) <span class="ruby-operator">?</span> <span class="ruby-value str">'%02x'</span><span class="ruby-operator">%</span><span class="ruby-identifier">color</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">color</span>.<span class="ruby-identifier">to_s</span>}.<span class="ruby-identifier">join</span>
+          <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Bad RGB color #{colors.inspect}&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">color_code</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^[a-fA-F0-9]{6}/</span>
+          <span class="ruby-identifier">color</span>(<span class="ruby-node">&quot;rgb_#{color_code}&quot;</span>.<span class="ruby-identifier">to_sym</span>)
+        <span class="ruby-keyword kw">end</span>
+
+        <span class="ruby-keyword kw">undef</span> <span class="ruby-identifier">:on_rgb</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">method_defined?</span> <span class="ruby-identifier">:on_rgb</span>
+        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">on_rgb</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">colors</span>)
+          <span class="ruby-identifier">color_code</span> = <span class="ruby-identifier">colors</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">color</span><span class="ruby-operator">|</span> <span class="ruby-identifier">color</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Numeric</span>) <span class="ruby-operator">?</span> <span class="ruby-value str">'%02x'</span><span class="ruby-operator">%</span><span class="ruby-identifier">color</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">color</span>.<span class="ruby-identifier">to_s</span>}.<span class="ruby-identifier">join</span>
+          <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Bad RGB color #{colors.inspect}&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">color_code</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^[a-fA-F0-9]{6}/</span>
+          <span class="ruby-identifier">color</span>(<span class="ruby-node">&quot;on_rgb_#{color_code}&quot;</span>.<span class="ruby-identifier">to_sym</span>)
+        <span class="ruby-keyword kw">end</span>
+
+        <span class="ruby-comment cmt"># TODO Chain existing method_missing</span>
+        <span class="ruby-keyword kw">undef</span> <span class="ruby-identifier">:method_missing</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">method_defined?</span> <span class="ruby-identifier">:method_missing</span>
+        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method_missing</span>(<span class="ruby-identifier">method</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">blk</span>)
+          <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^(on_)?rgb_([0-9a-fA-F]{6})$/</span>
+            <span class="ruby-identifier">color</span>(<span class="ruby-identifier">method</span>)
+          <span class="ruby-keyword kw">else</span>
+            <span class="ruby-identifier">raise</span> <span class="ruby-constant">NoMethodError</span>, <span class="ruby-node">&quot;undefined method `#{method}' for #&lt;#{self.class}:#{'%#x'%self.object_id}&gt;&quot;</span>
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

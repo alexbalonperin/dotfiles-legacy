@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Temporarily turn off warnings. Intended for tests only.
+full_name: Gem::Deprecate#skip_during
+is_singleton: false
+name: skip_during
+params: () {|| ...}
+visibility: public

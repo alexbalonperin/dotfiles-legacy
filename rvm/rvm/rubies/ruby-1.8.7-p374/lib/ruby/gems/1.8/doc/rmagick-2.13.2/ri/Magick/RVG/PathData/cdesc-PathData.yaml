@@ -1,0 +1,39 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: The PathData class provides an object-oriented way to produce an SVG path. Each of the methods corresponds to a path command. Construct a path by calling one or more methods. The path object can be passed as an argument to the RVG::ShapeConstructors#path method.
+constants: []
+
+full_name: Magick::RVG::PathData
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: arc
+- !ruby/object:RI::MethodSummary 
+  name: closepath
+- !ruby/object:RI::MethodSummary 
+  name: curveto
+- !ruby/object:RI::MethodSummary 
+  name: hlineto
+- !ruby/object:RI::MethodSummary 
+  name: lineto
+- !ruby/object:RI::MethodSummary 
+  name: moveto
+- !ruby/object:RI::MethodSummary 
+  name: quadratic_curveto
+- !ruby/object:RI::MethodSummary 
+  name: smooth_curveto
+- !ruby/object:RI::MethodSummary 
+  name: smooth_quadratic_curveto
+- !ruby/object:RI::MethodSummary 
+  name: to_s
+- !ruby/object:RI::MethodSummary 
+  name: vlineto
+name: PathData
+superclass: Object

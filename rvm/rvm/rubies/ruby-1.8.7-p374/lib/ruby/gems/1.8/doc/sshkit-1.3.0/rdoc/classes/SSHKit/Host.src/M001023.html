@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>new (SSHKit::Host)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/sshkit/host.rb, line 23</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">host_string_or_options_hash</span>)
+
+      <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">host_string_or_options_hash</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+        <span class="ruby-identifier">suitable_parsers</span> = [
+          <span class="ruby-constant">SimpleHostParser</span>,
+          <span class="ruby-constant">HostWithPortParser</span>,
+          <span class="ruby-constant">HostWithUsernameAndPortParser</span>,
+          <span class="ruby-constant">IPv6HostWithPortParser</span>,
+          <span class="ruby-constant">HostWithUsernameParser</span>,
+        ].<span class="ruby-identifier">select</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+          <span class="ruby-identifier">p</span>.<span class="ruby-identifier">suitable?</span>(<span class="ruby-identifier">host_string_or_options_hash</span>)
+        <span class="ruby-keyword kw">end</span>
+
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">suitable_parsers</span>.<span class="ruby-identifier">any?</span>
+          <span class="ruby-identifier">suitable_parsers</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">tap</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">parser</span><span class="ruby-operator">|</span>
+            <span class="ruby-ivar">@user</span>, <span class="ruby-ivar">@hostname</span>, <span class="ruby-ivar">@port</span> = <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">host_string_or_options_hash</span>).<span class="ruby-identifier">attributes</span>
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-identifier">raise</span> <span class="ruby-constant">UnparsableHostStringError</span>, <span class="ruby-node">&quot;Cannot parse host string #{host_string_or_options_hash}&quot;</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">host_string_or_options_hash</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+          <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-node">&quot;#{key}=&quot;</span>)
+            <span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{key}=&quot;</span>, <span class="ruby-identifier">value</span>)
+          <span class="ruby-keyword kw">else</span>
+            <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Unknown host property #{key}&quot;</span>
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+full_name: SSHKit::Backend::Abstract#as
+is_singleton: false
+name: as
+params: (who, &block) {|| ...}
+visibility: public

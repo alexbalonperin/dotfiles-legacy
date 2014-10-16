@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "RSpec 1: does not keep track of failures, so we do"
+full_name: ParallelTests::RSpec::FailuresLogger#example_failed
+is_singleton: false
+name: example_failed
+params: (example, *args)
+visibility: public

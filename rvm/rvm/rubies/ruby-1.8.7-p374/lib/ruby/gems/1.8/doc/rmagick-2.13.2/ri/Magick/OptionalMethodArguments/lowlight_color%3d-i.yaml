@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: accepts Pixel object or color name
+full_name: Magick::OptionalMethodArguments#lowlight_color=
+is_singleton: false
+name: lowlight_color=
+params: (color)
+visibility: public

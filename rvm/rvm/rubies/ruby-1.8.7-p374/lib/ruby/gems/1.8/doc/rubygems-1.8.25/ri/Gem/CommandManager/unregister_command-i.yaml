@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Unregister the Symbol <tt>command</tt> as a gem command.
+full_name: Gem::CommandManager#unregister_command
+is_singleton: false
+name: unregister_command
+params: (command)
+visibility: public

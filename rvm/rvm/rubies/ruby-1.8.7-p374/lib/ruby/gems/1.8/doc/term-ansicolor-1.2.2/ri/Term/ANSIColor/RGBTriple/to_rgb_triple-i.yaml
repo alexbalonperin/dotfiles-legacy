@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Term::ANSIColor::RGBTriple#to_rgb_triple
+is_singleton: false
+name: to_rgb_triple
+params: ()
+visibility: public

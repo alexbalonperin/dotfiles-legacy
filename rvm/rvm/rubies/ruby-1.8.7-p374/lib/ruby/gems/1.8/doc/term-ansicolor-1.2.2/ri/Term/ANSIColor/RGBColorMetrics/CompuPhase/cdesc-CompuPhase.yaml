@@ -1,0 +1,22 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: distance
+- !ruby/object:RI::MethodSummary 
+  name: distance
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "Implements color distance as given in:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  http://www.compuphase.com/cmetric.htm\n"
+constants: []
+
+full_name: Term::ANSIColor::RGBColorMetrics::CompuPhase
+includes: []
+
+instance_methods: []
+
+name: CompuPhase
+superclass: 

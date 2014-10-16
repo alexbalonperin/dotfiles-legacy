@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Creates an RubyGems API to <tt>host</tt> and <tt>path</tt> with the given HTTP <tt>method</tt>.
+- !ruby/struct:SM::Flow::P 
+  body: If <tt>allowed_push_host</tt> metadata is present, then it will only allow that host.
+full_name: Gem::GemcutterUtilities#rubygems_api_request
+is_singleton: false
+name: rubygems_api_request
+params: (method, path, host = nil, allowed_push_host = nil, &block)
+visibility: public

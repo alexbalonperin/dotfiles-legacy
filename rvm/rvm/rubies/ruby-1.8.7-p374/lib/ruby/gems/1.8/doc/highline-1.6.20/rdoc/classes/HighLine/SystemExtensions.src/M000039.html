@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>initialize_system_extensions (HighLine::SystemExtensions)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/highline/system_extensions.rb, line 15</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize_system_extensions</span>
+        <span class="ruby-identifier">require</span> <span class="ruby-value str">'java'</span>
+        <span class="ruby-identifier">require</span> <span class="ruby-value str">'readline'</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-constant">JRUBY_VERSION</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^1.7/</span>
+          <span class="ruby-identifier">java_import</span> <span class="ruby-value str">'jline.console.ConsoleReader'</span>
+
+          <span class="ruby-identifier">input</span> = <span class="ruby-ivar">@input</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@input</span>.<span class="ruby-identifier">to_inputstream</span>
+          <span class="ruby-identifier">output</span> = <span class="ruby-ivar">@output</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">to_outputstream</span>
+
+          <span class="ruby-ivar">@java_console</span> = <span class="ruby-constant">ConsoleReader</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">input</span>, <span class="ruby-identifier">output</span>)
+          <span class="ruby-ivar">@java_console</span>.<span class="ruby-identifier">set_history_enabled</span>(<span class="ruby-keyword kw">false</span>)
+          <span class="ruby-ivar">@java_console</span>.<span class="ruby-identifier">set_bell_enabled</span>(<span class="ruby-keyword kw">true</span>)
+          <span class="ruby-ivar">@java_console</span>.<span class="ruby-identifier">set_pagination_enabled</span>(<span class="ruby-keyword kw">false</span>)
+          <span class="ruby-ivar">@java_terminal</span> = <span class="ruby-ivar">@java_console</span>.<span class="ruby-identifier">getTerminal</span>
+        <span class="ruby-keyword kw">elsif</span> <span class="ruby-constant">JRUBY_VERSION</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^1.6/</span>
+          <span class="ruby-identifier">java_import</span> <span class="ruby-value str">'java.io.OutputStreamWriter'</span>
+          <span class="ruby-identifier">java_import</span> <span class="ruby-value str">'java.nio.channels.Channels'</span>
+          <span class="ruby-identifier">java_import</span> <span class="ruby-value str">'jline.ConsoleReader'</span>
+          <span class="ruby-identifier">java_import</span> <span class="ruby-value str">'jline.Terminal'</span>
+
+          <span class="ruby-ivar">@java_input</span> = <span class="ruby-constant">Channels</span>.<span class="ruby-identifier">newInputStream</span>(<span class="ruby-ivar">@input</span>.<span class="ruby-identifier">to_channel</span>)
+          <span class="ruby-ivar">@java_output</span> = <span class="ruby-constant">OutputStreamWriter</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">Channels</span>.<span class="ruby-identifier">newOutputStream</span>(<span class="ruby-ivar">@output</span>.<span class="ruby-identifier">to_channel</span>))
+          <span class="ruby-ivar">@java_terminal</span> = <span class="ruby-constant">Terminal</span>.<span class="ruby-identifier">getTerminal</span>
+          <span class="ruby-ivar">@java_console</span> = <span class="ruby-constant">ConsoleReader</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@java_input</span>, <span class="ruby-ivar">@java_output</span>)
+          <span class="ruby-ivar">@java_console</span>.<span class="ruby-identifier">setUseHistory</span>(<span class="ruby-keyword kw">false</span>)
+          <span class="ruby-ivar">@java_console</span>.<span class="ruby-identifier">setBellEnabled</span>(<span class="ruby-keyword kw">true</span>)
+          <span class="ruby-ivar">@java_console</span>.<span class="ruby-identifier">setUsePagination</span>(<span class="ruby-keyword kw">false</span>)
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

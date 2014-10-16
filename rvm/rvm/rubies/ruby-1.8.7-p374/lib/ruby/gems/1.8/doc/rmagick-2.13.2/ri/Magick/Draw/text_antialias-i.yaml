@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Specify if rendered text is to be antialiased.
+full_name: Magick::Draw#text_antialias
+is_singleton: false
+name: text_antialias
+params: (boolean)
+visibility: public

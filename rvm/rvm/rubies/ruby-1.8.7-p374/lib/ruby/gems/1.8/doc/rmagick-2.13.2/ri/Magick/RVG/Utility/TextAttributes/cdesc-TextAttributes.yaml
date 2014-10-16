@@ -1,0 +1,56 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: WRITING_MODE
+  value: "%w{lr-tb lr rl-tb rl tb-rl tb}"
+full_name: Magick::RVG::Utility::TextAttributes
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: affine
+- !ruby/object:RI::MethodSummary 
+  name: baseline_shift
+- !ruby/object:RI::MethodSummary 
+  name: baseline_shift=
+- !ruby/object:RI::MethodSummary 
+  name: glyph_orientation_horizontal
+- !ruby/object:RI::MethodSummary 
+  name: glyph_orientation_horizontal=
+- !ruby/object:RI::MethodSummary 
+  name: glyph_orientation_vertical
+- !ruby/object:RI::MethodSummary 
+  name: glyph_orientation_vertical=
+- !ruby/object:RI::MethodSummary 
+  name: letter_spacing
+- !ruby/object:RI::MethodSummary 
+  name: letter_spacing=
+- !ruby/object:RI::MethodSummary 
+  name: non_default?
+- !ruby/object:RI::MethodSummary 
+  name: pop
+- !ruby/object:RI::MethodSummary 
+  name: push
+- !ruby/object:RI::MethodSummary 
+  name: set_affine
+- !ruby/object:RI::MethodSummary 
+  name: text_anchor
+- !ruby/object:RI::MethodSummary 
+  name: text_anchor=
+- !ruby/object:RI::MethodSummary 
+  name: word_spacing
+- !ruby/object:RI::MethodSummary 
+  name: word_spacing=
+- !ruby/object:RI::MethodSummary 
+  name: writing_mode
+- !ruby/object:RI::MethodSummary 
+  name: writing_mode=
+name: TextAttributes
+superclass: Object

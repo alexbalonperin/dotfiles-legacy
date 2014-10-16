@@ -1,0 +1,41 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The directory where trusted certificates will be stored.
+  name: dir
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: The TrustDir manages the trusted certificates for gem signature verification.
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Default permissions for the trust directory and its contents
+  name: DEFAULT_PERMISSIONS
+  value: "{     :trust_dir    => 0700,     :trusted_cert => 0600,   }"
+full_name: Gem::Security::TrustDir
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: cert_path
+- !ruby/object:RI::MethodSummary 
+  name: each_certificate
+- !ruby/object:RI::MethodSummary 
+  name: issuer_of
+- !ruby/object:RI::MethodSummary 
+  name: load_certificate
+- !ruby/object:RI::MethodSummary 
+  name: name_path
+- !ruby/object:RI::MethodSummary 
+  name: trust_cert
+- !ruby/object:RI::MethodSummary 
+  name: verify
+name: TrustDir
+superclass: Object

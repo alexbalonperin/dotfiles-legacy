@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Tins::AskAndSend#ask_and_send!
+is_singleton: false
+name: ask_and_send!
+params: (method_name, *args, &block)
+visibility: public

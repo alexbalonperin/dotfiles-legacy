@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: List of all unique prerequisite tasks including prerequisite tasks' prerequisites. Includes self when cyclic dependencies are found.
+full_name: Rake::Task#all_prerequisite_tasks
+is_singleton: false
+name: all_prerequisite_tasks
+params: ()
+visibility: public

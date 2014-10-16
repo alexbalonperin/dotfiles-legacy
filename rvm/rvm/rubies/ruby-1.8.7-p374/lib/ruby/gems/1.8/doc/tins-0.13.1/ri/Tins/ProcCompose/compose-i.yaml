@@ -1,0 +1,13 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+- !ruby/object:RI::AliasName 
+  name: "*"
+- !ruby/object:RI::AliasName 
+  name: "*"
+block_params: 
+comment: 
+full_name: Tins::ProcCompose#compose
+is_singleton: false
+name: compose
+params: (other)
+visibility: public

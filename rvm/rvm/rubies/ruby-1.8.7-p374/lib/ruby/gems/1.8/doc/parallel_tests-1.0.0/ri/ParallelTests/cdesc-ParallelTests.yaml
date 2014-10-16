@@ -1,0 +1,28 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: rake tasks for Rails 3+
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: VERSION
+  value: Version = '1.0.0'
+- !ruby/object:RI::Constant 
+  comment: 
+  name: WINDOWS
+  value: (RbConfig::CONFIG['host_os'] =~ /cygwin|mswin|mingw|bccwin|wince|emx/)
+- !ruby/object:RI::Constant 
+  comment: 
+  name: GREP_PROCESSES_COMMAND
+  value: \   if WINDOWS
+full_name: ParallelTests
+includes: []
+
+instance_methods: []
+
+name: ParallelTests
+superclass: 

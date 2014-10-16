@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>handle_data (Capistrano::Deploy::SCM::Mercurial)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/capistrano/recipes/deploy/scm/mercurial.rb, line 69</span>
+        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">handle_data</span>(<span class="ruby-identifier">state</span>, <span class="ruby-identifier">stream</span>, <span class="ruby-identifier">text</span>)
+          <span class="ruby-identifier">host</span> = <span class="ruby-identifier">state</span>[<span class="ruby-identifier">:channel</span>][<span class="ruby-identifier">:host</span>]
+          <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;[#{host} :: #{stream}] #{text}&quot;</span>
+          <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">text</span>
+          <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/^user:/</span><span class="ruby-identifier">mi</span>
+            <span class="ruby-comment cmt"># support :scm_user for backwards compatibility of this module</span>
+            <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">user</span> = <span class="ruby-identifier">variable</span>(<span class="ruby-identifier">:scm_username</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">variable</span>(<span class="ruby-identifier">:scm_user</span>)
+              <span class="ruby-node">&quot;#{user}\n&quot;</span>
+            <span class="ruby-keyword kw">else</span>
+              <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;No variable :scm_username specified and Mercurial asked!\n&quot;</span> <span class="ruby-operator">+</span>
+                <span class="ruby-node">&quot;Prompt was: #{text}&quot;</span>
+            <span class="ruby-keyword kw">end</span>
+          <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/\bpassword:/</span><span class="ruby-identifier">mi</span>
+            <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">pass</span> = <span class="ruby-identifier">scm_password_or_prompt</span>
+              <span class="ruby-comment cmt"># fall back on old behavior of erroring out with msg</span>
+              <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;No variable :scm_password specified and Mercurial asked!\n&quot;</span> <span class="ruby-operator">+</span>
+                <span class="ruby-node">&quot;Prompt was: #{text}&quot;</span>
+            <span class="ruby-keyword kw">end</span>
+            <span class="ruby-node">&quot;#{pass}\n&quot;</span>
+          <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/yes\/no/i</span>
+            <span class="ruby-value str">&quot;yes\n&quot;</span>
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

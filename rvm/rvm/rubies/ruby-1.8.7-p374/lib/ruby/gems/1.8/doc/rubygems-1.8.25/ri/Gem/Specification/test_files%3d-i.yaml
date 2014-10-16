@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Set test_files to <tt>files</tt>, ensuring it is an array.
+full_name: Gem::Specification#test_files=
+is_singleton: false
+name: test_files=
+params: (files)
+visibility: public

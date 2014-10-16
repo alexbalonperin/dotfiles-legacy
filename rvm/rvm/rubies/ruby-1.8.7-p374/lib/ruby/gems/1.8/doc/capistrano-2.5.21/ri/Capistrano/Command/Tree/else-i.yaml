@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Capistrano::Command::Tree#else
+is_singleton: false
+name: else
+params: (command, &block)
+visibility: public

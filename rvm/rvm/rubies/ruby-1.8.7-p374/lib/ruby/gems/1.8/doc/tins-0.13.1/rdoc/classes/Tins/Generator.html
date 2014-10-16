@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Tins::Generator</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Tins::Generator</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/lib/tins/generator_rb.html">
+                lib/tins/generator.rb
+                </a>
+        <br />
+                <a href="../../files/lib/tins/generator_rb.html">
+                lib/tins/generator.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                <a href="../Object.html">
+                Object
+               </a>
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+This class can create generator objects, that can produce all tuples, that
+would be created by as many for-loops as dimensions were given.
+</p>
+<p>
+The generator
+</p>
+<pre>
+ g = Tins::Generator[1..2, %w[a b c]]
+</pre>
+<p>
+produces
+</p>
+<pre>
+ g.to_a # =&gt; [[1, &quot;a&quot;], [1, &quot;b&quot;], [1, &quot;c&quot;], [2, &quot;a&quot;], [2, &quot;b&quot;], [2, &quot;c&quot;]]
+</pre>
+<p>
+The &#8216;<a href="Generator.html#M000742">each</a>&#8217; method can be
+used to iterate over the tuples
+</p>
+<pre>
+ g.each { |a, b| puts &quot;#{a} #{b}&quot; }
+</pre>
+<p>
+and <a href="Generator.html">Tins::Generator</a> includes the Enumerable
+module, so Enumerable.instance_methods can be used as well:
+</p>
+<pre>
+ g.select { |a, b| %w[a c].include? b  } # =&gt; [[1, &quot;a&quot;], [1, &quot;c&quot;], [2, &quot;a&quot;], [2, &quot;c&quot;]]
+</pre>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000740">[]</a>&nbsp;&nbsp;
+      <a href="#M000745">[]</a>&nbsp;&nbsp;
+      <a href="#M000748">add_dimension</a>&nbsp;&nbsp;
+      <a href="#M000743">add_dimension</a>&nbsp;&nbsp;
+      <a href="#M000742">each</a>&nbsp;&nbsp;
+      <a href="#M000747">each</a>&nbsp;&nbsp;
+      <a href="#M000741">new</a>&nbsp;&nbsp;
+      <a href="#M000746">new</a>&nbsp;&nbsp;
+      <a href="#M000744">size</a>&nbsp;&nbsp;
+      <a href="#M000749">size</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+    <div id="includes">
+      <h3 class="section-bar">Included Modules</h3>
+
+      <div id="includes-list">
+        <span class="include-name">Enumerable</span>
+        <span class="include-name">Enumerable</span>
+      </div>
+    </div>
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000740" class="method-detail">
+        <a name="M000740"></a>
+
+        <div class="method-heading">
+          <a href="Generator.src/M000740.html" target="Code" class="method-signature"
+            onclick="popupCode('Generator.src/M000740.html');return false;">
+          <span class="method-name">[]</span><span class="method-args">(*enums)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Create a <a href="Generator.html#M000741">new</a> <a
+href="Generator.html">Generator</a> object from the enumberables
+<em>enums</em>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000745" class="method-detail">
+        <a name="M000745"></a>
+
+        <div class="method-heading">
+          <a href="Generator.src/M000745.html" target="Code" class="method-signature"
+            onclick="popupCode('Generator.src/M000745.html');return false;">
+          <span class="method-name">[]</span><span class="method-args">(*enums)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Create a <a href="Generator.html#M000741">new</a> <a
+href="Generator.html">Generator</a> object from the enumberables
+<em>enums</em>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000741" class="method-detail">
+        <a name="M000741"></a>
+
+        <div class="method-heading">
+          <a href="Generator.src/M000741.html" target="Code" class="method-signature"
+            onclick="popupCode('Generator.src/M000741.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(enums)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Create a <a href="Generator.html#M000741">new</a> <a
+href="Generator.html">Generator</a> instance. Use the objects in the <a
+href="../Array.html">Array</a> <em>enums</em> as dimensions. The should all
+respond to the :<a href="Generator.html#M000742">each</a> method (see
+module Enumerable in the core ruby library).
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000746" class="method-detail">
+        <a name="M000746"></a>
+
+        <div class="method-heading">
+          <a href="Generator.src/M000746.html" target="Code" class="method-signature"
+            onclick="popupCode('Generator.src/M000746.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(enums)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Create a <a href="Generator.html#M000741">new</a> <a
+href="Generator.html">Generator</a> instance. Use the objects in the <a
+href="../Array.html">Array</a> <em>enums</em> as dimensions. The should all
+respond to the :<a href="Generator.html#M000742">each</a> method (see
+module Enumerable in the core ruby library).
+</p>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000748" class="method-detail">
+        <a name="M000748"></a>
+
+        <div class="method-heading">
+          <a href="Generator.src/M000748.html" target="Code" class="method-signature"
+            onclick="popupCode('Generator.src/M000748.html');return false;">
+          <span class="method-name">add_dimension</span><span class="method-args">(enum, iterator = :each)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Add another dimension to this generator. <em>enum</em> is an object, that
+ought to respond to the <em>iterator</em> method (defaults to :<a
+href="Generator.html#M000742">each</a>).
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000743" class="method-detail">
+        <a name="M000743"></a>
+
+        <div class="method-heading">
+          <a href="Generator.src/M000743.html" target="Code" class="method-signature"
+            onclick="popupCode('Generator.src/M000743.html');return false;">
+          <span class="method-name">add_dimension</span><span class="method-args">(enum, iterator = :each)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Add another dimension to this generator. <em>enum</em> is an object, that
+ought to respond to the <em>iterator</em> method (defaults to :<a
+href="Generator.html#M000742">each</a>).
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000742" class="method-detail">
+        <a name="M000742"></a>
+
+        <div class="method-heading">
+          <a href="Generator.src/M000742.html" target="Code" class="method-signature"
+            onclick="popupCode('Generator.src/M000742.html');return false;">
+          <span class="method-name">each</span><span class="method-args">() {|tuple| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Iterate over all tuples produced by this generator and yield to them.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000747" class="method-detail">
+        <a name="M000747"></a>
+
+        <div class="method-heading">
+          <a href="Generator.src/M000747.html" target="Code" class="method-signature"
+            onclick="popupCode('Generator.src/M000747.html');return false;">
+          <span class="method-name">each</span><span class="method-args">() {|tuple| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Iterate over all tuples produced by this generator and yield to them.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000744" class="method-detail">
+        <a name="M000744"></a>
+
+        <div class="method-heading">
+          <a href="Generator.src/M000744.html" target="Code" class="method-signature"
+            onclick="popupCode('Generator.src/M000744.html');return false;">
+          <span class="method-name">size</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the <a href="Generator.html#M000744">size</a> of this generator,
+that is the number of its dimensions.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000749" class="method-detail">
+        <a name="M000749"></a>
+
+        <div class="method-heading">
+          <a href="Generator.src/M000749.html" target="Code" class="method-signature"
+            onclick="popupCode('Generator.src/M000749.html');return false;">
+          <span class="method-name">size</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the <a href="Generator.html#M000744">size</a> of this generator,
+that is the number of its dimensions.
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

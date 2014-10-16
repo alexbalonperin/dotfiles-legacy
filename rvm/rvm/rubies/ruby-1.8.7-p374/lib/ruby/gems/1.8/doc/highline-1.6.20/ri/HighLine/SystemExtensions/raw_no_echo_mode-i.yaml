@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: HighLine::SystemExtensions#raw_no_echo_mode
+is_singleton: false
+name: raw_no_echo_mode
+params: ()
+visibility: public

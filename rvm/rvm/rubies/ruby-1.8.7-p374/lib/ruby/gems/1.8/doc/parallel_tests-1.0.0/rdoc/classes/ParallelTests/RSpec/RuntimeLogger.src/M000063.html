@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>example_group_finished (ParallelTests::RSpec::RuntimeLogger)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/parallel_tests/rspec/runtime_logger.rb, line 33</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">example_group_finished</span>(<span class="ruby-identifier">notification</span>)
+      <span class="ruby-ivar">@group_nesting</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@group_nesting</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+        <span class="ruby-identifier">path</span> = (<span class="ruby-constant">RSPEC_3</span> <span class="ruby-value">? </span><span class="ruby-identifier">notification</span>.<span class="ruby-identifier">group</span>.<span class="ruby-identifier">file_path</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">notification</span>.<span class="ruby-identifier">file_path</span>)
+        <span class="ruby-ivar">@example_times</span>[<span class="ruby-identifier">path</span>] <span class="ruby-operator">+=</span> <span class="ruby-constant">ParallelTests</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@time</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">super</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-keyword kw">super</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

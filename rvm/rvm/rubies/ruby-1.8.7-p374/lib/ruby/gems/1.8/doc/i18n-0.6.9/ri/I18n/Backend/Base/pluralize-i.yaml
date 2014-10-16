@@ -1,0 +1,26 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "Picks a translation from a pluralized mnemonic subkey according to English pluralization rules :"
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: "-"
+    body: It will pick the :one subkey if count is equal to 1.
+  - !ruby/struct:SM::Flow::LI 
+    label: "-"
+    body: It will pick the :other subkey otherwise.
+  - !ruby/struct:SM::Flow::LI 
+    label: "-"
+    body: It will pick the :zero subkey in the special case where count is equal to 0 and there is a :zero subkey present. This behaviour is not stand with regards to the CLDR pluralization rules.
+  type: :BULLET
+- !ruby/struct:SM::Flow::P 
+  body: Other backends can implement more flexible or complex pluralization rules.
+full_name: I18n::Backend::Base#pluralize
+is_singleton: false
+name: pluralize
+params: (locale, entry, count)
+visibility: protected

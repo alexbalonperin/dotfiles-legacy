@@ -1,0 +1,75 @@
+[2014-08-01 17:22:04] alias_delete_execute
+alias_delete_execute () 
+{ 
+    for _path in "$rvm_rubies_path" "$rvm_environments_path" "$rvm_wrappers_path";
+    do
+        if [[ -L "$_path/$1" ]]; then
+            \rm -fv "$_path/$1" || return $?;
+        fi;
+    done;
+    __rvm_db_ "$rvm_path/config/alias" "$1" "delete";
+    alias_after_delete_default "$1" || return $?
+}
+current path: /Users/abalonperin
+GEM_HOME=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2
+PATH=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2/bin:/Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/bin:/Users/abalonperin/dotfiles/rvm/rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+GEM_PATH=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2
+command(2): alias_delete_execute default
++ for _path in '"$rvm_rubies_path"' '"$rvm_environments_path"' '"$rvm_wrappers_path"'
++ [[ -L /Users/abalonperin/dotfiles/rvm/rvm/rubies/default ]]
++ rm -fv /Users/abalonperin/dotfiles/rvm/rvm/rubies/default
+/Users/abalonperin/dotfiles/rvm/rvm/rubies/default
++ for _path in '"$rvm_rubies_path"' '"$rvm_environments_path"' '"$rvm_wrappers_path"'
++ [[ -L /Users/abalonperin/dotfiles/rvm/rvm/environments/default ]]
++ for _path in '"$rvm_rubies_path"' '"$rvm_environments_path"' '"$rvm_wrappers_path"'
++ [[ -L /Users/abalonperin/dotfiles/rvm/rvm/wrappers/default ]]
++ rm -fv /Users/abalonperin/dotfiles/rvm/rvm/wrappers/default
+/Users/abalonperin/dotfiles/rvm/rvm/wrappers/default
++ __rvm_db_ /Users/abalonperin/dotfiles/rvm/rvm/config/alias default delete
++ typeset __db __key __value
++ __db=/Users/abalonperin/dotfiles/rvm/rvm/config/alias
++ __key=default
++ shift 2
++ __value=delete
++ case "${__value}" in
++ __rvm_db_remove /Users/abalonperin/dotfiles/rvm/rvm/config/alias default
++ [[ -f /Users/abalonperin/dotfiles/rvm/rvm/config/alias ]]
++ __rvm_sed -e '\#^default=# d' -e '/^$/d' /Users/abalonperin/dotfiles/rvm/rvm/config/alias
++ sed -e '\#^default=# d' -e '/^$/d' /Users/abalonperin/dotfiles/rvm/rvm/config/alias
++ mv -f /Users/abalonperin/dotfiles/rvm/rvm/config/alias.new /Users/abalonperin/dotfiles/rvm/rvm/config/alias
++ alias_after_delete_default default
++ [[ default == \d\e\f\a\u\l\t ]]
++ for _path in '"$rvm_bin_path"/default_*'
++ [[ -f /Users/abalonperin/dotfiles/rvm/rvm/bin/default_* ]]
++ _path='/Users/abalonperin/dotfiles/rvm/rvm/bin/default_*'
++ [[ -f /Users/abalonperin/dotfiles/rvm/rvm/bin/default_* ]]
++ for _path in '"$rvm_path"/wrappers/default/*' gem irb erb ri rdoc testrb rake ruby bundle
++ _path='*'
++ rm -fv '/Users/abalonperin/dotfiles/rvm/rvm/bin/*'
++ for _path in '"$rvm_path"/wrappers/default/*' gem irb erb ri rdoc testrb rake ruby bundle
++ _path=gem
++ rm -fv /Users/abalonperin/dotfiles/rvm/rvm/bin/gem
++ for _path in '"$rvm_path"/wrappers/default/*' gem irb erb ri rdoc testrb rake ruby bundle
++ _path=irb
++ rm -fv /Users/abalonperin/dotfiles/rvm/rvm/bin/irb
++ for _path in '"$rvm_path"/wrappers/default/*' gem irb erb ri rdoc testrb rake ruby bundle
++ _path=erb
++ rm -fv /Users/abalonperin/dotfiles/rvm/rvm/bin/erb
++ for _path in '"$rvm_path"/wrappers/default/*' gem irb erb ri rdoc testrb rake ruby bundle
++ _path=ri
++ rm -fv /Users/abalonperin/dotfiles/rvm/rvm/bin/ri
++ for _path in '"$rvm_path"/wrappers/default/*' gem irb erb ri rdoc testrb rake ruby bundle
++ _path=rdoc
++ rm -fv /Users/abalonperin/dotfiles/rvm/rvm/bin/rdoc
++ for _path in '"$rvm_path"/wrappers/default/*' gem irb erb ri rdoc testrb rake ruby bundle
++ _path=testrb
++ rm -fv /Users/abalonperin/dotfiles/rvm/rvm/bin/testrb
++ for _path in '"$rvm_path"/wrappers/default/*' gem irb erb ri rdoc testrb rake ruby bundle
++ _path=rake
++ rm -fv /Users/abalonperin/dotfiles/rvm/rvm/bin/rake
++ for _path in '"$rvm_path"/wrappers/default/*' gem irb erb ri rdoc testrb rake ruby bundle
++ _path=ruby
++ rm -fv /Users/abalonperin/dotfiles/rvm/rvm/bin/ruby
++ for _path in '"$rvm_path"/wrappers/default/*' gem irb erb ri rdoc testrb rake ruby bundle
++ _path=bundle
++ rm -fv /Users/abalonperin/dotfiles/rvm/rvm/bin/bundle

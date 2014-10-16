@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Term::ANSIColor::RGBColorMetricsHelpers::WeightedEuclideanDistance#weighted_euclidean_distance_to
+is_singleton: false
+name: weighted_euclidean_distance_to
+params: (other, weights = [ 1.0 ] * values.size)
+visibility: public

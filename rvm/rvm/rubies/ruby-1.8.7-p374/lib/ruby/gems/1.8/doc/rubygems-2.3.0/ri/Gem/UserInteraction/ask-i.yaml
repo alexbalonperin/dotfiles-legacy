@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Asks a <tt>question</tt> and returns the answer.
+full_name: Gem::UserInteraction#ask
+is_singleton: false
+name: ask
+params: (question)
+visibility: public

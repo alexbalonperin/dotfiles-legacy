@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: HighLine::colorize_strings
+is_singleton: true
+name: colorize_strings
+params: ()
+visibility: public

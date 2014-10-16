@@ -1,0 +1,13 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+- !ruby/object:RI::AliasName 
+  name: font_size
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Specify the font size in points. Yes, the primitive is &quot;font-size&quot; but in other places this value is called the &quot;pointsize&quot;. Give it both names.
+full_name: Magick::Draw#pointsize
+is_singleton: false
+name: pointsize
+params: (points)
+visibility: public

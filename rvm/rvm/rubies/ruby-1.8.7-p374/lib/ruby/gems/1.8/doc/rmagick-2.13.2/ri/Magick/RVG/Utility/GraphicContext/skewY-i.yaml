@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Magick::RVG::Utility::GraphicContext#skewY
+is_singleton: false
+name: skewY
+params: (degrees)
+visibility: public

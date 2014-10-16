@@ -1,0 +1,24 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The hash of (parsed) command-line options
+  name: options
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: included
+comment: 
+constants: []
+
+full_name: Capistrano::CLI::Options
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: coerce_variable
+- !ruby/object:RI::MethodSummary 
+  name: coerce_variable_types!
+name: Options
+superclass: 

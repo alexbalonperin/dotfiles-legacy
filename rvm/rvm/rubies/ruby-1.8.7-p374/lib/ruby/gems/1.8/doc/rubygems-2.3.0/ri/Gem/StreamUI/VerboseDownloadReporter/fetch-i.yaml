@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Tells the download reporter that the <tt>file_name</tt> is being fetched and contains <tt>total_bytes</tt>.
+full_name: Gem::StreamUI::VerboseDownloadReporter#fetch
+is_singleton: false
+name: fetch
+params: (file_name, total_bytes)
+visibility: public

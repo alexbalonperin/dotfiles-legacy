@@ -1,0 +1,23 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Register a Gem::Specification for default gem.
+- !ruby/struct:SM::Flow::P 
+  body: "Two formats for the specification are supported:"
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: MRI 2.0 style, where spec.files contains unprefixed require names. The spec's filenames will be registered as-is.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: New style, where spec.files contains files prefixed with paths from spec.require_paths. The prefixes are stripped before registering the spec's filenames. Unprefixed files are omitted.
+  type: :BULLET
+full_name: Gem::register_default_spec
+is_singleton: true
+name: register_default_spec
+params: (spec)
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Add a <tt>horizontal lineto</tt> command. If <tt>abs</tt> is <tt>true</tt> the coordinates are absolute, otherwise the coordinates are relative.
+full_name: Magick::RVG::PathData#hlineto
+is_singleton: false
+name: hlineto
+params: (abs, x)
+visibility: public

@@ -1,0 +1,18 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Tins::StringUnderscore
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: underscore
+- !ruby/object:RI::MethodSummary 
+  name: underscore
+name: StringUnderscore
+superclass: 

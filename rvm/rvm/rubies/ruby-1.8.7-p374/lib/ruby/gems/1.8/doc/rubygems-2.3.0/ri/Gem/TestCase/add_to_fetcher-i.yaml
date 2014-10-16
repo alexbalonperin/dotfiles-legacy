@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Add <tt>spec</tt> to +@fetcher+ serving the data in the file <tt>path</tt>. <tt>repo</tt> indicates which repo to make <tt>spec</tt> appear to be in.
+full_name: Gem::TestCase#add_to_fetcher
+is_singleton: false
+name: add_to_fetcher
+params: (spec, path=nil, repo=@gem_repo)
+visibility: public

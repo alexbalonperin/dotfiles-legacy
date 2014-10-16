@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ParallelTests::RSpec::FailuresLogger#dump_failure
+is_singleton: false
+name: dump_failure
+params: (*args)
+visibility: public

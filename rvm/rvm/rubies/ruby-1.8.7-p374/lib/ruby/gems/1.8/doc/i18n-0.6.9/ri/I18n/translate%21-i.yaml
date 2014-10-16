@@ -1,0 +1,13 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+- !ruby/object:RI::AliasName 
+  name: t!
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Wrapper for <tt>translate</tt> that adds <tt>:raise =&gt; true</tt>. With this option, if no translation is found, it will raise <tt>I18n::MissingTranslationData</tt>
+full_name: I18n#translate!
+is_singleton: false
+name: translate!
+params: (key, options={})
+visibility: public

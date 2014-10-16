@@ -1,0 +1,17 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:SM::Flow::RULE 
+  width: 10
+constants: []
+
+full_name: Magick::Image::DrawOptions
+includes: []
+
+instance_methods: []
+
+name: DrawOptions
+superclass: Object

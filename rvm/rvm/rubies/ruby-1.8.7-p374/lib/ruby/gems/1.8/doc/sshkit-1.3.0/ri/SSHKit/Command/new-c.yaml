@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Initialize a new Command object
+- !ruby/struct:SM::Flow::P 
+  body: "@param [Array] A list of arguments, the first is considered to be the command name, with optional variadaric args @return [Command] An un-started command object with no exit staus, and nothing in stdin or stdout"
+full_name: SSHKit::Command::new
+is_singleton: true
+name: new
+params: (*args)
+visibility: public

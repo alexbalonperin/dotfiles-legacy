@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Return the name that the gemspec file would be
+full_name: Gem::NameTuple#spec_name
+is_singleton: false
+name: spec_name
+params: ()
+visibility: public

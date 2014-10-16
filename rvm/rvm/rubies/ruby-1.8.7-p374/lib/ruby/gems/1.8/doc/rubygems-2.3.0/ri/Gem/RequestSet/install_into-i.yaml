@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: request, nil if block_given?
+comment: 
+full_name: Gem::RequestSet#install_into
+is_singleton: false
+name: install_into
+params: (dir, force = true, options = {}) {|request, nil if block_given?| ...}
+visibility: public

@@ -1,0 +1,35 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Errors encountered attempting to find the gem.
+  name: errors
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The name of the gem that could not be found.
+  name: name
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The version of the gem that could not be found.
+  name: version
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Raised by the DependencyInstaller when a specific gem cannot be found
+constants: []
+
+full_name: Gem::SpecificGemNotFoundException
+includes: []
+
+instance_methods: []
+
+name: SpecificGemNotFoundException
+superclass: Gem::GemNotFoundException

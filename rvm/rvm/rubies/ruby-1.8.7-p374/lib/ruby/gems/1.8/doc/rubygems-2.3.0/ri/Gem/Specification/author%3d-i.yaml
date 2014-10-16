@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "Singular writer for #authors"
+- !ruby/struct:SM::Flow::P 
+  body: "Usage:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  spec.author = 'John Jones'\n"
+full_name: Gem::Specification#author=
+is_singleton: false
+name: author=
+params: (o)
+visibility: public

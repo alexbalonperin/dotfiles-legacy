@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>dpi= (Magick::RVG)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/rvg/units.rb, line 9</span>
+            <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dpi=</span>(<span class="ruby-identifier">n</span>)
+                <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-keyword kw">defined?</span>(<span class="ruby-ivar">@dpi</span>)
+                    [<span class="ruby-constant">Float</span>, <span class="ruby-constant">Fixnum</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+                        <span class="ruby-identifier">c</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-value str">&quot;# the default measurement - 1px is 1 pixel\ndef px\nself\nend\n# inches\ndef in\nself * ::Magick::RVG.dpi\nend\n# millimeters\ndef mm\nself * ::Magick::RVG.dpi / 25.4\nend\n# centimeters\ndef cm\nself * ::Magick::RVG.dpi / 2.54\nend\n# points\ndef pt\nself * ::Magick::RVG.dpi / 72.0\nend\n# picas\ndef pc\nself * ::Magick::RVG.dpi / 6.0\nend\n# percentage of the argument\ndef pct(of)\nself * Float(of) / 100.0\nend\n# the default is deg\ndef deg\nself\nend\n# radians -&gt; degrees\ndef rad\nself * 180.0 / Math::PI\nend\n# grads -&gt; degrees\ndef grad\nself * 9.0 / 10.0\nend\n&quot;</span>
+                    <span class="ruby-keyword kw">end</span>
+                <span class="ruby-keyword kw">end</span>
+
+                <span class="ruby-ivar">@dpi</span> = <span class="ruby-constant">Float</span>(<span class="ruby-identifier">n</span>)
+                <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@dpi</span>
+            <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">ArgumentError</span>
+                <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;Can't convert `#{n}' to Float&quot;</span>
+            <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

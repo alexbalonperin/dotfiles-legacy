@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>to_spec (Gem::Dependency)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/rubygems/dependency.rb, line 255</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_spec</span>
+    <span class="ruby-identifier">matches</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_specs</span>
+
+    <span class="ruby-identifier">matches</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">spec</span><span class="ruby-operator">|</span> <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">activated?</span> } <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">matches</span>.<span class="ruby-identifier">last</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

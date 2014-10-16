@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: tuple
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Iterate over all tuples produced by this generator and yield to them.
+full_name: Tins::Generator#each
+is_singleton: false
+name: each
+params: () {|tuple| ...}
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ParallelTests::Test::Runner::with_filesize_info
+is_singleton: true
+name: with_filesize_info
+params: (tests)
+visibility: protected

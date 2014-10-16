@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Sets the known specs to <tt>specs</tt>. Not guaranteed to work for you in the future. Use at your own risk. Caveat emptor. Doomy doom doom. Etc etc.
+full_name: Gem::Specification::all=
+is_singleton: true
+name: all=
+params: (specs)
+visibility: public

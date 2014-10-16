@@ -1,0 +1,17 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: The SHA-256 HMAC algorithm. This has a mac and key length of 32, and uses the SHA-256 digest algorithm.
+constants: []
+
+full_name: Net::SSH::Transport::HMAC::SHA2_256
+includes: []
+
+instance_methods: []
+
+name: SHA2_256
+superclass: Abstract

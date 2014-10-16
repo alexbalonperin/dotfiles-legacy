@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Magick::Image#resize_to_fit!
+is_singleton: false
+name: resize_to_fit!
+params: (cols, rows=nil)
+visibility: public

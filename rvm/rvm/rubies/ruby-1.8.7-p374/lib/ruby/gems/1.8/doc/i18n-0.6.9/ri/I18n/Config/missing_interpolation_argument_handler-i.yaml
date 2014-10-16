@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Returns the current handler for situations when interpolation argument is missing. MissingInterpolationArgument will be raised by default.
+full_name: I18n::Config#missing_interpolation_argument_handler
+is_singleton: false
+name: missing_interpolation_argument_handler
+params: ()
+visibility: public

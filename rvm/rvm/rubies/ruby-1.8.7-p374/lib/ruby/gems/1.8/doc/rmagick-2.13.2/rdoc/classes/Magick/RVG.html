@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Magick::RVG</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Magick::RVG</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/lib/rvg/clippath_rb.html">
+                lib/rvg/clippath.rb
+                </a>
+        <br />
+                <a href="../../files/lib/rvg/container_rb.html">
+                lib/rvg/container.rb
+                </a>
+        <br />
+                <a href="../../files/lib/rvg/deep_equal_rb.html">
+                lib/rvg/deep_equal.rb
+                </a>
+        <br />
+                <a href="../../files/lib/rvg/describable_rb.html">
+                lib/rvg/describable.rb
+                </a>
+        <br />
+                <a href="../../files/lib/rvg/embellishable_rb.html">
+                lib/rvg/embellishable.rb
+                </a>
+        <br />
+                <a href="../../files/lib/rvg/misc_rb.html">
+                lib/rvg/misc.rb
+                </a>
+        <br />
+                <a href="../../files/lib/rvg/paint_rb.html">
+                lib/rvg/paint.rb
+                </a>
+        <br />
+                <a href="../../files/lib/rvg/pathdata_rb.html">
+                lib/rvg/pathdata.rb
+                </a>
+        <br />
+                <a href="../../files/lib/rvg/rvg_rb.html">
+                lib/rvg/rvg.rb
+                </a>
+        <br />
+                <a href="../../files/lib/rvg/stretchable_rb.html">
+                lib/rvg/stretchable.rb
+                </a>
+        <br />
+                <a href="../../files/lib/rvg/stylable_rb.html">
+                lib/rvg/stylable.rb
+                </a>
+        <br />
+                <a href="../../files/lib/rvg/text_rb.html">
+                lib/rvg/text.rb
+                </a>
+        <br />
+                <a href="../../files/lib/rvg/transformable_rb.html">
+                lib/rvg/transformable.rb
+                </a>
+        <br />
+                <a href="../../files/lib/rvg/units_rb.html">
+                lib/rvg/units.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000018">background_fill=</a>&nbsp;&nbsp;
+      <a href="#M000019">background_fill_opacity=</a>&nbsp;&nbsp;
+      <a href="#M000015">background_image=</a>&nbsp;&nbsp;
+      <a href="#M000016">background_pattern=</a>&nbsp;&nbsp;
+      <a href="#M000017">background_position=</a>&nbsp;&nbsp;
+      <a href="#M000014">convert_one_to_float</a>&nbsp;&nbsp;
+      <a href="#M000013">convert_to_float</a>&nbsp;&nbsp;
+      <a href="#M000010">deep_equal</a>&nbsp;&nbsp;
+      <a href="#M000011">deep_equal</a>&nbsp;&nbsp;
+      <a href="#M000022">dpi=</a>&nbsp;&nbsp;
+      <a href="#M000021">draw</a>&nbsp;&nbsp;
+      <a href="#M000012">fmsg</a>&nbsp;&nbsp;
+      <a href="#M000020">new</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+    <div id="includes">
+      <h3 class="section-bar">Included Modules</h3>
+
+      <div id="includes-list">
+        <span class="include-name"><a href="RVG/Stylable.html">Stylable</a></span>
+        <span class="include-name"><a href="RVG/Transformable.html">Transformable</a></span>
+        <span class="include-name"><a href="RVG/Stretchable.html">Stretchable</a></span>
+        <span class="include-name"><a href="RVG/Embellishable.html">Embellishable</a></span>
+        <span class="include-name"><a href="RVG/Describable.html">Describable</a></span>
+        <span class="include-name"><a href="RVG/Duplicatable.html">Duplicatable</a></span>
+      </div>
+    </div>
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Module <a href="RVG/Describable.html" class="link">Magick::RVG::Describable</a><br />
+Module <a href="RVG/Duplicatable.html" class="link">Magick::RVG::Duplicatable</a><br />
+Module <a href="RVG/Embellishable.html" class="link">Magick::RVG::Embellishable</a><br />
+Module <a href="RVG/ImageConstructors.html" class="link">Magick::RVG::ImageConstructors</a><br />
+Module <a href="RVG/PreserveAspectRatio.html" class="link">Magick::RVG::PreserveAspectRatio</a><br />
+Module <a href="RVG/ShapeConstructors.html" class="link">Magick::RVG::ShapeConstructors</a><br />
+Module <a href="RVG/Stretchable.html" class="link">Magick::RVG::Stretchable</a><br />
+Module <a href="RVG/StructureConstructors.html" class="link">Magick::RVG::StructureConstructors</a><br />
+Module <a href="RVG/Stylable.html" class="link">Magick::RVG::Stylable</a><br />
+Module <a href="RVG/TextConstructors.html" class="link">Magick::RVG::TextConstructors</a><br />
+Module <a href="RVG/Transformable.html" class="link">Magick::RVG::Transformable</a><br />
+Module <a href="RVG/UseConstructors.html" class="link">Magick::RVG::UseConstructors</a><br />
+Class <a href="RVG/Circle.html" class="link">Magick::RVG::Circle</a><br />
+Class <a href="RVG/ClipPath.html" class="link">Magick::RVG::ClipPath</a><br />
+Class <a href="RVG/Ellipse.html" class="link">Magick::RVG::Ellipse</a><br />
+Class <a href="RVG/Group.html" class="link">Magick::RVG::Group</a><br />
+Class <a href="RVG/Image.html" class="link">Magick::RVG::Image</a><br />
+Class <a href="RVG/Line.html" class="link">Magick::RVG::Line</a><br />
+Class <a href="RVG/Path.html" class="link">Magick::RVG::Path</a><br />
+Class <a href="RVG/PathData.html" class="link">Magick::RVG::PathData</a><br />
+Class <a href="RVG/Pattern.html" class="link">Magick::RVG::Pattern</a><br />
+Class <a href="RVG/PolyShape.html" class="link">Magick::RVG::PolyShape</a><br />
+Class <a href="RVG/Polygon.html" class="link">Magick::RVG::Polygon</a><br />
+Class <a href="RVG/Polyline.html" class="link">Magick::RVG::Polyline</a><br />
+Class <a href="RVG/Rect.html" class="link">Magick::RVG::Rect</a><br />
+Class <a href="RVG/Text.html" class="link">Magick::RVG::Text</a><br />
+Class <a href="RVG/TextBase.html" class="link">Magick::RVG::TextBase</a><br />
+Class <a href="RVG/Use.html" class="link">Magick::RVG::Use</a><br />
+Class <a href="RVG/Utility.html" class="link">Magick::RVG::Utility</a><br />
+
+    </div>
+
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">WORD_SEP</td>
+          <td>=</td>
+          <td class="context-item-value">/ /</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+    <div id="attribute-list">
+      <h3 class="section-bar">Attributes</h3>
+
+      <div class="name-list">
+        <table>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">background_fill</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc">
+The background fill color specified by <a
+href="RVG.html#M000018">background_fill=</a>
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">background_fill_opacity</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc">
+The background fill color opacity specified by <a
+href="RVG.html#M000019">background_fill_opacity=</a>
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">background_image</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc">
+The background image specified by <a
+href="RVG.html#M000015">background_image=</a>
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">background_position</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc">
+The background image layout specified by <a
+href="RVG.html#M000017">background_position=</a>
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">canvas</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc">
+The image after drawing has completed
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">dpi</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">height</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">width</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">x</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc">
+For embedded <a href="RVG.html">RVG</a> objects, the x-axis coordinate of
+the upper-left corner
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">y</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc">
+For embedded <a href="RVG.html">RVG</a> objects, the x-axis coordinate of
+the upper-left corner
+
+</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000014" class="method-detail">
+        <a name="M000014"></a>
+
+        <div class="method-heading">
+          <a href="RVG.src/M000014.html" target="Code" class="method-signature"
+            onclick="popupCode('RVG.src/M000014.html');return false;">
+          <span class="method-name">convert_one_to_float</span><span class="method-args">(arg)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000013" class="method-detail">
+        <a name="M000013"></a>
+
+        <div class="method-heading">
+          <a href="RVG.src/M000013.html" target="Code" class="method-signature"
+            onclick="popupCode('RVG.src/M000013.html');return false;">
+          <span class="method-name">convert_to_float</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000022" class="method-detail">
+        <a name="M000022"></a>
+
+        <div class="method-heading">
+          <a href="RVG.src/M000022.html" target="Code" class="method-signature"
+            onclick="popupCode('RVG.src/M000022.html');return false;">
+          <span class="method-name">dpi=</span><span class="method-args">(n)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000012" class="method-detail">
+        <a name="M000012"></a>
+
+        <div class="method-heading">
+          <a href="RVG.src/M000012.html" target="Code" class="method-signature"
+            onclick="popupCode('RVG.src/M000012.html');return false;">
+          <span class="method-name">fmsg</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Convert an array of method arguments to Float objects. If any cannot be
+converted, raise ArgumentError and issue a message.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000020" class="method-detail">
+        <a name="M000020"></a>
+
+        <div class="method-heading">
+          <a href="RVG.src/M000020.html" target="Code" class="method-signature"
+            onclick="popupCode('RVG.src/M000020.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(width=nil, height=nil) {|self| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+<a href="Draw.html">Draw</a> a <tt>width</tt> x <tt>height</tt> image. The
+image is specified by calling one or more drawing methods on the <a
+href="RVG.html">RVG</a> object. You can group the drawing method calls in
+the optional associated block. The <tt>x</tt> and <tt>y</tt> arguments have
+no meaning for the outermost <a href="RVG.html">RVG</a> object. On nested
+<a href="RVG.html">RVG</a> objects [<tt>x</tt>, <tt>y</tt>] is the
+coordinate of the upper-left corner in the containing canvas on which the
+nested <a href="RVG.html">RVG</a> object is placed.
+</p>
+<p>
+Drawing occurs on a <tt>canvas</tt> created by the <a
+href="RVG.html#M000021">draw</a> method. By default the canvas is
+transparent. You can specify a different canvas with the background_fill=
+or background_image= methods.
+</p>
+<p>
+<a href="RVG.html">RVG</a> objects are <em>containers</em>. That is, styles
+and transforms defined on the object are used by contained objects such as
+shapes, text, and groups unless overridden by an inner container or the
+object itself.
+</p>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000018" class="method-detail">
+        <a name="M000018"></a>
+
+        <div class="method-heading">
+          <a href="RVG.src/M000018.html" target="Code" class="method-signature"
+            onclick="popupCode('RVG.src/M000018.html');return false;">
+          <span class="method-name">background_fill=</span><span class="method-args">(color)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the canvas background color. Either a <a
+href="Pixel.html">Magick::Pixel</a> or a color name. The default fill is
+&quot;none&quot;, that is, transparent black.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000019" class="method-detail">
+        <a name="M000019"></a>
+
+        <div class="method-heading">
+          <a href="RVG.src/M000019.html" target="Code" class="method-signature"
+            onclick="popupCode('RVG.src/M000019.html');return false;">
+          <span class="method-name">background_fill_opacity=</span><span class="method-args">(opacity)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Opacity of the background fill color, a number between 0.0 (transparent)
+and 1.0 (opaque). The default is 1.0 when the <a
+href="RVG.html#M000018">background_fill=</a> attribute has been set.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000015" class="method-detail">
+        <a name="M000015"></a>
+
+        <div class="method-heading">
+          <a href="RVG.src/M000015.html" target="Code" class="method-signature"
+            onclick="popupCode('RVG.src/M000015.html');return false;">
+          <span class="method-name">background_image=</span><span class="method-args">(bg_image)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets an image to use as the canvas background. See <a
+href="RVG.html#M000017">background_position=</a> for layout options.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000016" class="method-detail">
+        <a name="M000016"></a>
+
+        <div class="method-heading">
+          <a href="RVG.src/M000016.html" target="Code" class="method-signature"
+            onclick="popupCode('RVG.src/M000016.html');return false;">
+          <span class="method-name">background_pattern=</span><span class="method-args">(filler)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets an object to use to fill the canvas background. The object must have a
+<tt>fill</tt> method. See the <b>Fill Classes</b> section in the RMagick
+doc for more information.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000017" class="method-detail">
+        <a name="M000017"></a>
+
+        <div class="method-heading">
+          <a href="RVG.src/M000017.html" target="Code" class="method-signature"
+            onclick="popupCode('RVG.src/M000017.html');return false;">
+          <span class="method-name">background_position=</span><span class="method-args">(pos)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+How to position the background image on the canvas. One of the following
+symbols:
+</p>
+<dl>
+<dt>:scaled</dt><dd>Scale the image to the canvas width and height.
+
+</dd>
+<dt>:tiled</dt><dd>Tile the image across the canvas.
+
+</dd>
+<dt>:fit</dt><dd>Scale the image to fit within the canvas while retaining the image
+proportions. Center the image on the canvas. Color any part of the canvas
+not covered by the image with the background color.
+
+</dd>
+</dl>
+        </div>
+      </div>
+
+      <div id="method-M000010" class="method-detail">
+        <a name="M000010"></a>
+
+        <div class="method-heading">
+          <a href="RVG.src/M000010.html" target="Code" class="method-signature"
+            onclick="popupCode('RVG.src/M000010.html');return false;">
+          <span class="method-name">deep_equal</span><span class="method-args">(other)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000011" class="method-detail">
+        <a name="M000011"></a>
+
+        <div class="method-heading">
+          <a href="RVG.src/M000011.html" target="Code" class="method-signature"
+            onclick="popupCode('RVG.src/M000011.html');return false;">
+          <span class="method-name">deep_equal</span><span class="method-args">(other)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000021" class="method-detail">
+        <a name="M000021"></a>
+
+        <div class="method-heading">
+          <a href="RVG.src/M000021.html" target="Code" class="method-signature"
+            onclick="popupCode('RVG.src/M000021.html');return false;">
+          <span class="method-name">draw</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Construct a canvas or reuse an existing canvas. Execute drawing commands.
+Return the canvas.
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

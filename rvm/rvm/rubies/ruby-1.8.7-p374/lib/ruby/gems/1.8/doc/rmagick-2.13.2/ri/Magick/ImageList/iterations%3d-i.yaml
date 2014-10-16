@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Set the number of iterations of an animated GIF
+full_name: Magick::ImageList#iterations=
+is_singleton: false
+name: iterations=
+params: (n)
+visibility: public

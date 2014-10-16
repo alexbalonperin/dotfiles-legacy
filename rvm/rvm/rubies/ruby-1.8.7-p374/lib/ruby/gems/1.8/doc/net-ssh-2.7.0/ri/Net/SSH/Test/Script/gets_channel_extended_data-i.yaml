@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Scripts the reception of a channel extended data packet from the remote host by the given Net::SSH::Test::Channel <tt>channel</tt>. This will typically be called via Net::SSH::Test::Channel#gets_extended_data.
+- !ruby/struct:SM::Flow::P 
+  body: Currently the only extended data type is stderr == 1.
+full_name: Net::SSH::Test::Script#gets_channel_extended_data
+is_singleton: false
+name: gets_channel_extended_data
+params: (channel, data)
+visibility: public

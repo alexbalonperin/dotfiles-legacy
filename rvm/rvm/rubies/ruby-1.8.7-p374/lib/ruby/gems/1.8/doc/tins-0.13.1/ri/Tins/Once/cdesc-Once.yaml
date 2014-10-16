@@ -1,0 +1,25 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Tins::Once
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: File::Constants
+- !ruby/object:RI::IncludedModule 
+  name: File::Constants
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: only_once
+- !ruby/object:RI::MethodSummary 
+  name: only_once
+- !ruby/object:RI::MethodSummary 
+  name: try_only_once
+- !ruby/object:RI::MethodSummary 
+  name: try_only_once
+name: Once
+superclass: 

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "DOC: Missing docs or :nodoc:."
+full_name: Gem::Installer#ensure_dependencies_met
+is_singleton: false
+name: ensure_dependencies_met
+params: ()
+visibility: public

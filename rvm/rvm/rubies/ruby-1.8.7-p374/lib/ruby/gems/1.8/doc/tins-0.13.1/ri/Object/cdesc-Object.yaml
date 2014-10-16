@@ -1,0 +1,69 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Object
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: Tins::AskAndSend
+- !ruby/object:RI::IncludedModule 
+  name: Tins::Attempt
+- !ruby/object:RI::IncludedModule 
+  name: DeepConstGet
+- !ruby/object:RI::IncludedModule 
+  name: Tins::DeepDup
+- !ruby/object:RI::IncludedModule 
+  name: Full
+- !ruby/object:RI::IncludedModule 
+  name: Tins::IfPredicate
+- !ruby/object:RI::IncludedModule 
+  name: Tins::Null::Kernel
+- !ruby/object:RI::IncludedModule 
+  name: Tins::P
+- !ruby/object:RI::IncludedModule 
+  name: Tins::RequireMaybe
+- !ruby/object:RI::IncludedModule 
+  name: Tins::Responding
+- !ruby/object:RI::IncludedModule 
+  name: "::Tins::To"
+- !ruby/object:RI::IncludedModule 
+  name: Tins::AskAndSend
+- !ruby/object:RI::IncludedModule 
+  name: Tins::Attempt
+- !ruby/object:RI::IncludedModule 
+  name: DeepConstGet
+- !ruby/object:RI::IncludedModule 
+  name: Tins::DeepDup
+- !ruby/object:RI::IncludedModule 
+  name: Full
+- !ruby/object:RI::IncludedModule 
+  name: Tins::IfPredicate
+- !ruby/object:RI::IncludedModule 
+  name: Tins::Null::Kernel
+- !ruby/object:RI::IncludedModule 
+  name: Tins::P
+- !ruby/object:RI::IncludedModule 
+  name: Tins::RequireMaybe
+- !ruby/object:RI::IncludedModule 
+  name: Tins::Responding
+- !ruby/object:RI::IncludedModule 
+  name: "::Tins::To"
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: examine
+- !ruby/object:RI::MethodSummary 
+  name: examine
+- !ruby/object:RI::MethodSummary 
+  name: named
+- !ruby/object:RI::MethodSummary 
+  name: named
+- !ruby/object:RI::MethodSummary 
+  name: named
+- !ruby/object:RI::MethodSummary 
+  name: named
+name: Object
+superclass: Object

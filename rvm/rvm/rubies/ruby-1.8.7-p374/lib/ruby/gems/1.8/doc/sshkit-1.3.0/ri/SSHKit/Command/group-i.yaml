@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: unless options[:group]
+comment: 
+full_name: SSHKit::Command#group
+is_singleton: false
+name: group
+params: (&block) {|unless options[:group]| ...}
+visibility: public

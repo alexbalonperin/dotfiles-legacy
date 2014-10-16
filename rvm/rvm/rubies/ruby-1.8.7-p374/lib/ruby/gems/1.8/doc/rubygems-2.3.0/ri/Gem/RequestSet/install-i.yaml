@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: request, installer
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Installs gems for this RequestSet using the Gem::Installer <tt>options</tt>.
+- !ruby/struct:SM::Flow::P 
+  body: If a <tt>block</tt> is given an activation <tt>request</tt> and <tt>installer</tt> are yielded. The <tt>installer</tt> will be <tt>nil</tt> if a gem matching the request was already installed.
+full_name: Gem::RequestSet#install
+is_singleton: false
+name: install
+params: (options, &block {|request, installer| ...}
+visibility: public

@@ -1,0 +1,46 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: t
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Executes different commands in parallel. This is useful for commands that need to be different on different hosts, but which could be otherwise run in parallel.
+- !ruby/struct:SM::Flow::P 
+  body: The <tt>options</tt> parameter is currently unused.
+- !ruby/struct:SM::Flow::P 
+  body: "Example:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  task :restart_everything do\n    parallel do |session|\n      session.when &quot;in?(:app)&quot;, &quot;/path/to/restart/mongrel&quot;\n      session.when &quot;in?(:web)&quot;, &quot;/path/to/restart/apache&quot;\n      session.when &quot;in?(:db)&quot;, &quot;/path/to/restart/mysql&quot;\n    end\n  end\n"
+- !ruby/struct:SM::Flow::P 
+  body: "Each command may have its own callback block, for capturing and responding to output, with semantics identical to #run:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  session.when &quot;in?(:app)&quot;, &quot;/path/to/restart/mongrel&quot; do |ch, stream, data|\n    # ch is the SSH channel for this command, used to send data\n    #    back to the command (e.g. ch.send_data(&quot;password\\n&quot;))\n    # stream is either :out or :err, for which stream the data arrived on\n    # data is a string containing data sent from the remote command\n  end\n"
+- !ruby/struct:SM::Flow::P 
+  body: "Also, you can specify a fallback command, to use when none of the conditions match a server:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  session.else &quot;/execute/something/else&quot;\n"
+- !ruby/struct:SM::Flow::P 
+  body: "The string specified as the first argument to <tt>when</tt> may be any valid Ruby code. It has access to the following variables and methods:"
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: +in?(role)+ returns true if the server participates in the given role
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>server</tt> is the ServerDefinition object for the server. This can be used to get the host-name, etc.
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: <tt>configuration</tt> is the current Capistrano::Configuration object, which you can use to get the value of variables, etc.
+  type: :BULLET
+- !ruby/struct:SM::Flow::P 
+  body: "For example:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  session.when &quot;server.host =~ /app/&quot;, &quot;/some/command&quot;\n  session.when &quot;server.host == configuration[:some_var]&quot;, &quot;/another/command&quot;\n  session.when &quot;in?(:web) || in?(:app)&quot;, &quot;/more/commands&quot;\n"
+- !ruby/struct:SM::Flow::P 
+  body: "See #run for a description of the valid <tt>options</tt>."
+full_name: Capistrano::Configuration::Actions::Invocation#parallel
+is_singleton: false
+name: parallel
+params: (options={}) {|t| ...}
+visibility: public

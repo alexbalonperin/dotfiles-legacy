@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>connect (Net::SFTP::Session)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/net/sftp/session.rb, line 766</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">connect</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+        <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">state</span>
+        <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:open</span>
+          <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-keyword kw">self</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block</span>
+        <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:closed</span>
+          <span class="ruby-ivar">@state</span> = <span class="ruby-identifier">:opening</span>
+          <span class="ruby-ivar">@channel</span> = <span class="ruby-identifier">session</span>.<span class="ruby-identifier">open_channel</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">method</span>(<span class="ruby-identifier">:when_channel_confirmed</span>))
+          <span class="ruby-ivar">@packet_length</span> = <span class="ruby-keyword kw">nil</span>
+          <span class="ruby-ivar">@protocol</span> = <span class="ruby-keyword kw">nil</span>
+          <span class="ruby-ivar">@on_ready</span> = <span class="ruby-constant">Array</span>(<span class="ruby-identifier">block</span>)
+        <span class="ruby-keyword kw">else</span> <span class="ruby-comment cmt"># opening</span>
+          <span class="ruby-ivar">@on_ready</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">block</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block</span>
+        <span class="ruby-keyword kw">end</span>
+
+        <span class="ruby-keyword kw">self</span>
+      <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

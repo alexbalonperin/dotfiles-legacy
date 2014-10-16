@@ -1,0 +1,1234 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Magick::ImageList</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Magick::ImageList</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/lib/RMagick_rb.html">
+                lib/RMagick.rb
+                </a>
+        <br />
+                <a href="../../files/ext/RMagick/rmmain_c.html">
+                ext/RMagick/rmmain.c
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <hr size="10"></hr>
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000157">*</a>&nbsp;&nbsp;
+      <a href="#M000158">&lt;&lt;</a>&nbsp;&nbsp;
+      <a href="#M000159">&lt;=&gt;</a>&nbsp;&nbsp;
+      <a href="#M000160">[]</a>&nbsp;&nbsp;
+      <a href="#M000161">[]=</a>&nbsp;&nbsp;
+      <a href="#M000169">__map__</a>&nbsp;&nbsp;
+      <a href="#M000171">__map__!</a>&nbsp;&nbsp;
+      <a href="#M000163">clear</a>&nbsp;&nbsp;
+      <a href="#M000164">clone</a>&nbsp;&nbsp;
+      <a href="#M000165">collect</a>&nbsp;&nbsp;
+      <a href="#M000166">collect!</a>&nbsp;&nbsp;
+      <a href="#M000172">compact</a>&nbsp;&nbsp;
+      <a href="#M000173">compact!</a>&nbsp;&nbsp;
+      <a href="#M000174">concat</a>&nbsp;&nbsp;
+      <a href="#M000167">copy</a>&nbsp;&nbsp;
+      <a href="#M000168">cur_image</a>&nbsp;&nbsp;
+      <a href="#M000175">delay=</a>&nbsp;&nbsp;
+      <a href="#M000176">delete</a>&nbsp;&nbsp;
+      <a href="#M000177">delete_at</a>&nbsp;&nbsp;
+      <a href="#M000178">delete_if</a>&nbsp;&nbsp;
+      <a href="#M000179">dup</a>&nbsp;&nbsp;
+      <a href="#M000180">eql?</a>&nbsp;&nbsp;
+      <a href="#M000181">fill</a>&nbsp;&nbsp;
+      <a href="#M000182">find_all</a>&nbsp;&nbsp;
+      <a href="#M000184">from_blob</a>&nbsp;&nbsp;
+      <a href="#M000215">indexes</a>&nbsp;&nbsp;
+      <a href="#M000216">indices</a>&nbsp;&nbsp;
+      <a href="#M000186">insert</a>&nbsp;&nbsp;
+      <a href="#M000187">inspect</a>&nbsp;&nbsp;
+      <a href="#M000153">is_an_image</a>&nbsp;&nbsp;
+      <a href="#M000154">is_an_image_array</a>&nbsp;&nbsp;
+      <a href="#M000188">iterations=</a>&nbsp;&nbsp;
+      <a href="#M000189">last</a>&nbsp;&nbsp;
+      <a href="#M000170">map!</a>&nbsp;&nbsp;
+      <a href="#M000190">marshal_dump</a>&nbsp;&nbsp;
+      <a href="#M000191">marshal_load</a>&nbsp;&nbsp;
+      <a href="#M000192">method_missing</a>&nbsp;&nbsp;
+      <a href="#M000185">new</a>&nbsp;&nbsp;
+      <a href="#M000193">new_image</a>&nbsp;&nbsp;
+      <a href="#M000162">nitems</a>&nbsp;&nbsp;
+      <a href="#M000194">partition</a>&nbsp;&nbsp;
+      <a href="#M000195">ping</a>&nbsp;&nbsp;
+      <a href="#M000196">pop</a>&nbsp;&nbsp;
+      <a href="#M000197">push</a>&nbsp;&nbsp;
+      <a href="#M000198">read</a>&nbsp;&nbsp;
+      <a href="#M000199">reject</a>&nbsp;&nbsp;
+      <a href="#M000200">reject!</a>&nbsp;&nbsp;
+      <a href="#M000201">replace</a>&nbsp;&nbsp;
+      <a href="#M000202">respond_to?</a>&nbsp;&nbsp;
+      <a href="#M000203">reverse</a>&nbsp;&nbsp;
+      <a href="#M000204">reverse!</a>&nbsp;&nbsp;
+      <a href="#M000205">reverse_each</a>&nbsp;&nbsp;
+      <a href="#M000156">scene=</a>&nbsp;&nbsp;
+      <a href="#M000183">select</a>&nbsp;&nbsp;
+      <a href="#M000155">set_current</a>&nbsp;&nbsp;
+      <a href="#M000206">shift</a>&nbsp;&nbsp;
+      <a href="#M000207">slice</a>&nbsp;&nbsp;
+      <a href="#M000208">slice!</a>&nbsp;&nbsp;
+      <a href="#M000209">ticks_per_second=</a>&nbsp;&nbsp;
+      <a href="#M000210">to_a</a>&nbsp;&nbsp;
+      <a href="#M000211">uniq</a>&nbsp;&nbsp;
+      <a href="#M000212">uniq!</a>&nbsp;&nbsp;
+      <a href="#M000213">unshift</a>&nbsp;&nbsp;
+      <a href="#M000214">values_at</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+    <div id="includes">
+      <h3 class="section-bar">Included Modules</h3>
+
+      <div id="includes-list">
+        <span class="include-name">Comparable</span>
+        <span class="include-name">Enumerable</span>
+      </div>
+    </div>
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Class <a href="ImageList/Montage.html" class="link">Magick::ImageList::Montage</a><br />
+
+    </div>
+
+
+    <div id="aliases-list">
+      <h3 class="section-bar">External Aliases</h3>
+
+      <div class="name-list">
+                        <table summary="aliases">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">length</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">size</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">remap</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">affinity</td>
+        </tr>
+      <tr class="top-aligned-row context-row">
+        <td>&nbsp;</td>
+        <td colspan="2" class="context-item-desc">
+ImageMagic used affinity in 6.4.3, switch to remap in 6.4.4.
+
+</td>
+      </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">respond_to?</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">__respond_to__?</td>
+        </tr>
+      <tr class="top-aligned-row context-row">
+        <td>&nbsp;</td>
+        <td colspan="2" class="context-item-desc">
+Ensure <a href="ImageList.html#M000202">respond_to?</a> answers correctly
+when we are delegating to <a href="Image.html">Image</a>
+
+</td>
+      </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">display</td>
+          <td>-&gt;</td>
+          <td class="context-item-value">__display__</td>
+        </tr>
+                        </table>
+      </div>
+    </div>
+
+
+    <div id="attribute-list">
+      <h3 class="section-bar">Attributes</h3>
+
+      <div class="name-list">
+        <table>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">scene</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000185" class="method-detail">
+        <a name="M000185"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000185.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000185.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(*filenames, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Initialize <a href="ImageList.html#M000185">new</a> instances
+</p>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000157" class="method-detail">
+        <a name="M000157"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000157.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000157.html');return false;">
+          <span class="method-name">*</span><span class="method-args">(n)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000158" class="method-detail">
+        <a name="M000158"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000158.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000158.html');return false;">
+          <span class="method-name">&lt;&lt;</span><span class="method-args">(obj)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000159" class="method-detail">
+        <a name="M000159"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000159.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000159.html');return false;">
+          <span class="method-name">&lt;=&gt;</span><span class="method-args">(other)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Compare ImageLists Compare each image in turn until the result of a
+comparison is not 0. If all comparisons return 0, then
+</p>
+<pre>
+  return if A.scene != B.scene
+  return A.length &lt;=&gt; B.length
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000160" class="method-detail">
+        <a name="M000160"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000160.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000160.html');return false;">
+          <span class="method-name">[]</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000161" class="method-detail">
+        <a name="M000161"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000161.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000161.html');return false;">
+          <span class="method-name">[]=</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000169" class="method-detail">
+        <a name="M000169"></a>
+
+        <div class="method-heading">
+          <span class="method-name">__map__</span><span class="method-args">(&amp;block)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="ImageList.html#M000165">collect</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000171" class="method-detail">
+        <a name="M000171"></a>
+
+        <div class="method-heading">
+          <span class="method-name">__map__!</span><span class="method-args">(&amp;block)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="ImageList.html#M000165">collect</a>!
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000163" class="method-detail">
+        <a name="M000163"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000163.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000163.html');return false;">
+          <span class="method-name">clear</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000164" class="method-detail">
+        <a name="M000164"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000164.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000164.html');return false;">
+          <span class="method-name">clone</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000165" class="method-detail">
+        <a name="M000165"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000165.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000165.html');return false;">
+          <span class="method-name">collect</span><span class="method-args">(&amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+override Enumerable#collect
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000166" class="method-detail">
+        <a name="M000166"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000166.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000166.html');return false;">
+          <span class="method-name">collect!</span><span class="method-args">(&amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000172" class="method-detail">
+        <a name="M000172"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000172.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000172.html');return false;">
+          <span class="method-name">compact</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000173" class="method-detail">
+        <a name="M000173"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000173.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000173.html');return false;">
+          <span class="method-name">compact!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000174" class="method-detail">
+        <a name="M000174"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000174.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000174.html');return false;">
+          <span class="method-name">concat</span><span class="method-args">(other)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000167" class="method-detail">
+        <a name="M000167"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000167.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000167.html');return false;">
+          <span class="method-name">copy</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Make a deep <a href="ImageList.html#M000167">copy</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000168" class="method-detail">
+        <a name="M000168"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000168.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000168.html');return false;">
+          <span class="method-name">cur_image</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the current image
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000175" class="method-detail">
+        <a name="M000175"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000175.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000175.html');return false;">
+          <span class="method-name">delay=</span><span class="method-args">(d)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set same delay for all images
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000176" class="method-detail">
+        <a name="M000176"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000176.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000176.html');return false;">
+          <span class="method-name">delete</span><span class="method-args">(obj, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000177" class="method-detail">
+        <a name="M000177"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000177.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000177.html');return false;">
+          <span class="method-name">delete_at</span><span class="method-args">(ndx)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000178" class="method-detail">
+        <a name="M000178"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000178.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000178.html');return false;">
+          <span class="method-name">delete_if</span><span class="method-args">(&amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000179" class="method-detail">
+        <a name="M000179"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000179.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000179.html');return false;">
+          <span class="method-name">dup</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000180" class="method-detail">
+        <a name="M000180"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000180.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000180.html');return false;">
+          <span class="method-name">eql?</span><span class="method-args">(other)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000181" class="method-detail">
+        <a name="M000181"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000181.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000181.html');return false;">
+          <span class="method-name">fill</span><span class="method-args">(*args, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000182" class="method-detail">
+        <a name="M000182"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000182.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000182.html');return false;">
+          <span class="method-name">find_all</span><span class="method-args">(&amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Override Enumerable&#8216;s <a href="ImageList.html#M000182">find_all</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000184" class="method-detail">
+        <a name="M000184"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000184.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000184.html');return false;">
+          <span class="method-name">from_blob</span><span class="method-args">(*blobs, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000215" class="method-detail">
+        <a name="M000215"></a>
+
+        <div class="method-heading">
+          <span class="method-name">indexes</span><span class="method-args">(*args)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="ImageList.html#M000214">values_at</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000216" class="method-detail">
+        <a name="M000216"></a>
+
+        <div class="method-heading">
+          <span class="method-name">indices</span><span class="method-args">(*args)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="ImageList.html#M000214">values_at</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000186" class="method-detail">
+        <a name="M000186"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000186.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000186.html');return false;">
+          <span class="method-name">insert</span><span class="method-args">(index, *args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000187" class="method-detail">
+        <a name="M000187"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000187.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000187.html');return false;">
+          <span class="method-name">inspect</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Call <a href="ImageList.html#M000187">inspect</a> for all the images
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000188" class="method-detail">
+        <a name="M000188"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000188.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000188.html');return false;">
+          <span class="method-name">iterations=</span><span class="method-args">(n)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Set the number of iterations of an animated GIF
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000189" class="method-detail">
+        <a name="M000189"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000189.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000189.html');return false;">
+          <span class="method-name">last</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000170" class="method-detail">
+        <a name="M000170"></a>
+
+        <div class="method-heading">
+          <span class="method-name">map!</span><span class="method-args">(&amp;block)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="ImageList.html#M000165">collect</a>!
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000190" class="method-detail">
+        <a name="M000190"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000190.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000190.html');return false;">
+          <span class="method-name">marshal_dump</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Custom marshal/unmarshal for Ruby 1.8.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000191" class="method-detail">
+        <a name="M000191"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000191.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000191.html');return false;">
+          <span class="method-name">marshal_load</span><span class="method-args">(ary)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000192" class="method-detail">
+        <a name="M000192"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000192.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000192.html');return false;">
+          <span class="method-name">method_missing</span><span class="method-args">(methID, *args, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+The <a href="ImageList.html">ImageList</a> class supports the <a
+href="Image.html">Magick::Image</a> class methods by simply sending the
+method to the current image. If the method isn&#8216;t explicitly
+supported, send it to the current image in the array. If there are no
+images, send it up the line. Catch a NameError and emit a useful message.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000193" class="method-detail">
+        <a name="M000193"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000193.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000193.html');return false;">
+          <span class="method-name">new_image</span><span class="method-args">(cols, rows, *fill, &amp;info_blk)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Create a <a href="ImageList.html#M000185">new</a> image and add it to the
+end
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000162" class="method-detail">
+        <a name="M000162"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000162.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000162.html');return false;">
+          <span class="method-name">nitems</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000194" class="method-detail">
+        <a name="M000194"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000194.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000194.html');return false;">
+          <span class="method-name">partition</span><span class="method-args">(&amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000195" class="method-detail">
+        <a name="M000195"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000195.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000195.html');return false;">
+          <span class="method-name">ping</span><span class="method-args">(*files, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Ping files and concatenate the <a href="ImageList.html#M000185">new</a>
+images
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000196" class="method-detail">
+        <a name="M000196"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000196.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000196.html');return false;">
+          <span class="method-name">pop</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000197" class="method-detail">
+        <a name="M000197"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000197.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000197.html');return false;">
+          <span class="method-name">push</span><span class="method-args">(*objs)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000198" class="method-detail">
+        <a name="M000198"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000198.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000198.html');return false;">
+          <span class="method-name">read</span><span class="method-args">(*files, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Read files and concatenate the <a href="ImageList.html#M000185">new</a>
+images
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000199" class="method-detail">
+        <a name="M000199"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000199.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000199.html');return false;">
+          <span class="method-name">reject</span><span class="method-args">(&amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+override Enumerable&#8216;s <a href="ImageList.html#M000199">reject</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000200" class="method-detail">
+        <a name="M000200"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000200.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000200.html');return false;">
+          <span class="method-name">reject!</span><span class="method-args">(&amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000201" class="method-detail">
+        <a name="M000201"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000201.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000201.html');return false;">
+          <span class="method-name">replace</span><span class="method-args">(other)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000202" class="method-detail">
+        <a name="M000202"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000202.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000202.html');return false;">
+          <span class="method-name">respond_to?</span><span class="method-args">(methID, priv=false)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000203" class="method-detail">
+        <a name="M000203"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000203.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000203.html');return false;">
+          <span class="method-name">reverse</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000204" class="method-detail">
+        <a name="M000204"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000204.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000204.html');return false;">
+          <span class="method-name">reverse!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000205" class="method-detail">
+        <a name="M000205"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000205.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000205.html');return false;">
+          <span class="method-name">reverse_each</span><span class="method-args">() {|image| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000156" class="method-detail">
+        <a name="M000156"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000156.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000156.html');return false;">
+          <span class="method-name">scene=</span><span class="method-args">(n)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Allow scene to be set to nil
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000183" class="method-detail">
+        <a name="M000183"></a>
+
+        <div class="method-heading">
+          <span class="method-name">select</span><span class="method-args">(&amp;block)</span>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Alias for <a href="ImageList.html#M000182">find_all</a>
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000206" class="method-detail">
+        <a name="M000206"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000206.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000206.html');return false;">
+          <span class="method-name">shift</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000207" class="method-detail">
+        <a name="M000207"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000207.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000207.html');return false;">
+          <span class="method-name">slice</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000208" class="method-detail">
+        <a name="M000208"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000208.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000208.html');return false;">
+          <span class="method-name">slice!</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000209" class="method-detail">
+        <a name="M000209"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000209.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000209.html');return false;">
+          <span class="method-name">ticks_per_second=</span><span class="method-args">(t)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000210" class="method-detail">
+        <a name="M000210"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000210.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000210.html');return false;">
+          <span class="method-name">to_a</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000211" class="method-detail">
+        <a name="M000211"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000211.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000211.html');return false;">
+          <span class="method-name">uniq</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000212" class="method-detail">
+        <a name="M000212"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000212.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000212.html');return false;">
+          <span class="method-name">uniq!</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000213" class="method-detail">
+        <a name="M000213"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000213.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000213.html');return false;">
+          <span class="method-name">unshift</span><span class="method-args">(obj)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+@scene -&gt; <a href="ImageList.html#M000185">new</a> object
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000214" class="method-detail">
+        <a name="M000214"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000214.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000214.html');return false;">
+          <span class="method-name">values_at</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <h3 class="section-bar">Protected Instance methods</h3>
+
+      <div id="method-M000153" class="method-detail">
+        <a name="M000153"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000153.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000153.html');return false;">
+          <span class="method-name">is_an_image</span><span class="method-args">(obj)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000154" class="method-detail">
+        <a name="M000154"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000154.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000154.html');return false;">
+          <span class="method-name">is_an_image_array</span><span class="method-args">(ary)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Ensure array is always an array of <a href="Image.html">Magick::Image</a>
+objects
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000155" class="method-detail">
+        <a name="M000155"></a>
+
+        <div class="method-heading">
+          <a href="ImageList.src/M000155.html" target="Code" class="method-signature"
+            onclick="popupCode('ImageList.src/M000155.html');return false;">
+          <span class="method-name">set_current</span><span class="method-args">(current)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Find old current image, update scene number current is the id of the old
+current image.
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

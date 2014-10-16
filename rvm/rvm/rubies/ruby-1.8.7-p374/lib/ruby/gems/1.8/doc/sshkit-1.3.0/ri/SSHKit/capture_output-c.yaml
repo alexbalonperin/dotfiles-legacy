@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+full_name: SSHKit::capture_output
+is_singleton: true
+name: capture_output
+params: (io, &block) {|| ...}
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Polymorphically add a new element to the head of a list. The type of head node will be the same list type has the tail.
+full_name: Rake::LinkedList#conj
+is_singleton: false
+name: conj
+params: (item)
+visibility: public

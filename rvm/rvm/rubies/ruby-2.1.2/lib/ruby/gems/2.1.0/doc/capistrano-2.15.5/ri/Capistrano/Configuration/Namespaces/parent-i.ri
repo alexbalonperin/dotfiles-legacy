@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"parent:ETI"1Capistrano::Configuration::Namespaces#parent;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"MThe parent namespace of this namespace. Returns +nil+ for the top-level ;TI"namespace.;T:
+@fileI"/lib/capistrano/configuration/namespaces.rb;T:0@omit_headings_from_table_of_contents_below0F@I"*Capistrano::Configuration::Namespaces;FcRDoc::NormalModule0

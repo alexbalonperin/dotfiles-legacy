@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Gem::Installer</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Gem::Installer</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/lib/rubygems/installer_rb.html">
+                lib/rubygems/installer.rb
+                </a>
+        <br />
+                <a href="../../files/lib/rubygems/installer_test_case_rb.html">
+                lib/rubygems/installer_test_case.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+The installer class processes RubyGem .gem files and installs the files
+contained in the .gem into the <a href="../Gem.html#M000039">Gem.path</a>.
+</p>
+<p>
+<a href="Installer.html">Gem::Installer</a> does the work of putting files
+in all the right places on the filesystem including unpacking the gem into
+its gem <a href="Installer.html#M000566">dir</a>, installing the gemspec in
+the specifications <a href="Installer.html#M000566">dir</a>, storing the
+cached gem in the cache <a href="Installer.html#M000566">dir</a>, and
+installing either wrappers or symlinks for executables.
+</p>
+<p>
+The installer invokes pre and post <a
+href="Installer.html#M000545">install</a> hooks. Hooks can be added either
+through a rubygems_plugin.rb file in an installed gem or via a
+rubygems/defaults/#{RUBY_ENGINE}.rb or
+rubygems/defaults/operating_system.rb file. See <a
+href="../Gem.html#M000060">Gem.pre_install</a> and <a
+href="../Gem.html#M000057">Gem.post_install</a> for details.
+</p>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000561">app_script_text</a>&nbsp;&nbsp;
+      <a href="#M000563">build_extensions</a>&nbsp;&nbsp;
+      <a href="#M000559">check_that_user_bin_dir_is_in_path</a>&nbsp;&nbsp;
+      <a href="#M000566">dir</a>&nbsp;&nbsp;
+      <a href="#M000557">ensure_dependencies_met</a>&nbsp;&nbsp;
+      <a href="#M000546">ensure_dependency</a>&nbsp;&nbsp;
+      <a href="#M000555">ensure_required_ruby_version_met</a>&nbsp;&nbsp;
+      <a href="#M000556">ensure_required_rubygems_version_met</a>&nbsp;&nbsp;
+      <a href="#M000540">exec_format</a>&nbsp;&nbsp;
+      <a href="#M000564">extract_files</a>&nbsp;&nbsp;
+      <a href="#M000543">format</a>&nbsp;&nbsp;
+      <a href="#M000565">formatted_program_filename</a>&nbsp;&nbsp;
+      <a href="#M000542">gem_dir</a>&nbsp;&nbsp;
+      <a href="#M000551">generate_bin</a>&nbsp;&nbsp;
+      <a href="#M000552">generate_bin_script</a>&nbsp;&nbsp;
+      <a href="#M000553">generate_bin_symlink</a>&nbsp;&nbsp;
+      <a href="#M000550">generate_windows_script</a>&nbsp;&nbsp;
+      <a href="#M000545">install</a>&nbsp;&nbsp;
+      <a href="#M000547">installation_satisfies_dependency?</a>&nbsp;&nbsp;
+      <a href="#M000541">new</a>&nbsp;&nbsp;
+      <a href="#M000558">process_options</a>&nbsp;&nbsp;
+      <a href="#M000554">shebang</a>&nbsp;&nbsp;
+      <a href="#M000544">spec</a>&nbsp;&nbsp;
+      <a href="#M000548">unpack</a>&nbsp;&nbsp;
+      <a href="#M000560">verify_gem_home</a>&nbsp;&nbsp;
+      <a href="#M000562">windows_stub_script</a>&nbsp;&nbsp;
+      <a href="#M000549">write_spec</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+    <div id="includes">
+      <h3 class="section-bar">Included Modules</h3>
+
+      <div id="includes-list">
+        <span class="include-name"><a href="UserInteraction.html">Gem::UserInteraction</a></span>
+        <span class="include-name"><a href="RequirePathsBuilder.html">Gem::RequirePathsBuilder</a></span>
+      </div>
+    </div>
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Class <a href="Installer/ExtensionBuildError.html" class="link">Gem::Installer::ExtensionBuildError</a><br />
+
+    </div>
+
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">ENV_PATHS</td>
+          <td>=</td>
+          <td class="context-item-value">%w[/usr/bin/env /bin/env]</td>
+          <td width="3em">&nbsp;</td>
+          <td class="context-item-desc">
+Paths where env(1) might live. Some systems are broken and have it in /bin
+
+</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+    <div id="attribute-list">
+      <h3 class="section-bar">Attributes</h3>
+
+      <div class="name-list">
+        <table>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">bin_dir</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc">
+The directory a gem&#8216;s executables will be installed into
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">env_shebang</td>
+          <td class="context-item-value">&nbsp;[W]&nbsp;</td>
+          <td class="context-item-desc">
+Available through requiring rubygems/installer_test_case
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">exec_format</td>
+          <td class="context-item-value">&nbsp;[W]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">format</td>
+          <td class="context-item-value">&nbsp;[W]&nbsp;</td>
+          <td class="context-item-desc">
+Available through requiring rubygems/installer_test_case
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">format_executable</td>
+          <td class="context-item-value">&nbsp;[W]&nbsp;</td>
+          <td class="context-item-desc">
+Available through requiring rubygems/installer_test_case
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">gem</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">gem_dir</td>
+          <td class="context-item-value">&nbsp;[W]&nbsp;</td>
+          <td class="context-item-desc">
+Available through requiring rubygems/installer_test_case
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">gem_home</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc">
+The gem repository the gem will be installed into
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">gem_home</td>
+          <td class="context-item-value">&nbsp;[W]&nbsp;</td>
+          <td class="context-item-desc">
+Available through requiring rubygems/installer_test_case
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">ignore_dependencies</td>
+          <td class="context-item-value">&nbsp;[W]&nbsp;</td>
+          <td class="context-item-desc">
+Available through requiring rubygems/installer_test_case
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">options</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc">
+The options passed when the <a href="Installer.html">Gem::Installer</a> was
+instantiated.
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">path_warning</td>
+          <td class="context-item-value">&nbsp;[RW]&nbsp;</td>
+          <td class="context-item-desc">
+True if we&#8216;ve warned about PATH not including <a
+href="../Gem.html#M000029">Gem.bindir</a>
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">security_policy</td>
+          <td class="context-item-value">&nbsp;[W]&nbsp;</td>
+          <td class="context-item-desc">
+Available through requiring rubygems/installer_test_case
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">spec</td>
+          <td class="context-item-value">&nbsp;[W]&nbsp;</td>
+          <td class="context-item-desc">
+Available through requiring rubygems/installer_test_case
+
+</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">wrappers</td>
+          <td class="context-item-value">&nbsp;[W]&nbsp;</td>
+          <td class="context-item-desc">
+Available through requiring rubygems/installer_test_case
+
+</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000540" class="method-detail">
+        <a name="M000540"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000540.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000540.html');return false;">
+          <span class="method-name">exec_format</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Defaults to use Ruby&#8216;s program prefix and suffix.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000541" class="method-detail">
+        <a name="M000541"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000541.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000541.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(gem, options={})</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Constructs an <a href="Installer.html">Installer</a> instance that will <a
+href="Installer.html#M000545">install</a> the gem located at <tt>gem</tt>.
+<tt>options</tt> is a Hash with the following keys:
+</p>
+<table>
+<tr><td valign="top">:env_shebang:</td><td>Use /usr/bin/env in bin wrappers.
+
+</td></tr>
+<tr><td valign="top">:force:</td><td>Overrides all version checks and security policy checks, except for a
+signed-gems-only policy.
+
+</td></tr>
+<tr><td valign="top">:ignore_dependencies:</td><td>Don&#8216;t raise if a dependency is missing.
+
+</td></tr>
+<tr><td valign="top">:install_dir:</td><td>The directory to <a href="Installer.html#M000545">install</a> the gem into.
+
+</td></tr>
+<tr><td valign="top">:format_executable:</td><td><a href="Format.html">Format</a> the executable the same as the ruby
+executable. If your ruby is ruby18, foo_exec will be installed as
+foo_exec18.
+
+</td></tr>
+<tr><td valign="top">:security_policy:</td><td>Use the specified security policy. See Gem::Security
+
+</td></tr>
+<tr><td valign="top">:wrappers:</td><td>Install wrappers if true, symlinks if false.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000561" class="method-detail">
+        <a name="M000561"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000561.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000561.html');return false;">
+          <span class="method-name">app_script_text</span><span class="method-args">(bin_file_name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the text for an application file.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000563" class="method-detail">
+        <a name="M000563"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000563.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000563.html');return false;">
+          <span class="method-name">build_extensions</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Builds extensions. Valid types of extensions are extconf.rb files,
+configure scripts and rakefiles or mkrf_conf files.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000559" class="method-detail">
+        <a name="M000559"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000559.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000559.html');return false;">
+          <span class="method-name">check_that_user_bin_dir_is_in_path</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000566" class="method-detail">
+        <a name="M000566"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000566.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000566.html');return false;">
+          <span class="method-name">dir</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the target directory where the gem is to be installed. This
+directory is not guaranteed to be populated.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000557" class="method-detail">
+        <a name="M000557"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000557.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000557.html');return false;">
+          <span class="method-name">ensure_dependencies_met</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000546" class="method-detail">
+        <a name="M000546"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000546.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000546.html');return false;">
+          <span class="method-name">ensure_dependency</span><span class="method-args">(spec, dependency)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Ensure that the dependency is satisfied by the current installation of gem.
+If it is not an exception is raised.
+</p>
+<table>
+<tr><td valign="top"><a href="Installer.html#M000544">spec</a>       :</td><td><a href="Specification.html">Gem::Specification</a>
+
+</td></tr>
+<tr><td valign="top">dependency :</td><td><a href="Dependency.html">Gem::Dependency</a>
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000555" class="method-detail">
+        <a name="M000555"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000555.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000555.html');return false;">
+          <span class="method-name">ensure_required_ruby_version_met</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000556" class="method-detail">
+        <a name="M000556"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000556.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000556.html');return false;">
+          <span class="method-name">ensure_required_rubygems_version_met</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000564" class="method-detail">
+        <a name="M000564"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000564.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000564.html');return false;">
+          <span class="method-name">extract_files</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Reads the file index and extracts each file into the gem directory.
+</p>
+<p>
+Ensures that files can&#8216;t be installed outside the gem directory.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000543" class="method-detail">
+        <a name="M000543"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000543.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000543.html');return false;">
+          <span class="method-name">format</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Lazy accessor for the installer&#8216;s <a
+href="Format.html">Gem::Format</a> instance.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000565" class="method-detail">
+        <a name="M000565"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000565.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000565.html');return false;">
+          <span class="method-name">formatted_program_filename</span><span class="method-args">(filename)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Prefix and suffix the program filename the same as ruby.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000542" class="method-detail">
+        <a name="M000542"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000542.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000542.html');return false;">
+          <span class="method-name">gem_dir</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Lazy accessor for the <a href="Installer.html#M000544">spec</a>&#8216;s gem
+directory.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000551" class="method-detail">
+        <a name="M000551"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000551.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000551.html');return false;">
+          <span class="method-name">generate_bin</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000552" class="method-detail">
+        <a name="M000552"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000552.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000552.html');return false;">
+          <span class="method-name">generate_bin_script</span><span class="method-args">(filename, bindir)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Creates the scripts to run the applications in the gem.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000553" class="method-detail">
+        <a name="M000553"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000553.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000553.html');return false;">
+          <span class="method-name">generate_bin_symlink</span><span class="method-args">(filename, bindir)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Creates the symlinks to run the applications in the gem. Moves the symlink
+if the gem being installed has a newer version.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000550" class="method-detail">
+        <a name="M000550"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000550.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000550.html');return false;">
+          <span class="method-name">generate_windows_script</span><span class="method-args">(filename, bindir)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Creates windows .bat files for easy running of commands
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000545" class="method-detail">
+        <a name="M000545"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000545.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000545.html');return false;">
+          <span class="method-name">install</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Installs the gem and returns a loaded <a
+href="Specification.html">Gem::Specification</a> for the installed gem.
+</p>
+<p>
+The gem will be installed with the following structure:
+</p>
+<pre>
+  @gem_home/
+    cache/&lt;gem-version&gt;.gem #=&gt; a cached copy of the installed gem
+    gems/&lt;gem-version&gt;/... #=&gt; extracted files
+    specifications/&lt;gem-version&gt;.gemspec #=&gt; the Gem::Specification
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000547" class="method-detail">
+        <a name="M000547"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000547.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000547.html');return false;">
+          <span class="method-name">installation_satisfies_dependency?</span><span class="method-args">(dependency)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+True if the gems in the source_index satisfy <tt>dependency</tt>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000558" class="method-detail">
+        <a name="M000558"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000558.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000558.html');return false;">
+          <span class="method-name">process_options</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000554" class="method-detail">
+        <a name="M000554"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000554.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000554.html');return false;">
+          <span class="method-name">shebang</span><span class="method-args">(bin_file_name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Generates a #! line for <tt>bin_file_name</tt>&#8216;s wrapper copying
+arguments if necessary.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000544" class="method-detail">
+        <a name="M000544"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000544.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000544.html');return false;">
+          <span class="method-name">spec</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Lazy accessor for the installer&#8216;s <a
+href="Installer.html#M000544">spec</a>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000548" class="method-detail">
+        <a name="M000548"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000548.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000548.html');return false;">
+          <span class="method-name">unpack</span><span class="method-args">(directory)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Unpacks the gem into the given directory.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000560" class="method-detail">
+        <a name="M000560"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000560.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000560.html');return false;">
+          <span class="method-name">verify_gem_home</span><span class="method-args">(unpack = false)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000562" class="method-detail">
+        <a name="M000562"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000562.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000562.html');return false;">
+          <span class="method-name">windows_stub_script</span><span class="method-args">(bindir, bin_file_name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+return the stub script text used to launch the true ruby script
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000549" class="method-detail">
+        <a name="M000549"></a>
+
+        <div class="method-heading">
+          <a href="Installer.src/M000549.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000549.html');return false;">
+          <span class="method-name">write_spec</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Writes the .gemspec specification (in Ruby) to the gem home&#8216;s
+specifications directory.
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

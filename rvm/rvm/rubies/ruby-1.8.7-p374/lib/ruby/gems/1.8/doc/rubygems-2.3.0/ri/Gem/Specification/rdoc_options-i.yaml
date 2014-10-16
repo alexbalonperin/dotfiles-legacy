@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Specifies the rdoc options to be used when generating API documentation.
+- !ruby/struct:SM::Flow::P 
+  body: "Usage:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  spec.rdoc_options &lt;&lt; '--title' &lt;&lt; 'Rake -- Ruby Make' &lt;&lt;\n    '--main' &lt;&lt; 'README' &lt;&lt;\n    '--line-numbers'\n"
+full_name: Gem::Specification#rdoc_options
+is_singleton: false
+name: rdoc_options
+params: ()
+visibility: public

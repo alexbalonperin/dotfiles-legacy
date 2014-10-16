@@ -1,0 +1,20 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Scope lists always end with an EmptyScope object. See Null Object Pattern)
+constants: []
+
+full_name: Rake::Scope::EmptyScope
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: path
+- !ruby/object:RI::MethodSummary 
+  name: path_with_task_name
+name: EmptyScope
+superclass: EmptyLinkedList

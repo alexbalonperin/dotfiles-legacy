@@ -1,0 +1,68 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: builtin
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: list
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: name
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: rgb
+  rw: RW
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: ansi_rgb_to_hex
+- !ruby/object:RI::MethodSummary 
+  name: code_index
+- !ruby/object:RI::MethodSummary 
+  name: index
+- !ruby/object:RI::MethodSummary 
+  name: list
+- !ruby/object:RI::MethodSummary 
+  name: new
+- !ruby/object:RI::MethodSummary 
+  name: rgb
+- !ruby/object:RI::MethodSummary 
+  name: rgb_hex
+- !ruby/object:RI::MethodSummary 
+  name: rgb_number
+- !ruby/object:RI::MethodSummary 
+  name: rgb_parts
+- !ruby/object:RI::MethodSummary 
+  name: uncolor
+comment: 
+constants: []
+
+full_name: HighLine::Style
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: blue
+- !ruby/object:RI::MethodSummary 
+  name: bright
+- !ruby/object:RI::MethodSummary 
+  name: code
+- !ruby/object:RI::MethodSummary 
+  name: color
+- !ruby/object:RI::MethodSummary 
+  name: dup
+- !ruby/object:RI::MethodSummary 
+  name: green
+- !ruby/object:RI::MethodSummary 
+  name: "on"
+- !ruby/object:RI::MethodSummary 
+  name: red
+- !ruby/object:RI::MethodSummary 
+  name: to_hash
+- !ruby/object:RI::MethodSummary 
+  name: variant
+name: Style
+superclass: Object

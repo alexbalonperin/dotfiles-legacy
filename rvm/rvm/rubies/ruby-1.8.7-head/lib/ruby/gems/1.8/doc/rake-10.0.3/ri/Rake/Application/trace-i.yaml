@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Rake::Application#trace
+is_singleton: false
+name: trace
+params: (*strings)
+visibility: public

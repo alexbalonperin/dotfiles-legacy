@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Retrieves the pre-configured API key <tt>key</tt> or terminates interaction with an error.
+full_name: Gem::GemcutterUtilities#verify_api_key
+is_singleton: false
+name: verify_api_key
+params: (key)
+visibility: public

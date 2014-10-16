@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Check the spec for possible conflicts and freak out if there are any.
+full_name: Gem::Specification#raise_if_conflicts
+is_singleton: false
+name: raise_if_conflicts
+params: ()
+visibility: public

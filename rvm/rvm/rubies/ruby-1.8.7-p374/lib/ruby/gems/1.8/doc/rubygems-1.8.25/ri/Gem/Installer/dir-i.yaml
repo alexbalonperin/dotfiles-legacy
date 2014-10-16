@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Return the target directory where the gem is to be installed. This directory is not guaranteed to be populated.
+full_name: Gem::Installer#dir
+is_singleton: false
+name: dir
+params: ()
+visibility: public

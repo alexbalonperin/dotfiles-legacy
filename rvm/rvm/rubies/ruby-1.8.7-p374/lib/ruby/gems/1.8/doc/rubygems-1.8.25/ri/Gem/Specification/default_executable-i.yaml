@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: The default executable for this gem.
+- !ruby/struct:SM::Flow::P 
+  body: "Deprecated: The name of the gem is assumed to be the name of the executable now. See Gem.bin_path."
+full_name: Gem::Specification#default_executable
+is_singleton: false
+name: default_executable
+params: ()
+visibility: public

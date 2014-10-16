@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Gem::Request#proxy_uri
+is_singleton: false
+name: proxy_uri
+params: ()
+visibility: public

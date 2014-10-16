@@ -1,0 +1,22 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Provides a single method <tt>deprecate</tt> to be used to declare when something is going away.
+- !ruby/struct:SM::Flow::VERB 
+  body: "    class Legacy\n      def self.klass_method\n        # ...\n      end\n\n      def instance_method\n        # ...\n      end\n\n      extend Gem::Deprecate\n      deprecate :instance_method, &quot;X.z&quot;, 2011, 4\n\n      class &lt;&lt; self\n        extend Gem::Deprecate\n        deprecate :klass_method, :none, 2011, 4\n      end\n    end\n"
+constants: []
+
+full_name: Gem::Deprecate
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: deprecate
+- !ruby/object:RI::MethodSummary 
+  name: skip_during
+name: Deprecate
+superclass: 

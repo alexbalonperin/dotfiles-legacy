@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Creates a legacy platform spec with the name 'pl' and version 1
+full_name: Gem::TestCase::SpecFetcherSetup#legacy_platform
+is_singleton: false
+name: legacy_platform
+params: ()
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Get update from Rows - if @dirty ever becomes true, don't change it back to false!
+full_name: Magick::Image::View#update
+is_singleton: false
+name: update
+params: (rows)
+visibility: public

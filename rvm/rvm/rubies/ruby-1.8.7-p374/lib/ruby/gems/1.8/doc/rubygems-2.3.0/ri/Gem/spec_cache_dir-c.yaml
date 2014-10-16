@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Gem::spec_cache_dir
+is_singleton: true
+name: spec_cache_dir
+params: ()
+visibility: public

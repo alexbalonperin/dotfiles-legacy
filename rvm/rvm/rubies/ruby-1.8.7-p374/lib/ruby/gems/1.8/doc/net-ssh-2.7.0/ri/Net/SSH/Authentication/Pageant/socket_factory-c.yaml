@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Selects which socket to use depending on the ruby version This is needed due changes in the DL module.
+full_name: Net::SSH::Authentication::Pageant::socket_factory
+is_singleton: true
+name: socket_factory
+params: ()
+visibility: public

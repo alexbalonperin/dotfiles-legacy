@@ -1,0 +1,73 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: JRUBY
+  value: defined?(RUBY_ENGINE) && RUBY_ENGINE == 'jruby'
+- !ruby/object:RI::Constant 
+  comment: 
+  name: CHARACTER_MODE
+  value: "\"Win32API\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: CHARACTER_MODE
+  value: "\"termios\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: CHARACTER_MODE
+  value: "\"jline\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: CHARACTER_MODE
+  value: "\"ncurses\""
+- !ruby/object:RI::Constant 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "<b>WARNING</b>: This requires the external &quot;stty&quot; program!"
+  name: CHARACTER_MODE
+  value: "\"stty\""
+full_name: HighLine::SystemExtensions
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: get_character
+- !ruby/object:RI::MethodSummary 
+  name: get_character
+- !ruby/object:RI::MethodSummary 
+  name: initialize_system_extensions
+- !ruby/object:RI::MethodSummary 
+  name: raw_no_echo_mode
+- !ruby/object:RI::MethodSummary 
+  name: raw_no_echo_mode
+- !ruby/object:RI::MethodSummary 
+  name: raw_no_echo_mode
+- !ruby/object:RI::MethodSummary 
+  name: raw_no_echo_mode
+- !ruby/object:RI::MethodSummary 
+  name: raw_no_echo_mode
+- !ruby/object:RI::MethodSummary 
+  name: restore_mode
+- !ruby/object:RI::MethodSummary 
+  name: restore_mode
+- !ruby/object:RI::MethodSummary 
+  name: restore_mode
+- !ruby/object:RI::MethodSummary 
+  name: restore_mode
+- !ruby/object:RI::MethodSummary 
+  name: restore_mode
+- !ruby/object:RI::MethodSummary 
+  name: terminal_size
+- !ruby/object:RI::MethodSummary 
+  name: terminal_size
+- !ruby/object:RI::MethodSummary 
+  name: terminal_size
+- !ruby/object:RI::MethodSummary 
+  name: terminal_size
+name: SystemExtensions
+superclass: 

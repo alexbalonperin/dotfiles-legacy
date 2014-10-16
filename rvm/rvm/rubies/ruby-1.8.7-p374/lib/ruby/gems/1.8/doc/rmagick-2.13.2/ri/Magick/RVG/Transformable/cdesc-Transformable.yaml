@@ -1,0 +1,35 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Transformations are operations on the coordinate system. All the transformations defined within a container (an RVG object or a group) are applied before drawing any shapes or text. All transformations are applied in the order they were defined. <em>Note:</em> This means that
+- !ruby/struct:SM::Flow::VERB 
+  body: "  g.translate(10,20).scale(2)\n"
+- !ruby/struct:SM::Flow::P 
+  body: is not the same as
+- !ruby/struct:SM::Flow::VERB 
+  body: "  g.scale(2).translate(10,20)\n"
+constants: []
+
+full_name: Magick::RVG::Transformable
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: matrix
+- !ruby/object:RI::MethodSummary 
+  name: rotate
+- !ruby/object:RI::MethodSummary 
+  name: scale
+- !ruby/object:RI::MethodSummary 
+  name: skewX
+- !ruby/object:RI::MethodSummary 
+  name: skewY
+- !ruby/object:RI::MethodSummary 
+  name: translate
+name: Transformable
+superclass: 

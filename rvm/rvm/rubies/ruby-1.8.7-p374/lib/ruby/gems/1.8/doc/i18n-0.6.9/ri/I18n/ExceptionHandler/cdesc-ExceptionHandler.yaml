@@ -1,0 +1,19 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Handles exceptions raised in the backend. All exceptions except for MissingTranslationData exceptions are re-thrown. When a MissingTranslationData was caught the handler returns an error message string containing the key/scope. Note that the exception handler is not called when the option :throw was given.
+constants: []
+
+full_name: I18n::ExceptionHandler
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: Module
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: call
+name: ExceptionHandler
+superclass: Object

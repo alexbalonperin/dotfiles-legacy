@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Returns an Array of sources to fetch remote gems from. Uses default_sources if the sources list is empty.
+full_name: Gem::sources
+is_singleton: true
+name: sources
+params: ()
+visibility: public

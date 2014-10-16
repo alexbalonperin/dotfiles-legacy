@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: rs
+comment: 
+full_name: Gem::needs
+is_singleton: true
+name: needs
+params: () {|rs| ...}
+visibility: public

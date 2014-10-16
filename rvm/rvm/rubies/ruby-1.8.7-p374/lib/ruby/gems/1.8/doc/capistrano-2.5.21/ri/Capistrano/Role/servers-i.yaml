@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+- !ruby/object:RI::AliasName 
+  name: to_ary
+block_params: 
+comment: 
+full_name: Capistrano::Role#servers
+is_singleton: false
+name: servers
+params: ()
+visibility: public

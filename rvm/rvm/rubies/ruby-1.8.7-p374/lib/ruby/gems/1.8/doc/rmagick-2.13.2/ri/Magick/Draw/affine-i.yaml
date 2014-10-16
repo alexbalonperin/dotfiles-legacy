@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Apply coordinate transformations to support scaling (s), rotation (r), and translation (t). Angles are specified in radians.
+full_name: Magick::Draw#affine
+is_singleton: false
+name: affine
+params: (sx, rx, ry, sy, tx, ty)
+visibility: public

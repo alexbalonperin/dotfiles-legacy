@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: The license(s) for the library. Each license must be a short name, no more than 64 characters.
+full_name: Gem::Specification#licenses
+is_singleton: false
+name: licenses
+params: ()
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Store changed pixels back to image
+full_name: Magick::Image::View#sync
+is_singleton: false
+name: sync
+params: (force=false)
+visibility: public

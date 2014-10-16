@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Debugger::prepare_debugger
+is_singleton: true
+name: prepare_debugger
+params: (options)
+visibility: public

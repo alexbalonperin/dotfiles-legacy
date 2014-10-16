@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Defines a group.
+- !ruby/struct:SM::Flow::P 
+  body: This method constructs a new Group <em>container</em> object. The styles and transforms specified on this object will be used by objects contained within, unless overridden by an inner container or the contained object itself. Define grouped elements by calling RVG::Embellishable methods within the associated block.
+full_name: Magick::RVG::StructureConstructors#g
+is_singleton: false
+name: g
+params: (&block)
+visibility: public

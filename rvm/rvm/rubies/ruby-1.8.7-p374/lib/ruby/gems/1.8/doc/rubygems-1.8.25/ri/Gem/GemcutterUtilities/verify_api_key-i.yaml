@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Gem::GemcutterUtilities#verify_api_key
+is_singleton: false
+name: verify_api_key
+params: (key)
+visibility: public

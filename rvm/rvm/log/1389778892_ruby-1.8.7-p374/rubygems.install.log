@@ -1,0 +1,68 @@
+[2014-01-15 18:41:33] /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/bin/ruby
+current path: /Users/abalonperin/.rvm/src/rubygems-1.8.25
+GEM_HOME=/Users/abalonperin/.rvm/gems/ruby-1.8.7-p374
+PATH=/Users/abalonperin/.rvm/gems/ruby-1.8.7-p374/bin:/Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/bin:/Users/abalonperin/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+GEM_PATH=/Users/abalonperin/.rvm/gems/ruby-1.8.7-p374
+command(6): env GEM_PATH=/Users/abalonperin/.rvm/gems/ruby-1.8.7-p374:/Users/abalonperin/.rvm/gems/ruby-1.8.7-p374@global GEM_HOME=/Users/abalonperin/.rvm/gems/ruby-1.8.7-p374 /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/bin/ruby -d /Users/abalonperin/.rvm/src/rubygems-1.8.25/setup.rb
+Exception `LoadError' at ./lib/rubygems.rb:1264 - no such file to load -- rubygems/defaults/operating_system
+Exception `NoMethodError' at ./lib/rubygems/config_file.rb:53 - undefined method `sysconfdir' for Etc:Module
+Exception `LoadError' at ./lib/rubygems/custom_require.rb:36 - no such file to load -- Win32API
+Exception `LoadError' at ./lib/rubygems/custom_require.rb:63 - no such file to load -- Win32API
+Exception `Gem::LoadError' at ./lib/rubygems/dependency.rb:247 - Could not find psych (>= 1.2.1, ~> 1.2) amongst []
+Exception `LoadError' at ./lib/rubygems/custom_require.rb:36 - no such file to load -- psych
+Exception `LoadError' at ./lib/rubygems/custom_require.rb:63 - no such file to load -- psych
+Exception `NoMethodError' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/rational.rb:78 - undefined method `gcd' for Rational(1, 2):Rational
+Exception `NameError' at ./lib/rubygems/syck_hack.rb:42 - method `to_s' not defined in YAML::Syck::DefaultKey
+Exception `NameError' at ./lib/rubygems/command_manager.rb:177 - uninitialized constant Gem::Commands::SetupCommand
+Exception `LoadError' at ./lib/rubygems/custom_require.rb:36 - no such file to load -- Win32API
+Exception `LoadError' at ./lib/rubygems/custom_require.rb:63 - no such file to load -- Win32API
+Exception `Errno::EEXIST' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:243 - File exists - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8
+Exception `Errno::EEXIST' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:243 - File exists - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/bin
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rbconfig/datadir.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rbconfig/datadir.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/builder.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/builder.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/doc_manager.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/doc_manager.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/format.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/format.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/gem_openssl.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/gem_openssl.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/gem_path_searcher.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/gem_path_searcher.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/old_format.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/old_format.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/package/f_sync_dir.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/package/f_sync_dir.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/package/tar_input.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/package/tar_input.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/package/tar_output.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/package/tar_output.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/require_paths_builder.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/require_paths_builder.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/source_index.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/source_index.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/ssl_certs/ca-bundle.pem
+Exception `Errno::ENOENT' at /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/lib/ruby/site_ruby/1.8/rubygems/ssl_certs/ca-bundle.pem
+Exception `Gem::InstallError' at ./lib/rubygems/uninstaller.rb:73 - gem "gemcutter" is not installed
+RubyGems 1.8.25 installed
+
+== 1.8.25/ 2013-01-24
+
+* 6 bug fixes:
+
+  * Added 11627 to setup bin_file location to protect against errors. Fixes #328 by ConradIrwin
+  * Specification#ruby_code didn't handle Requirement with multiple
+  * Fix error on creating a Version object with a frozen string.
+  * Fix incremental index updates
+  * Fix missing load_yaml in YAML-related requirement.rb code.
+  * Manually backport encoding-aware YAML gemspec
+
+
+------------------------------------------------------------------------------
+
+RubyGems installed the following executables:
+	/Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/bin/gem
+

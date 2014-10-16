@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: SSHKit::Runner</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">SSHKit::Runner</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/lib/sshkit/runners/abstract_rb.html">
+                lib/sshkit/runners/abstract.rb
+                </a>
+        <br />
+                <a href="../../files/lib/sshkit/runners/group_rb.html">
+                lib/sshkit/runners/group.rb
+                </a>
+        <br />
+                <a href="../../files/lib/sshkit/runners/null_rb.html">
+                lib/sshkit/runners/null.rb
+                </a>
+        <br />
+                <a href="../../files/lib/sshkit/runners/parallel_rb.html">
+                lib/sshkit/runners/parallel.rb
+                </a>
+        <br />
+                <a href="../../files/lib/sshkit/runners/sequential_rb.html">
+                lib/sshkit/runners/sequential.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Class <a href="Runner/Abstract.html" class="link">SSHKit::Runner::Abstract</a><br />
+Class <a href="Runner/Group.html" class="link">SSHKit::Runner::Group</a><br />
+Class <a href="Runner/Null.html" class="link">SSHKit::Runner::Null</a><br />
+Class <a href="Runner/Parallel.html" class="link">SSHKit::Runner::Parallel</a><br />
+Class <a href="Runner/Sequential.html" class="link">SSHKit::Runner::Sequential</a><br />
+
+    </div>
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

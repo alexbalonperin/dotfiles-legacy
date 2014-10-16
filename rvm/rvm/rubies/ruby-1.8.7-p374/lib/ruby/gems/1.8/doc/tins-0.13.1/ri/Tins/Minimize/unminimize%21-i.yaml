@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Invert a minimized version of this object in place.
+full_name: Tins::Minimize#unminimize!
+is_singleton: false
+name: unminimize!
+params: ()
+visibility: public

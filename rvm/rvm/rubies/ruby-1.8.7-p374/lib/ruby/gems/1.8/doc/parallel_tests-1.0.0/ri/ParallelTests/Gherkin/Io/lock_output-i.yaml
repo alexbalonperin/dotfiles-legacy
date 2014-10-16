@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: do not let multiple processes get in each others way
+full_name: ParallelTests::Gherkin::Io#lock_output
+is_singleton: false
+name: lock_output
+params: () {|| ...}
+visibility: public

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>level (Magick::Image)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/RMagick.rb, line 915</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">level</span>(<span class="ruby-identifier">black_point</span>=<span class="ruby-value">0</span><span class="ruby-value">.0</span>, <span class="ruby-identifier">white_point</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">gamma</span>=<span class="ruby-keyword kw">nil</span>)
+        <span class="ruby-identifier">black_point</span> = <span class="ruby-constant">Float</span>(<span class="ruby-identifier">black_point</span>)
+
+        <span class="ruby-identifier">white_point</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Magick</span><span class="ruby-operator">::</span><span class="ruby-constant">QuantumRange</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">black_point</span>
+        <span class="ruby-identifier">white_point</span> = <span class="ruby-constant">Float</span>(<span class="ruby-identifier">white_point</span>)
+
+        <span class="ruby-identifier">gamma_arg</span> = <span class="ruby-identifier">gamma</span>
+        <span class="ruby-identifier">gamma</span> <span class="ruby-operator">||=</span> <span class="ruby-value">1.0</span>
+        <span class="ruby-identifier">gamma</span> = <span class="ruby-constant">Float</span>(<span class="ruby-identifier">gamma</span>)
+
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">gamma</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">10.0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">white_point</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">10.0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">white_point</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">gamma</span>.<span class="ruby-identifier">abs</span>
+            <span class="ruby-identifier">gamma</span>, <span class="ruby-identifier">white_point</span> = <span class="ruby-identifier">white_point</span>, <span class="ruby-identifier">gamma</span>
+            <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">gamma_arg</span>
+                <span class="ruby-identifier">white_point</span> = <span class="ruby-constant">Magick</span><span class="ruby-operator">::</span><span class="ruby-constant">QuantumRange</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">black_point</span>
+            <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">end</span>
+
+        <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">level2</span>(<span class="ruby-identifier">black_point</span>, <span class="ruby-identifier">white_point</span>, <span class="ruby-identifier">gamma</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

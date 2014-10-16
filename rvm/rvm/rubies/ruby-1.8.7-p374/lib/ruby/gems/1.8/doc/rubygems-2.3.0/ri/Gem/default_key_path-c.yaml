@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: The default signing key path
+full_name: Gem::default_key_path
+is_singleton: true
+name: default_key_path
+params: ()
+visibility: public

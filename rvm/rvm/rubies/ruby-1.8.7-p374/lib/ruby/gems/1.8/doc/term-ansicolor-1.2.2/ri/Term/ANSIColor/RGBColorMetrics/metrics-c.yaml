@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Term::ANSIColor::RGBColorMetrics::metrics
+is_singleton: true
+name: metrics
+params: ()
+visibility: public

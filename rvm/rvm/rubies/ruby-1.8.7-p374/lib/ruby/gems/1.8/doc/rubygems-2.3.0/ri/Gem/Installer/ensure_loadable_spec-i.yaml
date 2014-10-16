@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Ensures the Gem::Specification written out for this gem is loadable upon installation.
+full_name: Gem::Installer#ensure_loadable_spec
+is_singleton: false
+name: ensure_loadable_spec
+params: ()
+visibility: public

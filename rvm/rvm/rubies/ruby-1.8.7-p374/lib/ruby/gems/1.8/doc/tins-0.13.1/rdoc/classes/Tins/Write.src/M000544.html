@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>extended (Tins::Write)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/tins/write.rb, line 5</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">extended</span>(<span class="ruby-identifier">modul</span>)
+      <span class="ruby-identifier">modul</span>.<span class="ruby-identifier">extend</span> <span class="ruby-constant">SecureWrite</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">modul</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">:write</span>)
+        <span class="ruby-identifier">$DEBUG</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;Skipping inclusion of Tins::Write#write method, include Tins::Write::SecureWrite#secure_write instead&quot;</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-keyword kw">class</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">modul</span>; <span class="ruby-keyword kw">self</span>; <span class="ruby-keyword kw">end</span>.<span class="ruby-identifier">instance_eval</span> <span class="ruby-keyword kw">do</span>
+          <span class="ruby-identifier">alias_method</span> <span class="ruby-identifier">:write</span>, <span class="ruby-identifier">:secure_write</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">super</span>
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

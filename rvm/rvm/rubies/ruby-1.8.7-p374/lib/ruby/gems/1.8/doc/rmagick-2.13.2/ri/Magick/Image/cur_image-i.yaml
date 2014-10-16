@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Used by ImageList methods - see ImageList#cur_image
+full_name: Magick::Image#cur_image
+is_singleton: false
+name: cur_image
+params: ()
+visibility: public

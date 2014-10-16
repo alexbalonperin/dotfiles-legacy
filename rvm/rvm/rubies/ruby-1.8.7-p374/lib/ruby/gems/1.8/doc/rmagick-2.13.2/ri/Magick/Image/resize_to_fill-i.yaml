@@ -1,0 +1,13 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+- !ruby/object:RI::AliasName 
+  name: crop_resized
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Force an image to exact dimensions without changing the aspect ratio. Resize and crop if necessary. (Thanks to Jerett Taylor!)
+full_name: Magick::Image#resize_to_fill
+is_singleton: false
+name: resize_to_fill
+params: (ncols, nrows=nil, gravity=CenterGravity)
+visibility: public

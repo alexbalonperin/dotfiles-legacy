@@ -1,0 +1,25 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: []
+
+full_name: Magick::RVG::Utility::TextStrategy
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: enquote
+- !ruby/object:RI::MethodSummary 
+  name: glyph_metrics
+- !ruby/object:RI::MethodSummary 
+  name: render_glyph
+- !ruby/object:RI::MethodSummary 
+  name: shift_baseline
+- !ruby/object:RI::MethodSummary 
+  name: text_rel_coords
+name: TextStrategy
+superclass: Object

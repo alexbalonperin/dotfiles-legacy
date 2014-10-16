@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Debugger::EventProcessor#line_event
+is_singleton: false
+name: line_event
+params: (context, file, line)
+visibility: public

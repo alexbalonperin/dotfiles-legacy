@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Draw a text string at (<tt>x</tt>,<tt>y</tt>). The string can be omitted. Optionally, define text chunks within the associated block.
+full_name: Magick::RVG::TextConstructors#text
+is_singleton: false
+name: text
+params: (x=0, y=0, text=nil, &block)
+visibility: public

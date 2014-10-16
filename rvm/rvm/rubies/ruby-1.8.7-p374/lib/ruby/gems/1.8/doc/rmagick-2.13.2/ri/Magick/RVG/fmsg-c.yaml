@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Convert an array of method arguments to Float objects. If any cannot be converted, raise ArgumentError and issue a message.
+full_name: Magick::RVG::fmsg
+is_singleton: true
+name: fmsg
+params: (*args)
+visibility: public

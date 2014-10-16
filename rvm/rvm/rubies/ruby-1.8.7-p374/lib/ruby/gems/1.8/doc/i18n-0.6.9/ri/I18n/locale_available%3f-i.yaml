@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Returns true when the passed locale is in I18.available_locales. Returns false otherwise. Compare with Strings as `locale` may be coming from user input
+full_name: I18n#locale_available?
+is_singleton: false
+name: locale_available?
+params: (locale)
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Appends <tt>obj</tt> to the source list which may be a Gem::Source, URI or URI String.
+full_name: Gem::SourceList#<<
+is_singleton: false
+name: "<<"
+params: (obj)
+visibility: public

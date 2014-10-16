@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "For checking if the current version of HighLine supports RGB colors Usage: HighLine.supports_rgb_color? rescue false # rescue for compatibility with older versions Note: color usage also depends on HighLine.use_color being set"
+full_name: HighLine::supports_rgb_color?
+is_singleton: true
+name: supports_rgb_color?
+params: ()
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Tins::LinesFile#match_backward
+is_singleton: false
+name: match_backward
+params: (regexp, previous_after_match = false)
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Sets the RubyGems.org API key to <tt>api_key</tt>
+full_name: Gem::ConfigFile#rubygems_api_key=
+is_singleton: false
+name: rubygems_api_key=
+params: (api_key)
+visibility: public

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Capistrano::TaskDefinition</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Capistrano::TaskDefinition</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/lib/capistrano/task_definition_rb.html">
+                lib/capistrano/task_definition.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Object
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+Represents the definition of a single task.
+</p>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000490">brief_description</a>&nbsp;&nbsp;
+      <a href="#M000491">continue_on_error?</a>&nbsp;&nbsp;
+      <a href="#M000489">description</a>&nbsp;&nbsp;
+      <a href="#M000488">fully_qualified_name</a>&nbsp;&nbsp;
+      <a href="#M000487">new</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+    <div id="attribute-list">
+      <h3 class="section-bar">Attributes</h3>
+
+      <div class="name-list">
+        <table>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">body</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">desc</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">max_hosts</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">name</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">namespace</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">on_error</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">options</td>
+          <td class="context-item-value">&nbsp;[R]&nbsp;</td>
+          <td class="context-item-desc"></td>
+        </tr>
+        </table>
+      </div>
+    </div>
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000487" class="method-detail">
+        <a name="M000487"></a>
+
+        <div class="method-heading">
+          <a href="TaskDefinition.src/M000487.html" target="Code" class="method-signature"
+            onclick="popupCode('TaskDefinition.src/M000487.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(name, namespace, options={}, &amp;block)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000490" class="method-detail">
+        <a name="M000490"></a>
+
+        <div class="method-heading">
+          <a href="TaskDefinition.src/M000490.html" target="Code" class="method-signature"
+            onclick="popupCode('TaskDefinition.src/M000490.html');return false;">
+          <span class="method-name">brief_description</span><span class="method-args">(max_length=nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the first sentence of the full <a
+href="TaskDefinition.html#M000489">description</a>. If <tt>max_length</tt>
+is given, the result will be truncated if it is longer than
+<tt>max_length</tt>, and an ellipsis appended.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000491" class="method-detail">
+        <a name="M000491"></a>
+
+        <div class="method-heading">
+          <a href="TaskDefinition.src/M000491.html" target="Code" class="method-signature"
+            onclick="popupCode('TaskDefinition.src/M000491.html');return false;">
+          <span class="method-name">continue_on_error?</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Indicates whether the task wants to continue, even if a server has failed
+previously
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000489" class="method-detail">
+        <a name="M000489"></a>
+
+        <div class="method-heading">
+          <a href="TaskDefinition.src/M000489.html" target="Code" class="method-signature"
+            onclick="popupCode('TaskDefinition.src/M000489.html');return false;">
+          <span class="method-name">description</span><span class="method-args">(rebuild=false)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the <a href="TaskDefinition.html#M000489">description</a> for this
+task, with newlines collapsed and whitespace stripped. Returns the empty
+string if there is no <a href="TaskDefinition.html#M000489">description</a>
+for this task.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000488" class="method-detail">
+        <a name="M000488"></a>
+
+        <div class="method-heading">
+          <a href="TaskDefinition.src/M000488.html" target="Code" class="method-signature"
+            onclick="popupCode('TaskDefinition.src/M000488.html');return false;">
+          <span class="method-name">fully_qualified_name</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the task&#8216;s fully-qualified name, including the namespace
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

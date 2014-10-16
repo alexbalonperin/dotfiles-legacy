@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Creates a Resolver that queries only against the already installed gems for the <tt>needed</tt> dependencies.
+full_name: Gem::Resolver::for_current_gems
+is_singleton: true
+name: for_current_gems
+params: (needed)
+visibility: public

@@ -1,0 +1,48 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Number of processors seen by the OS and used for process scheduling.
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: "AIX: /usr/sbin/pmcycles (AIX 5+), /usr/sbin/lsdev"
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: "BSD: /sbin/sysctl"
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: "Cygwin: /proc/cpuinfo"
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: "Darwin: /usr/bin/hwprefs, /usr/sbin/sysctl"
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: "HP-UX: /usr/sbin/ioscan"
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: "IRIX: /usr/sbin/sysconf"
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: "Linux: /proc/cpuinfo"
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: "Minix 3+: /proc/cpuinfo"
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: "Solaris: /usr/sbin/psrinfo"
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: "Tru64 UNIX: /usr/sbin/psrinfo"
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: "UnixWare: /usr/sbin/psrinfo"
+  type: :BULLET
+full_name: Parallel::processor_count
+is_singleton: true
+name: processor_count
+params: ()
+visibility: public

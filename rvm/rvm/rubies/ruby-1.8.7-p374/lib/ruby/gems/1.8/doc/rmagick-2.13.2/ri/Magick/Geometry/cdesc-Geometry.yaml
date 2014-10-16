@@ -1,0 +1,67 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: flag
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: height
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: width
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: x
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: y
+  rw: RW
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: from_s
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: FLAGS
+  value: "['', '%', '!', '<', '>', '@', '^']"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: RFLAGS
+  value: "{ '%' => PercentGeometry,                '!' => AspectGeometry,                '<' => LessGeometry,                '>' => GreaterGeometry,                '@' => AreaGeometry,                '^' => MinimumGeometry }"
+- !ruby/object:RI::Constant 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Construct an object from a geometry string
+  name: W
+  value: /(\d+\.\d+%?)|(\d*%?)/
+- !ruby/object:RI::Constant 
+  comment: 
+  name: H
+  value: W
+- !ruby/object:RI::Constant 
+  comment: 
+  name: X
+  value: /(?:([-+]\d+))?/
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Y
+  value: X
+- !ruby/object:RI::Constant 
+  comment: 
+  name: RE
+  value: /\A#{W}x?#{H}#{X}#{Y}([!<>@\^]?)\Z/
+full_name: Magick::Geometry
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: to_s
+name: Geometry
+superclass: Object

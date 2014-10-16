@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Returns the version of the latest release-version of gem <tt>name</tt>
+full_name: Gem::latest_version_for
+is_singleton: true
+name: latest_version_for
+params: (name)
+visibility: public

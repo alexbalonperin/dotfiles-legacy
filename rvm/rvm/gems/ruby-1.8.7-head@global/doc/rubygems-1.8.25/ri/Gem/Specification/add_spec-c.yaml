@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Adds <tt>spec</tt> to the known specifications, keeping the collection properly sorted.
+full_name: Gem::Specification::add_spec
+is_singleton: true
+name: add_spec
+params: (spec)
+visibility: public

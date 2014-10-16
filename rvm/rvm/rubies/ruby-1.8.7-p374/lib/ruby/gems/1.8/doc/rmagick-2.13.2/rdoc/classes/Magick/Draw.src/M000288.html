@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>pop (Magick::Draw)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/RMagick.rb, line 498</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pop</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">what</span>)
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">what</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+            <span class="ruby-identifier">primitive</span> <span class="ruby-value str">&quot;pop graphic-context&quot;</span>
+        <span class="ruby-keyword kw">else</span>
+            <span class="ruby-comment cmt"># to_s allows a Symbol to be used instead of a String</span>
+            <span class="ruby-identifier">primitive</span> <span class="ruby-value str">&quot;pop &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">what</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">w</span><span class="ruby-operator">|</span> <span class="ruby-identifier">w</span>.<span class="ruby-identifier">to_s</span>}.<span class="ruby-identifier">join</span>(<span class="ruby-value str">' '</span>)
+        <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

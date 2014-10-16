@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Gem::TestCase#new_default_spec
+is_singleton: false
+name: new_default_spec
+params: (name, version, deps = nil, *files)
+visibility: public

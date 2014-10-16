@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Draws a path defined by an SVG path string or a PathData object.
+full_name: Magick::RVG::ShapeConstructors#path
+is_singleton: false
+name: path
+params: (path)
+visibility: public

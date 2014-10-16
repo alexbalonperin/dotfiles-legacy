@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Magick::RVG::Utility::TextAttributes#set_affine
+is_singleton: false
+name: set_affine
+params: (sx, rx, ry, sy, tx, ty)
+visibility: public

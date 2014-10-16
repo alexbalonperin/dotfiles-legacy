@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Debugger::start_server
+is_singleton: true
+name: start_server
+params: (host = nil, port = 1234)
+visibility: public

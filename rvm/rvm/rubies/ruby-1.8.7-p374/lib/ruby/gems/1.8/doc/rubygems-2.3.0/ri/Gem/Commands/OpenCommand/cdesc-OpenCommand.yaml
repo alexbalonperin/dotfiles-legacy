@@ -1,0 +1,26 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: []
+
+full_name: Gem::Commands::OpenCommand
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: Gem::VersionOption
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: execute
+- !ruby/object:RI::MethodSummary 
+  name: get_env_editor
+- !ruby/object:RI::MethodSummary 
+  name: open_editor
+- !ruby/object:RI::MethodSummary 
+  name: open_gem
+- !ruby/object:RI::MethodSummary 
+  name: spec_for
+name: OpenCommand
+superclass: Gem::Command

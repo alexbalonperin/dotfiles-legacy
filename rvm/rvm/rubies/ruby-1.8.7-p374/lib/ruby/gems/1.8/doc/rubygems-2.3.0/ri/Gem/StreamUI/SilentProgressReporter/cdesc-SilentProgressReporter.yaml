@@ -1,0 +1,26 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The count of items is never updated for the silent progress reporter.
+  name: count
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: An absolutely silent progress reporter.
+constants: []
+
+full_name: Gem::StreamUI::SilentProgressReporter
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: done
+- !ruby/object:RI::MethodSummary 
+  name: updated
+name: SilentProgressReporter
+superclass: Object

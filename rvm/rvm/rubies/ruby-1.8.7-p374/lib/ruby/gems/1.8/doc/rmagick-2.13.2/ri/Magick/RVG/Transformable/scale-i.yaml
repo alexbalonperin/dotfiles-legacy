@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: (self)
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Multiply the x-coordinates by <tt>sx</tt> and the y-coordinates by <tt>sy</tt>. If <tt>sy</tt> is omitted it defaults to <tt>sx</tt>.
+full_name: Magick::RVG::Transformable#scale
+is_singleton: false
+name: scale
+params: (sx, sy=nil) {|self| ...}
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Capistrano::Configuration::Actions::Invocation#continue_execution_for_branch
+is_singleton: false
+name: continue_execution_for_branch
+params: (branch)
+visibility: public

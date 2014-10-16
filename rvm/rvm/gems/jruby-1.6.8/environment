@@ -1,0 +1,6 @@
+export PATH="/Users/abalonperin/dotfiles/rvm/rvm/gems/jruby-1.6.8/bin:/Users/abalonperin/dotfiles/rvm/rvm/gems/jruby-1.6.8/bin:/Users/abalonperin/dotfiles/rvm/rvm/rubies/jruby-1.6.8/bin:$PATH"
+export GEM_HOME='/Users/abalonperin/dotfiles/rvm/rvm/gems/jruby-1.6.8'
+export GEM_PATH='/Users/abalonperin/dotfiles/rvm/rvm/gems/jruby-1.6.8'
+export IRBRC='/Users/abalonperin/dotfiles/rvm/rvm/rubies/jruby-1.6.8/.irbrc'
+unset MAGLEV_HOME
+unset RBXOPT

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "Alias for #resize_to_fill!"
+full_name: Magick::Image#crop_resized!
+is_singleton: false
+name: crop_resized!
+params: (ncols, nrows=nil, gravity=CenterGravity)
+visibility: public

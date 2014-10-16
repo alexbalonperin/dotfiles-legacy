@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Magick::Draw#stroke_linejoin
+is_singleton: false
+name: stroke_linejoin
+params: (value)
+visibility: public

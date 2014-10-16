@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>on_rollback (Capistrano::Configuration::Execution)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/capistrano/configuration/execution.rb, line 69</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">on_rollback</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">transaction?</span>
+          <span class="ruby-comment cmt"># don't note a new rollback request if one has already been set</span>
+          <span class="ruby-identifier">rollback_requests</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">task_call_frames</span>.<span class="ruby-identifier">last</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">task_call_frames</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">rollback</span>
+          <span class="ruby-identifier">task_call_frames</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">rollback</span> = <span class="ruby-identifier">block</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

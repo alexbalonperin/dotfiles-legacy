@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>expand_key (Net::SSH::Transport::KeyExpander)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/net/ssh/transport/key_expander.rb, line 6</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">expand_key</span>(<span class="ruby-identifier">bytes</span>, <span class="ruby-identifier">start</span>, <span class="ruby-identifier">options</span>={})
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">bytes</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-value str">&quot;&quot;</span>
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-identifier">k</span> = <span class="ruby-identifier">start</span>[<span class="ruby-value">0</span>, <span class="ruby-identifier">bytes</span>]
+
+    <span class="ruby-identifier">digester</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:digester</span>] <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">raise</span> <span class="ruby-value str">'No digester supplied'</span>
+    <span class="ruby-identifier">shared</span>   = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:shared</span>] <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">raise</span> <span class="ruby-value str">'No shared secret supplied'</span>
+    <span class="ruby-identifier">hash</span>     = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:hash</span>] <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">raise</span> <span class="ruby-value str">'No hash supplied'</span>
+
+    <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">bytes</span>
+      <span class="ruby-identifier">step</span> = <span class="ruby-identifier">digester</span>.<span class="ruby-identifier">digest</span>(<span class="ruby-identifier">shared</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">hash</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">k</span>)
+      <span class="ruby-identifier">bytes_needed</span> = <span class="ruby-identifier">bytes</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">length</span>
+      <span class="ruby-identifier">k</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">step</span>[<span class="ruby-value">0</span>, <span class="ruby-identifier">bytes_needed</span>]
+    <span class="ruby-keyword kw">end</span>
+
+    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">k</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Draw a rectangle with rounded corners
+full_name: Magick::Draw#roundrectangle
+is_singleton: false
+name: roundrectangle
+params: (center_x, center_y, width, height, corner_width, corner_height)
+visibility: public

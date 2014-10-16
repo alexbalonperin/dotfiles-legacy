@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Gem::Commands::SetupCommand#show_release_notes
+is_singleton: false
+name: show_release_notes
+params: ()
+visibility: public

@@ -1,0 +1,16 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Sets the list of authors, ensuring it is an array.
+- !ruby/struct:SM::Flow::P 
+  body: "Usage:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  spec.authors = ['John Jones', 'Mary Smith']\n"
+full_name: Gem::Specification#authors=
+is_singleton: false
+name: authors=
+params: (value)
+visibility: public

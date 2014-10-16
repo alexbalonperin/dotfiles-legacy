@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>[] (Term::ANSIColor::Attribute)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/term/ansicolor/attribute.rb, line 33</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-operator">[]</span>(<span class="ruby-identifier">name</span>)
+        <span class="ruby-keyword kw">case</span>
+        <span class="ruby-keyword kw">when</span> <span class="ruby-keyword kw">self</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">name</span>                              <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">name</span>
+        <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Array</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">name</span>                             <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">nearest_rgb_color</span> <span class="ruby-identifier">name</span>
+        <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/\A(on_)?(\d+)\z/</span>             <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">get</span> <span class="ruby-value str">&quot;#$1color#$2&quot;</span>
+        <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/\A#([0-9a-f]{3}){1,2}\z/i</span>    <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">nearest_rgb_color</span> <span class="ruby-identifier">name</span>
+        <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/\Aon_#([0-9a-f]{3}){1,2}\z/i</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">nearest_rgb_on_color</span> <span class="ruby-identifier">name</span>
+        <span class="ruby-keyword kw">else</span>                                            <span class="ruby-identifier">get</span> <span class="ruby-identifier">name</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

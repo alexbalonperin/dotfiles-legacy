@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Creates a new SystemExitException with the given <tt>exit_code</tt>
+full_name: Gem::SystemExitException::new
+is_singleton: true
+name: new
+params: (exit_code)
+visibility: public

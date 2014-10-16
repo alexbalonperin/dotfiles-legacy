@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Constructor. Takes a single argument which is to be treated like a hashtable, or defaults to ENV, the system environment.
+full_name: Gem::PathSupport::new
+is_singleton: true
+name: new
+params: (env=ENV)
+visibility: public

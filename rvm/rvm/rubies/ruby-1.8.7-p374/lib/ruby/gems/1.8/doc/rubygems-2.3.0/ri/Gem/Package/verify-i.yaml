@@ -1,0 +1,26 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "Verifies that this gem:"
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: Contains a valid gem specification
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: Contains a contents archive
+  - !ruby/struct:SM::Flow::LI 
+    label: "*"
+    body: The contents archive is not corrupt
+  type: :BULLET
+- !ruby/struct:SM::Flow::P 
+  body: "After verification the gem specification from the gem is available from #spec"
+full_name: Gem::Package#verify
+is_singleton: false
+name: verify
+params: ()
+visibility: public

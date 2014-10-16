@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Config#enforce_available_locales=
+is_singleton: false
+name: enforce_available_locales=
+params: (enforce_available_locales)
+visibility: public

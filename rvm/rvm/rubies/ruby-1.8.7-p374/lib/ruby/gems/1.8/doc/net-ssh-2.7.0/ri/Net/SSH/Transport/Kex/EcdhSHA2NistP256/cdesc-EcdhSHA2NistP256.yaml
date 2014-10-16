@@ -1,0 +1,27 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: ecdh
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: A key-exchange service implementing the &quot;ecdh-sha2-nistp256&quot; key-exchange algorithm. (defined in RFC 5656)
+constants: []
+
+full_name: Net::SSH::Transport::Kex::EcdhSHA2NistP256
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: Constants
+- !ruby/object:RI::IncludedModule 
+  name: Loggable
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: curve_name
+- !ruby/object:RI::MethodSummary 
+  name: digester
+name: EcdhSHA2NistP256
+superclass: DiffieHellmanGroup1SHA1

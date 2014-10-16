@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Extensions to build when installing the gem. See Gem::Installer#build_extensions for valid values.
+full_name: Gem::Specification#extensions
+is_singleton: false
+name: extensions
+params: ()
+visibility: public

@@ -1,0 +1,21 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: []
+
+full_name: Debugger::IdeCommandProcessor
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: print
+- !ruby/object:RI::MethodSummary 
+  name: process_commands
+- !ruby/object:RI::MethodSummary 
+  name: splitter
+name: IdeCommandProcessor
+superclass: Object

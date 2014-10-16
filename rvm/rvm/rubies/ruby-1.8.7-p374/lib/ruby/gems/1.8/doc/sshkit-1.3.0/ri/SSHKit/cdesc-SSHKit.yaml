@@ -1,0 +1,38 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: config
+  rw: RW
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: capture_output
+- !ruby/object:RI::MethodSummary 
+  name: config
+- !ruby/object:RI::MethodSummary 
+  name: configure
+- !ruby/object:RI::MethodSummary 
+  name: reset_configuration!
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "\xC2\xA0@author Lee Hambley"
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: UnparsableHostStringError
+  value: Class.new(SSHKit::StandardError)
+- !ruby/object:RI::Constant 
+  comment: 
+  name: VERSION
+  value: "\"1.3.0\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: StandardError
+  value: Class.new(::StandardError)
+full_name: SSHKit
+includes: []
+
+instance_methods: []
+
+name: SSHKit
+superclass: 

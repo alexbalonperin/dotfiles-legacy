@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Tins::DeepConstGet#deep_const_get
+is_singleton: false
+name: deep_const_get
+params: (path, start_module = Object)
+visibility: public

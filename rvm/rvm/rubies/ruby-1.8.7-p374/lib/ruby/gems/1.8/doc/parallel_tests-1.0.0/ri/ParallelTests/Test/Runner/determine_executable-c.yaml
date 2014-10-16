@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ParallelTests::Test::Runner::determine_executable
+is_singleton: true
+name: determine_executable
+params: ()
+visibility: protected

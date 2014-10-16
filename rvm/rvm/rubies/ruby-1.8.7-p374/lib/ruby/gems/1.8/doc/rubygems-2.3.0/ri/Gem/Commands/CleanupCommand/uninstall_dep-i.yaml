@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Gem::Commands::CleanupCommand#uninstall_dep
+is_singleton: false
+name: uninstall_dep
+params: (spec)
+visibility: public

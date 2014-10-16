@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>dump_summary (ParallelTests::RSpec::FailuresLogger)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/parallel_tests/rspec/failures_logger.rb, line 27</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dump_summary</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+    <span class="ruby-identifier">lock_output</span> <span class="ruby-keyword kw">do</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-constant">RSPEC_1</span>
+        <span class="ruby-identifier">dump_commands_to_rerun_failed_examples_rspec_1</span>
+      <span class="ruby-keyword kw">elsif</span> <span class="ruby-constant">RSPEC_3</span>
+        <span class="ruby-identifier">notification</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>
+        <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">notification</span>.<span class="ruby-identifier">failed_examples</span>.<span class="ruby-identifier">empty?</span>
+          <span class="ruby-identifier">colorizer</span> = <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Core</span><span class="ruby-operator">::</span><span class="ruby-constant">Formatters</span><span class="ruby-operator">::</span><span class="ruby-constant">ConsoleCodes</span>
+          <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">notification</span>.<span class="ruby-identifier">colorized_rerun_commands</span>(<span class="ruby-identifier">colorizer</span>)
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">dump_commands_to_rerun_failed_examples</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span>
+    <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">flush</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

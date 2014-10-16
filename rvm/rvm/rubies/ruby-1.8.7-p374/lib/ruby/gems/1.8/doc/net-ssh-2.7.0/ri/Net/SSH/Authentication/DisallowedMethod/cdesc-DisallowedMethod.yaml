@@ -1,0 +1,17 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Raised if the current authentication method is not allowed
+constants: []
+
+full_name: Net::SSH::Authentication::DisallowedMethod
+includes: []
+
+instance_methods: []
+
+name: DisallowedMethod
+superclass: Net::SSH::Exception

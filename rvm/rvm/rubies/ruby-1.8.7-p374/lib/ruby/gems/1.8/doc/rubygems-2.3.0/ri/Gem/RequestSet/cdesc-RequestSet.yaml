@@ -1,0 +1,85 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Array of gems to install even if already installed
+  name: always_install
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: dependencies
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: development
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Set to true if you want to install only direct development dependencies.
+  name: development_shallow
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Errors fetching gems during resolution.
+  name: errors
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: When true, dependency resolution is not performed, only the requested gems are installed.
+  name: ignore_dependencies
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: When false no remote sets are used for resolving gems.
+  name: remote
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Treat missing dependencies as silent errors
+  name: soft_missing
+  rw: RW
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: A RequestSet groups a request to activate a set of dependencies.
+- !ruby/struct:SM::Flow::VERB 
+  body: "  nokogiri = Gem::Dependency.new 'nokogiri', '~&gt; 1.6'\n  pg = Gem::Dependency.new 'pg', '~&gt; 0.14'\n\n  set = Gem::RequestSet.new nokogiri, pg\n\n  requests = set.resolve\n\n  p requests.map { |r| r.full_name }\n  #=&gt; [&quot;nokogiri-1.6.0&quot;, &quot;mini_portile-0.5.1&quot;, &quot;pg-0.17.0&quot;]\n"
+constants: []
+
+full_name: Gem::RequestSet
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: TSort
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: gem
+- !ruby/object:RI::MethodSummary 
+  name: import
+- !ruby/object:RI::MethodSummary 
+  name: install
+- !ruby/object:RI::MethodSummary 
+  name: install_from_gemdeps
+- !ruby/object:RI::MethodSummary 
+  name: install_into
+- !ruby/object:RI::MethodSummary 
+  name: load_gemdeps
+- !ruby/object:RI::MethodSummary 
+  name: resolve
+- !ruby/object:RI::MethodSummary 
+  name: resolve_current
+- !ruby/object:RI::MethodSummary 
+  name: sorted_requests
+- !ruby/object:RI::MethodSummary 
+  name: specs
+- !ruby/object:RI::MethodSummary 
+  name: specs_in
+name: RequestSet
+superclass: Object

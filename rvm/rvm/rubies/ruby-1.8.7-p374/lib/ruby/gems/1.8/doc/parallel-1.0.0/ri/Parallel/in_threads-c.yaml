@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: (i)
+comment: 
+full_name: Parallel::in_threads
+is_singleton: true
+name: in_threads
+params: (options={:count => 2}) {|i| ...}
+visibility: public

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"logger:ETI"%Capistrano::Configuration#logger;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"8The logger instance defined for this configuration.;T:
+@fileI"$lib/capistrano/configuration.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Capistrano::Configuration;FcRDoc::NormalClass0

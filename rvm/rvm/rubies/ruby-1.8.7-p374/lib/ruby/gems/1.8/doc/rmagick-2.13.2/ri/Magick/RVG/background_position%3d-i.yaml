@@ -1,0 +1,24 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "How to position the background image on the canvas. One of the following symbols:"
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: ":scaled"
+    body: Scale the image to the canvas width and height.
+  - !ruby/struct:SM::Flow::LI 
+    label: ":tiled"
+    body: Tile the image across the canvas.
+  - !ruby/struct:SM::Flow::LI 
+    label: ":fit"
+    body: Scale the image to fit within the canvas while retaining the image proportions. Center the image on the canvas. Color any part of the canvas not covered by the image with the background color.
+  type: :LABELED
+full_name: Magick::RVG#background_position=
+is_singleton: false
+name: background_position=
+params: (pos)
+visibility: public

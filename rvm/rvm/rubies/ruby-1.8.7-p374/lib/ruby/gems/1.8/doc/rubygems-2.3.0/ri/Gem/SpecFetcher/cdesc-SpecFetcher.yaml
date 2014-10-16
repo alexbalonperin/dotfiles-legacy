@@ -1,0 +1,32 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: fetcher
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: SpecFetcher handles metadata updates from remote gem repositories.
+constants: []
+
+full_name: Gem::SpecFetcher
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: Gem::UserInteraction
+- !ruby/object:RI::IncludedModule 
+  name: Gem::Text
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: available_specs
+- !ruby/object:RI::MethodSummary 
+  name: detect
+- !ruby/object:RI::MethodSummary 
+  name: search_for_dependency
+- !ruby/object:RI::MethodSummary 
+  name: spec_for_dependency
+- !ruby/object:RI::MethodSummary 
+  name: suggest_gems_from_name
+name: SpecFetcher
+superclass: Object

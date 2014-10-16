@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Add a <tt>smooth curveto</tt> (<em>cubic Bezier</em>) command. If <tt>abs</tt> is <tt>true</tt> the coordinates are absolute, otherwise the coordinates are relative.
+full_name: Magick::RVG::PathData#smooth_curveto
+is_singleton: false
+name: smooth_curveto
+params: (abs, x2, y2, x, y, *coords)
+visibility: public

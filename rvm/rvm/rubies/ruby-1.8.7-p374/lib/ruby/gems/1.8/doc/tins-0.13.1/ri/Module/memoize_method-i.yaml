@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Automatically memoize calls of the the methods <tt>method_ids</tt>. The memoized results do NOT ONLY depend on the arguments, but ALSO on the object the method is called on.
+full_name: Module#memoize_method
+is_singleton: false
+name: memoize_method
+params: (*method_ids)
+visibility: public

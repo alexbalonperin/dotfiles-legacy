@@ -1,0 +1,57 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: capture_output
+- !ruby/object:RI::MethodSummary 
+  name: determine_executable
+- !ruby/object:RI::MethodSummary 
+  name: executable
+- !ruby/object:RI::MethodSummary 
+  name: execute_command
+- !ruby/object:RI::MethodSummary 
+  name: execute_command_and_capture_output
+- !ruby/object:RI::MethodSummary 
+  name: files_in_folder
+- !ruby/object:RI::MethodSummary 
+  name: find_results
+- !ruby/object:RI::MethodSummary 
+  name: find_tests
+- !ruby/object:RI::MethodSummary 
+  name: line_is_result?
+- !ruby/object:RI::MethodSummary 
+  name: name
+- !ruby/object:RI::MethodSummary 
+  name: run_tests
+- !ruby/object:RI::MethodSummary 
+  name: runtime_log
+- !ruby/object:RI::MethodSummary 
+  name: sum_up_results
+- !ruby/object:RI::MethodSummary 
+  name: summarize_results
+- !ruby/object:RI::MethodSummary 
+  name: test_env_number
+- !ruby/object:RI::MethodSummary 
+  name: test_file_name
+- !ruby/object:RI::MethodSummary 
+  name: test_suffix
+- !ruby/object:RI::MethodSummary 
+  name: tests_in_groups
+- !ruby/object:RI::MethodSummary 
+  name: with_filesize_info
+- !ruby/object:RI::MethodSummary 
+  name: with_runtime_info
+comment: 
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: NAME
+  value: "'Test'"
+full_name: ParallelTests::Test::Runner
+includes: []
+
+instance_methods: []
+
+name: Runner
+superclass: Object

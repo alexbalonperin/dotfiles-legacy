@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Set all pixels to the fill color. Very similar to Image#erase! Accepts either String or Pixel arguments
+full_name: Magick::Image#color_reset!
+is_singleton: false
+name: color_reset!
+params: (fill)
+visibility: public

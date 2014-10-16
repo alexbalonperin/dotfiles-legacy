@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Draw an ellipse
+full_name: Magick::Draw#ellipse
+is_singleton: false
+name: ellipse
+params: (originX, originY, width, height, arcStart, arcEnd)
+visibility: public

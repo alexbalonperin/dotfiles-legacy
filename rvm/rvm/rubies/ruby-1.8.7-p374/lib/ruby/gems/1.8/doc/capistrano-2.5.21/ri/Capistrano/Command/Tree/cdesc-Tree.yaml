@@ -1,0 +1,35 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: branches
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: configuration
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: fallback
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: []
+
+full_name: Capistrano::Command::Tree
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: Enumerable
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: branches_for
+- !ruby/object:RI::MethodSummary 
+  name: each
+- !ruby/object:RI::MethodSummary 
+  name: else
+- !ruby/object:RI::MethodSummary 
+  name: when
+name: Tree
+superclass: Object

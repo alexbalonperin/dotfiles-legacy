@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>sync (Capistrano::Deploy::SCM::Git)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/capistrano/recipes/deploy/scm/git.rb, line 165</span>
+        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sync</span>(<span class="ruby-identifier">revision</span>, <span class="ruby-identifier">destination</span>)
+          <span class="ruby-identifier">git</span>     = <span class="ruby-identifier">command</span>
+          <span class="ruby-identifier">remote</span>  = <span class="ruby-identifier">origin</span>
+
+          <span class="ruby-identifier">execute</span> = []
+          <span class="ruby-identifier">execute</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;cd #{destination}&quot;</span>
+
+          <span class="ruby-comment cmt"># Use git-config to setup a remote tracking branches. Could use</span>
+          <span class="ruby-comment cmt"># git-remote but it complains when a remote of the same name already</span>
+          <span class="ruby-comment cmt"># exists, git-config will just silenty overwrite the setting every</span>
+          <span class="ruby-comment cmt"># time. This could cause wierd-ness in the remote cache if the url</span>
+          <span class="ruby-comment cmt"># changes between calls, but as long as the repositories are all</span>
+          <span class="ruby-comment cmt"># based from each other it should still work fine.</span>
+          <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">remote</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">'origin'</span>
+            <span class="ruby-identifier">execute</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{git} config remote.#{remote}.url #{variable(:repository)}&quot;</span>
+            <span class="ruby-identifier">execute</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{git} config remote.#{remote}.fetch +refs/heads/*:refs/remotes/#{remote}/*&quot;</span>
+          <span class="ruby-keyword kw">end</span>
+
+          <span class="ruby-comment cmt"># since we're in a local branch already, just reset to specified revision rather than merge</span>
+          <span class="ruby-identifier">execute</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{git} fetch #{verbose} #{remote} &amp;&amp; #{git} reset #{verbose} --hard #{revision}&quot;</span>
+
+          <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">variable</span>(<span class="ruby-identifier">:git_enable_submodules</span>)
+            <span class="ruby-identifier">execute</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{git} submodule #{verbose} init&quot;</span>
+            <span class="ruby-identifier">execute</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;for mod in `#{git} submodule status | awk '{ print $2 }'`; do #{git} config -f .git/config submodule.${mod}.url `#{git} config -f .gitmodules --get submodule.${mod}.url` &amp;&amp; echo Synced $mod; done&quot;</span>
+            <span class="ruby-identifier">execute</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{git} submodule #{verbose} sync&quot;</span>
+            <span class="ruby-identifier">execute</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{git} submodule #{verbose} update&quot;</span>
+          <span class="ruby-keyword kw">end</span>
+
+          <span class="ruby-comment cmt"># Make sure there's nothing else lying around in the repository (for</span>
+          <span class="ruby-comment cmt"># example, a submodule that has subsequently been removed).</span>
+          <span class="ruby-identifier">execute</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{git} clean #{verbose} -d -x -f&quot;</span>
+
+          <span class="ruby-identifier">execute</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot; &amp;&amp; &quot;</span>)
+        <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

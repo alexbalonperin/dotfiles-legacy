@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Ping files and concatenate the new images
+full_name: Magick::ImageList#ping
+is_singleton: false
+name: ping
+params: (*files, &block)
+visibility: public

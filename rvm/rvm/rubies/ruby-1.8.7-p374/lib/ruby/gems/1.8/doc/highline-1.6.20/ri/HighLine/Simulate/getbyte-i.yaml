@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Simulate StringIO#getbyte by shifting a single character off of the next line of the script
+full_name: HighLine::Simulate#getbyte
+is_singleton: false
+name: getbyte
+params: ()
+visibility: public

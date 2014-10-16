@@ -1,0 +1,26 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Validator performs various gem file and gem database validation
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Describes a problem with a file in a gem.
+  name: ErrorData
+  value: "Struct.new :path, :problem do     def <=> other # :nodoc:"
+full_name: Gem::Validator
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: Gem::UserInteraction
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: verify_gem
+- !ruby/object:RI::MethodSummary 
+  name: verify_gem_file
+name: Validator
+superclass: Object

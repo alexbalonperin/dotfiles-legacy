@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: The simulator handles its own EOF
+full_name: HighLine::Simulate#eof?
+is_singleton: false
+name: eof?
+params: ()
+visibility: public

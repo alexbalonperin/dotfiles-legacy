@@ -1,0 +1,40 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: inverted
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: inverted
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: "[]"
+- !ruby/object:RI::MethodSummary 
+  name: "[]"
+- !ruby/object:RI::MethodSummary 
+  name: new
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: []
+
+full_name: Tins::Bijection
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: "[]="
+- !ruby/object:RI::MethodSummary 
+  name: "[]="
+- !ruby/object:RI::MethodSummary 
+  name: fill
+- !ruby/object:RI::MethodSummary 
+  name: fill
+- !ruby/object:RI::MethodSummary 
+  name: freeze
+- !ruby/object:RI::MethodSummary 
+  name: freeze
+name: Bijection
+superclass: Hash

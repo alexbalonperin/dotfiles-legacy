@@ -1,0 +1,30 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The fetch error which is an Exception subclass.
+  name: error
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The source that had the fetch problem.
+  name: source
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: An error that indicates we weren't able to fetch some data from a source
+constants: []
+
+full_name: Gem::SourceFetchProblem
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: wordy
+name: SourceFetchProblem
+superclass: ErrorReason

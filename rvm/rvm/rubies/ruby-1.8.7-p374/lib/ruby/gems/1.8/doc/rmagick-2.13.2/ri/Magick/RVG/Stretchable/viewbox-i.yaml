@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: (self)
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Describe a user coordinate system to be imposed on the viewbox. The arguments must be numbers and the <tt>width</tt> and <tt>height</tt> arguments must be positive.
+full_name: Magick::RVG::Stretchable#viewbox
+is_singleton: false
+name: viewbox
+params: (x, y, width, height) {|self| ...}
+visibility: public

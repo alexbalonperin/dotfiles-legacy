@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Adds a hook that will get run before Gem::Specification.reset is run.
+full_name: Gem::pre_reset
+is_singleton: true
+name: pre_reset
+params: (&hook)
+visibility: public

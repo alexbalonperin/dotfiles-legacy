@@ -1,0 +1,87 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: values
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: values
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: "[]"
+- !ruby/object:RI::MethodSummary 
+  name: "[]"
+- !ruby/object:RI::MethodSummary 
+  name: from_array
+- !ruby/object:RI::MethodSummary 
+  name: from_array
+- !ruby/object:RI::MethodSummary 
+  name: from_hash
+- !ruby/object:RI::MethodSummary 
+  name: from_hash
+- !ruby/object:RI::MethodSummary 
+  name: from_html
+- !ruby/object:RI::MethodSummary 
+  name: from_html
+- !ruby/object:RI::MethodSummary 
+  name: new
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: []
+
+full_name: Term::ANSIColor::RGBTriple
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: Term::ANSIColor::RGBColorMetricsHelpers::WeightedEuclideanDistance
+- !ruby/object:RI::IncludedModule 
+  name: Term::ANSIColor::RGBColorMetricsHelpers::WeightedEuclideanDistance
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: ==
+- !ruby/object:RI::MethodSummary 
+  name: ==
+- !ruby/object:RI::MethodSummary 
+  name: blue
+- !ruby/object:RI::MethodSummary 
+  name: blue
+- !ruby/object:RI::MethodSummary 
+  name: distance_to
+- !ruby/object:RI::MethodSummary 
+  name: distance_to
+- !ruby/object:RI::MethodSummary 
+  name: gradient_to
+- !ruby/object:RI::MethodSummary 
+  name: gradient_to
+- !ruby/object:RI::MethodSummary 
+  name: gray?
+- !ruby/object:RI::MethodSummary 
+  name: gray?
+- !ruby/object:RI::MethodSummary 
+  name: green
+- !ruby/object:RI::MethodSummary 
+  name: green
+- !ruby/object:RI::MethodSummary 
+  name: html
+- !ruby/object:RI::MethodSummary 
+  name: html
+- !ruby/object:RI::MethodSummary 
+  name: initialize_copy
+- !ruby/object:RI::MethodSummary 
+  name: initialize_copy
+- !ruby/object:RI::MethodSummary 
+  name: red
+- !ruby/object:RI::MethodSummary 
+  name: red
+- !ruby/object:RI::MethodSummary 
+  name: to_a
+- !ruby/object:RI::MethodSummary 
+  name: to_a
+- !ruby/object:RI::MethodSummary 
+  name: to_rgb_triple
+- !ruby/object:RI::MethodSummary 
+  name: to_rgb_triple
+name: RGBTriple
+superclass: Object

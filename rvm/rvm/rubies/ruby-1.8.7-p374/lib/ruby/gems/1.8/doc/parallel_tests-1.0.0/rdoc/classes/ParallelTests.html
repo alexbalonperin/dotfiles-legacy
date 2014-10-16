@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: ParallelTests</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">ParallelTests</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../files/lib/parallel_tests/cli_rb.html">
+                lib/parallel_tests/cli.rb
+                </a>
+        <br />
+                <a href="../files/lib/parallel_tests/cucumber/failures_logger_rb.html">
+                lib/parallel_tests/cucumber/failures_logger.rb
+                </a>
+        <br />
+                <a href="../files/lib/parallel_tests/cucumber/runner_rb.html">
+                lib/parallel_tests/cucumber/runner.rb
+                </a>
+        <br />
+                <a href="../files/lib/parallel_tests/cucumber/scenario_line_logger_rb.html">
+                lib/parallel_tests/cucumber/scenario_line_logger.rb
+                </a>
+        <br />
+                <a href="../files/lib/parallel_tests/cucumber/scenarios_rb.html">
+                lib/parallel_tests/cucumber/scenarios.rb
+                </a>
+        <br />
+                <a href="../files/lib/parallel_tests/gherkin/io_rb.html">
+                lib/parallel_tests/gherkin/io.rb
+                </a>
+        <br />
+                <a href="../files/lib/parallel_tests/gherkin/listener_rb.html">
+                lib/parallel_tests/gherkin/listener.rb
+                </a>
+        <br />
+                <a href="../files/lib/parallel_tests/gherkin/runner_rb.html">
+                lib/parallel_tests/gherkin/runner.rb
+                </a>
+        <br />
+                <a href="../files/lib/parallel_tests/gherkin/runtime_logger_rb.html">
+                lib/parallel_tests/gherkin/runtime_logger.rb
+                </a>
+        <br />
+                <a href="../files/lib/parallel_tests/grouper_rb.html">
+                lib/parallel_tests/grouper.rb
+                </a>
+        <br />
+                <a href="../files/lib/parallel_tests/railtie_rb.html">
+                lib/parallel_tests/railtie.rb
+                </a>
+        <br />
+                <a href="../files/lib/parallel_tests/rspec/logger_base_rb.html">
+                lib/parallel_tests/rspec/logger_base.rb
+                </a>
+        <br />
+                <a href="../files/lib/parallel_tests/rspec/runner_rb.html">
+                lib/parallel_tests/rspec/runner.rb
+                </a>
+        <br />
+                <a href="../files/lib/parallel_tests/spinach/runner_rb.html">
+                lib/parallel_tests/spinach/runner.rb
+                </a>
+        <br />
+                <a href="../files/lib/parallel_tests/tasks_rb.html">
+                lib/parallel_tests/tasks.rb
+                </a>
+        <br />
+                <a href="../files/lib/parallel_tests/test/runner_rb.html">
+                lib/parallel_tests/test/runner.rb
+                </a>
+        <br />
+                <a href="../files/lib/parallel_tests/test/runtime_logger_rb.html">
+                lib/parallel_tests/test/runtime_logger.rb
+                </a>
+        <br />
+                <a href="../files/lib/parallel_tests/version_rb.html">
+                lib/parallel_tests/version.rb
+                </a>
+        <br />
+                <a href="../files/lib/parallel_tests_rb.html">
+                lib/parallel_tests.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+rake tasks for Rails 3+
+</p>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+    <div id="class-list">
+      <h3 class="section-bar">Classes and Modules</h3>
+
+      Module <a href="ParallelTests/Cucumber.html" class="link">ParallelTests::Cucumber</a><br />
+Module <a href="ParallelTests/Gherkin.html" class="link">ParallelTests::Gherkin</a><br />
+Module <a href="ParallelTests/RSpec.html" class="link">ParallelTests::RSpec</a><br />
+Module <a href="ParallelTests/Spinach.html" class="link">ParallelTests::Spinach</a><br />
+Module <a href="ParallelTests/Tasks.html" class="link">ParallelTests::Tasks</a><br />
+Module <a href="ParallelTests/Test.html" class="link">ParallelTests::Test</a><br />
+Class <a href="ParallelTests/CLI.html" class="link">ParallelTests::CLI</a><br />
+Class <a href="ParallelTests/Grouper.html" class="link">ParallelTests::Grouper</a><br />
+Class <a href="ParallelTests/Railtie.html" class="link">ParallelTests::Railtie</a><br />
+
+    </div>
+
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">VERSION</td>
+          <td>=</td>
+          <td class="context-item-value">Version = '1.0.0'</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">WINDOWS</td>
+          <td>=</td>
+          <td class="context-item-value">(RbConfig::CONFIG['host_os'] =~ /cygwin|mswin|mingw|bccwin|wince|emx/)</td>
+        </tr>
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">GREP_PROCESSES_COMMAND</td>
+          <td>=</td>
+          <td class="context-item-value">\   if WINDOWS</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

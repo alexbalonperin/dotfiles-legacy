@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Net::SSH::LogLevelShim#lwarn
+is_singleton: false
+name: lwarn
+params: (args)
+visibility: public

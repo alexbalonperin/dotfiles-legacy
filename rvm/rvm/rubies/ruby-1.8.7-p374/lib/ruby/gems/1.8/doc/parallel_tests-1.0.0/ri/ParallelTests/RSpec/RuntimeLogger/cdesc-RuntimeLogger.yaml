@@ -1,0 +1,33 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: []
+
+full_name: ParallelTests::RSpec::RuntimeLogger
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: dump_failure
+- !ruby/object:RI::MethodSummary 
+  name: dump_failures
+- !ruby/object:RI::MethodSummary 
+  name: dump_pending
+- !ruby/object:RI::MethodSummary 
+  name: dump_summary
+- !ruby/object:RI::MethodSummary 
+  name: example_group_finished
+- !ruby/object:RI::MethodSummary 
+  name: example_group_started
+- !ruby/object:RI::MethodSummary 
+  name: example_passed
+- !ruby/object:RI::MethodSummary 
+  name: example_started
+- !ruby/object:RI::MethodSummary 
+  name: start_dump
+name: RuntimeLogger
+superclass: ParallelTests::RSpec::LoggerBase

@@ -1,0 +1,30 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: A StaticSet ignores remote because it has a fixed set of gems.
+  name: remote
+  rw: RW
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: The StaticSet is a static set of gem specifications used for testing only. It is available by requiring Gem::TestCase.
+constants: []
+
+full_name: Gem::TestCase::StaticSet
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: add
+- !ruby/object:RI::MethodSummary 
+  name: find_all
+- !ruby/object:RI::MethodSummary 
+  name: find_spec
+- !ruby/object:RI::MethodSummary 
+  name: load_spec
+name: StaticSet
+superclass: Gem::Resolver::Set

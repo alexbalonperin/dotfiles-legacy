@@ -1,0 +1,19 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: build
+comment: 
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: FileEntry
+  value: "FileUtils::Entry_ # :nodoc:"
+full_name: Gem::Ext::ExtConfBuilder
+includes: []
+
+instance_methods: []
+
+name: ExtConfBuilder
+superclass: Gem::Ext::Builder

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Trim <tt>n</tt> innermost scope levels from the scope. In no case will this trim beyond the toplevel scope.
+full_name: Rake::Scope#trim
+is_singleton: false
+name: trim
+params: (n)
+visibility: public

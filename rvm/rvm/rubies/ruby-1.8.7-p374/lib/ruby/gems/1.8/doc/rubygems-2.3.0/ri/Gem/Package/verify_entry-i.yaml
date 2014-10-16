@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Verifies <tt>entry</tt> in a .gem file.
+full_name: Gem::Package#verify_entry
+is_singleton: false
+name: verify_entry
+params: (entry)
+visibility: public

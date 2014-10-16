@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Get the appropriate cache path.
+- !ruby/struct:SM::Flow::P 
+  body: Pass a string to use a different base path, or nil/false (default) for Gem.dir.
+full_name: Gem::cache_dir
+is_singleton: true
+name: cache_dir
+params: (custom_dir=false)
+visibility: public

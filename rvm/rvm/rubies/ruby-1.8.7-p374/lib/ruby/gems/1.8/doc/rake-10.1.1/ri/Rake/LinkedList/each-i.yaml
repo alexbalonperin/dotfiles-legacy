@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: (current.head)
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: For each item in the list.
+full_name: Rake::LinkedList#each
+is_singleton: false
+name: each
+params: () {|current.head| ...}
+visibility: public

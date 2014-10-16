@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: IM 6.4.8-3 and later
+full_name: Magick::Draw#interword_spacing
+is_singleton: false
+name: interword_spacing
+params: (space)
+visibility: public

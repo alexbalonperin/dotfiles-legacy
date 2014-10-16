@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: HighLine::Style::ansi_rgb_to_hex
+is_singleton: true
+name: ansi_rgb_to_hex
+params: (ansi_number)
+visibility: public

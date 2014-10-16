@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: SSHKit::Backend::Netssh#background
+is_singleton: false
+name: background
+params: (*args)
+visibility: public

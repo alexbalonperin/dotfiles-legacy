@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Magick::ImageList#delete_at
+is_singleton: false
+name: delete_at
+params: (ndx)
+visibility: public

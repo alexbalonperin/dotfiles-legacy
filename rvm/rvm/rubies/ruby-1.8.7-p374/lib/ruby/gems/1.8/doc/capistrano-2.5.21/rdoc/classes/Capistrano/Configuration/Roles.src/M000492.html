@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>role (Capistrano::Configuration::Roles)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/capistrano/configuration/roles.rb, line 45</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">role</span>(<span class="ruby-identifier">which</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+        <span class="ruby-identifier">options</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">pop</span> <span class="ruby-operator">:</span> {}
+        <span class="ruby-identifier">which</span> = <span class="ruby-identifier">which</span>.<span class="ruby-identifier">to_sym</span>
+
+        <span class="ruby-comment cmt"># The roles Hash is defined so that unrecognized keys always auto-initialize</span>
+        <span class="ruby-comment cmt"># to a new Role instance (see the assignment in the initialize_with_roles method,</span>
+        <span class="ruby-comment cmt"># above). However, we explicitly assign here so that role declarations will</span>
+        <span class="ruby-comment cmt"># vivify the role object even if there are no server arguments. (Otherwise,</span>
+        <span class="ruby-comment cmt"># role(:app) won't actually instantiate a Role object for :app.)</span>
+        <span class="ruby-identifier">roles</span>[<span class="ruby-identifier">which</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">Role</span>.<span class="ruby-identifier">new</span>
+
+        <span class="ruby-identifier">roles</span>[<span class="ruby-identifier">which</span>].<span class="ruby-identifier">push</span>(<span class="ruby-identifier">block</span>, <span class="ruby-identifier">options</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+        <span class="ruby-identifier">args</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">host</span><span class="ruby-operator">|</span> <span class="ruby-identifier">roles</span>[<span class="ruby-identifier">which</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">ServerDefinition</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">host</span>, <span class="ruby-identifier">options</span>) }
+      <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"remote:ETI")Net::SFTP::Operations::Upload#remote;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"9The destination of the upload (on the remote server);T:
+@fileI"&lib/net/sftp/operations/upload.rb;T:0@omit_headings_from_table_of_contents_below0F@I""Net::SFTP::Operations::Upload;FcRDoc::NormalClass0

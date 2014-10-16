@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>execute (Debugger::InspectCommand)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/ruby-debug-ide/commands/inspect.rb, line 17</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">execute</span>
+      <span class="ruby-identifier">binding</span> = <span class="ruby-ivar">@state</span>.<span class="ruby-identifier">context</span> <span class="ruby-value">? </span><span class="ruby-identifier">get_binding</span> <span class="ruby-operator">:</span> <span class="ruby-constant">TOPLEVEL_BINDING</span>
+      <span class="ruby-identifier">obj</span> = <span class="ruby-identifier">debug_eval</span>(<span class="ruby-ivar">@match</span>.<span class="ruby-identifier">post_match</span>, <span class="ruby-identifier">binding</span>)
+      <span class="ruby-constant">InspectCommand</span>.<span class="ruby-identifier">reference_result</span>(<span class="ruby-identifier">obj</span>)
+      <span class="ruby-ivar">@printer</span>.<span class="ruby-identifier">print_inspect</span>(<span class="ruby-identifier">obj</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

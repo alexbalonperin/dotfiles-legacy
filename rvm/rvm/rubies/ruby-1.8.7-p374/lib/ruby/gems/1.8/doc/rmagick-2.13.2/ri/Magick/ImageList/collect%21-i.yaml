@@ -1,0 +1,13 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+- !ruby/object:RI::AliasName 
+  name: map!
+- !ruby/object:RI::AliasName 
+  name: __map__!
+block_params: 
+comment: 
+full_name: Magick::ImageList#collect!
+is_singleton: false
+name: collect!
+params: (&block)
+visibility: public

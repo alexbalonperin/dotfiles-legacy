@@ -1,0 +1,11 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+- !ruby/object:RI::AliasName 
+  name: capture!
+block_params: 
+comment: 
+full_name: SSHKit::Backend::Printer#capture
+is_singleton: false
+name: capture
+params: (*args)
+visibility: public

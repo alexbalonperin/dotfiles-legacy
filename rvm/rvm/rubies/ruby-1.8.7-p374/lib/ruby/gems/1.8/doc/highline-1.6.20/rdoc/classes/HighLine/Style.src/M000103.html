@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>new (HighLine::Style)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/highline/style.rb, line 106</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">defn</span> = {})
+      <span class="ruby-ivar">@definition</span> = <span class="ruby-identifier">defn</span>
+      <span class="ruby-ivar">@name</span>    = <span class="ruby-identifier">defn</span>[<span class="ruby-identifier">:name</span>]
+      <span class="ruby-ivar">@code</span>    = <span class="ruby-identifier">defn</span>[<span class="ruby-identifier">:code</span>]
+      <span class="ruby-ivar">@rgb</span>     = <span class="ruby-identifier">defn</span>[<span class="ruby-identifier">:rgb</span>]
+      <span class="ruby-ivar">@list</span>    = <span class="ruby-identifier">defn</span>[<span class="ruby-identifier">:list</span>]
+      <span class="ruby-ivar">@builtin</span> = <span class="ruby-identifier">defn</span>[<span class="ruby-identifier">:builtin</span>]
+      <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@rgb</span>
+        <span class="ruby-identifier">hex</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">rgb_hex</span>(<span class="ruby-ivar">@rgb</span>)
+        <span class="ruby-ivar">@name</span> <span class="ruby-operator">||=</span> <span class="ruby-value str">'rgb_'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">hex</span>
+      <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@list</span>
+        <span class="ruby-ivar">@name</span> <span class="ruby-operator">||=</span> <span class="ruby-ivar">@list</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">index</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">defn</span>[<span class="ruby-identifier">:no_index</span>]
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>secure_write (Tins::SecureWrite)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/tins/secure_write.rb, line 4</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">secure_write</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">content</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">mode</span> = <span class="ruby-value str">'w'</span>)
+      <span class="ruby-identifier">temp</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">filename</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;.tmp.#$$.#{Time.now.to_f}&quot;</span>, <span class="ruby-identifier">mode</span>)
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">content</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">block_given?</span>
+        <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">temp</span>
+      <span class="ruby-keyword kw">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">content</span>.<span class="ruby-identifier">nil?</span>
+        <span class="ruby-identifier">temp</span>.<span class="ruby-identifier">write</span> <span class="ruby-identifier">content</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;either content or block argument required&quot;</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">temp</span>.<span class="ruby-identifier">fsync</span>
+      <span class="ruby-identifier">size</span> = <span class="ruby-identifier">temp</span>.<span class="ruby-identifier">stat</span>.<span class="ruby-identifier">size</span>
+      <span class="ruby-identifier">temp</span>.<span class="ruby-identifier">close</span>
+      <span class="ruby-constant">File</span>.<span class="ruby-identifier">rename</span> <span class="ruby-identifier">temp</span>.<span class="ruby-identifier">path</span>, <span class="ruby-identifier">filename</span>
+      <span class="ruby-identifier">size</span>
+    <span class="ruby-keyword kw">ensure</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">temp</span>
+        <span class="ruby-operator">!</span><span class="ruby-identifier">temp</span>.<span class="ruby-identifier">closed?</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">temp</span>.<span class="ruby-identifier">close</span>
+        <span class="ruby-constant">File</span>.<span class="ruby-identifier">file?</span>(<span class="ruby-identifier">temp</span>.<span class="ruby-identifier">path</span>) <span class="ruby-keyword kw">and</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">unlink</span> <span class="ruby-identifier">temp</span>.<span class="ruby-identifier">path</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

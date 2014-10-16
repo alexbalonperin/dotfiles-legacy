@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Capistrano::Command::Tree#branches_for
+is_singleton: false
+name: branches_for
+params: (server)
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Magick::RVG::convert_one_to_float
+is_singleton: true
+name: convert_one_to_float
+params: (arg)
+visibility: public

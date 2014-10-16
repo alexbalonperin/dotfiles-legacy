@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>system (Capistrano::Deploy::Strategy::Base)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/capistrano/recipes/deploy/strategy/base.rb, line 51</span>
+          <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">system</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+            <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">' '</span>)
+            <span class="ruby-identifier">result</span> = <span class="ruby-keyword kw">nil</span>
+            <span class="ruby-keyword kw">if</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/win32/</span>
+                                                        <span class="ruby-identifier">cmd</span> = <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\s+/</span>).<span class="ruby-identifier">collect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">w</span><span class="ruby-operator">|</span> <span class="ruby-identifier">w</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp re">/^[\w+]+:\/\//</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">w</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">w</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">'/'</span>, <span class="ruby-value str">'\\'</span>) }.<span class="ruby-identifier">join</span>(<span class="ruby-value str">' '</span>) <span class="ruby-comment cmt"># Split command by spaces, change / by \\ unless element is a some+thing:// </span>
+              <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp re">/^cd /</span>,<span class="ruby-value str">'cd /D '</span>) <span class="ruby-comment cmt"># Replace cd with cd /D</span>
+              <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp re">/&amp;&amp; cd /</span>,<span class="ruby-value str">'&amp;&amp; cd /D '</span>) <span class="ruby-comment cmt"># Replace cd with cd /D</span>
+              <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">trace</span> <span class="ruby-node">&quot;executing locally: #{cmd}&quot;</span>
+              <span class="ruby-identifier">elapsed</span> = <span class="ruby-constant">Benchmark</span>.<span class="ruby-identifier">realtime</span> <span class="ruby-keyword kw">do</span>
+                <span class="ruby-identifier">result</span> = <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">cmd</span>)
+              <span class="ruby-keyword kw">end</span>
+            <span class="ruby-keyword kw">else</span>
+              <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">trace</span> <span class="ruby-node">&quot;executing locally: #{cmd}&quot;</span>
+              <span class="ruby-identifier">elapsed</span> = <span class="ruby-constant">Benchmark</span>.<span class="ruby-identifier">realtime</span> <span class="ruby-keyword kw">do</span>
+                <span class="ruby-identifier">result</span> = <span class="ruby-keyword kw">super</span>
+              <span class="ruby-keyword kw">end</span>
+            <span class="ruby-keyword kw">end</span>
+            
+            <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">trace</span> <span class="ruby-node">&quot;command finished in #{(elapsed * 1000).round}ms&quot;</span>
+            <span class="ruby-identifier">result</span>
+          <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

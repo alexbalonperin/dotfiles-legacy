@@ -1,0 +1,30 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Capistrano::Configuration::Connections
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: connect!
+- !ruby/object:RI::MethodSummary 
+  name: connection_factory
+- !ruby/object:RI::MethodSummary 
+  name: establish_connections_to
+- !ruby/object:RI::MethodSummary 
+  name: execute_on_servers
+- !ruby/object:RI::MethodSummary 
+  name: failed!
+- !ruby/object:RI::MethodSummary 
+  name: has_failed?
+- !ruby/object:RI::MethodSummary 
+  name: sessions
+- !ruby/object:RI::MethodSummary 
+  name: teardown_connections_to
+name: Connections
+superclass: 

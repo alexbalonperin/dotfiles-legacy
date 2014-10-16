@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Returns additional metadata of this object. The RVG object metadata are stored as the 'metadata' property on the image
+full_name: Magick::RVG::Describable#metadata
+is_singleton: false
+name: metadata
+params: ()
+visibility: public

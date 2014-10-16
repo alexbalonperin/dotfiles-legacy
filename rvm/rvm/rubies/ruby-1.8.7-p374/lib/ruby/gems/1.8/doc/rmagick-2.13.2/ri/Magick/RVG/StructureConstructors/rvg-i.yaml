@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Establishes a new viewport. [<tt>x</tt>, <tt>y</tt>] is the coordinate of the upper-left corner within the containing viewport. This is a <em>container</em> method. Styles and transforms specified on this object will be used by objects contained within, unless overridden by an inner container or the contained object itself.
+full_name: Magick::RVG::StructureConstructors#rvg
+is_singleton: false
+name: rvg
+params: (cols, rows, x=0, y=0, &block)
+visibility: public

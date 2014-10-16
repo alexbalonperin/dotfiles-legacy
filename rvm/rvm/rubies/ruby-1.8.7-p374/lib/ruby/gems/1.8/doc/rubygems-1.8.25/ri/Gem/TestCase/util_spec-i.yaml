@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Creates a spec with <tt>name</tt>, <tt>version</tt> and <tt>deps</tt>.
+full_name: Gem::TestCase#util_spec
+is_singleton: false
+name: util_spec
+params: (name, version, deps = nil, &block)
+visibility: public

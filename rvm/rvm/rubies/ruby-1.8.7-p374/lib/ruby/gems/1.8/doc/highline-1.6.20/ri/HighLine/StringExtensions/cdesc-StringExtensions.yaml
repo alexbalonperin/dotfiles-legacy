@@ -1,0 +1,27 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: included
+comment: 
+constants: []
+
+full_name: HighLine::StringExtensions
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: color
+- !ruby/object:RI::MethodSummary 
+  name: method_missing
+- !ruby/object:RI::MethodSummary 
+  name: "on"
+- !ruby/object:RI::MethodSummary 
+  name: on_rgb
+- !ruby/object:RI::MethodSummary 
+  name: rgb
+- !ruby/object:RI::MethodSummary 
+  name: uncolor
+name: StringExtensions
+superclass: 

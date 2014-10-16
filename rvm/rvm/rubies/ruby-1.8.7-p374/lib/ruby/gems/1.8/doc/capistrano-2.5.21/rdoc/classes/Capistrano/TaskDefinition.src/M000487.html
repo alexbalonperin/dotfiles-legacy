@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>new (Capistrano::TaskDefinition)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/capistrano/task_definition.rb, line 8</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">namespace</span>, <span class="ruby-identifier">options</span>={}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+      
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^(?:before_|after_)/</span>
+        <span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">warn</span>(<span class="ruby-node">&quot;[Deprecation Warning] Naming tasks with before_ and after_ is deprecated, please see the new before() and after() methods. (Offending task name was #{name})&quot;</span>)
+      <span class="ruby-keyword kw">end</span>
+      
+      <span class="ruby-ivar">@name</span>, <span class="ruby-ivar">@namespace</span>, <span class="ruby-ivar">@options</span> = <span class="ruby-identifier">name</span>, <span class="ruby-identifier">namespace</span>, <span class="ruby-identifier">options</span>
+      <span class="ruby-ivar">@desc</span> = <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">:desc</span>)
+      <span class="ruby-ivar">@on_error</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">:on_error</span>)
+      <span class="ruby-ivar">@max_hosts</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:max_hosts</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:max_hosts</span>].<span class="ruby-identifier">to_i</span>
+      <span class="ruby-ivar">@body</span> = <span class="ruby-identifier">block</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;a task requires a block&quot;</span>
+      <span class="ruby-ivar">@servers</span> = <span class="ruby-keyword kw">nil</span>
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

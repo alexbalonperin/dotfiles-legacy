@@ -1,0 +1,125 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: formats
+- !ruby/object:RI::MethodSummary 
+  name: trace_proc=
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Define the classes and constants.
+- !ruby/struct:SM::Flow::P 
+  body: No Ruby usage (internal function)
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: PercentGeometry
+  value: GeometryValue.new(:PercentGeometry, 1).freeze
+- !ruby/object:RI::Constant 
+  comment: 
+  name: AspectGeometry
+  value: GeometryValue.new(:AspectGeometry, 2).freeze
+- !ruby/object:RI::Constant 
+  comment: 
+  name: LessGeometry
+  value: GeometryValue.new(:LessGeometry, 3).freeze
+- !ruby/object:RI::Constant 
+  comment: 
+  name: GreaterGeometry
+  value: GeometryValue.new(:GreaterGeometry, 4).freeze
+- !ruby/object:RI::Constant 
+  comment: 
+  name: AreaGeometry
+  value: GeometryValue.new(:AreaGeometry, 5).freeze
+- !ruby/object:RI::Constant 
+  comment: 
+  name: MinimumGeometry
+  value: GeometryValue.new(:MinimumGeometry, 6).freeze
+- !ruby/object:RI::Constant 
+  comment: 
+  name: MANAGED_MEMORY
+  value: Qtrue
+- !ruby/object:RI::Constant 
+  comment: 
+  name: MANAGED_MEMORY
+  value: Qfalse
+- !ruby/object:RI::Constant 
+  comment: 
+  name: MANAGED_MEMORY
+  value: Qfalse
+- !ruby/object:RI::Constant 
+  comment: 
+  name: AlphaChannel
+  value: _enum
+- !ruby/object:RI::Constant 
+  comment: 
+  name: DefaultChannels
+  value: _enum
+- !ruby/object:RI::Constant 
+  comment: 
+  name: HueChannel
+  value: _enum
+- !ruby/object:RI::Constant 
+  comment: 
+  name: LuminosityChannel
+  value: _enum
+- !ruby/object:RI::Constant 
+  comment: 
+  name: SaturationChannel
+  value: _enum
+- !ruby/object:RI::Constant 
+  comment: 
+  name: AffineMatrix
+  value: Class_AffineMatrix
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Primary
+  value: Class_Primary
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Chromaticity
+  value: Class_Chromaticity
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Color
+  value: Class_Color
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Point
+  value: Class_Point
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Rectangle
+  value: Class_Rectangle
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Segment
+  value: Class_Segment
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Font
+  value: Class_Font
+- !ruby/object:RI::Constant 
+  comment: 
+  name: TypeMetric
+  value: Class_TypeMetric
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Magick_version
+  value: str
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Version
+  value: str
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Long_version
+  value: str
+full_name: Magick
+includes: []
+
+instance_methods: []
+
+name: Magick
+superclass: 

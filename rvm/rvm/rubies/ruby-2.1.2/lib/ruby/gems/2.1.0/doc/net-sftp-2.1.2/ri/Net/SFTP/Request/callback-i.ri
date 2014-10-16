@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"callback:ETI" Net::SFTP::Request#callback;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"KThe callback (if any) associated with this request. When the response ;TI"@is recieved for this request, the callback will be invoked.;T:
+@fileI"lib/net/sftp/request.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Net::SFTP::Request;FcRDoc::NormalClass0

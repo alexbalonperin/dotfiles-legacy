@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Magick::RVG::Utility::TextAttributes#baseline_shift=
+is_singleton: false
+name: baseline_shift=
+params: (value)
+visibility: public

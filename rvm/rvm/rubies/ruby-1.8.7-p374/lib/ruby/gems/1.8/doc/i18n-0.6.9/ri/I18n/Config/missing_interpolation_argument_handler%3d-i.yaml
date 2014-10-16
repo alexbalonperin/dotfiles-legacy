@@ -1,0 +1,19 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "Sets the missing interpolation argument handler. It can be any object that responds to #call. The arguments that will be passed to #call are the same as for MissingInterpolationArgument initializer. Use +Proc.new+ if you don't care about arity."
+- !ruby/struct:SM::Flow::H 
+  level: 2
+  text: "Example:"
+- !ruby/struct:SM::Flow::P 
+  body: "You can supress raising an exception and return string instead:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  I18n.config.missing_interpolation_argument_handler = Proc.new do |key|\n    &quot;#{key} is missing&quot;\n  end\n"
+full_name: I18n::Config#missing_interpolation_argument_handler=
+is_singleton: false
+name: missing_interpolation_argument_handler=
+params: (exception_handler)
+visibility: public

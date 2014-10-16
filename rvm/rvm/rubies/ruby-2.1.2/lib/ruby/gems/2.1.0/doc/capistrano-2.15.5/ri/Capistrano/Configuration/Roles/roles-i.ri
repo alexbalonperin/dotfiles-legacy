@@ -1,0 +1,4 @@
+U:RDoc::Attr[iI"
+roles:ETI"+Capistrano::Configuration::Roles#roles;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"IThe hash of roles defined for this configuration. Each entry in the ;TI"Ghash points to an array of server definitions that belong in that ;TI"
+role.;T:
+@fileI"*lib/capistrano/configuration/roles.rb;T:0@omit_headings_from_table_of_contents_below0F@I"%Capistrano::Configuration::Roles;FcRDoc::NormalModule0

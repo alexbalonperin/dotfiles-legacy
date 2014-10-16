@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>debug_program (Debugger)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/ruby-debug-ide.rb, line 82</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">debug_program</span>(<span class="ruby-identifier">options</span>)
+      <span class="ruby-identifier">prepare_debugger</span>(<span class="ruby-identifier">options</span>)
+
+      <span class="ruby-identifier">abs_prog_script</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-constant">Debugger</span><span class="ruby-operator">::</span><span class="ruby-constant">PROG_SCRIPT</span>)
+      <span class="ruby-identifier">bt</span> = <span class="ruby-identifier">debug_load</span>(<span class="ruby-identifier">abs_prog_script</span>, <span class="ruby-identifier">options</span>.<span class="ruby-identifier">stop</span>, <span class="ruby-identifier">options</span>.<span class="ruby-identifier">load_mode</span>)
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">bt</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">bt</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">SystemExit</span>)
+        <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">print</span> <span class="ruby-node">&quot;Uncaught exception: #{bt}\n&quot;</span>
+        <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">print</span> <span class="ruby-constant">Debugger</span>.<span class="ruby-identifier">cleanup_backtrace</span>(<span class="ruby-identifier">bt</span>.<span class="ruby-identifier">backtrace</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">l</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;\t#{l}&quot;</span>}.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;\n&quot;</span>), <span class="ruby-value str">&quot;\n&quot;</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

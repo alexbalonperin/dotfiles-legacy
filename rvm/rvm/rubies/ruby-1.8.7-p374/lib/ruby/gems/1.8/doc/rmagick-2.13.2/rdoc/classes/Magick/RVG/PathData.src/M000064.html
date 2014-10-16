@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>arc (Magick::RVG::PathData)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/rvg/pathdata.rb, line 123</span>
+            <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">arc</span>(<span class="ruby-identifier">abs</span>, <span class="ruby-identifier">rx</span>, <span class="ruby-identifier">ry</span>, <span class="ruby-identifier">x_axis_rotation</span>, <span class="ruby-identifier">large_arc_flag</span>, <span class="ruby-identifier">sweep_flag</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+                <span class="ruby-ivar">@path</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">sprintf</span>(<span class="ruby-value str">&quot;%s%g,%g %g %d %d %g,%g &quot;</span>, (<span class="ruby-identifier">abs</span> <span class="ruby-value">? </span><span class="ruby-value str">'A'</span> <span class="ruby-operator">:</span> <span class="ruby-value str">'a'</span>), <span class="ruby-identifier">rx</span>, <span class="ruby-identifier">ry</span>, <span class="ruby-identifier">x_axis_rotation</span>, <span class="ruby-identifier">large_arc_flag</span>, <span class="ruby-identifier">sweep_flag</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+            <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

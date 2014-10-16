@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Draws a polygon. The arguments are [<tt>x</tt>, <tt>y</tt>] pairs that define the points that make up the polygon. At least two points must be specified. If the last point is not the same as the first, adds an additional point to close the polygon.
+full_name: Magick::RVG::ShapeConstructors#polygon
+is_singleton: false
+name: polygon
+params: (*points)
+visibility: public

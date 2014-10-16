@@ -1,0 +1,19 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+- !ruby/object:RI::AliasName 
+  name: log
+- !ruby/object:RI::AliasName 
+  name: fatal
+- !ruby/object:RI::AliasName 
+  name: error
+- !ruby/object:RI::AliasName 
+  name: debug
+- !ruby/object:RI::AliasName 
+  name: trace
+block_params: 
+comment: 
+full_name: SSHKit::Backend::Skipper#info
+is_singleton: false
+name: info
+params: (messages)
+visibility: public

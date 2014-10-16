@@ -1,0 +1,262 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Record_Version
+  value: "\"2:00\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Object_Type_Reference
+  value: "\"2:03\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Object_Name
+  value: "\"2:05\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Title
+  value: "\"2:05\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Edit_Status
+  value: "\"2:07\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Editorial_Update
+  value: "\"2:08\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Urgency
+  value: "\"2:10\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Subject_Reference
+  value: "\"2:12\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Category
+  value: "\"2:15\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Supplemental_Category
+  value: "\"2:20\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Fixture_Identifier
+  value: "\"2:22\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Keywords
+  value: "\"2:25\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Content_Location_Code
+  value: "\"2:26\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Content_Location_Name
+  value: "\"2:27\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Release_Date
+  value: "\"2:30\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Release_Time
+  value: "\"2:35\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Expiration_Date
+  value: "\"2:37\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Expiration_Time
+  value: "\"2:35\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Special_Instructions
+  value: "\"2:40\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Action_Advised
+  value: "\"2:42\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Reference_Service
+  value: "\"2:45\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Reference_Date
+  value: "\"2:47\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Reference_Number
+  value: "\"2:50\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Date_Created
+  value: "\"2:55\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Time_Created
+  value: "\"2:60\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Digital_Creation_Date
+  value: "\"2:62\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Digital_Creation_Time
+  value: "\"2:63\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Originating_Program
+  value: "\"2:65\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Program_Version
+  value: "\"2:70\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Object_Cycle
+  value: "\"2:75\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: By_Line
+  value: "\"2:80\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Author
+  value: "\"2:80\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: By_Line_Title
+  value: "\"2:85\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Author_Position
+  value: "\"2:85\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: City
+  value: "\"2:90\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Sub_Location
+  value: "\"2:92\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Province
+  value: "\"2:95\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: State
+  value: "\"2:95\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Country_Primary_Location_Code
+  value: "\"2:100\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Country_Primary_Location_Name
+  value: "\"2:101\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Original_Transmission_Reference
+  value: "\"2:103\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Headline
+  value: "\"2:105\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Credit
+  value: "\"2:110\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Source
+  value: "\"2:115\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Copyright_Notice
+  value: "\"2:116\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Contact
+  value: "\"2:118\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Abstract
+  value: "\"2:120\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Caption
+  value: "\"2:120\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Editor
+  value: "\"2:122\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Caption_Writer
+  value: "\"2:122\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Rasterized_Caption
+  value: "\"2:125\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Image_Type
+  value: "\"2:130\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Image_Orientation
+  value: "\"2:131\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Language_Identifier
+  value: "\"2:135\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Audio_Type
+  value: "\"2:150\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Audio_Sampling_Rate
+  value: "\"2:151\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Audio_Sampling_Resolution
+  value: "\"2:152\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Audio_Duration
+  value: "\"2:153\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: Audio_Outcue
+  value: "\"2:154\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: ObjectData_Preview_File_Format
+  value: "\"2:200\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: ObjectData_Preview_File_Format_Version
+  value: "\"2:201\""
+- !ruby/object:RI::Constant 
+  comment: 
+  name: ObjectData_Preview_Data
+  value: "\"2:202\""
+full_name: Magick::IPTC::Application
+includes: []
+
+instance_methods: []
+
+name: Application
+superclass: 

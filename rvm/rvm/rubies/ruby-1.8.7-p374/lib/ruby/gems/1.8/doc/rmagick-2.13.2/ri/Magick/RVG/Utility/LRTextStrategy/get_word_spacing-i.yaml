@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Magick::RVG::Utility::LRTextStrategy#get_word_spacing
+is_singleton: false
+name: get_word_spacing
+params: ()
+visibility: public

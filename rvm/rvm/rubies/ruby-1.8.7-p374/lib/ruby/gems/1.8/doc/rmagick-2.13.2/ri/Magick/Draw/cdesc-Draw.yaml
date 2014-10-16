@@ -1,0 +1,171 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:SM::Flow::RULE 
+  width: 10
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Thse hashes are used to map Magick constant values to the strings used in the primitives.
+  name: ALIGN_TYPE_NAMES
+  value: "{         LeftAlign.to_i => 'left',         RightAlign.to_i => 'right',         CenterAlign.to_i => 'center'"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: ANCHOR_TYPE_NAMES
+  value: "{         StartAnchor.to_i => 'start',         MiddleAnchor.to_i => 'middle',         EndAnchor.to_i => 'end'"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: DECORATION_TYPE_NAMES
+  value: "{         NoDecoration.to_i => 'none',         UnderlineDecoration.to_i => 'underline',         OverlineDecoration.to_i => 'overline',         LineThroughDecoration.to_i => 'line-through'"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: FONT_WEIGHT_NAMES
+  value: "{         AnyWeight.to_i => 'all',         NormalWeight.to_i => 'normal',         BoldWeight.to_i => 'bold',         BolderWeight.to_i => 'bolder',         LighterWeight.to_i => 'lighter',         }.freeze"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: GRAVITY_NAMES
+  value: "{         NorthWestGravity.to_i => 'northwest',         NorthGravity.to_i => 'north',         NorthEastGravity.to_i => 'northeast',         WestGravity.to_i => 'west',         CenterGravity.to_i => 'center',         EastGravity.to_i => 'east',         SouthWestGravity.to_i => 'southwest',         SouthGravity.to_i => 'south',         SouthEastGravity.to_i => 'southeast'"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: PAINT_METHOD_NAMES
+  value: "{         PointMethod.to_i => 'point',         ReplaceMethod.to_i => 'replace',         FloodfillMethod.to_i => 'floodfill',         FillToBorderMethod.to_i => 'filltoborder',         ResetMethod.to_i => 'reset'"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: STRETCH_TYPE_NAMES
+  value: "{         NormalStretch.to_i => 'normal',         UltraCondensedStretch.to_i => 'ultra-condensed',         ExtraCondensedStretch.to_i => 'extra-condensed',         CondensedStretch.to_i => 'condensed',         SemiCondensedStretch.to_i => 'semi-condensed',         SemiExpandedStretch.to_i => 'semi-expanded',         ExpandedStretch.to_i => 'expanded',         ExtraExpandedStretch.to_i => 'extra-expanded',         UltraExpandedStretch.to_i => 'ultra-expanded',         AnyStretch.to_i => 'all'"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: STYLE_TYPE_NAMES
+  value: "{         NormalStyle.to_i => 'normal',         ItalicStyle.to_i => 'italic',         ObliqueStyle.to_i => 'oblique',         AnyStyle.to_i => 'all'"
+full_name: Magick::Draw
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: affine
+- !ruby/object:RI::MethodSummary 
+  name: arc
+- !ruby/object:RI::MethodSummary 
+  name: bezier
+- !ruby/object:RI::MethodSummary 
+  name: circle
+- !ruby/object:RI::MethodSummary 
+  name: clip_path
+- !ruby/object:RI::MethodSummary 
+  name: clip_rule
+- !ruby/object:RI::MethodSummary 
+  name: clip_units
+- !ruby/object:RI::MethodSummary 
+  name: color
+- !ruby/object:RI::MethodSummary 
+  name: decorate
+- !ruby/object:RI::MethodSummary 
+  name: define_clip_path
+- !ruby/object:RI::MethodSummary 
+  name: ellipse
+- !ruby/object:RI::MethodSummary 
+  name: encoding
+- !ruby/object:RI::MethodSummary 
+  name: fill
+- !ruby/object:RI::MethodSummary 
+  name: fill_color
+- !ruby/object:RI::MethodSummary 
+  name: fill_opacity
+- !ruby/object:RI::MethodSummary 
+  name: fill_pattern
+- !ruby/object:RI::MethodSummary 
+  name: fill_rule
+- !ruby/object:RI::MethodSummary 
+  name: font
+- !ruby/object:RI::MethodSummary 
+  name: font_family
+- !ruby/object:RI::MethodSummary 
+  name: font_size
+- !ruby/object:RI::MethodSummary 
+  name: font_stretch
+- !ruby/object:RI::MethodSummary 
+  name: font_style
+- !ruby/object:RI::MethodSummary 
+  name: font_weight
+- !ruby/object:RI::MethodSummary 
+  name: gravity
+- !ruby/object:RI::MethodSummary 
+  name: interline_spacing
+- !ruby/object:RI::MethodSummary 
+  name: interword_spacing
+- !ruby/object:RI::MethodSummary 
+  name: kerning
+- !ruby/object:RI::MethodSummary 
+  name: line
+- !ruby/object:RI::MethodSummary 
+  name: matte
+- !ruby/object:RI::MethodSummary 
+  name: opacity
+- !ruby/object:RI::MethodSummary 
+  name: path
+- !ruby/object:RI::MethodSummary 
+  name: pattern
+- !ruby/object:RI::MethodSummary 
+  name: point
+- !ruby/object:RI::MethodSummary 
+  name: pointsize
+- !ruby/object:RI::MethodSummary 
+  name: polygon
+- !ruby/object:RI::MethodSummary 
+  name: polyline
+- !ruby/object:RI::MethodSummary 
+  name: pop
+- !ruby/object:RI::MethodSummary 
+  name: push
+- !ruby/object:RI::MethodSummary 
+  name: rectangle
+- !ruby/object:RI::MethodSummary 
+  name: rotate
+- !ruby/object:RI::MethodSummary 
+  name: roundrectangle
+- !ruby/object:RI::MethodSummary 
+  name: scale
+- !ruby/object:RI::MethodSummary 
+  name: skewx
+- !ruby/object:RI::MethodSummary 
+  name: skewy
+- !ruby/object:RI::MethodSummary 
+  name: stroke
+- !ruby/object:RI::MethodSummary 
+  name: stroke_antialias
+- !ruby/object:RI::MethodSummary 
+  name: stroke_color
+- !ruby/object:RI::MethodSummary 
+  name: stroke_dasharray
+- !ruby/object:RI::MethodSummary 
+  name: stroke_dashoffset
+- !ruby/object:RI::MethodSummary 
+  name: stroke_linecap
+- !ruby/object:RI::MethodSummary 
+  name: stroke_linejoin
+- !ruby/object:RI::MethodSummary 
+  name: stroke_miterlimit
+- !ruby/object:RI::MethodSummary 
+  name: stroke_opacity
+- !ruby/object:RI::MethodSummary 
+  name: stroke_pattern
+- !ruby/object:RI::MethodSummary 
+  name: stroke_width
+- !ruby/object:RI::MethodSummary 
+  name: text
+- !ruby/object:RI::MethodSummary 
+  name: text_align
+- !ruby/object:RI::MethodSummary 
+  name: text_anchor
+- !ruby/object:RI::MethodSummary 
+  name: text_antialias
+- !ruby/object:RI::MethodSummary 
+  name: text_undercolor
+- !ruby/object:RI::MethodSummary 
+  name: translate
+name: Draw
+superclass: Object

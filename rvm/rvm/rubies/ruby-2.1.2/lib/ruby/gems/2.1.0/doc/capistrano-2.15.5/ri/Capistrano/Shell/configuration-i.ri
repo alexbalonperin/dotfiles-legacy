@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"configuration:ETI"$Capistrano::Shell#configuration;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"6The configuration instance employed by this shell;T:
+@fileI"lib/capistrano/shell.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Capistrano::Shell;FcRDoc::NormalClass0

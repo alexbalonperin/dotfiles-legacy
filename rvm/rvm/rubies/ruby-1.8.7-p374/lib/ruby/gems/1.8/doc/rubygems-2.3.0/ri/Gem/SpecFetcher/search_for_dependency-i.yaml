@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Find and fetch gem name tuples that match <tt>dependency</tt>.
+- !ruby/struct:SM::Flow::P 
+  body: If <tt>matching_platform</tt> is false, gems for all platforms are returned.
+full_name: Gem::SpecFetcher#search_for_dependency
+is_singleton: false
+name: search_for_dependency
+params: (dependency, matching_platform=true)
+visibility: public

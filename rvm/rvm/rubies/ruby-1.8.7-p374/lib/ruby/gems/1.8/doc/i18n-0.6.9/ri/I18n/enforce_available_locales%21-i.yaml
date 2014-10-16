@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Raises an InvalidLocale exception when the passed locale is not included in I18n.available_locales. Returns false otherwise
+full_name: I18n#enforce_available_locales!
+is_singleton: false
+name: enforce_available_locales!
+params: (locale)
+visibility: public

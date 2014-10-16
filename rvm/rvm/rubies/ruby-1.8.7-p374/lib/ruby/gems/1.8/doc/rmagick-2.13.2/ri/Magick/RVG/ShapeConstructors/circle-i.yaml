@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Draws a circle whose center is [<tt>cx</tt>, <tt>cy</tt>] and radius is <tt>r</tt>.
+full_name: Magick::RVG::ShapeConstructors#circle
+is_singleton: false
+name: circle
+params: (r, cx=0, cy=0)
+visibility: public

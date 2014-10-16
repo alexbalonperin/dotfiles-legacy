@@ -1,0 +1,33 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: declare
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "The SpecFetcherSetup allows easy setup of a remote source in RubyGems tests:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  spec_fetcher do |f|\n    f.gem  'a', 1\n    f.spec 'a', 2\n    f.gem  'b', 1' 'a' =&gt; '~&gt; 1.0'\n    f.clear\n  end\n"
+- !ruby/struct:SM::Flow::P 
+  body: The above declaration creates two gems, a-1 and b-1, with a dependency from b to a. The declaration creates an additional spec a-2, but no gem for it (so it cannot be installed).
+- !ruby/struct:SM::Flow::P 
+  body: After the gems are created they are removed from Gem.dir.
+constants: []
+
+full_name: Gem::TestCase::SpecFetcherSetup
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: clear
+- !ruby/object:RI::MethodSummary 
+  name: created_specs
+- !ruby/object:RI::MethodSummary 
+  name: gem
+- !ruby/object:RI::MethodSummary 
+  name: legacy_platform
+- !ruby/object:RI::MethodSummary 
+  name: spec
+name: SpecFetcherSetup
+superclass: Object

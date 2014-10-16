@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Magick::ImageList#from_blob
+is_singleton: false
+name: from_blob
+params: (*blobs, &block)
+visibility: public

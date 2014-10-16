@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Prepares the gem for signing and checksum generation. If a signing certificate and key are not present only checksum generation is set up.
+full_name: Gem::Package#setup_signer
+is_singleton: false
+name: setup_signer
+params: ()
+visibility: public

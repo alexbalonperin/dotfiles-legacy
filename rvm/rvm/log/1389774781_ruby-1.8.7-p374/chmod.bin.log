@@ -1,0 +1,11 @@
+[2014-01-15 17:33:50] __rvm_set_executable
+__rvm_set_executable () 
+{ 
+    for __file in "$@";
+    do
+        [[ -x "${__file}" ]] || chmod +x "${__file}";
+    done
+}
+current path: /Users/abalonperin/.rvm/src/ruby-1.8.7-p374
+PATH=/usr/local/opt/pkg-config/bin:/usr/local/opt/libtool/bin:/usr/local/opt/automake/bin:/usr/local/opt/autoconf/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/abalonperin/.rvm/bin
+command(7): __rvm_set_executable /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/bin/erb /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/bin/irb /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/bin/rdoc /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/bin/ri /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/bin/ruby /Users/abalonperin/.rvm/rubies/ruby-1.8.7-p374/bin/testrb

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Gem::GemPathSearcher#matching_paths
+is_singleton: false
+name: matching_paths
+params: (spec, path)
+visibility: public

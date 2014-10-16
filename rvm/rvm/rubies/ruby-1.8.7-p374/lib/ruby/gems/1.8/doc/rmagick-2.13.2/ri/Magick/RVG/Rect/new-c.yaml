@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Define a width x height rectangle. The upper-left corner is at [<tt>x</tt>, <tt>y</tt>]. If either <tt>width</tt> or <tt>height</tt> is 0, the rectangle is not rendered. Use the RVG::ShapeConstructors#rect method to create Rect objects in a container.
+full_name: Magick::RVG::Rect::new
+is_singleton: true
+name: new
+params: (width, height, x=0, y=0)
+visibility: public

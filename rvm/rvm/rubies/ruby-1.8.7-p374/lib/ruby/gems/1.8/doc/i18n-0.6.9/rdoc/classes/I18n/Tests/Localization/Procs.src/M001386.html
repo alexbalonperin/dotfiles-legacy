@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>setup_time_proc_translations (I18n::Tests::Localization::Procs)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/i18n/tests/localization/procs.rb, line 84</span>
+          <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">setup_time_proc_translations</span>
+            <span class="ruby-constant">I18n</span>.<span class="ruby-identifier">backend</span>.<span class="ruby-identifier">store_translations</span> <span class="ruby-identifier">:ru</span>, {
+              <span class="ruby-identifier">:time</span> =<span class="ruby-operator">&gt;</span> {
+                <span class="ruby-identifier">:formats</span> =<span class="ruby-operator">&gt;</span> {
+                  <span class="ruby-identifier">:proc</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-operator">*</span><span class="ruby-identifier">args</span><span class="ruby-operator">|</span> <span class="ruby-identifier">inspect_args</span>(<span class="ruby-identifier">args</span>) }
+                }
+              },
+              <span class="ruby-identifier">:date</span> =<span class="ruby-operator">&gt;</span> {
+                <span class="ruby-identifier">:formats</span> =<span class="ruby-operator">&gt;</span> {
+                  <span class="ruby-identifier">:proc</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-operator">*</span><span class="ruby-identifier">args</span><span class="ruby-operator">|</span> <span class="ruby-identifier">inspect_args</span>(<span class="ruby-identifier">args</span>) }
+                },
+                <span class="ruby-value str">'day_names'</span><span class="ruby-value str">'day_names'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">options</span><span class="ruby-operator">|</span>
+                  (<span class="ruby-identifier">options</span>[<span class="ruby-identifier">:format</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^%A/</span>) <span class="ruby-operator">?</span>
+                  <span class="ruby-node">%w(Воскресенье Понедельник Вторник Среда Четверг Пятница Суббота)</span> <span class="ruby-operator">:</span>
+                  <span class="ruby-node">%w(воскресенье понедельник вторник среда четверг пятница суббота)</span>
+                },
+                <span class="ruby-value str">'month_names'</span><span class="ruby-value str">'month_names'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">options</span><span class="ruby-operator">|</span>
+                  (<span class="ruby-identifier">options</span>[<span class="ruby-identifier">:format</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/(%d|%e)(\s*)?(%B)/</span>) <span class="ruby-operator">?</span>
+                  <span class="ruby-node">%w(января февраля марта апреля мая июня июля августа сентября октября ноября декабря)</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-keyword kw">nil</span>) <span class="ruby-operator">:</span>
+                  <span class="ruby-node">%w(Январь Февраль Март Апрель Май Июнь Июль Август Сентябрь Октябрь Ноябрь Декабрь)</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-keyword kw">nil</span>)
+                },
+                <span class="ruby-value str">'abbr_month_names'</span><span class="ruby-value str">'abbr_month_names'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">options</span><span class="ruby-operator">|</span>
+                  (<span class="ruby-identifier">options</span>[<span class="ruby-identifier">:format</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/(%d|%e)(\s*)(%b)/</span>) <span class="ruby-operator">?</span>
+                  <span class="ruby-node">%w(янв. февр. марта апр. мая июня июля авг. сент. окт. нояб. дек.)</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-keyword kw">nil</span>) <span class="ruby-operator">:</span>
+                  <span class="ruby-node">%w(янв. февр. март апр. май июнь июль авг. сент. окт. нояб. дек.)</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-keyword kw">nil</span>)
+                },
+              }
+            }
+          <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

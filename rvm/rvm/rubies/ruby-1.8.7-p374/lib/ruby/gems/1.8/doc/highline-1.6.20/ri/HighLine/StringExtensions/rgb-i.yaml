@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: HighLine::StringExtensions#rgb
+is_singleton: false
+name: rgb
+params: (*colors)
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Debugger::MultiProcess::start_debugger
+is_singleton: true
+name: start_debugger
+params: (options)
+visibility: public

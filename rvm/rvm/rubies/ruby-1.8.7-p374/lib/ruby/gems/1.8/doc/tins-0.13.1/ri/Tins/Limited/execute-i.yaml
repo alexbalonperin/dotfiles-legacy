@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: ""
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Execute <em>maximum</em> number of threads in parallel.
+full_name: Tins::Limited#execute
+is_singleton: false
+name: execute
+params: () {|| ...}
+visibility: public

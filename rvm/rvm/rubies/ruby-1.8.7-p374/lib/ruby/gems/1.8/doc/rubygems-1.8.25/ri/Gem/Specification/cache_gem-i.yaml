@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "Alias for #cache_file"
+full_name: Gem::Specification#cache_gem
+is_singleton: false
+name: cache_gem
+params: ()
+visibility: public

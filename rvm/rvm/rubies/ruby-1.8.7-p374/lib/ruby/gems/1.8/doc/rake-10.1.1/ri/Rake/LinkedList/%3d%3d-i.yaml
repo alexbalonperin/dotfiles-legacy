@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Lists are structurally equivalent.
+full_name: Rake::LinkedList#==
+is_singleton: false
+name: ==
+params: (other)
+visibility: public

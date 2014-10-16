@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Tins::LinesFile#match_forward
+is_singleton: false
+name: match_forward
+params: (regexp, next_after_match = false)
+visibility: public

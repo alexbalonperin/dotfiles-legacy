@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Set color in image according to specified colorization rule. Rule is one of point, replace, floodfill, filltoborder,reset
+full_name: Magick::Draw#color
+is_singleton: false
+name: color
+params: (x, y, method)
+visibility: public

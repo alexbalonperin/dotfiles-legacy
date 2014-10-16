@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Draw a bezier curve.
+full_name: Magick::Draw#bezier
+is_singleton: false
+name: bezier
+params: (*points)
+visibility: public

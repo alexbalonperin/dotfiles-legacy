@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Default spec directory path to be used if an alternate value is not specified in the environment
+full_name: Gem::default_spec_cache_dir
+is_singleton: true
+name: default_spec_cache_dir
+params: ()
+visibility: public

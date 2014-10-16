@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Gem::unresolved_deps
+is_singleton: true
+name: unresolved_deps
+params: ()
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Initialize the filesystem paths to use from <tt>env</tt>. <tt>env</tt> is a hash-like object (typically ENV) that is queried for 'GEM_HOME', 'GEM_PATH', and 'GEM_SPEC_CACHE'
+full_name: Gem::paths=
+is_singleton: true
+name: paths=
+params: (env)
+visibility: public

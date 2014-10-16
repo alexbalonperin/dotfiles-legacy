@@ -1,0 +1,35 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: collapse
+comment: 
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: SYS_KEYS
+  value: RbConfig::CONFIG.keys.grep(/(prefix|libdir)/)
+- !ruby/object:RI::Constant 
+  comment: 
+  name: SYS_PATHS
+  value: RbConfig::CONFIG.values_at(*SYS_KEYS).uniq +       [ File.join(File.dirname(__FILE__), "..") ]
+- !ruby/object:RI::Constant 
+  comment: 
+  name: SUPPRESSED_PATHS
+  value: SYS_PATHS.       map { |s| s.gsub("\\", "/") }.       map { |f| File.expand_path(f) }.       reject { |s| s.nil? || s =~ /^ *$/ }
+- !ruby/object:RI::Constant 
+  comment: 
+  name: SUPPRESSED_PATHS_RE
+  value: SUPPRESSED_PATHS.map { |f| Regexp.quote(f) }.join("|")
+- !ruby/object:RI::Constant 
+  comment: 
+  name: SUPPRESS_PATTERN
+  value: "%r!(\\A(#{SUPPRESSED_PATHS_RE})|bin/rake:\\d+)!i"
+full_name: Rake::Backtrace
+includes: []
+
+instance_methods: []
+
+name: Backtrace
+superclass: 

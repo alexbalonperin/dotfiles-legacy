@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: HighLine::StringExtensions#uncolor
+is_singleton: false
+name: uncolor
+params: ()
+visibility: public

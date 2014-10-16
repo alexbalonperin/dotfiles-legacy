@@ -1,0 +1,18 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Socket changes for Ruby 1.9 Functionality is the same as Ruby 1.8 but it includes the new calls to the DL module as well as other pointer transformations
+constants: []
+
+full_name: Net::SSH::Authentication::Pageant::Socket19
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: send_query
+name: Socket19
+superclass: Socket

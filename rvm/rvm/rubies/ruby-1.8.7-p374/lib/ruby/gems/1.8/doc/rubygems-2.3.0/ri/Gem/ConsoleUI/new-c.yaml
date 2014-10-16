@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: The Console UI has no arguments as it defaults to reading input from stdin, output to stdout and warnings or errors to stderr.
+full_name: Gem::ConsoleUI::new
+is_singleton: true
+name: new
+params: ()
+visibility: public

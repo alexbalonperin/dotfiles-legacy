@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Gem::TestCase#common_installer_teardown
+is_singleton: false
+name: common_installer_teardown
+params: ()
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Returns the first source in the list.
+full_name: Gem::SourceList#first
+is_singleton: false
+name: first
+params: ()
+visibility: public

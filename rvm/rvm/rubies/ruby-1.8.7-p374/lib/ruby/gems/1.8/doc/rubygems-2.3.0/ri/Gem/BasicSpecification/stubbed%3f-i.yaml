@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Whether this specification is stubbed - i.e. we have information about the gem from a stub line, without having to evaluate the entire gemspec file.
+full_name: Gem::BasicSpecification#stubbed?
+is_singleton: false
+name: stubbed?
+params: ()
+visibility: public

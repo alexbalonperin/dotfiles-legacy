@@ -1,0 +1,18 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: Deprecated
+    body: this will default to true in the future
+  type: :LABELED
+- !ruby/struct:SM::Flow::P 
+  body: Defaults to nil so that it triggers the deprecation warning
+full_name: I18n::Config#enforce_available_locales
+is_singleton: false
+name: enforce_available_locales
+params: ()
+visibility: public

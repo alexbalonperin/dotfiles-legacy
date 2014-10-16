@@ -1,0 +1,96 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: []
+
+full_name: Tins::StringVersion::Version
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: Comparable
+- !ruby/object:RI::IncludedModule 
+  name: Comparable
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: <=>
+- !ruby/object:RI::MethodSummary 
+  name: <=>
+- !ruby/object:RI::MethodSummary 
+  name: ==
+- !ruby/object:RI::MethodSummary 
+  name: ==
+- !ruby/object:RI::MethodSummary 
+  name: "[]"
+- !ruby/object:RI::MethodSummary 
+  name: "[]"
+- !ruby/object:RI::MethodSummary 
+  name: "[]="
+- !ruby/object:RI::MethodSummary 
+  name: "[]="
+- !ruby/object:RI::MethodSummary 
+  name: array
+- !ruby/object:RI::MethodSummary 
+  name: array
+- !ruby/object:RI::MethodSummary 
+  name: build
+- !ruby/object:RI::MethodSummary 
+  name: build
+- !ruby/object:RI::MethodSummary 
+  name: build=
+- !ruby/object:RI::MethodSummary 
+  name: build=
+- !ruby/object:RI::MethodSummary 
+  name: inspect
+- !ruby/object:RI::MethodSummary 
+  name: inspect
+- !ruby/object:RI::MethodSummary 
+  name: major
+- !ruby/object:RI::MethodSummary 
+  name: major
+- !ruby/object:RI::MethodSummary 
+  name: major=
+- !ruby/object:RI::MethodSummary 
+  name: major=
+- !ruby/object:RI::MethodSummary 
+  name: minor
+- !ruby/object:RI::MethodSummary 
+  name: minor
+- !ruby/object:RI::MethodSummary 
+  name: minor=
+- !ruby/object:RI::MethodSummary 
+  name: minor=
+- !ruby/object:RI::MethodSummary 
+  name: pred!
+- !ruby/object:RI::MethodSummary 
+  name: pred!
+- !ruby/object:RI::MethodSummary 
+  name: revision
+- !ruby/object:RI::MethodSummary 
+  name: revision
+- !ruby/object:RI::MethodSummary 
+  name: revision=
+- !ruby/object:RI::MethodSummary 
+  name: revision=
+- !ruby/object:RI::MethodSummary 
+  name: succ!
+- !ruby/object:RI::MethodSummary 
+  name: succ!
+- !ruby/object:RI::MethodSummary 
+  name: to_a
+- !ruby/object:RI::MethodSummary 
+  name: to_a
+- !ruby/object:RI::MethodSummary 
+  name: to_s
+- !ruby/object:RI::MethodSummary 
+  name: to_s
+- !ruby/object:RI::MethodSummary 
+  name: version
+- !ruby/object:RI::MethodSummary 
+  name: version
+name: Version
+superclass: Object

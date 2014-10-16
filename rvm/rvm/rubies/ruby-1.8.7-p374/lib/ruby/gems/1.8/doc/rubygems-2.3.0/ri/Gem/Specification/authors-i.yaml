@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: The list of author names who wrote this gem.
+- !ruby/struct:SM::Flow::VERB 
+  body: "  spec.authors = ['Chad Fowler', 'Jim Weirich', 'Rich Kilmer']\n"
+full_name: Gem::Specification#authors
+is_singleton: false
+name: authors
+params: ()
+visibility: public

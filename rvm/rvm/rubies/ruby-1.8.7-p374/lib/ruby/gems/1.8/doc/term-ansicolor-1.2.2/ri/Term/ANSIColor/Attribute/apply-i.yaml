@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Term::ANSIColor::Attribute#apply
+is_singleton: false
+name: apply
+params: (string = nil, &block)
+visibility: public

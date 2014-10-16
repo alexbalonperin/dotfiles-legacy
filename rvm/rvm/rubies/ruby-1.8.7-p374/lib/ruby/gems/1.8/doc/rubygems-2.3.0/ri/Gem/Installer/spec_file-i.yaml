@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: The location of of the spec file that is installed.
+full_name: Gem::Installer#spec_file
+is_singleton: false
+name: spec_file
+params: ()
+visibility: public

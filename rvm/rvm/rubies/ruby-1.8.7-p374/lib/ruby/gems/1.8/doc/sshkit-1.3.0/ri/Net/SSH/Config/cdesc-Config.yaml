@@ -1,0 +1,16 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: default_files
+comment: 
+constants: []
+
+full_name: Net::SSH::Config
+includes: []
+
+instance_methods: []
+
+name: Config
+superclass: Object

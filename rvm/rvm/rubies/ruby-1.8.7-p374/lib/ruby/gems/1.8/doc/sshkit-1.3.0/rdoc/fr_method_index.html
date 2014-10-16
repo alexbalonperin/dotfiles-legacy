@@ -1,0 +1,191 @@
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--
+
+    Methods
+
+  -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Methods</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="rdoc-style.css" type="text/css" />
+  <base target="docwin" />
+</head>
+<body>
+<div id="index">
+  <h1 class="section-bar">Methods</h1>
+  <div id="index-entries">
+    <a href="classes/SSHKit/Formatter/Dot.html#M000905"><< (SSHKit::Formatter::Dot)</a><br />
+    <a href="classes/SSHKit/Formatter/BlackHole.html#M000907"><< (SSHKit::Formatter::BlackHole)</a><br />
+    <a href="classes/SSHKit/Formatter/Pretty.html#M000903"><< (SSHKit::Formatter::Pretty)</a><br />
+    <a href="classes/SSHKit/Formatter/Abstract.html#M000910"><< (SSHKit::Formatter::Abstract)</a><br />
+    <a href="classes/SSHKit/Host.html#M001027">== (SSHKit::Host)</a><br />
+    <a href="classes/SSHKit/CommandMap.html#M001038">[] (SSHKit::CommandMap)</a><br />
+    <a href="classes/SSHKit/CommandMap/PrefixProvider.html#M001044">[] (SSHKit::CommandMap::PrefixProvider)</a><br />
+    <a href="classes/SSHKit/CommandMap.html#M001040">[]= (SSHKit::CommandMap)</a><br />
+    <a href="classes/SSHKit/Backend/Abstract.html#M000965">as (SSHKit::Backend::Abstract)</a><br />
+    <a href="classes/SSHKit/SimpleHostParser.html#M000993">attributes (SSHKit::SimpleHostParser)</a><br />
+    <a href="classes/SSHKit/Configuration.html#M001047">backend (SSHKit::Configuration)</a><br />
+    <a href="classes/SSHKit/Backend/Netssh.html#M000933">background (SSHKit::Backend::Netssh)</a><br />
+    <a href="classes/SSHKit/Backend/Abstract.html#M000959">background (SSHKit::Backend::Abstract)</a><br />
+    <a href="classes/SSHKit/Backend/Netssh.html#M000934">capture (SSHKit::Backend::Netssh)</a><br />
+    <a href="classes/SSHKit/Backend/Local.html#M000915">capture (SSHKit::Backend::Local)</a><br />
+    <a href="classes/SSHKit/Backend/Printer.html#M000946">capture (SSHKit::Backend::Printer)</a><br />
+    <a href="classes/SSHKit/Backend/Abstract.html#M000962">capture (SSHKit::Backend::Abstract)</a><br />
+    <a href="classes/SSHKit/Backend/Printer.html#M000947">capture! (SSHKit::Backend::Printer)</a><br />
+    <a href="classes/SSHKit.html#M000898">capture_output (SSHKit)</a><br />
+    <a href="classes/SSHKit/CommandMap.html#M001041">clear (SSHKit::CommandMap)</a><br />
+    <a href="classes/SSHKit/Configuration.html#M001051">command_map (SSHKit::Configuration)</a><br />
+    <a href="classes/SSHKit/Configuration.html#M001052">command_map= (SSHKit::Configuration)</a><br />
+    <a href="classes/SSHKit/Command.html#M000995">complete? (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/Backend/Abstract.html#M000966">config (SSHKit::Backend::Abstract)</a><br />
+    <a href="classes/SSHKit/Backend/Netssh.html#M000938">config (SSHKit::Backend::Netssh)</a><br />
+    <a href="classes/SSHKit.html#M000900">config (SSHKit)</a><br />
+    <a href="classes/SSHKit/Backend/Abstract.html#M000967">configure (SSHKit::Backend::Abstract)</a><br />
+    <a href="classes/SSHKit.html#M000899">configure (SSHKit)</a><br />
+    <a href="classes/SSHKit/Backend/Netssh.html#M000937">configure (SSHKit::Backend::Netssh)</a><br />
+    <a href="classes/SSHKit/Backend/ConnectionPool.html#M000929">create_or_reuse_connection (SSHKit::Backend::ConnectionPool)</a><br />
+    <a href="classes/SSHKit/Backend/Abstract.html#M000955">debug (SSHKit::Backend::Abstract)</a><br />
+    <a href="classes/Net/SSH/LogLevelShim.html#M001057">debug (Net::SSH::LogLevelShim)</a><br />
+    <a href="classes/SSHKit/Backend/Skipper.html#M000926">debug (SSHKit::Backend::Skipper)</a><br />
+    <a href="classes/SSHKit/Configuration.html#M001046">default_env (SSHKit::Configuration)</a><br />
+    <a href="classes/Net/SSH/Config.html#M001055">default_files (Net::SSH::Config)</a><br />
+    <a href="classes/SSHKit/CommandMap.html#M001042">defaults (SSHKit::CommandMap)</a><br />
+    <a href="classes/SSHKit/Backend/Netssh.html#M000936">download! (SSHKit::Backend::Netssh)</a><br />
+    <a href="classes/SSHKit/Backend/Printer.html#M000943">download! (SSHKit::Backend::Printer)</a><br />
+    <a href="classes/SSHKit/Backend/Skipper.html#M000919">download! (SSHKit::Backend::Skipper)</a><br />
+    <a href="classes/SSHKit/Coordinator.html#M001036">each (SSHKit::Coordinator)</a><br />
+    <a href="classes/SSHKit/Command.html#M001011">environment_hash (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/Command.html#M001012">envivonment_string (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/Host.html#M001026">eql? (SSHKit::Host)</a><br />
+    <a href="classes/SSHKit/Host.html#M001028">equal? (SSHKit::Host)</a><br />
+    <a href="classes/SSHKit/Backend/Skipper.html#M000925">error (SSHKit::Backend::Skipper)</a><br />
+    <a href="classes/Net/SSH/LogLevelShim.html#M001058">error (Net::SSH::LogLevelShim)</a><br />
+    <a href="classes/SSHKit/Backend/Abstract.html#M000952">error (SSHKit::Backend::Abstract)</a><br />
+    <a href="classes/SSHKit/CommandHelper.html#M000977">execute (SSHKit::CommandHelper)</a><br />
+    <a href="classes/SSHKit/Backend/Printer.html#M000941">execute (SSHKit::Backend::Printer)</a><br />
+    <a href="classes/SSHKit/Backend/Netssh.html#M000932">execute (SSHKit::Backend::Netssh)</a><br />
+    <a href="classes/SSHKit/Runner/Null.html#M000971">execute (SSHKit::Runner::Null)</a><br />
+    <a href="classes/SSHKit/Runner/Sequential.html#M000970">execute (SSHKit::Runner::Sequential)</a><br />
+    <a href="classes/SSHKit/Runner/Parallel.html#M000969">execute (SSHKit::Runner::Parallel)</a><br />
+    <a href="classes/SSHKit/Backend/Abstract.html#M000961">execute (SSHKit::Backend::Abstract)</a><br />
+    <a href="classes/SSHKit/Backend/Local.html#M000914">execute (SSHKit::Backend::Local)</a><br />
+    <a href="classes/SSHKit/Backend/Skipper.html#M000917">execute (SSHKit::Backend::Skipper)</a><br />
+    <a href="classes/SSHKit/Runner/Group.html#M000968">execute (SSHKit::Runner::Group)</a><br />
+    <a href="classes/SSHKit/Command.html#M001004">exit_status= (SSHKit::Command)</a><br />
+    <a href="classes/Array.html#M000897">extract_options! (Array)</a><br />
+    <a href="classes/SSHKit/Command.html#M001003">failed? (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/Command.html#M001002">failure? (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/Backend/Skipper.html#M000924">fatal (SSHKit::Backend::Skipper)</a><br />
+    <a href="classes/SSHKit/Backend/Abstract.html#M000951">fatal (SSHKit::Backend::Abstract)</a><br />
+    <a href="classes/SSHKit/Command.html#M000996">finished? (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/Configuration.html#M001050">format= (SSHKit::Configuration)</a><br />
+    <a href="classes/SSHKit/Command.html#M001017">group (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/Host.html#M001024">hash (SSHKit::Host)</a><br />
+    <a href="classes/SSHKit/Command.html#M001007">host (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/SimpleHostParser.html#M000992">hostname (SSHKit::SimpleHostParser)</a><br />
+    <a href="classes/SSHKit/IPv6HostWithPortParser.html#M000983">hostname (SSHKit::IPv6HostWithPortParser)</a><br />
+    <a href="classes/SSHKit/HostWithUsernameAndPortParser.html#M000986">hostname (SSHKit::HostWithUsernameAndPortParser)</a><br />
+    <a href="classes/SSHKit/HostWithPortParser.html#M001034">hostname (SSHKit::HostWithPortParser)</a><br />
+    <a href="classes/SSHKit/HostWithUsernameParser.html#M000980">hostname (SSHKit::HostWithUsernameParser)</a><br />
+    <a href="classes/SSHKit/Command.html#M001015">in_background (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/Backend/Abstract.html#M000954">info (SSHKit::Backend::Abstract)</a><br />
+    <a href="classes/SSHKit/Backend/Skipper.html#M000922">info (SSHKit::Backend::Skipper)</a><br />
+    <a href="classes/SSHKit/Backend/Printer.html#M000945">invoke (SSHKit::Backend::Printer)</a><br />
+    <a href="classes/SSHKit/Backend/Skipper.html#M000921">invoke (SSHKit::Backend::Skipper)</a><br />
+    <a href="classes/SSHKit/Host.html#M001020">key= (SSHKit::Host)</a><br />
+    <a href="classes/SSHKit/Host.html#M001022">keys (SSHKit::Host)</a><br />
+    <a href="classes/SSHKit/Host.html#M001021">keys= (SSHKit::Host)</a><br />
+    <a href="classes/SSHKit/Backend/Skipper.html#M000923">log (SSHKit::Backend::Skipper)</a><br />
+    <a href="classes/SSHKit/Backend/Abstract.html#M000950">log (SSHKit::Backend::Abstract)</a><br />
+    <a href="classes/Net/SSH/LogLevelShim.html#M001059">lwarn (Net::SSH::LogLevelShim)</a><br />
+    <a href="classes/SSHKit/CommandHelper.html#M000976">make (SSHKit::CommandHelper)</a><br />
+    <a href="classes/SSHKit/Backend/Abstract.html#M000957">make (SSHKit::Backend::Abstract)</a><br />
+    <a href="classes/SSHKit/Host.html#M001030">netssh_options (SSHKit::Host)</a><br />
+    <a href="classes/SSHKit/Backend/Abstract.html#M000949">new (SSHKit::Backend::Abstract)</a><br />
+    <a href="classes/SSHKit/Formatter/Abstract.html#M000908">new (SSHKit::Formatter::Abstract)</a><br />
+    <a href="classes/SSHKit/Host.html#M001023">new (SSHKit::Host)</a><br />
+    <a href="classes/SSHKit/Coordinator.html#M001035">new (SSHKit::Coordinator)</a><br />
+    <a href="classes/SSHKit/CommandMap/PrefixProvider.html#M001043">new (SSHKit::CommandMap::PrefixProvider)</a><br />
+    <a href="classes/SSHKit/CommandMap.html#M001037">new (SSHKit::CommandMap)</a><br />
+    <a href="classes/SSHKit/Backend/Local.html#M000911">new (SSHKit::Backend::Local)</a><br />
+    <a href="classes/SSHKit/SimpleHostParser.html#M000989">new (SSHKit::SimpleHostParser)</a><br />
+    <a href="classes/SSHKit/Backend/Skipper.html#M000916">new (SSHKit::Backend::Skipper)</a><br />
+    <a href="classes/SSHKit/Runner/Abstract.html#M000972">new (SSHKit::Runner::Abstract)</a><br />
+    <a href="classes/SSHKit/Backend/ConnectionPool.html#M000928">new (SSHKit::Backend::ConnectionPool)</a><br />
+    <a href="classes/Net/SSH/LogLevelShim.html#M001056">new (Net::SSH::LogLevelShim)</a><br />
+    <a href="classes/SSHKit/Command.html#M000994">new (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/LogMessage.html#M001053">new (SSHKit::LogMessage)</a><br />
+    <a href="classes/SSHKit/DSL.html#M000973">on (SSHKit::DSL)</a><br />
+    <a href="classes/SSHKit/Configuration.html#M001045">output (SSHKit::Configuration)</a><br />
+    <a href="classes/SSHKit/Configuration.html#M001048">output_verbosity (SSHKit::Configuration)</a><br />
+    <a href="classes/SSHKit/Configuration.html#M001049">output_verbosity= (SSHKit::Configuration)</a><br />
+    <a href="classes/SSHKit/SimpleHostParser.html#M000991">port (SSHKit::SimpleHostParser)</a><br />
+    <a href="classes/SSHKit/HostWithUsernameAndPortParser.html#M000987">port (SSHKit::HostWithUsernameAndPortParser)</a><br />
+    <a href="classes/SSHKit/IPv6HostWithPortParser.html#M000982">port (SSHKit::IPv6HostWithPortParser)</a><br />
+    <a href="classes/SSHKit/HostWithPortParser.html#M001033">port (SSHKit::HostWithPortParser)</a><br />
+    <a href="classes/SSHKit/CommandMap.html#M001039">prefix (SSHKit::CommandMap)</a><br />
+    <a href="classes/SSHKit/Host.html#M001031">properties (SSHKit::Host)</a><br />
+    <a href="classes/SSHKit/CommandHelper.html#M000975">rake (SSHKit::CommandHelper)</a><br />
+    <a href="classes/SSHKit/Backend/Abstract.html#M000958">rake (SSHKit::Backend::Abstract)</a><br />
+    <a href="classes/SSHKit.html#M000901">reset_configuration! (SSHKit)</a><br />
+    <a href="classes/SSHKit/Backend/Abstract.html#M000948">run (SSHKit::Backend::Abstract)</a><br />
+    <a href="classes/SSHKit/Backend/Printer.html#M000940">run (SSHKit::Backend::Printer)</a><br />
+    <a href="classes/SSHKit/Backend/Local.html#M000912">run (SSHKit::Backend::Local)</a><br />
+    <a href="classes/SSHKit/Backend/Netssh.html#M000930">run (SSHKit::Backend::Netssh)</a><br />
+    <a href="classes/SSHKit/DSL.html#M000974">run_locally (SSHKit::DSL)</a><br />
+    <a href="classes/SSHKit/Command.html#M001005">runtime (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/Command.html#M001009">should_map? (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/Backend/Netssh/Configuration.html#M000939">ssh_options (SSHKit::Backend::Netssh::Configuration)</a><br />
+    <a href="classes/SSHKit/Command.html#M000998">started= (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/Command.html#M000997">started? (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/Command.html#M001000">success? (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/Command.html#M001001">successful? (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/SimpleHostParser.html#M000988">suitable? (SSHKit::SimpleHostParser)</a><br />
+    <a href="classes/SSHKit/HostWithUsernameAndPortParser.html#M000984">suitable? (SSHKit::HostWithUsernameAndPortParser)</a><br />
+    <a href="classes/SSHKit/IPv6HostWithPortParser.html#M000981">suitable? (SSHKit::IPv6HostWithPortParser)</a><br />
+    <a href="classes/SSHKit/HostWithPortParser.html#M001032">suitable? (SSHKit::HostWithPortParser)</a><br />
+    <a href="classes/SSHKit/HostWithUsernameParser.html#M000978">suitable? (SSHKit::HostWithUsernameParser)</a><br />
+    <a href="classes/Hash.html#M000895">symbolize_keys (Hash)</a><br />
+    <a href="classes/Hash.html#M000896">symbolize_keys! (Hash)</a><br />
+    <a href="classes/SSHKit/Backend/Netssh.html#M000931">test (SSHKit::Backend::Netssh)</a><br />
+    <a href="classes/SSHKit/Backend/Printer.html#M000944">test (SSHKit::Backend::Printer)</a><br />
+    <a href="classes/SSHKit/Backend/Abstract.html#M000960">test (SSHKit::Backend::Abstract)</a><br />
+    <a href="classes/SSHKit/Backend/Local.html#M000913">test (SSHKit::Backend::Local)</a><br />
+    <a href="classes/SSHKit/Backend/Skipper.html#M000920">test (SSHKit::Backend::Skipper)</a><br />
+    <a href="classes/SSHKit/Command.html#M001018">to_command (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/Command.html#M001006">to_hash (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/LogMessage.html#M001054">to_s (SSHKit::LogMessage)</a><br />
+    <a href="classes/SSHKit/Host.html#M001029">to_s (SSHKit::Host)</a><br />
+    <a href="classes/SSHKit/Command.html#M001019">to_s (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/Backend/Skipper.html#M000927">trace (SSHKit::Backend::Skipper)</a><br />
+    <a href="classes/SSHKit/Backend/Abstract.html#M000956">trace (SSHKit::Backend::Abstract)</a><br />
+    <a href="classes/SSHKit/Command.html#M001016">umask (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/Backend/Netssh.html#M000935">upload! (SSHKit::Backend::Netssh)</a><br />
+    <a href="classes/SSHKit/Backend/Printer.html#M000942">upload! (SSHKit::Backend::Printer)</a><br />
+    <a href="classes/SSHKit/Backend/Skipper.html#M000918">upload! (SSHKit::Backend::Skipper)</a><br />
+    <a href="classes/SSHKit/Command.html#M001014">user (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/SimpleHostParser.html#M000990">username (SSHKit::SimpleHostParser)</a><br />
+    <a href="classes/SSHKit/HostWithUsernameAndPortParser.html#M000985">username (SSHKit::HostWithUsernameAndPortParser)</a><br />
+    <a href="classes/SSHKit/Host.html#M001025">username (SSHKit::Host)</a><br />
+    <a href="classes/SSHKit/HostWithUsernameParser.html#M000979">username (SSHKit::HostWithUsernameParser)</a><br />
+    <a href="classes/SSHKit/Command.html#M000999">uuid (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/Command.html#M001008">verbosity (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/Backend/Abstract.html#M000953">warn (SSHKit::Backend::Abstract)</a><br />
+    <a href="classes/SSHKit/Command.html#M001013">with (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/Backend/Abstract.html#M000964">with (SSHKit::Backend::Abstract)</a><br />
+    <a href="classes/SSHKit/Backend/Abstract.html#M000963">within (SSHKit::Backend::Abstract)</a><br />
+    <a href="classes/SSHKit/Command.html#M001010">within (SSHKit::Command)</a><br />
+    <a href="classes/SSHKit/Formatter/Pretty.html#M000902">write (SSHKit::Formatter::Pretty)</a><br />
+    <a href="classes/SSHKit/Formatter/Dot.html#M000904">write (SSHKit::Formatter::Dot)</a><br />
+    <a href="classes/SSHKit/Formatter/BlackHole.html#M000906">write (SSHKit::Formatter::BlackHole)</a><br />
+    <a href="classes/SSHKit/Formatter/Abstract.html#M000909">write (SSHKit::Formatter::Abstract)</a><br />
+  </div>
+</div>
+</body>
+</html>

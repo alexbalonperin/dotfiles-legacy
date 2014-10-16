@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>const_missing (HighLine)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/highline.rb, line 148</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">const_missing</span>(<span class="ruby-identifier">name</span>)
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^(ON_)?(RGB_)([A-F0-9]{6})(_STYLE)?$/</span> <span class="ruby-comment cmt"># RGB color</span>
+      <span class="ruby-identifier">on</span> = <span class="ruby-identifier">$1</span>
+      <span class="ruby-identifier">suffix</span> = <span class="ruby-identifier">$4</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">suffix</span>
+        <span class="ruby-identifier">code_name</span> = <span class="ruby-identifier">$1</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">$2</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">$3</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">code_name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-identifier">style_name</span> = <span class="ruby-identifier">code_name</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'_STYLE'</span>
+      <span class="ruby-identifier">style</span> = <span class="ruby-constant">Style</span>.<span class="ruby-identifier">rgb</span>(<span class="ruby-identifier">$3</span>)
+      <span class="ruby-identifier">style</span> = <span class="ruby-identifier">style</span>.<span class="ruby-identifier">on</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">on</span>
+      <span class="ruby-identifier">const_set</span>(<span class="ruby-identifier">style_name</span>, <span class="ruby-identifier">style</span>)
+      <span class="ruby-identifier">const_set</span>(<span class="ruby-identifier">code_name</span>, <span class="ruby-identifier">style</span>.<span class="ruby-identifier">code</span>)
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">suffix</span>
+        <span class="ruby-identifier">style</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-identifier">style</span>.<span class="ruby-identifier">code</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">else</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">NameError</span>, <span class="ruby-node">&quot;Bad color or uninitialized constant #{name}&quot;</span>
+    <span class="ruby-keyword kw">end</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

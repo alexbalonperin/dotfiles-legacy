@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Gem::Commands::OpenCommand#get_env_editor
+is_singleton: false
+name: get_env_editor
+params: ()
+visibility: public

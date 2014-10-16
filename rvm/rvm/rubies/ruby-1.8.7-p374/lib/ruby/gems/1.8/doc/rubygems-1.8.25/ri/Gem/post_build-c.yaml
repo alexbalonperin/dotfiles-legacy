@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Adds a post-build hook that will be passed an Gem::Installer instance when Gem::Installer#install is called. The hook is called after the gem has been extracted and extensions have been built but before the executables or gemspec has been written. If the hook returns <tt>false</tt> then the gem's files will be removed and the install will be aborted.
+full_name: Gem::post_build
+is_singleton: true
+name: post_build
+params: (&hook)
+visibility: public

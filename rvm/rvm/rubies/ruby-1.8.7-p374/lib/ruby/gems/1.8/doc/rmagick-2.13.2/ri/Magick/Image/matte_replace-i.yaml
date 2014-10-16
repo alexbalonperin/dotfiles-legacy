@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Make transparent all pixels that are the same color as the pixel at (x, y).
+full_name: Magick::Image#matte_replace
+is_singleton: false
+name: matte_replace
+params: (x, y)
+visibility: public

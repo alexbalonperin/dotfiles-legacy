@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>text_anchor (Magick::RVG::Utility::GraphicContext)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/rvg/misc.rb, line 700</span>
+                <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">text_anchor</span>(<span class="ruby-identifier">anchor</span>)
+                    <span class="ruby-identifier">anchor</span> = <span class="ruby-identifier">anchor</span>.<span class="ruby-identifier">intern</span>
+                    <span class="ruby-identifier">anchor_enum</span> = <span class="ruby-constant">TEXT_ANCHOR</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">anchor</span>, <span class="ruby-constant">Magick</span><span class="ruby-operator">::</span><span class="ruby-constant">StartAnchor</span>)
+                    <span class="ruby-ivar">@gc</span>.<span class="ruby-identifier">text_anchor</span>(<span class="ruby-identifier">anchor_enum</span>)
+                    <span class="ruby-identifier">align</span> = <span class="ruby-constant">ANCHOR_TO_ALIGN</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">anchor</span>, <span class="ruby-constant">Magick</span><span class="ruby-operator">::</span><span class="ruby-constant">LeftAlign</span>)
+                    <span class="ruby-ivar">@shadow</span>[<span class="ruby-value">-1</span>].<span class="ruby-identifier">align</span> = <span class="ruby-identifier">align</span>
+                    <span class="ruby-ivar">@text_attrs</span>.<span class="ruby-identifier">text_anchor</span> = <span class="ruby-identifier">anchor</span>
+                    <span class="ruby-keyword kw">nil</span>
+                <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: here
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Enumerates the parents of <tt>directory</tt>.
+full_name: Gem::Util::traverse_parents
+is_singleton: true
+name: traverse_parents
+params: (directory) {|here| ...}
+visibility: public

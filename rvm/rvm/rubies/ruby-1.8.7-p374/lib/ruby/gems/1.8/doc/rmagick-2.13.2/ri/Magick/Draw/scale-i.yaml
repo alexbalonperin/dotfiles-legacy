@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Specify scaling to be applied to coordinate space on subsequent drawing commands.
+full_name: Magick::Draw#scale
+is_singleton: false
+name: scale
+params: (x, y)
+visibility: public

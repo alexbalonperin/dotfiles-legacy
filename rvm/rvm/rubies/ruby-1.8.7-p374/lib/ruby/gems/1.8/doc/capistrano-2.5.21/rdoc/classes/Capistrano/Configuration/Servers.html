@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: Capistrano::Configuration::Servers</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">Capistrano::Configuration::Servers</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../files/lib/capistrano/configuration/servers_rb.html">
+                lib/capistrano/configuration/servers.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000510">build_list</a>&nbsp;&nbsp;
+      <a href="#M000507">filter_server_list</a>&nbsp;&nbsp;
+      <a href="#M000506">find_servers</a>&nbsp;&nbsp;
+      <a href="#M000505">find_servers_for_task</a>&nbsp;&nbsp;
+      <a href="#M000509">role_list_from</a>&nbsp;&nbsp;
+      <a href="#M000508">server_list_from</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000506" class="method-detail">
+        <a name="M000506"></a>
+
+        <div class="method-heading">
+          <a href="Servers.src/M000506.html" target="Code" class="method-signature"
+            onclick="popupCode('Servers.src/M000506.html');return false;">
+          <span class="method-name">find_servers</span><span class="method-args">(options={})</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Attempts to find all defined servers that match the given criteria. The
+options hash may include a :hosts option (which should specify an array of
+host names or <a href="../ServerDefinition.html">ServerDefinition</a>
+instances), a :roles option (specifying an array of roles), an :only option
+(specifying a hash of key/value pairs that any matching server must match),
+an :exception option (like :only, but the inverse), and a :skip_hostfilter
+option to ignore the HOSTFILTER environment variable described below.
+</p>
+<p>
+Additionally, if the HOSTS environment variable is set, it will take
+precedence over any other options. Similarly, the ROLES environment
+variable will take precedence over other options. If both HOSTS and ROLES
+are given, HOSTS wins.
+</p>
+<p>
+Yet additionally, if the HOSTFILTER environment variable is set, it will
+limit the result to hosts found in that (comma-separated) list.
+</p>
+<p>
+Usage:
+</p>
+<pre>
+  # return all known servers
+  servers = find_servers
+
+  # find all servers in the app role that are not exempted from
+  # deployment
+  servers = find_servers :roles =&gt; :app,
+               :except =&gt; { :no_release =&gt; true }
+
+  # returns the given hosts, translated to ServerDefinition objects
+  servers = find_servers :hosts =&gt; &quot;jamis@example.host.com&quot;
+</pre>
+        </div>
+      </div>
+
+      <div id="method-M000505" class="method-detail">
+        <a name="M000505"></a>
+
+        <div class="method-heading">
+          <a href="Servers.src/M000505.html" target="Code" class="method-signature"
+            onclick="popupCode('Servers.src/M000505.html');return false;">
+          <span class="method-name">find_servers_for_task</span><span class="method-args">(task, options={})</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Identifies all servers that the given task should be executed on. The
+options hash accepts the same arguments as <a
+href="Servers.html#M000506">find_servers</a>, and any preexisting options
+there will take precedence over the options in the task.
+</p>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Protected Instance methods</h3>
+
+      <div id="method-M000510" class="method-detail">
+        <a name="M000510"></a>
+
+        <div class="method-heading">
+          <a href="Servers.src/M000510.html" target="Code" class="method-signature"
+            onclick="popupCode('Servers.src/M000510.html');return false;">
+          <span class="method-name">build_list</span><span class="method-args">(list)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000507" class="method-detail">
+        <a name="M000507"></a>
+
+        <div class="method-heading">
+          <a href="Servers.src/M000507.html" target="Code" class="method-signature"
+            onclick="popupCode('Servers.src/M000507.html');return false;">
+          <span class="method-name">filter_server_list</span><span class="method-args">(servers)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000509" class="method-detail">
+        <a name="M000509"></a>
+
+        <div class="method-heading">
+          <a href="Servers.src/M000509.html" target="Code" class="method-signature"
+            onclick="popupCode('Servers.src/M000509.html');return false;">
+          <span class="method-name">role_list_from</span><span class="method-args">(roles)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000508" class="method-detail">
+        <a name="M000508"></a>
+
+        <div class="method-heading">
+          <a href="Servers.src/M000508.html" target="Code" class="method-signature"
+            onclick="popupCode('Servers.src/M000508.html');return false;">
+          <span class="method-name">server_list_from</span><span class="method-args">(hosts)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Gem::Commands::SetupCommand#remove_old_lib_files
+is_singleton: false
+name: remove_old_lib_files
+params: (lib_dir)
+visibility: public

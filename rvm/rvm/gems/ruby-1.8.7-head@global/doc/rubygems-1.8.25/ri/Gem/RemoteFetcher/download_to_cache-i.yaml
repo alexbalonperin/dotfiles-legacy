@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Given a name and requirement, downloads this gem into cache and returns the filename. Returns nil if the gem cannot be located.
+full_name: Gem::RemoteFetcher#download_to_cache
+is_singleton: false
+name: download_to_cache
+params: (dependency)
+visibility: public

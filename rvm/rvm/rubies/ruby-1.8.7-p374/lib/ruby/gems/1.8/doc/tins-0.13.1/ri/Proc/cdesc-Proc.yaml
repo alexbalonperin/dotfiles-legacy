@@ -1,0 +1,22 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: Proc
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: PartialApplication
+- !ruby/object:RI::IncludedModule 
+  name: Tins::ProcCompose
+- !ruby/object:RI::IncludedModule 
+  name: PartialApplication
+- !ruby/object:RI::IncludedModule 
+  name: Tins::ProcCompose
+instance_methods: []
+
+name: Proc
+superclass: Object

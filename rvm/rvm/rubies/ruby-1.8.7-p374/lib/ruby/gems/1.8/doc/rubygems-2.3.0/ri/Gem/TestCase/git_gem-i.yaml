@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: specification if block_given?
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: A git_gem is used with a gem dependencies file. The gem created here has no files, just a gem specification for the given <tt>name</tt> and <tt>version</tt>.
+- !ruby/struct:SM::Flow::P 
+  body: Yields the <tt>specification</tt> to the block, if given
+full_name: Gem::TestCase#git_gem
+is_singleton: false
+name: git_gem
+params: (name = 'a', version = 1) {|specification if block_given?| ...}
+visibility: public

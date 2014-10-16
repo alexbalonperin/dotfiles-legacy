@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Tins::ProcPrelude#map_apply
+is_singleton: false
+name: map_apply
+params: (my_method, *args, &my_proc)
+visibility: public

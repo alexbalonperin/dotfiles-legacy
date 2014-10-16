@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "Singular accessor for #executables"
+full_name: Gem::Specification#executable=
+is_singleton: false
+name: executable=
+params: (o)
+visibility: public

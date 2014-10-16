@@ -1,0 +1,63 @@
+[2014-08-04 16:18:52] __rvm_package_extract
+__rvm_package_extract () 
+{ 
+    rvm_debug __rvm_package_extract:$#: "$@";
+    typeset __tempdir __path __file __return;
+    __return=0;
+    __tempdir="$( TMPDIR="${rvm_tmp_path}" mktemp -d -t rvm-tmp.XXXXXXXXX )";
+    __rvm_package_extract_run "$1" "$__tempdir" || __return=$?;
+    if (( __return == 0 )); then
+        for __path in "$__tempdir"/*;
+        do
+            __file="${__path##*/}";
+            if [[ -n "${__file}" && -e "$2/${__file}" ]]; then
+                \rm -rf "$2/${__file}" || __return=$?;
+            fi;
+            \mv -f "${__path}" "$2/" || __return=$?;
+        done;
+    fi;
+    if [[ -n "$__tempdir" ]]; then
+        \rm -rf "$__tempdir";
+    fi;
+    return $__return
+}
+current path: /Users/abalonperin/dotfiles/rvm/rvm/src
+GEM_HOME=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-1.8.7-head
+PATH=/usr/local/opt/pkg-config/bin:/usr/local/opt/libtool/bin:/usr/local/opt/automake/bin:/usr/local/opt/autoconf/bin:/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-1.8.7-head/bin:/Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/bin:/Users/abalonperin/dotfiles/rvm/rvm/bin:/Users/abalonperin/.rbenv/shims:/Users/abalonperin/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+GEM_PATH=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-1.8.7-head
+command(3): __rvm_package_extract /Users/abalonperin/dotfiles/rvm/rvm/archives/openssl-1.0.1g.tar.gz /Users/abalonperin/dotfiles/rvm/rvm/src
++ rvm_debug __rvm_package_extract:2: /Users/abalonperin/dotfiles/rvm/rvm/archives/openssl-1.0.1g.tar.gz /Users/abalonperin/dotfiles/rvm/rvm/src
++ ((  0  ))
++ return 0
++ typeset __tempdir __path __file __return
++ __return=0
+++ TMPDIR=/Users/abalonperin/dotfiles/rvm/rvm/tmp
+++ mktemp -d -t rvm-tmp.XXXXXXXXX
++ __tempdir=/Users/abalonperin/dotfiles/rvm/rvm/tmp/rvm-tmp.XXXXXXXXX.T2Pm1yAx
++ __rvm_package_extract_run /Users/abalonperin/dotfiles/rvm/rvm/archives/openssl-1.0.1g.tar.gz /Users/abalonperin/dotfiles/rvm/rvm/tmp/rvm-tmp.XXXXXXXXX.T2Pm1yAx
++ [[ !    =~  --no-same-owner  ]]
++ __rvm_tar --help
++ __rvm_grep -- --no-same-owner
++ GREP_OPTIONS=
++ grep -- --no-same-owner
++ return 1
++ [[ -d /Users/abalonperin/dotfiles/rvm/rvm/tmp/rvm-tmp.XXXXXXXXX.T2Pm1yAx ]]
++ case "$1" in
++ [[ -n '' ]]
++ __rvm_tar xzf /Users/abalonperin/dotfiles/rvm/rvm/archives/openssl-1.0.1g.tar.gz -C /Users/abalonperin/dotfiles/rvm/rvm/tmp/rvm-tmp.XXXXXXXXX.T2Pm1yAx
++ tar xzf /Users/abalonperin/dotfiles/rvm/rvm/archives/openssl-1.0.1g.tar.gz -C /Users/abalonperin/dotfiles/rvm/rvm/tmp/rvm-tmp.XXXXXXXXX.T2Pm1yAx
++ __rvm_fix_group_permissions /Users/abalonperin/dotfiles/rvm/rvm/tmp/rvm-tmp.XXXXXXXXX.T2Pm1yAx/openssl-1.0.1g
++ umask -S
++ __rvm_grep g=rw
++ GREP_OPTIONS=
++ grep g=rw
++ return 1
++ ((  __return == 0  ))
++ for __path in '"$__tempdir"/*'
++ __file=openssl-1.0.1g
++ [[ -n openssl-1.0.1g ]]
++ [[ -e /Users/abalonperin/dotfiles/rvm/rvm/src/openssl-1.0.1g ]]
++ mv -f /Users/abalonperin/dotfiles/rvm/rvm/tmp/rvm-tmp.XXXXXXXXX.T2Pm1yAx/openssl-1.0.1g /Users/abalonperin/dotfiles/rvm/rvm/src/
++ [[ -n /Users/abalonperin/dotfiles/rvm/rvm/tmp/rvm-tmp.XXXXXXXXX.T2Pm1yAx ]]
++ rm -rf /Users/abalonperin/dotfiles/rvm/rvm/tmp/rvm-tmp.XXXXXXXXX.T2Pm1yAx
++ return 0

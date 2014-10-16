@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: The ImageList class supports the Magick::Image class methods by simply sending the method to the current image. If the method isn't explicitly supported, send it to the current image in the array. If there are no images, send it up the line. Catch a NameError and emit a useful message.
+full_name: Magick::ImageList#method_missing
+is_singleton: false
+name: method_missing
+params: (methID, *args, &block)
+visibility: public

@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Creates a new Gem::Package for the file at <tt>gem</tt>. <tt>gem</tt> can also be provided as an IO object.
+- !ruby/struct:SM::Flow::P 
+  body: If <tt>gem</tt> is an existing file in the old format a Gem::Package::Old will be returned.
+full_name: Gem::Package::new
+is_singleton: true
+name: new
+params: (gem)
+visibility: public

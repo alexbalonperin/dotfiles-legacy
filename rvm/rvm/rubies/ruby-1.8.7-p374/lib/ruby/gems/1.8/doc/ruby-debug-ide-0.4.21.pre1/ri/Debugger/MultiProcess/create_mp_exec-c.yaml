@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Debugger::MultiProcess::create_mp_exec
+is_singleton: true
+name: create_mp_exec
+params: (private=false)
+visibility: public

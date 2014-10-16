@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::MissingTranslation::Base#to_exception
+is_singleton: false
+name: to_exception
+params: ()
+visibility: public

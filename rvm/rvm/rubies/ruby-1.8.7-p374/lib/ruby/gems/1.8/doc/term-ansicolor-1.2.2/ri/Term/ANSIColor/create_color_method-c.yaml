@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Term::ANSIColor::create_color_method
+is_singleton: true
+name: create_color_method
+params: (color_name, color_value)
+visibility: public

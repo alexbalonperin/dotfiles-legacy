@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "Alias for #stroke"
+full_name: Magick::Draw#stroke_pattern
+is_singleton: false
+name: stroke_pattern
+params: (colorspec)
+visibility: public

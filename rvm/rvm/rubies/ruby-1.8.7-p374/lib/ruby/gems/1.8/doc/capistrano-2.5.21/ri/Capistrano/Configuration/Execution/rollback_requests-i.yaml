@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: The stack of tasks that have registered rollback handlers within the current transaction. If this is nil, then there is no transaction that is currently active.
+full_name: Capistrano::Configuration::Execution#rollback_requests
+is_singleton: false
+name: rollback_requests
+params: ()
+visibility: public

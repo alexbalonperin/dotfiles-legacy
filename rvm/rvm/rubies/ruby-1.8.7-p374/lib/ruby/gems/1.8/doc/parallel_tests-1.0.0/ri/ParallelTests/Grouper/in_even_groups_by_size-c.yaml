@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: ParallelTests::Grouper::in_even_groups_by_size
+is_singleton: true
+name: in_even_groups_by_size
+params: (items, num_groups, options= {})
+visibility: public

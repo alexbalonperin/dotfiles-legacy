@@ -1,0 +1,18 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: A key-exchange service implementing the &quot;diffie-hellman-group-exchange-sha256&quot; key-exchange algorithm.
+constants: []
+
+full_name: Net::SSH::Transport::Kex::DiffieHellmanGroupExchangeSHA256
+includes: []
+
+instance_methods: []
+
+name: DiffieHellmanGroupExchangeSHA256
+superclass: DiffieHellmanGroupExchangeSHA1

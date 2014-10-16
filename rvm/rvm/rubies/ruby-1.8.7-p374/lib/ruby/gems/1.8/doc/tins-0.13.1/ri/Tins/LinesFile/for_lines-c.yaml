@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Tins::LinesFile::for_lines
+is_singleton: true
+name: for_lines
+params: (lines, line_number = nil)
+visibility: public

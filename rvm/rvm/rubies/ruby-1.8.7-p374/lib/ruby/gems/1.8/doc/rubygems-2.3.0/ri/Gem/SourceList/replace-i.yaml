@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "Replaces this SourceList with the sources in <tt>other</tt> See #&lt;&lt; for acceptable items in <tt>other</tt>."
+full_name: Gem::SourceList#replace
+is_singleton: false
+name: replace
+params: (other)
+visibility: public

@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Returns binary extensions dir for specified RubyGems base dir or nil if such directory cannot be determined.
+- !ruby/struct:SM::Flow::P 
+  body: By default, the binary extensions are located side by side with their Ruby counterparts, therefore nil is returned
+full_name: Gem::default_ext_dir_for
+is_singleton: true
+name: default_ext_dir_for
+params: (base_dir)
+visibility: public

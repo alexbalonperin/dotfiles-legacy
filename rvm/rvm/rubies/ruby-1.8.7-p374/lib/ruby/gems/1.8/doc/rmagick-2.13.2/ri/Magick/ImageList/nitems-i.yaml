@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Magick::ImageList#nitems
+is_singleton: false
+name: nitems
+params: ()
+visibility: public

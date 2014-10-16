@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Prints to the stderr using printf(*args) if debug logging flag (-d) is on.
+full_name: Debugger::print_debug
+is_singleton: true
+name: print_debug
+params: (*args)
+visibility: public

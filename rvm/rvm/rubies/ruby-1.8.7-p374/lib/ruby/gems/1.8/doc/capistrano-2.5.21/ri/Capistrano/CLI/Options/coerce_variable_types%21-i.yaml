@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Capistrano::CLI::Options#coerce_variable_types!
+is_singleton: false
+name: coerce_variable_types!
+params: ()
+visibility: public

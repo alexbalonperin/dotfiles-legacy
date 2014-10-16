@@ -1,0 +1,29 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: The default system path for managing Gems.
+  name: home
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Array of paths to search for Gems.
+  name: path
+  rw: R
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Gem::PathSupport facilitates the GEM_HOME and GEM_PATH environment settings to the rest of RubyGems.
+constants: []
+
+full_name: Gem::PathSupport
+includes: []
+
+instance_methods: []
+
+name: PathSupport
+superclass: Object

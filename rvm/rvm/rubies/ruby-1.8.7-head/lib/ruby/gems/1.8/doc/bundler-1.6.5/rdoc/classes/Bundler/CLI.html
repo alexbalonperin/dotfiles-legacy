@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Bundler::CLI</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Bundler::CLI</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../files/lib/bundler/cli_rb.html">
+                lib/bundler/cli.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                Thor
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000439">binstubs</a>&nbsp;&nbsp;
+      <a href="#M000441">cache</a>&nbsp;&nbsp;
+      <a href="#M000435">check</a>&nbsp;&nbsp;
+      <a href="#M000452">clean</a>&nbsp;&nbsp;
+      <a href="#M000444">config</a>&nbsp;&nbsp;
+      <a href="#M000446">console</a>&nbsp;&nbsp;
+      <a href="#M000455">env</a>&nbsp;&nbsp;
+      <a href="#M000443">exec</a>&nbsp;&nbsp;
+      <a href="#M000450">gem</a>&nbsp;&nbsp;
+      <a href="#M000433">help</a>&nbsp;&nbsp;
+      <a href="#M000434">init</a>&nbsp;&nbsp;
+      <a href="#M000454">inject</a>&nbsp;&nbsp;
+      <a href="#M000436">install</a>&nbsp;&nbsp;
+      <a href="#M000448">licenses</a>&nbsp;&nbsp;
+      <a href="#M000432">new</a>&nbsp;&nbsp;
+      <a href="#M000445">open</a>&nbsp;&nbsp;
+      <a href="#M000440">outdated</a>&nbsp;&nbsp;
+      <a href="#M000442">package</a>&nbsp;&nbsp;
+      <a href="#M000453">platform</a>&nbsp;&nbsp;
+      <a href="#M000438">show</a>&nbsp;&nbsp;
+      <a href="#M000451">source_root</a>&nbsp;&nbsp;
+      <a href="#M000431">start</a>&nbsp;&nbsp;
+      <a href="#M000437">update</a>&nbsp;&nbsp;
+      <a href="#M000447">version</a>&nbsp;&nbsp;
+      <a href="#M000449">viz</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+    <div id="includes">
+      <h3 class="section-bar">Included Modules</h3>
+
+      <div id="includes-list">
+        <span class="include-name">Thor::Actions</span>
+      </div>
+    </div>
+
+    <div id="section">
+
+
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">CONSOLES</td>
+          <td>=</td>
+          <td class="context-item-value">{       'pry'  =&gt; :Pry,       'ripl' =&gt; :Ripl,       'irb'  =&gt; :IRB,     }</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000432" class="method-detail">
+        <a name="M000432"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000432.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000432.html');return false;">
+          <span class="method-name">new</span><span class="method-args">(*)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000451" class="method-detail">
+        <a name="M000451"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000451.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000451.html');return false;">
+          <span class="method-name">source_root</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000431" class="method-detail">
+        <a name="M000431"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000431.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000431.html');return false;">
+          <span class="method-name">start</span><span class="method-args">(*)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000439" class="method-detail">
+        <a name="M000439"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000439.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000439.html');return false;">
+          <span class="method-name">binstubs</span><span class="method-args">(*gems)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000441" class="method-detail">
+        <a name="M000441"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000441.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000441.html');return false;">
+          <span class="method-name">cache</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000435" class="method-detail">
+        <a name="M000435"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000435.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000435.html');return false;">
+          <span class="method-name">check</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000452" class="method-detail">
+        <a name="M000452"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000452.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000452.html');return false;">
+          <span class="method-name">clean</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000444" class="method-detail">
+        <a name="M000444"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000444.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000444.html');return false;">
+          <span class="method-name">config</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000446" class="method-detail">
+        <a name="M000446"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000446.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000446.html');return false;">
+          <span class="method-name">console</span><span class="method-args">(group = nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000455" class="method-detail">
+        <a name="M000455"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000455.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000455.html');return false;">
+          <span class="method-name">env</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000443" class="method-detail">
+        <a name="M000443"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000443.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000443.html');return false;">
+          <span class="method-name">exec</span><span class="method-args">(*args)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000450" class="method-detail">
+        <a name="M000450"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000450.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000450.html');return false;">
+          <span class="method-name">gem</span><span class="method-args">(name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000433" class="method-detail">
+        <a name="M000433"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000433.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000433.html');return false;">
+          <span class="method-name">help</span><span class="method-args">(cli = nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000434" class="method-detail">
+        <a name="M000434"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000434.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000434.html');return false;">
+          <span class="method-name">init</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000454" class="method-detail">
+        <a name="M000454"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000454.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000454.html');return false;">
+          <span class="method-name">inject</span><span class="method-args">(name, version, *gems)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000436" class="method-detail">
+        <a name="M000436"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000436.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000436.html');return false;">
+          <span class="method-name">install</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000448" class="method-detail">
+        <a name="M000448"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000448.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000448.html');return false;">
+          <span class="method-name">licenses</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000445" class="method-detail">
+        <a name="M000445"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000445.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000445.html');return false;">
+          <span class="method-name">open</span><span class="method-args">(name)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000440" class="method-detail">
+        <a name="M000440"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000440.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000440.html');return false;">
+          <span class="method-name">outdated</span><span class="method-args">(*gems)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000442" class="method-detail">
+        <a name="M000442"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000442.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000442.html');return false;">
+          <span class="method-name">package</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000453" class="method-detail">
+        <a name="M000453"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000453.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000453.html');return false;">
+          <span class="method-name">platform</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000438" class="method-detail">
+        <a name="M000438"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000438.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000438.html');return false;">
+          <span class="method-name">show</span><span class="method-args">(gem_name = nil)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000437" class="method-detail">
+        <a name="M000437"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000437.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000437.html');return false;">
+          <span class="method-name">update</span><span class="method-args">(*gems)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000447" class="method-detail">
+        <a name="M000447"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000447.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000447.html');return false;">
+          <span class="method-name">version</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000449" class="method-detail">
+        <a name="M000449"></a>
+
+        <div class="method-heading">
+          <a href="CLI.src/M000449.html" target="Code" class="method-signature"
+            onclick="popupCode('CLI.src/M000449.html');return false;">
+          <span class="method-name">viz</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

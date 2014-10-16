@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Loads the default specifications. It should be called only once.
+full_name: Gem::Specification::load_defaults
+is_singleton: true
+name: load_defaults
+params: ()
+visibility: public

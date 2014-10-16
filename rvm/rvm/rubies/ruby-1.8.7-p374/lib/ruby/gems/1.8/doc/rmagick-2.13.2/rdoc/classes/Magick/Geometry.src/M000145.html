@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>new (Magick::Geometry)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/RMagick.rb, line 62</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">width</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">height</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">x</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">y</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">flag</span>=<span class="ruby-keyword kw">nil</span>)
+        <span class="ruby-identifier">raise</span>(<span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;width set to #{width.to_s}&quot;</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">width</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">GeometryValue</span>
+        <span class="ruby-identifier">raise</span>(<span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;height set to #{height.to_s}&quot;</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">height</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">GeometryValue</span>
+        <span class="ruby-identifier">raise</span>(<span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;x set to #{x.to_s}&quot;</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">GeometryValue</span>
+        <span class="ruby-identifier">raise</span>(<span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;y set to #{y.to_s}&quot;</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">y</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">GeometryValue</span>
+
+        <span class="ruby-comment cmt"># Support floating-point width and height arguments so Geometry</span>
+        <span class="ruby-comment cmt"># objects can be used to specify Image#density= arguments.</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">width</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span>
+            <span class="ruby-ivar">@width</span> = <span class="ruby-value">0</span>
+        <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">width</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span><span class="ruby-value">.0</span>
+            <span class="ruby-ivar">@width</span> = <span class="ruby-identifier">width</span>.<span class="ruby-identifier">to_f</span>
+        <span class="ruby-keyword kw">else</span>
+            <span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;width must be &gt;= 0: #{width}&quot;</span>
+        <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">height</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span>
+            <span class="ruby-ivar">@height</span> = <span class="ruby-value">0</span>
+        <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">height</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span><span class="ruby-value">.0</span>
+            <span class="ruby-ivar">@height</span> = <span class="ruby-identifier">height</span>.<span class="ruby-identifier">to_f</span>
+        <span class="ruby-keyword kw">else</span>
+            <span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;height must be &gt;= 0: #{height}&quot;</span>
+        <span class="ruby-keyword kw">end</span>
+
+        <span class="ruby-ivar">@x</span>    = <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_i</span>
+        <span class="ruby-ivar">@y</span>    = <span class="ruby-identifier">y</span>.<span class="ruby-identifier">to_i</span>
+        <span class="ruby-ivar">@flag</span> = <span class="ruby-identifier">flag</span>
+
+    <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

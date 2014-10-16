@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Make transparent any pixel that matches the color of the pixel at (x,y) and is a neighbor.
+full_name: Magick::Image#matte_floodfill
+is_singleton: false
+name: matte_floodfill
+params: (x, y)
+visibility: public

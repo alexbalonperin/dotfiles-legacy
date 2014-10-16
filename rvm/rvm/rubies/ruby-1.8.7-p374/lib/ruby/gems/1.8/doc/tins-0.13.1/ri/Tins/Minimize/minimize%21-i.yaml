@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: First minimizes this object, then calls the replace method with the result.
+full_name: Tins::Minimize#minimize!
+is_singleton: false
+name: minimize!
+params: ()
+visibility: public

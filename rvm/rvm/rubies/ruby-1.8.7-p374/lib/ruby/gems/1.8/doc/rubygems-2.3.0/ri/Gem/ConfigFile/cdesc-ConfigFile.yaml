@@ -1,0 +1,200 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: List of arguments supplied to the config file object.
+  name: args
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: True if we print backtraces on errors.
+  name: backtrace
+  rw: W
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Bulk threshold value. If the number of missing gems are above this threshold value, then a bulk download technique is used. (deprecated)
+  name: bulk_threshold
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: True if we want to force specification of gem server when pushing a gem
+  name: disable_default_gem_server
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: hash
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Where to install gems (deprecated)
+  name: home
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Where to look for gems (deprecated)
+  name: path
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Path name of directory or file of openssl CA certificate, used for remote https connection
+  name: ssl_ca_cert
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Path name of directory or file of openssl client certificate, used for remote https connection with client authentication
+  name: ssl_client_cert
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: openssl verify mode value, used for remote https connection
+  name: ssl_verify_mode
+  rw: R
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: True if we want to update the SourceInfoCache every time, false otherwise
+  name: update_sources
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Verbose level of output:"
+  - !ruby/object:SM::Flow::LIST 
+    contents: 
+    - !ruby/struct:SM::Flow::LI 
+      label: "*"
+      body: false -- No output
+    - !ruby/struct:SM::Flow::LI 
+      label: "*"
+      body: true -- Normal output
+    - !ruby/struct:SM::Flow::LI 
+      label: "*"
+      body: ":loud -- Extra output"
+    type: :BULLET
+  name: verbose
+  rw: RW
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Gem::ConfigFile RubyGems options and gem command options from gemrc.
+- !ruby/struct:SM::Flow::P 
+  body: gemrc is a YAML file that uses strings to match gem command arguments and symbols to match RubyGems options.
+- !ruby/struct:SM::Flow::P 
+  body: "Gem command arguments use a String key that matches the command name and allow you to specify default arguments:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "  install: --no-rdoc --no-ri\n  update: --no-rdoc --no-ri\n"
+- !ruby/struct:SM::Flow::P 
+  body: You can use <tt>gem:</tt> to set default arguments for all commands.
+- !ruby/struct:SM::Flow::P 
+  body: "RubyGems options use symbol keys. Valid options are:"
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: "+:backtrace+:"
+    body: "See #backtrace"
+  - !ruby/struct:SM::Flow::LI 
+    label: "+:sources+:"
+    body: Sets Gem::sources
+  - !ruby/struct:SM::Flow::LI 
+    label: "+:verbose+:"
+    body: "See #verbose"
+  type: :NOTE
+- !ruby/struct:SM::Flow::P 
+  body: "gemrc files may exist in various locations and are read and merged in the following order:"
+- !ruby/object:SM::Flow::LIST 
+  contents: 
+  - !ruby/struct:SM::Flow::LI 
+    label: "-"
+    body: system wide (/etc/gemrc)
+  - !ruby/struct:SM::Flow::LI 
+    label: "-"
+    body: per user (~/.gemrc)
+  - !ruby/struct:SM::Flow::LI 
+    label: "-"
+    body: per environment (gemrc files listed in the GEMRC environment variable)
+  type: :BULLET
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: DEFAULT_BACKTRACE
+  value: "false"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: DEFAULT_BULK_THRESHOLD
+  value: "1000"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: DEFAULT_VERBOSITY
+  value: "true"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: DEFAULT_UPDATE_SOURCES
+  value: "true"
+- !ruby/object:RI::Constant 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: For Ruby packagers to set configuration defaults. Set in rubygems/defaults/operating_system.rb
+  name: OPERATING_SYSTEM_DEFAULTS
+  value: "{}"
+- !ruby/object:RI::Constant 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: For Ruby implementers to set configuration defaults. Set in rubygems/defaults/#{RUBY_ENGINE}.rb
+  name: PLATFORM_DEFAULTS
+  value: "{}"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: SYSTEM_WIDE_CONFIG_FILE
+  value: File.join SYSTEM_CONFIG_PATH, 'gemrc'
+- !ruby/object:RI::Constant 
+  comment: 
+  name: YAMLErrors
+  value: "[ArgumentError]"
+full_name: Gem::ConfigFile
+includes: 
+- !ruby/object:RI::IncludedModule 
+  name: Gem::UserInteraction
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: "[]"
+- !ruby/object:RI::MethodSummary 
+  name: "[]="
+- !ruby/object:RI::MethodSummary 
+  name: api_keys
+- !ruby/object:RI::MethodSummary 
+  name: backtrace
+- !ruby/object:RI::MethodSummary 
+  name: check_credentials_permissions
+- !ruby/object:RI::MethodSummary 
+  name: config_file_name
+- !ruby/object:RI::MethodSummary 
+  name: credentials_path
+- !ruby/object:RI::MethodSummary 
+  name: each
+- !ruby/object:RI::MethodSummary 
+  name: handle_arguments
+- !ruby/object:RI::MethodSummary 
+  name: load_api_keys
+- !ruby/object:RI::MethodSummary 
+  name: load_file
+- !ruby/object:RI::MethodSummary 
+  name: really_verbose
+- !ruby/object:RI::MethodSummary 
+  name: rubygems_api_key
+- !ruby/object:RI::MethodSummary 
+  name: rubygems_api_key=
+- !ruby/object:RI::MethodSummary 
+  name: write
+name: ConfigFile
+superclass: Object

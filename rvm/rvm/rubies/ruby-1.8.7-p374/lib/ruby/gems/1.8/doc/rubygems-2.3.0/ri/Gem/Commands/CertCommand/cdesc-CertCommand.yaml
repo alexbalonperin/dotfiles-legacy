@@ -1,0 +1,27 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+constants: []
+
+full_name: Gem::Commands::CertCommand
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: build
+- !ruby/object:RI::MethodSummary 
+  name: certificates_matching
+- !ruby/object:RI::MethodSummary 
+  name: execute
+- !ruby/object:RI::MethodSummary 
+  name: load_default_cert
+- !ruby/object:RI::MethodSummary 
+  name: load_default_key
+- !ruby/object:RI::MethodSummary 
+  name: sign
+name: CertCommand
+superclass: Gem::Command

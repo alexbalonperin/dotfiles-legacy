@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Path for the scope + the named path.
+full_name: Rake::Scope#path_with_task_name
+is_singleton: false
+name: path_with_task_name
+params: (task_name)
+visibility: public

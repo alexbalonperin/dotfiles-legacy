@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Returns the path to the certificate named <tt>cert_name</tt> from <tt>test/rubygems/</tt>.
+full_name: Gem::TestCase::cert_path
+is_singleton: true
+name: cert_path
+params: (cert_name)
+visibility: public

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::MissingTranslation::Base#html_message
+is_singleton: false
+name: html_message
+params: ()
+visibility: public

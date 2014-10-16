@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: cucumber has 2 result lines per test run, that cannot be added 1 scenario (1 failed) 1 step (1 failed)
+full_name: ParallelTests::Gherkin::Runner::summarize_results
+is_singleton: true
+name: summarize_results
+params: (results)
+visibility: public

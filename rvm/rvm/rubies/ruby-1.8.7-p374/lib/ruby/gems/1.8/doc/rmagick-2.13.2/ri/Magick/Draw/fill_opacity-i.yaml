@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Specify fill opacity (use &quot;xx%&quot; to indicate percentage)
+full_name: Magick::Draw#fill_opacity
+is_singleton: false
+name: fill_opacity
+params: (opacity)
+visibility: public

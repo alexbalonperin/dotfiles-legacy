@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Magick::ImageList#ticks_per_second=
+is_singleton: false
+name: ticks_per_second=
+params: (t)
+visibility: public

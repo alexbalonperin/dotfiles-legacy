@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Activate all unambiguously resolved runtime dependencies of this spec. Add any ambiguous dependencies to the unresolved list to be resolved later, as needed.
+full_name: Gem::Specification#activate_dependencies
+is_singleton: false
+name: activate_dependencies
+params: ()
+visibility: public

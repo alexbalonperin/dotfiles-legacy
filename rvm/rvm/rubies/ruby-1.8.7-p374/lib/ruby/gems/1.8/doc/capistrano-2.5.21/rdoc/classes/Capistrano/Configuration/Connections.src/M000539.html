@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>execute_on_servers (Capistrano::Configuration::Connections)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/capistrano/configuration/connections.rb, line 129</span>
+      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">execute_on_servers</span>(<span class="ruby-identifier">options</span>={})
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;expected a block&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block_given?</span>
+
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">task</span> = <span class="ruby-identifier">current_task</span>
+          <span class="ruby-identifier">servers</span> = <span class="ruby-identifier">find_servers_for_task</span>(<span class="ruby-identifier">task</span>, <span class="ruby-identifier">options</span>)
+
+          <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">servers</span>.<span class="ruby-identifier">empty?</span>
+            <span class="ruby-keyword kw">if</span> <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'HOSTFILTER'</span>]
+              <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;skipping `#{task.fully_qualified_name}' because no servers matched&quot;</span>
+              <span class="ruby-keyword kw">return</span>
+            <span class="ruby-keyword kw">else</span>
+              <span class="ruby-identifier">raise</span> <span class="ruby-constant">Capistrano</span><span class="ruby-operator">::</span><span class="ruby-constant">NoMatchingServersError</span>, <span class="ruby-node">&quot;`#{task.fully_qualified_name}' is only run for servers matching #{task.options.inspect}, but no servers matched&quot;</span>
+            <span class="ruby-keyword kw">end</span>
+          <span class="ruby-keyword kw">end</span>
+
+          <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">task</span>.<span class="ruby-identifier">continue_on_error?</span>
+            <span class="ruby-identifier">servers</span>.<span class="ruby-identifier">delete_if</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">has_failed?</span>(<span class="ruby-identifier">s</span>) }
+            <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">servers</span>.<span class="ruby-identifier">empty?</span>
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-identifier">servers</span> = <span class="ruby-identifier">find_servers</span>(<span class="ruby-identifier">options</span>)
+          <span class="ruby-identifier">raise</span> <span class="ruby-constant">Capistrano</span><span class="ruby-operator">::</span><span class="ruby-constant">NoMatchingServersError</span>, <span class="ruby-node">&quot;no servers found to match #{options.inspect}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">servers</span>.<span class="ruby-identifier">empty?</span>
+        <span class="ruby-keyword kw">end</span>
+
+        <span class="ruby-identifier">servers</span> = [<span class="ruby-identifier">servers</span>.<span class="ruby-identifier">first</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-identifier">:once</span>]
+        <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">trace</span> <span class="ruby-node">&quot;servers: #{servers.map { |s| s.host }.inspect}&quot;</span>
+
+        <span class="ruby-identifier">max_hosts</span> = (<span class="ruby-identifier">options</span>[<span class="ruby-identifier">:max_hosts</span>] <span class="ruby-operator">||</span> (<span class="ruby-identifier">task</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">task</span>.<span class="ruby-identifier">max_hosts</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">servers</span>.<span class="ruby-identifier">size</span>).<span class="ruby-identifier">to_i</span>
+        <span class="ruby-identifier">is_subset</span> = <span class="ruby-identifier">max_hosts</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">servers</span>.<span class="ruby-identifier">size</span>
+
+        <span class="ruby-comment cmt"># establish connections to those servers in groups of max_hosts, as necessary</span>
+        <span class="ruby-identifier">servers</span>.<span class="ruby-identifier">each_slice</span>(<span class="ruby-identifier">max_hosts</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">servers_slice</span><span class="ruby-operator">|</span>
+          <span class="ruby-keyword kw">begin</span>
+            <span class="ruby-identifier">establish_connections_to</span>(<span class="ruby-identifier">servers_slice</span>)
+          <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">ConnectionError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">error</span>
+            <span class="ruby-identifier">raise</span> <span class="ruby-identifier">error</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">task</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">task</span>.<span class="ruby-identifier">continue_on_error?</span>
+            <span class="ruby-identifier">error</span>.<span class="ruby-identifier">hosts</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">h</span><span class="ruby-operator">|</span>
+              <span class="ruby-identifier">servers_slice</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">h</span>)
+              <span class="ruby-identifier">failed!</span>(<span class="ruby-identifier">h</span>)
+            <span class="ruby-keyword kw">end</span>
+          <span class="ruby-keyword kw">end</span>
+
+          <span class="ruby-keyword kw">begin</span>
+            <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">servers_slice</span>
+          <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">RemoteError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">error</span>
+            <span class="ruby-identifier">raise</span> <span class="ruby-identifier">error</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">task</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">task</span>.<span class="ruby-identifier">continue_on_error?</span>
+            <span class="ruby-identifier">error</span>.<span class="ruby-identifier">hosts</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">h</span><span class="ruby-operator">|</span> <span class="ruby-identifier">failed!</span>(<span class="ruby-identifier">h</span>) }
+          <span class="ruby-keyword kw">end</span>
+
+          <span class="ruby-comment cmt"># if dealing with a subset (e.g., :max_hosts is less than the</span>
+          <span class="ruby-comment cmt"># number of servers available) teardown the subset of connections</span>
+          <span class="ruby-comment cmt"># that were just made, so that we can make room for the next subset.</span>
+          <span class="ruby-identifier">teardown_connections_to</span>(<span class="ruby-identifier">servers_slice</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">is_subset</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

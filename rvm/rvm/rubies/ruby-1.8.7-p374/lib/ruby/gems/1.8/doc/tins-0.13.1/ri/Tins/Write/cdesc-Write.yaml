@@ -1,0 +1,18 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: extended
+- !ruby/object:RI::MethodSummary 
+  name: extended
+comment: 
+constants: []
+
+full_name: Tins::Write
+includes: []
+
+instance_methods: []
+
+name: Write
+superclass: 

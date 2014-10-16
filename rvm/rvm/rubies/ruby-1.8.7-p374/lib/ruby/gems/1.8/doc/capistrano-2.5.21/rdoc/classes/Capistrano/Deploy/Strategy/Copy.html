@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Capistrano::Deploy::Strategy::Copy</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Capistrano::Deploy::Strategy::Copy</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../../files/lib/capistrano/recipes/deploy/strategy/copy_rb.html">
+                lib/capistrano/recipes/deploy/strategy/copy.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                <a href="Base.html">
+                Base
+               </a>
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+This class implements the strategy for deployments which work by preparing
+the source code locally, compressing it, copying the file to each target
+host, and uncompressing it to the deployment directory.
+</p>
+<p>
+By default, the <a href="../SCM.html">SCM</a> checkout command is used to
+obtain the local copy of the source code. If you would rather use the
+export operation, you can set the :copy_strategy variable to :export.
+</p>
+<pre>
+  set :copy_strategy, :export
+</pre>
+<p>
+For even faster deployments, you can set the :<a
+href="Copy.html#M000328">copy_cache</a> variable to true. This will cause
+deployments to do a new checkout of your repository to a new directory, and
+then copy that checkout. Subsequent deploys will just resync that copy,
+rather than doing an entirely new checkout. Additionally, you can specify
+file patterns to exclude from the copy when using :<a
+href="Copy.html#M000328">copy_cache</a>; just set the :copy_exclude
+variable to a file glob (or an array of globs).
+</p>
+<pre>
+  set :copy_cache, true
+  set :copy_exclude, &quot;.git/*&quot;
+</pre>
+<p>
+Note that :copy_strategy is ignored when :<a
+href="Copy.html#M000328">copy_cache</a> is set. Also, if you want the copy
+cache put somewhere specific, you can set the variable to the path you
+want, instead of merely &#8216;true&#8217;:
+</p>
+<pre>
+  set :copy_cache, &quot;/tmp/caches/myapp&quot;
+</pre>
+<p>
+This deployment strategy also supports a special variable,
+:copy_compression, which must be one of :gzip, :bz2, or :zip, and which
+specifies how the source should be compressed for transmission to each
+host.
+</p>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000327">check!</a>&nbsp;&nbsp;
+      <a href="#M000328">copy_cache</a>&nbsp;&nbsp;
+      <a href="#M000326">deploy!</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">Compression</td>
+          <td>=</td>
+          <td class="context-item-value">Struct.new(:extension, :compress_command, :decompress_command)</td>
+          <td width="3em">&nbsp;</td>
+          <td class="context-item-desc">
+A struct for representing the specifics of a compression type. Commands are
+arrays, where the first element is the utility to be used to perform the
+compression or decompression.
+
+</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000327" class="method-detail">
+        <a name="M000327"></a>
+
+        <div class="method-heading">
+          <a href="Copy.src/M000327.html" target="Code" class="method-signature"
+            onclick="popupCode('Copy.src/M000327.html');return false;">
+          <span class="method-name">check!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000328" class="method-detail">
+        <a name="M000328"></a>
+
+        <div class="method-heading">
+          <a href="Copy.src/M000328.html" target="Code" class="method-signature"
+            onclick="popupCode('Copy.src/M000328.html');return false;">
+          <span class="method-name">copy_cache</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Returns the location of the local copy cache, if the strategy should use a
+local cache + copy instead of a new checkout/export every time. Returns
+<tt>nil</tt> unless :<a href="Copy.html#M000328">copy_cache</a> has been
+set. If :<a href="Copy.html#M000328">copy_cache</a> is <tt>true</tt>, a
+default cache location will be returned.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000326" class="method-detail">
+        <a name="M000326"></a>
+
+        <div class="method-heading">
+          <a href="Copy.src/M000326.html" target="Code" class="method-signature"
+            onclick="popupCode('Copy.src/M000326.html');return false;">
+          <span class="method-name">deploy!</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Obtains a copy of the source code locally (via the command method),
+compresses it to a single file, copies that file to all target servers, and
+uncompresses it on each of them into the deployment directory.
+</p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

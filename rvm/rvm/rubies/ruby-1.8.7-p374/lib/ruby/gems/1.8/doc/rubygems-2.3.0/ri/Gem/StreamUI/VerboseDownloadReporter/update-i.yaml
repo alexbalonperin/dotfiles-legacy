@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Updates the verbose download reporter for the given number of <tt>bytes</tt>.
+full_name: Gem::StreamUI::VerboseDownloadReporter#update
+is_singleton: false
+name: update
+params: (bytes)
+visibility: public

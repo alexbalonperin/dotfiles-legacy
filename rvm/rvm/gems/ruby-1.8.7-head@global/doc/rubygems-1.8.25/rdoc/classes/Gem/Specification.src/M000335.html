@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>add_spec (Gem::Specification)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/rubygems/specification.rb, line 296</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">add_spec</span> <span class="ruby-identifier">spec</span>
+    <span class="ruby-comment cmt"># TODO: find all extraneous adds</span>
+    <span class="ruby-comment cmt"># puts</span>
+    <span class="ruby-comment cmt"># p :add_spec =&gt; [spec.full_name, caller.reject { |s| s =~ /minitest/ }]</span>
+
+    <span class="ruby-comment cmt"># TODO: flush the rest of the crap from the tests</span>
+    <span class="ruby-comment cmt"># raise &quot;no dupes #{spec.full_name} in #{all_names.inspect}&quot; if</span>
+    <span class="ruby-comment cmt">#   _all.include? spec</span>
+
+    <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;nil spec!&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">spec</span> <span class="ruby-comment cmt"># TODO: remove once we're happy with tests</span>
+
+    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">_all</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">spec</span>
+
+    <span class="ruby-identifier">_all</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">spec</span>
+    <span class="ruby-identifier">_resort!</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

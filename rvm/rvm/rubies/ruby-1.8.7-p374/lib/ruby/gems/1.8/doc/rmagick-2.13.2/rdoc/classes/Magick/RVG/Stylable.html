@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Module: Magick::RVG::Stylable</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Module</strong></td>
+          <td class="class-name-in-header">Magick::RVG::Stylable</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../files/lib/rvg/stylable_rb.html">
+                lib/rvg/stylable.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+This module is mixed into classes that can have <a
+href="Stylable.html#M000043">styles</a>.
+</p>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000042">new</a>&nbsp;&nbsp;
+      <a href="#M000043">styles</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000042" class="method-detail">
+        <a name="M000042"></a>
+
+        <div class="method-heading">
+          <a href="Stylable.src/M000042.html" target="Code" class="method-signature"
+            onclick="popupCode('Stylable.src/M000042.html');return false;">
+          <span class="method-name">new</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000043" class="method-detail">
+        <a name="M000043"></a>
+
+        <div class="method-heading">
+          <a href="Stylable.src/M000043.html" target="Code" class="method-signature"
+            onclick="popupCode('Stylable.src/M000043.html');return false;">
+          <span class="method-name">styles</span><span class="method-args">(styles) {|self| ...}</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+This method can be used with any <a href="../RVG.html">RVG</a>, <a
+href="Group.html">Group</a>, <a href="Use.html">Use</a>, <a
+href="Text.html">Text</a>, or shape object. The argument is a hash. The
+style names are the hash keys. The style names and values are:
+</p>
+<dl>
+<dt>:baseline_shift</dt><dd>modify the text baseline
+
+</dd>
+<dt>:clip_path</dt><dd>clipping path defined by clip_path
+
+</dd>
+<dt>:clip_rule</dt><dd>&#8216;evenodd&#8217; or &#8216;nozero&#8216;
+
+</dd>
+<dt>:fill</dt><dd>color name
+
+</dd>
+<dt>:fill_opacity</dt><dd>the fill opacity, 0.0&lt;=N&lt;=1.0
+
+</dd>
+<dt>:fill_rule</dt><dd>&#8216;evenodd&#8217; or &#8216;nozero&#8216;
+
+</dd>
+<dt>:font</dt><dd>font name or font file name
+
+</dd>
+<dt>:font_family</dt><dd>font family name, ex. &#8216;serif&#8216;
+
+</dd>
+<dt>:font_size</dt><dd>font size in points
+
+</dd>
+<dt>:font_stretch</dt><dd>&#8216;normal&#8217;,&#8217;ultra_condensed&#8217;,&#8217;extra_condensed&#8217;,
+&#8216;condensed&#8217;,&#8217;semi_condensed&#8217;,&#8217;semi_expanded&#8217;,
+&#8216;expanded&#8217;,&#8217;extra_expanded&#8217;,&#8217;ultra_expanded&#8216;
+
+</dd>
+<dt>:font_style</dt><dd>&#8216;normal&#8217;,&#8217;italic&#8217;,&#8217;oblique&#8216;
+
+</dd>
+<dt>:font_weight</dt><dd>&#8216;normal&#8217;,&#8217;bold&#8217;,&#8217;bolder&#8217;,&#8217;lighter&#8217;,
+or a multiple of 100 between 100 and 900.
+
+</dd>
+<dt>:glyph_orientation_horizontal</dt><dd>0, 90, 180, 270
+
+</dd>
+<dt>:glyph_orientation_vertical</dt><dd>0, 90, 180, 270
+
+</dd>
+<dt>:letter_spacing</dt><dd>modify the spacing between letters
+
+</dd>
+<dt>:opacity</dt><dd>both fill and stroke opacity, 0.0&lt;=N&lt;=1.0
+
+</dd>
+<dt>:stroke</dt><dd>color name
+
+</dd>
+<dt>:stroke_dasharray</dt><dd>dash pattern (Array)
+
+</dd>
+<dt>:stroke_dashoffset</dt><dd>initial distance into dash pattern
+
+</dd>
+<dt>:stroke_linecap</dt><dd>&#8216;butt&#8217;, &#8216;round&#8217;, &#8216;square&#8216;
+
+</dd>
+<dt>:stroke_linejoin</dt><dd>&#8216;miter&#8217;, &#8216;round&#8217;, &#8216;bevel&#8216;
+
+</dd>
+<dt>:stroke_miterlimit</dt><dd>miter length constraint
+
+</dd>
+<dt>:stroke_opacity</dt><dd>the stroke opacity, 0.0&lt;=N&lt;=1.0
+
+</dd>
+<dt>:stroke_width</dt><dd>stroke width
+
+</dd>
+<dt>:text_anchor</dt><dd>&#8216;start&#8217;,&#8217;middle&#8217;,&#8217;end&#8216;
+
+</dd>
+<dt>:text_decoration</dt><dd>&#8216;none&#8217;,&#8217;underline&#8217;,&#8217;overline&#8217;,&#8217;line_through&#8216;
+
+</dd>
+<dt>:word_spacing</dt><dd>modify the spacing between words
+
+</dd>
+<dt>:writing_mode</dt><dd>&#8216;lr-tb&#8217;, &#8216;lr&#8217;, &#8216;rt-tb&#8217;,
+&#8216;rl&#8217;, &#8216;tb-rl&#8217;, &#8216;tb&#8216;
+
+</dd>
+</dl>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

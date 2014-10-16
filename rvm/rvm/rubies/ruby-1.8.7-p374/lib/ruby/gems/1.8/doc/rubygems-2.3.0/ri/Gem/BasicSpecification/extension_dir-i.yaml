@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Returns full path to the directory where gem's extensions are installed.
+full_name: Gem::BasicSpecification#extension_dir
+is_singleton: false
+name: extension_dir
+params: ()
+visibility: public

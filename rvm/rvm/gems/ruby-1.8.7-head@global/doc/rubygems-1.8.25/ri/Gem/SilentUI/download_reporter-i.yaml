@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Gem::SilentUI#download_reporter
+is_singleton: false
+name: download_reporter
+params: (*args)
+visibility: public

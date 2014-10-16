@@ -1,0 +1,20 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: []
+
+full_name: I18n::Tests::Interpolation
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: capture
+- !ruby/object:RI::MethodSummary 
+  name: euc_jp
+- !ruby/object:RI::MethodSummary 
+  name: interpolate
+name: Interpolation
+superclass: 

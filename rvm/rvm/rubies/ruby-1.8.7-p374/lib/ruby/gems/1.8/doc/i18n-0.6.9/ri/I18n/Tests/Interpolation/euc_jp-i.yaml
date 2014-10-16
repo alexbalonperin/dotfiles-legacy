@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: I18n::Tests::Interpolation#euc_jp
+is_singleton: false
+name: euc_jp
+params: (string)
+visibility: protected

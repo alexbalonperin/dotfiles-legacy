@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>user_agent (Gem::RemoteFetcher)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/rubygems/remote_fetcher.rb, line 494</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">user_agent</span>
+    <span class="ruby-identifier">ua</span> = <span class="ruby-node">&quot;RubyGems/#{Gem::VERSION} #{Gem::Platform.local}&quot;</span>
+
+    <span class="ruby-identifier">ruby_version</span> = <span class="ruby-constant">RUBY_VERSION</span>
+    <span class="ruby-identifier">ruby_version</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">'dev'</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">RUBY_PATCHLEVEL</span> <span class="ruby-operator">==</span> <span class="ruby-value">-1</span>
+
+    <span class="ruby-identifier">ua</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot; Ruby/#{ruby_version} (#{RUBY_RELEASE_DATE}&quot;</span>
+    <span class="ruby-keyword kw">if</span> <span class="ruby-constant">RUBY_PATCHLEVEL</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span> <span class="ruby-keyword kw">then</span>
+      <span class="ruby-identifier">ua</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot; patchlevel #{RUBY_PATCHLEVEL}&quot;</span>
+    <span class="ruby-keyword kw">elsif</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-constant">RUBY_REVISION</span>) <span class="ruby-keyword kw">then</span>
+      <span class="ruby-identifier">ua</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot; revision #{RUBY_REVISION}&quot;</span>
+    <span class="ruby-keyword kw">end</span>
+    <span class="ruby-identifier">ua</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;)&quot;</span>
+
+    <span class="ruby-identifier">ua</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot; #{RUBY_ENGINE}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-constant">RUBY_ENGINE</span>) <span class="ruby-keyword kw">and</span> <span class="ruby-constant">RUBY_ENGINE</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">'ruby'</span>
+
+    <span class="ruby-identifier">ua</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

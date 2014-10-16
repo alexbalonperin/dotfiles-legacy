@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: SSHKit::Host#properties
+is_singleton: false
+name: properties
+params: ()
+visibility: public

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: we have our own signing code here to avoid a dependency on the aws-sdk gem fortunately, a simple GET request isn't too complex to sign properly
+full_name: Gem::RemoteFetcher#sign_s3_url
+is_singleton: false
+name: sign_s3_url
+params: (uri, expiration = nil)
+visibility: protected
