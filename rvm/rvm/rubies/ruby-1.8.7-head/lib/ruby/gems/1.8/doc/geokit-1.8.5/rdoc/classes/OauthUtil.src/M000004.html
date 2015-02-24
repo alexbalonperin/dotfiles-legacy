@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>signature (OauthUtil)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/geokit/geocoders/yahoo.rb, line 120</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">signature</span>
+    <span class="ruby-identifier">key</span> = <span class="ruby-identifier">percent_encode</span>( <span class="ruby-ivar">@consumer_secret</span> ) <span class="ruby-operator">+</span> <span class="ruby-value str">'&amp;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">percent_encode</span>( <span class="ruby-ivar">@token_secret</span> )
+    
+    <span class="ruby-comment cmt"># ref: http://blog.nathanielbibler.com/post/63031273/openssl-hmac-vs-ruby-hmac-benchmarks</span>
+    <span class="ruby-identifier">digest</span> = <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">Digest</span>.<span class="ruby-identifier">new</span>( <span class="ruby-value str">'sha1'</span> )
+    <span class="ruby-identifier">hmac</span> = <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">HMAC</span>.<span class="ruby-identifier">digest</span>( <span class="ruby-identifier">digest</span>, <span class="ruby-identifier">key</span>, <span class="ruby-ivar">@base_str</span> )
+    
+    <span class="ruby-comment cmt"># ref http://groups.google.com/group/oauth-ruby/browse_thread/thread/9110ed8c8f3cae81</span>
+    <span class="ruby-constant">Base64</span>.<span class="ruby-identifier">encode64</span>( <span class="ruby-identifier">hmac</span> ).<span class="ruby-identifier">chomp</span>.<span class="ruby-identifier">gsub</span>( <span class="ruby-regexp re">/\n/</span>, <span class="ruby-value str">''</span> )
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

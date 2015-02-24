@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Geokit::GeoLoc#encode_with
+is_singleton: false
+name: encode_with
+params: (coder)
+visibility: public

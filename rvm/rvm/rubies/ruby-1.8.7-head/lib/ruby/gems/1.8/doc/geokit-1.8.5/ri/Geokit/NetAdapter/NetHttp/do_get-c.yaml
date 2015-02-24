@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Geokit::NetAdapter::NetHttp::do_get
+is_singleton: true
+name: do_get
+params: (url)
+visibility: public

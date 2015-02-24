@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "@ref http://oauth.net/core/1.0/#rfc.section.9.2"
+full_name: OauthUtil#signature
+is_singleton: false
+name: signature
+params: ()
+visibility: public

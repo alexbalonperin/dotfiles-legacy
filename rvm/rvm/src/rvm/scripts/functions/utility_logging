@@ -51,12 +51,12 @@ __rvm_log_command()
   shift 2
   _command=( "$@" )   # store full command so we can manipulate it
   _command_start="$1" # store first part so we can detect variables
-  while (( $# )) && [[ "$1" =~ "=" ]] # skip variables from beginning
+  while (( $# )) && [[ "$1" == *"="* ]] # skip variables from beginning
   do shift
   done
   _command_name="$1"  # store the real command so we can detect functions
 
-  [[ ! "${_command_start}" =~ "=" ]] || _command=( "env" "${_command[@]}" )
+  [[ "${_command_start}" != *"="* ]] || _command=( "env" "${_command[@]}" )
   if __function_on_stack __rvm_log_command_internal
   then __rvm_log_command_simple   "$@" || return $?
   else __rvm_log_command_internal "$@" || return $?
@@ -71,7 +71,7 @@ __rvm_log_command_debug()
   then typeset -f  "${_command_name}"
   fi
   printf "%b" "current path: $PWD\n"
-  env | grep -E '^GEM_HOME=|^GEM_PATH=|^PATH='
+  env | __rvm_grep -E '^GEM_HOME=|^GEM_PATH=|^PATH='
   printf "%b" "command(${#_command[@]}): ${_command[*]}\n"
 }
 
@@ -93,8 +93,8 @@ __rvm_log_command_internal()
   __rvm_log_command_caclulate_log_file_name
   rvm_debug "Log file: ${_log}"
 
-  [[ -d "${_log%\/*}" ]] || \mkdir -p "${_log%\/*}"
-  [[ -f "${_log}"     ]] || \rm -f "${_log}"
+  [[ -d "${_log%\/*}" ]] || \command \mkdir -p "${_log%\/*}"
+  [[ -f "${_log}"     ]] || \command \rm -f "${_log}"
 
   __rvm_log_command_debug | tee "${_log}" | rvm_debug_stream
 
@@ -128,7 +128,7 @@ __rvm_debug_command()
 
 __rvm_pager_or_cat_v()
 {
-  eval "${PAGER:-\cat} '$1'"
+  eval "${PAGER:-\command \cat} '$1'"
 }
 
 __rvm_ask_for()
@@ -274,6 +274,6 @@ __rvm_table()
     echo "$1" | __rvm_table_wrap_text
   fi
   __rvm_table_br
-  \cat "${2:--}" | __rvm_table_wrap_text
+  \command \cat "${2:--}" | __rvm_table_wrap_text
   __rvm_table_br
 }

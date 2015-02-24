@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Geokit::Inflector#humanize
+is_singleton: false
+name: humanize
+params: (lower_case_and_underscored_word)
+visibility: public

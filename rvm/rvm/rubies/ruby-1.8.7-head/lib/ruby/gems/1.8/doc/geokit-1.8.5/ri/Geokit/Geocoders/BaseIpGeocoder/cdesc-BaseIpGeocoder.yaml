@@ -1,0 +1,31 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: ip?
+- !ruby/object:RI::MethodSummary 
+  name: private_ip_address?
+- !ruby/object:RI::MethodSummary 
+  name: process
+- !ruby/object:RI::MethodSummary 
+  name: valid_ip?
+comment: 
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: A number of non-routable IP ranges.
+  - !ruby/struct:SM::Flow::P 
+    body: "-- Sources for these:"
+  - !ruby/struct:SM::Flow::VERB 
+    body: "  RFC 3330: Special-Use IPv4 Addresses\n  The bogon list: http://www.cymru.com/Documents/bogon-list.html\n"
+  name: NON_ROUTABLE_IP_RANGES
+  value: "[         IPAddr.new('0.0.0.0/8'),      # \"This\" Network         IPAddr.new('10.0.0.0/8'),     # Private-Use Networks         IPAddr.new('14.0.0.0/8'),     # Public-Data Networks         IPAddr.new('127.0.0.0/8'),    # Loopback         IPAddr.new('169.254.0.0/16'), # Link local         IPAddr.new('172.16.0.0/12'),  # Private-Use Networks         IPAddr.new('192.0.2.0/24'),   # Test-Net         IPAddr.new('192.168.0.0/16'), # Private-Use Networks         IPAddr.new('198.18.0.0/15'),  # Network Interconnect Device Benchmark Testing         IPAddr.new('224.0.0.0/4'),    # Multicast         IPAddr.new('240.0.0.0/4')"
+full_name: Geokit::Geocoders::BaseIpGeocoder
+includes: []
+
+instance_methods: []
+
+name: BaseIpGeocoder
+superclass: Geocoder

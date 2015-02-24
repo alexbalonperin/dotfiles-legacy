@@ -31,7 +31,6 @@ __rvm_parse_args_find_known_flags()
         rvm_disable_binary_flag=1
         ;;
       (--patches|--patch)
-        export -a rvm_patch_names
         __rvm_custom_separated_array rvm_patch_names , "${2:-}"
         rvm_patch_original_pwd="$PWD"
         rvm_disable_binary_flag=1
@@ -56,9 +55,10 @@ __rvm_parse_args_find_known_flags()
 
 __rvm_parse_args_error_finding_project_file()
 {
+  unset RVM_PROJECT_PATH
   case $? in
     101)
-      rvm_error_message="Could not use ruby/gemset from the project file, try 'rvm use $rvm_token' for better explanation."
+      true # should be printed already
       ;;
     *)
       rvm_error_message="Could not determine which Ruby to use; $rvm_token should contain .rvmrc or .versions.conf or .ruby-version or .rbfu-version or .rbenv-version, or an appropriate line in Gemfile."
@@ -76,7 +76,7 @@ __rvm_parse_args()
   rvm_parse_break=0
 
   if
-    [[ " $* " =~ " --trace " ]]
+    [[ " $* " == *" --trace "* ]]
   then
     echo "$@"
     __rvm_version
@@ -97,7 +97,7 @@ __rvm_parse_args()
 
     case "$rvm_token" in
 
-      [0-9a-zA-Z]*|@*) # Commands, Rubies and Gemsets
+      [0-9a-zA-ZuU]*|@*) # Commands, Rubies and Gemsets
         case "$rvm_token" in
           use)
             rvm_action="$rvm_token"
@@ -119,6 +119,7 @@ __rvm_parse_args()
               rvm_ruby_interpreter="."
               rvm_ruby_string="."
               rvm_ruby_strings="."
+              RVM_PROJECT_PATH="$PWD"
             fi
             ;;
 
@@ -220,7 +221,7 @@ __rvm_parse_args()
             rvm_error_message="Please note that \`rvm $rvm_token ...\` was removed, try \`$rvm_token $next_token $*\` or \`rvm all do $rvm_token $next_token $*\` instead."
             ;;
 
-          fetch|version|reset|debug|reload|update|monitor|notes|implode|seppuku|env|unexport|automount|prepare)
+          fetch|version|remote_version|reset|debug|reload|update|monitor|notes|implode|seppuku|env|unexport|automount|prepare)
             rvm_action=$rvm_token
             ;;
 
@@ -234,9 +235,9 @@ __rvm_parse_args()
               [[ -n "${next_token:-}" ]] &&
               [[ -x "${next_token:-}" ||
                 -d "${next_token:-}" ||
-                "${next_token:-}" =~ ^http ||
-                "${next_token:-}" =~ tar.bz2$ ||
-                "${next_token:-}" =~ tar.gz$
+                "${next_token:-}" == http* ||
+                "${next_token:-}" == *tar.bz2 ||
+                "${next_token:-}" == *tar.gz
               ]]
             do
               rvm_ruby_args=("$next_token" "${rvm_ruby_args[@]}")
@@ -275,10 +276,6 @@ __rvm_parse_args()
             rvm_parse_break=1
             ;;
 
-          benchmark|bench)
-            rvm_action="benchmark"
-            ;;
-
           specs|tests)
             rvm_action="rake"
             rvm_ruby_args=("${rvm_token/%ss/s}")
@@ -288,7 +285,9 @@ __rvm_parse_args()
             if
               [[ -n "$next_token" ]]
             then
-              rvm_export_args="$next_token$@"
+              typeset -a ___args
+              ___args=( "$next_token" "$@" )
+              rvm_export_args="${___args[*]}"
               rvm_action="export"
               rvm_parse_break=1
             else
@@ -355,11 +354,16 @@ __rvm_parse_args()
             rvm_ruby_strings="$rvm_token"
             ;;
 
-          opal*|jruby*|ree*|kiji*|macruby*|rbx*|rubinius*|goruby|mruby|ironruby*|default*|maglev*|topaz*|tcs*|jamesgolick*|ruby*|system|default|all)
+          opal*|jruby*|ree*|macruby*|rbx*|rubinius*|goruby|mruby|ironruby*|default*|maglev*|topaz*|ruby*|system|default|all)
             rvm_action="${rvm_action:-use}"
             rvm_ruby_interpreter="$rvm_token"
             rvm_ruby_string="$rvm_token"
             rvm_ruby_strings="$rvm_token"
+            ;;
+
+          kiji*|tcs*|jamesgolick*)
+            rvm_error_message="The $rvm_token was removed from RVM, use: rvm install ruby-head-<name> --url https://github.com/github/ruby.git --branch 2.1"
+            rvm_action="error"
             ;;
 
           old)
@@ -479,10 +483,10 @@ __rvm_parse_args()
             fi
             while
               [[ -n "${next_token:-}" ]] &&
-              [[ "${next_token:-}" =~ ^http ||
-                "${next_token:-}" =~ tar.bz2$ ||
-                "${next_token:-}" =~ tar.gz$ ||
-                "${next_token:-}" =~ ":"
+              [[ "${next_token:-}" == http* ||
+                "${next_token:-}" == *tar.bz2 ||
+                "${next_token:-}" == *tar.gz ||
+                "${next_token:-}" == *":"*
               ]]
             do
               rvm_ruby_args=("${rvm_ruby_args[@]}" "$next_token")
@@ -505,7 +509,6 @@ __rvm_parse_args()
             ;;
 
           --patches|--patch)
-            export -a rvm_patch_names
             __rvm_custom_separated_array rvm_patch_names , "$next_token"
             next_token="${1:-}"
             (( $# == 0 )) || shift
@@ -536,15 +539,9 @@ __rvm_parse_args()
             ;;
 
           --bin)
-            if
-              [[ "update" == "${rvm_action:-""}" ]]
-            then
-              rvm_bin_flag=1
-            else
-              rvm_bin_path="$next_token"
-              next_token="${1:-}"
-              (( $# == 0 )) || shift
-            fi
+            rvm_bin_path="$next_token"
+            next_token="${1:-}"
+            (( $# == 0 )) || shift
             ;;
 
           --rdoc|--yard)
@@ -818,7 +815,6 @@ __rvm_parse_args()
 rvm()
 {
   typeset result current_result
-  export -a rvm_ruby_args >/dev/null 2>/dev/null
   rvm_ruby_args=()
 
   __rvm_teardown_if_broken
@@ -850,7 +846,7 @@ rvm()
       then __rvm_switch "${rvm_ruby_args[@]}"
       fi
       ;;
-    inspect|strings|version)
+    inspect|strings|version|remote_version)
       __rvm_${rvm_action}
       ;;
     ls|list)
@@ -863,7 +859,7 @@ rvm()
     info)
       rvm_is_not_a_shell_function="${rvm_is_not_a_shell_function}" "$rvm_scripts_path/${rvm_action}" "${rvm_ruby_args[@]}"
       ;;
-    benchmark|reset)
+    reset)
       source "$rvm_scripts_path/functions/${rvm_action}"
       __rvm_${rvm_action}
       ;;
@@ -974,7 +970,7 @@ rvm()
           fi
           unset gem_prefix
         elif
-          [[ "${rvm_ruby_args[*]}" =~ ^rename ]]
+          [[ "${rvm_ruby_args[*]}" == rename* ]]
         then
           typeset _command _from _to
           read _command _from _to <<<"${rvm_ruby_args[*]}"

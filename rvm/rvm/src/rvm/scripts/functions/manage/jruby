@@ -84,6 +84,15 @@ jruby_install_check_java_home()
       cd "${rvm_scripts_path}/extras/java_read_properties"
       java ReadProperties java.home
     )"
+    if
+      [[ -n "$JAVA_HOME" &&
+        -x "$JAVA_HOME/../bin/javac" &&
+        -f "$JAVA_HOME/../lib/tools.jar"
+      ]]
+    then
+      rvm_debug "Detected JAVA_HOME=$JAVA_HOME has JDK level up"
+      JAVA_HOME="${JAVA_HOME%/*}" # cd ..
+    fi
     rvm_warn "\$JAVA_HOME was empty, setting up JAVA_HOME=$JAVA_HOME, if it fails try setting JAVA_HOME to something sane and try again."
   fi
 }
@@ -110,7 +119,7 @@ jruby_install()
   else jruby_install_upto17 || return $?
   fi
 
-  __rvm_rm_rf "$rvm_ruby_home" && \mkdir -p "$rvm_ruby_home" &&
+  __rvm_rm_rf "$rvm_ruby_home" && \command \mkdir -p "$rvm_ruby_home" &&
   __rvm_log_command "install" "$rvm_ruby_string - #installing to $rvm_ruby_home" \
     __rvm_cp -Rf "${rvm_src_path}/$rvm_ruby_string"/{bin,lib} "$rvm_ruby_home"/ || return $?
 

@@ -3,7 +3,7 @@
 __rvm_fix_group_permissions()
 {
   if
-    umask -S | __rvm_grep 'g=rw' >/dev/null
+    \umask -S | __rvm_grep 'g=rw' >/dev/null
   then
     chmod -R g+rwX "$@"
   fi
@@ -32,7 +32,7 @@ __rvm_package_list()
 __rvm_package_extract_run()
 {
   if
-    [[ ! " ${rvm_tar_options:-} " =~ " --no-same-owner "  ]] &&
+    [[ " ${rvm_tar_options:-} " != *" --no-same-owner "*  ]] &&
     __rvm_tar --help 2>&1 | __rvm_grep -- --no-same-owner >/dev/null
   then
     rvm_tar_options="${rvm_tar_options:-}${rvm_tar_options:+ }--no-same-owner"
@@ -80,13 +80,13 @@ __rvm_package_extract()
       if
         [[ -n "${__file}" && -e "$2/${__file}" ]]
       then
-        \rm -rf "$2/${__file}" || __return=$?
+        \command \rm -rf "$2/${__file}" || __return=$?
       fi
-      \mv -f "${__path}" "$2/" || __return=$?
+      \command \mv -f "${__path}" "$2/" || __return=$?
     done
   fi
   if [[ -n "$__tempdir" ]]
-  then \rm -rf "$__tempdir"
+  then \command \rm -rf "$__tempdir"
   fi
   return $__return
 }

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: NilClass#try
+is_singleton: false
+name: try
+params: (*args)
+visibility: public

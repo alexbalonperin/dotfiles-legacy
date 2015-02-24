@@ -1,0 +1,27 @@
+[2014-12-11 22:41:39] command
+current path: /Users/abalonperin/dotfiles/rvm/rvm/src/rvm
+GEM_HOME=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2
+PATH=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2/bin:/Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/bin:/Users/abalonperin/dotfiles/rvm/rvm/bin:/Users/abalonperin/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/MacGPG2/bin
+GEM_PATH=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2
+command(7): command gem install /Users/abalonperin/dotfiles/rvm/rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc
++ ./scripts/functions/utility_logging : __rvm_log_dotted()  210 > gem install /Users/abalonperin/dotfiles/rvm/rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc
+Building native extensions.  This could take a while...
+ERROR:  Error installing /Users/abalonperin/dotfiles/rvm/rvm/gem-cache/gem-wrappers-1.2.7.gem:
+	ERROR: Failed to build gem native extension.
+
+    /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/bin/ruby extconf.rb
+/Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/gem-wrappers-1.2.7/lib/gem-wrappers/installer.rb:52:in `initialize': Permission denied @ rb_sysopen - /Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2/wrappers/cap (Errno::EACCES)
+	from /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/gem-wrappers-1.2.7/lib/gem-wrappers/installer.rb:52:in `open'
+	from /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/gem-wrappers-1.2.7/lib/gem-wrappers/installer.rb:52:in `install_file'
+	from /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/gem-wrappers-1.2.7/lib/gem-wrappers/installer.rb:37:in `install'
+	from /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/gem-wrappers-1.2.7/lib/gem-wrappers.rb:20:in `block in install'
+	from /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/gem-wrappers-1.2.7/lib/gem-wrappers.rb:19:in `each'
+	from /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/gem-wrappers-1.2.7/lib/gem-wrappers.rb:19:in `install'
+	from /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/gem-wrappers-1.2.7/lib/gem-wrappers/command.rb:62:in `execute_regenerate'
+	from /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/gem-wrappers-1.2.7/lib/gem-wrappers/command.rb:37:in `execute'
+	from extconf.rb:21:in `<main>'
+
+extconf failed, exit code 1
+
+Gem files will remain installed in /Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2/gems/gem-wrappers-1.2.7 for inspection.
+Results logged to /Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2/extensions/x86_64-darwin-13/2.1.0-static/gem-wrappers-1.2.7/gem_make.out

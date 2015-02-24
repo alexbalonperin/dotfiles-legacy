@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>sign (OauthUtil)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File lib/geokit/geocoders/yahoo.rb, line 148</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sign</span>( <span class="ruby-identifier">parsed_url</span> )
+    
+    <span class="ruby-ivar">@params</span> = {
+      <span class="ruby-value str">'oauth_consumer_key'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@consumer_key</span>,
+      <span class="ruby-value str">'oauth_nonce'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">nonce</span>,
+      <span class="ruby-value str">'oauth_signature_method'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@sig_method</span>,
+      <span class="ruby-value str">'oauth_timestamp'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">timestamp</span>,
+      <span class="ruby-value str">'oauth_version'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@oauth_version</span>
+    }
+ 
+    <span class="ruby-comment cmt"># if url has query, merge key/values into params obj overwriting defaults</span>
+    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">parsed_url</span>.<span class="ruby-identifier">query</span>
+      <span class="ruby-constant">CGI</span>.<span class="ruby-identifier">parse</span>( <span class="ruby-identifier">parsed_url</span>.<span class="ruby-identifier">query</span> ).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+        <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+          <span class="ruby-ivar">@params</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-identifier">v</span>.<span class="ruby-identifier">first</span>
+        <span class="ruby-keyword kw">else</span>
+          <span class="ruby-ivar">@params</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-identifier">v</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span>
+    
+    <span class="ruby-comment cmt"># @ref http://oauth.net/core/1.0/#rfc.section.9.1.2</span>
+    <span class="ruby-ivar">@req_url</span> = <span class="ruby-identifier">parsed_url</span>.<span class="ruby-identifier">scheme</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'://'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">parsed_url</span>.<span class="ruby-identifier">host</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">parsed_url</span>.<span class="ruby-identifier">path</span>
+    
+    <span class="ruby-comment cmt"># create base str. make it an object attr for ez debugging</span>
+    <span class="ruby-comment cmt"># ref http://oauth.net/core/1.0/#anchor14</span>
+    <span class="ruby-ivar">@base_str</span> = [ 
+      <span class="ruby-ivar">@req_method</span>, 
+      <span class="ruby-identifier">percent_encode</span>( <span class="ruby-identifier">req_url</span> ), 
+      
+      <span class="ruby-comment cmt"># normalization is just x-www-form-urlencoded</span>
+      <span class="ruby-identifier">percent_encode</span>( <span class="ruby-identifier">query_string</span> ) 
+      
+    ].<span class="ruby-identifier">join</span>( <span class="ruby-value str">'&amp;'</span> )
+ 
+    <span class="ruby-comment cmt"># add signature</span>
+    <span class="ruby-ivar">@params</span>[ <span class="ruby-value str">'oauth_signature'</span> ] = <span class="ruby-identifier">signature</span>
+    
+    <span class="ruby-keyword kw">self</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Latitude attribute setter; stored as a float.
+full_name: Geokit::LatLng#lat=
+is_singleton: false
+name: lat=
+params: (lat)
+visibility: public

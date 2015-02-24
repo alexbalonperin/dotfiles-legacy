@@ -112,7 +112,6 @@ rubinius_install()
     rvm_error "There has been an error while trying to apply patches to rubinius.  \nHalting the installation."
     return $result
   }
-  (( ${#rvm_configure_flags[@]} )) || rvm_configure_flags=( --skip-system )
   rvm_configure_flags=( --prefix="$rvm_ruby_home"  "${rvm_configure_flags[@]}" )
 
   __rvm_db "${rvm_ruby_interpreter}_configure_flags" "db_configure_flags"
@@ -143,6 +142,7 @@ rubinius_install()
   then rvm_ruby_make="CONFIGURE_ARGS=${rvm_configure_args## } "
   fi
 
+  __setup_lang_fallback
   __rvm_log_command rake "$rvm_ruby_string - #compiling" \
     "${rvm_ruby_make:-}$rvm_wrappers_path/$ruby/rake" install --trace ||
     return $?
@@ -174,7 +174,7 @@ about not returning non zero status in case of errors."
     *) # older rbx had issues
       # Install IRB Wrapper on Rubinius.
       file_name="$rvm_ruby_home/bin/irb"
-      \rm -f "$file_name"
+      \command \rm -f "$file_name"
       printf "%b" '#!/usr/bin/env bash\n' > "$file_name"
       printf "%b" "exec '$rvm_ruby_home/bin/rbx' 'irb' \"\$@\"\n" >> "$file_name"
       [[ -x "$file_name" ]] || chmod +x "$file_name"

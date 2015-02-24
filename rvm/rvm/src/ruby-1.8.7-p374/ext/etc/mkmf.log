@@ -1,6 +1,6 @@
 have_library: checking for getpwnam() in -lsun... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static -lsun  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static -lsun  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘getpwnam’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -12,7 +12,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))getpwnam; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static -lsun  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static -lsun  -ldl -lobjc  "
 ld: library not found for -lsun
 collect2: ld returned 1 exit status
 checked program was:
@@ -26,7 +26,7 @@ checked program was:
 
 have_func: checking for getlogin()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘getlogin’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -38,7 +38,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))getlogin; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -50,7 +50,7 @@ checked program was:
 
 have_func: checking for getpwent()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘getpwent’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -62,7 +62,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))getpwent; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -74,7 +74,7 @@ checked program was:
 
 have_func: checking for getgrent()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘getgrent’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -86,7 +86,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))getgrent; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -98,7 +98,7 @@ checked program was:
 
 have_struct_member: checking for struct passwd.pw_gecos in pwd.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 checked program was:
 /* begin */
 1: #include <pwd.h>
@@ -112,7 +112,7 @@ checked program was:
 
 have_struct_member: checking for struct passwd.pw_change in pwd.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 checked program was:
 /* begin */
 1: #include <pwd.h>
@@ -126,7 +126,7 @@ checked program was:
 
 have_struct_member: checking for struct passwd.pw_quota in pwd.h... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 conftest.c:5: error: ‘struct passwd’ has no member named ‘pw_quota’
 checked program was:
 /* begin */
@@ -141,7 +141,7 @@ checked program was:
 
 have_struct_member: checking for struct passwd.pw_age in pwd.h... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 conftest.c:5: error: ‘struct passwd’ has no member named ‘pw_age’
 checked program was:
 /* begin */
@@ -156,7 +156,7 @@ checked program was:
 
 have_struct_member: checking for struct passwd.pw_class in pwd.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 checked program was:
 /* begin */
 1: #include <pwd.h>
@@ -170,7 +170,7 @@ checked program was:
 
 have_struct_member: checking for struct passwd.pw_comment in pwd.h... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 conftest.c:5: error: ‘struct passwd’ has no member named ‘pw_comment’
 checked program was:
 /* begin */
@@ -185,7 +185,7 @@ checked program was:
 
 have_struct_member: checking for struct passwd.pw_expire in pwd.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 checked program was:
 /* begin */
 1: #include <pwd.h>
@@ -199,7 +199,7 @@ checked program was:
 
 have_struct_member: checking for struct passwd.pw_passwd in pwd.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 checked program was:
 /* begin */
 1: #include <pwd.h>
@@ -213,7 +213,7 @@ checked program was:
 
 have_struct_member: checking for struct group.gr_passwd in grp.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 checked program was:
 /* begin */
 1: #include <grp.h>
@@ -227,7 +227,7 @@ checked program was:
 
 have_type: checking for uid_t in sys/types.h,pwd.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 checked program was:
 /* begin */
 1: #include <sys/types.h>
@@ -240,7 +240,7 @@ checked program was:
 
 --------------------
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 conftest.c:5: error: size of array ‘conftest_const’ is negative
 checked program was:
 /* begin */
@@ -251,7 +251,7 @@ checked program was:
 5: int conftest_const[(sizeof(uid_t) > sizeof(long)) ? 1 : -1];
 /* end */
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 checked program was:
 /* begin */
 1: #include <sys/types.h>
@@ -263,7 +263,7 @@ checked program was:
 
 have_type: checking for gid_t in sys/types.h,grp.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 checked program was:
 /* begin */
 1: #include <sys/types.h>
@@ -276,7 +276,7 @@ checked program was:
 
 --------------------
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 conftest.c:5: error: size of array ‘conftest_const’ is negative
 checked program was:
 /* begin */
@@ -287,7 +287,7 @@ checked program was:
 5: int conftest_const[(sizeof(gid_t) > sizeof(long)) ? 1 : -1];
 /* end */
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/etc  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 checked program was:
 /* begin */
 1: #include <sys/types.h>

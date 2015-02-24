@@ -1,0 +1,172 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: 
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: accuracy is set for Yahoo and Google geocoders, it is a numeric value of the precision. see http://code.google.com/apis/maps/documentation/geocoding/#GeocodingAccuracy
+  name: accuracy
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: all
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: FCC Attributes
+  name: block_fips
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Location attributes. Full address is a concatenation of all values. For example: 100 Spear St, San Francisco, CA, 94101, US Street number and street name are extracted from the street address attribute if they don't exist"
+  name: city
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Location attributes. Full address is a concatenation of all values. For example: 100 Spear St, San Francisco, CA, 94101, US Street number and street name are extracted from the street address attribute if they don't exist"
+  name: country
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Location attributes. Full address is a concatenation of all values. For example: 100 Spear St, San Francisco, CA, 94101, US Street number and street name are extracted from the street address attribute if they don't exist"
+  name: country_code
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: district
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: FCC Attributes
+  name: district_fips
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: full_address
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: neighborhood
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Attributes set upon return from geocoding. Success will be true for successful geocode lookups. The provider will be set to the name of the providing geocoder. Finally, precision is an indicator of the accuracy of the geocoding.
+  name: precision
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Attributes set upon return from geocoding. Success will be true for successful geocode lookups. The provider will be set to the name of the providing geocoder. Finally, precision is an indicator of the accuracy of the geocoding.
+  name: provider
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: province
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Location attributes. Full address is a concatenation of all values. For example: 100 Spear St, San Francisco, CA, 94101, US Street number and street name are extracted from the street address attribute if they don't exist"
+  name: state
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: FCC Attributes
+  name: state_fips
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Location attributes. Full address is a concatenation of all values. For example: 100 Spear St, San Francisco, CA, 94101, US Street number and street name are extracted from the street address attribute if they don't exist"
+  name: street_address
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Location attributes. Full address is a concatenation of all values. For example: 100 Spear St, San Francisco, CA, 94101, US Street number and street name are extracted from the street address attribute if they don't exist"
+  name: street_name
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Location attributes. Full address is a concatenation of all values. For example: 100 Spear St, San Francisco, CA, 94101, US Street number and street name are extracted from the street address attribute if they don't exist"
+  name: street_number
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  name: sub_premise
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Attributes set upon return from geocoding. Success will be true for successful geocode lookups. The provider will be set to the name of the providing geocoder. Finally, precision is an indicator of the accuracy of the geocoding.
+  name: success
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: Attributes set upon return from geocoding. Success will be true for successful geocode lookups. The provider will be set to the name of the providing geocoder. Finally, precision is an indicator of the accuracy of the geocoding.
+  name: suggested_bounds
+  rw: RW
+- !ruby/object:RI::Attribute 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: "Location attributes. Full address is a concatenation of all values. For example: 100 Spear St, San Francisco, CA, 94101, US Street number and street name are extracted from the street address attribute if they don't exist"
+  name: zip
+  rw: RW
+class_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: new
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: This class encapsulates the result of a geocoding call. It's primary purpose is to homogenize the results of multiple geocoding providers. It also provides some additional functionality, such as the &quot;full address&quot; method for geocoders that do not provide a full address in their results (for example, Yahoo), and the &quot;is_us&quot; method.
+- !ruby/struct:SM::Flow::P 
+  body: Some geocoders can return multple results. Geoloc can capture multiple results through its &quot;all&quot; method.
+- !ruby/struct:SM::Flow::P 
+  body: "For the geocoder setting the results, it would look something like this:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "    geo=GeoLoc.new(first_result)\n    geo.all.push(second_result)\n    geo.all.push(third_result)\n"
+- !ruby/struct:SM::Flow::P 
+  body: "Then, for the user of the result:"
+- !ruby/struct:SM::Flow::VERB 
+  body: "    puts geo.full_address     # just like usual\n    puts geo.all.size  =&gt; 3   # there's three results total\n    puts geo.all.first        # all is just an array or additional geolocs,\n                                so do what you want with it\n"
+constants: []
+
+full_name: Geokit::GeoLoc
+includes: []
+
+instance_methods: 
+- !ruby/object:RI::MethodSummary 
+  name: city=
+- !ruby/object:RI::MethodSummary 
+  name: encode_with
+- !ruby/object:RI::MethodSummary 
+  name: full_address
+- !ruby/object:RI::MethodSummary 
+  name: hash
+- !ruby/object:RI::MethodSummary 
+  name: is_us?
+- !ruby/object:RI::MethodSummary 
+  name: street_address=
+- !ruby/object:RI::MethodSummary 
+  name: street_name
+- !ruby/object:RI::MethodSummary 
+  name: street_number
+- !ruby/object:RI::MethodSummary 
+  name: success?
+- !ruby/object:RI::MethodSummary 
+  name: to_geocodeable_s
+- !ruby/object:RI::MethodSummary 
+  name: to_hash
+- !ruby/object:RI::MethodSummary 
+  name: to_s
+- !ruby/object:RI::MethodSummary 
+  name: to_yaml_properties
+name: GeoLoc
+superclass: LatLng

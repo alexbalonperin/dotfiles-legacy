@@ -1,5 +1,6 @@
 alias ll="ls -la"
-alias psql_start="pg_ctl -D /usr/local/var/postgres start"
-alias psql_stop="pg_ctl -D /usr/local/var/postgres stop"
+alias psql_start="pg_ctl -l /tmp/postgres.log -D /usr/local/var/postgres start"
+alias psql_stop="pg_ctl -l /tmp/postgres.log -D /usr/local/var/postgres stop"
 alias psql_status="pg_ctl -D /usr/local/var/postgres status"
-
+alias psql-qa="psql -d gilt -h qadb1.nrt.gilt.jp"
+alias psql-qa-csv="psql -d gilt -h qadb1.nrt.gilt.jp -A -F',' -c"

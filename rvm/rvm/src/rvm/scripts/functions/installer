@@ -117,6 +117,7 @@ install_rvm()
     migrate_old_gemsets
     migrate_defaults
     migrate_environments_and_wrappers
+    restore_missing_environments
     record_ruby_configs
     update_gemsets_install_rvm
     configure_autolibs
@@ -295,6 +296,7 @@ setup_installer()
     rvm_scripts_path:${rvm_scripts_path:=$rvm_path/scripts}
 
   # duplication marker kkdfkgnjfndgjkndfjkgnkfjdgn
+  [[ -n "${rvm_user_install_flag:-}" ]] ||
   case "$rvm_path" in
     (/usr/local/rvm)         rvm_user_install_flag=0 ;;
     ($HOME/*|/${USER// /_}*) rvm_user_install_flag=1 ;;
@@ -400,7 +402,7 @@ cleanse_old_entities()
   for script in utility array
   do
     if test -f "$rvm_path/scripts/${script}"
-    then \rm -f "$rvm_path/scripts/${script}"
+    then \command \rm -f "$rvm_path/scripts/${script}"
     fi
   done
   return 0
@@ -442,7 +444,7 @@ save_custom_flags()
   )
   typeset IFS="|"
   set | __rvm_grep -E "${__variables[*]}" > "${rvm_path:-}/user/custom_flags"
-  true # no failing from grep filtering
+  true # no failing from __rvm_grep filtering
 }
 
 install_rvm_directories()
@@ -451,7 +453,7 @@ install_rvm_directories()
   do
     # Target is supposed to be a directory, remove if it is a file.
     if [[ -f "$rvm_path/$entry" ]]
-    then \rm -f "$rvm_path/$entry"
+    then \command \rm -f "$rvm_path/$entry"
     fi
     [[ -d "$rvm_path/$entry" ]] || mkdir -p "$rvm_path/$entry"
   done
@@ -470,7 +472,7 @@ install_rvm_files()
     if [[ -d "$rvm_path/$entry" ]]
     then __rvm_rm_rf "$rvm_path/$entry"
     fi
-    \cat < "$source_path/$entry" > "$rvm_path/$entry"
+    \command \cat < "$source_path/$entry" > "$rvm_path/$entry"
     if [[ -x "$source_path/$entry" && ! -x "$rvm_path/$entry" ]]
     then chmod +x "$rvm_path/$entry"
     fi
@@ -514,7 +516,7 @@ install_rvm_scripts()
       else rvm_log "    Can not update '$entry', it's a conflict between Zsh and multiuser installation, prefix the command with 'rvmsudo' to update this file."
       fi
     else
-      \cat < "$source_path/$entry" > "$rvm_path/$entry"
+      \command \cat < "$source_path/$entry" > "$rvm_path/$entry"
       chmod_if_needed "$source_path/$entry" "$rvm_path/$entry"
     fi
   done
@@ -523,8 +525,8 @@ install_rvm_scripts()
 
 cleanup_old_help_and_docs_files()
 {
-  find "$rvm_path/help" -type f \! \( -name '*.md' -o -name '*.txt' \) -delete
-  find "$rvm_path/docs" -type f \! \( -name '*.md' -o -name '*.txt' \) -delete
+  find "$rvm_path/help" -type f \! \( -name '*.md' -o -name '*.txt' \) -exec rm '{}' \;
+  find "$rvm_path/docs" -type f \! \( -name '*.md' -o -name '*.txt' \) -exec rm '{}' \;
   true # for osx
 }
 
@@ -544,7 +546,7 @@ install_rvm_hooks()
       __rvm_grep -E '^hooks/[[:alpha:]]+_[[:alpha:]]+$' >/dev/null <<<"$entry" &&
       ! __rvm_grep "$(basename ${entry})_\*" "$rvm_path/$entry" >/dev/null
     then
-      \mv -f "$rvm_path/$entry" "$rvm_path/${entry}_custom"
+      \command \mv -f "$rvm_path/$entry" "$rvm_path/${entry}_custom"
     fi
     hook_x_flag=0
     [[ -x "$rvm_path/$entry" ]] || hook_x_flag=$?
@@ -567,7 +569,7 @@ remove_old_hooks()
       [[ -f "$rvm_path/hooks/$entry" ]] &&
       __rvm_grep "after_${name}_\*" "$rvm_path/hooks/$entry" >/dev/null
     then
-      \rm -f "$rvm_path/hooks/$entry"
+      \command \rm -f "$rvm_path/hooks/$entry"
     fi
   done
 }
@@ -587,7 +589,7 @@ install_binaries()
   do
     if [[ -e "${rvm_bin_path}/${file}" ]] &&
     [[ ! -f "${rvm_bin_path}/${file}"  || -L "${rvm_bin_path}/${file}" ]]
-    then \rm -f "${rvm_bin_path}/${file}"
+    then \command \rm -f "${rvm_bin_path}/${file}"
     fi
 
     if
@@ -595,7 +597,7 @@ install_binaries()
     then
       ln -s "$( readlink "${source_path}/bin/${file}" )" "${rvm_bin_path}/${file}"
     else
-      \cat < "${source_path}/bin/${file}" > "${rvm_bin_path}/${file}"
+      \command \cat < "${source_path}/bin/${file}" > "${rvm_bin_path}/${file}"
     fi
 
     [[ -x "${rvm_bin_path}/${file}" ]] || chmod a+rx "${rvm_bin_path}/${file}"
@@ -606,9 +608,9 @@ install_binaries()
       if
         [[ "${system_bin}" != "${rvm_bin_path}" && -x "${system_bin}/${file}" ]]
       then
-        \rm -f "${system_bin}/${file}" 2>/dev/null ||
+        \command \rm -f "${system_bin}/${file}" 2>/dev/null ||
         rvm_out "!!! could not remove ${system_bin}/${file}, remove it manually with:
-!!! > sudo \rm -f ${system_bin}/${file}
+!!! > sudo \command \rm -f ${system_bin}/${file}
 "
       fi
     done
@@ -637,7 +639,7 @@ install_gemsets()
   typeset gemset_files
 
   if [[ ${rvm_keep_gemset_defaults_flag:-0} == 0 && -d "$rvm_path/gemsets" ]]
-  then __rvm_find "$rvm_path/gemsets" -type f -delete
+  then __rvm_find "$rvm_path/gemsets" -type f -exec rm '{}' \;
   fi
 
   [[ -d "$rvm_path/gemsets" ]] || mkdir -p "$rvm_path/gemsets"
@@ -654,7 +656,7 @@ install_gemsets()
     then
       destination_path="${destination%/*}"
       [[ -d "$destination_path" ]] || mkdir -p "$destination_path"
-      \cat < "$gemset_file" > "$destination"
+      \command \cat < "$gemset_file" > "$destination"
     fi
   done
 
@@ -668,7 +670,7 @@ install_patchsets()
   if
     [[ ${rvm_keep_patchsets_flag:-0} == 0 && -d "$rvm_path/patchsets" ]]
   then
-    __rvm_find "$rvm_path/patchsets/" -type f -delete
+    __rvm_find "$rvm_path/patchsets/" -type f -exec rm '{}' \;
   fi
   if
     [[ -d patchsets/ ]]
@@ -684,9 +686,9 @@ install_patchsets()
         [[ ! -s "$destination" || "${patchset_file##*/}" == "default" ]]
       then
         if [[ -d "$destination"    ]]
-        then \rm -f "$destination"
+        then \command \rm -f "$destination"
         fi
-        \cat < "$patchset_file" > "$destination"
+        \command \cat < "$patchset_file" > "$destination"
       fi
     done
   fi
@@ -723,15 +725,15 @@ setup_configuration_files()
   __rvm_cd "$rvm_path"
 
   if [[ -f config/user ]]
-  then \mv config/user user/db
+  then \command \mv config/user user/db
   fi
 
   if [[ -f config/installs ]]
-  then \mv config/installs user/installs
+  then \command \mv config/installs user/installs
   fi
 
   if [[ -s config/rvmrcs ]]
-  then \mv config/rvmrcs user/rvmrcs
+  then \command \mv config/rvmrcs user/rvmrcs
   fi
 
   [[ -s user/db ]] ||
@@ -743,7 +745,7 @@ setup_configuration_files()
 
   # Prune old (keyed-by-hash) trust entries
   __rvm_grep '^_' user/rvmrcs > user/rvmrcs.new || true
-  \mv user/rvmrcs.new user/rvmrcs
+  \command \mv user/rvmrcs.new user/rvmrcs
 
   __rvm_cd "${_save_dir}"
 }
@@ -811,7 +813,7 @@ setup_etc_profile()
   then return 0
   fi
 
-  typeset executable add_to_profile_flag zshrc_file
+  typeset executable add_to_profile_flag zshrc_file ps_ucomm_alias
   if
     [[ -d /etc/profile.d ]]
   then
@@ -821,6 +823,13 @@ setup_etc_profile()
     add_to_profile_flag=1
     executable=0
     mkdir -p /etc/profile.d
+  fi
+  if [[ "$(uname)" == "SunOS" ]]
+  then
+    # Solaris defaut ps doesn't provide ucomm
+    ps_ucomm_alias=comm
+  else
+    ps_ucomm_alias=ucomm
   fi
 
 # partial duplication marker dkjnkjvnckbjncvbkjnvkj
@@ -833,8 +842,8 @@ setup_etc_profile()
 
 if
   [ -n \"\${BASH_VERSION:-}\" -o -n \"\${ZSH_VERSION:-}\" ] &&
-  test \"\`\ps -p \$\$ -o comm=\`\" != dash &&
-  test \"\`\ps -p \$\$ -o comm=\`\" != sh
+  test \"\`\\\\command \\\\ps -p \$\$ -o ${ps_ucomm_alias}=\`\" != dash &&
+  test \"\`\\\\command \\\\ps -p \$\$ -o ${ps_ucomm_alias}=\`\" != sh
 then
   [[ -n \"\${rvm_stored_umask:-}\" ]] || export rvm_stored_umask=\$(umask)
   # Load user rvmrc configurations, if exist
@@ -865,28 +874,6 @@ then
   then
     true \${rvm_path:=\"/usr/local/rvm\"}
     source \"/usr/local/rvm/scripts/rvm\"
-  fi
-
-  # Opt-in for custom prompt through by setting:
-  #     rvm_ps1=1
-  # in either /etc/rvmrc or \$HOME/.rvmrc
-  if
-    [[ \${rvm_ps1:-0} -eq 1 ]]
-  then
-    # Source RVM ps1 functions for a great prompt.
-    if
-      [[ -s \"\$rvm_path/contrib/ps1_functions\" ]]
-    then
-      source \"\$rvm_path/contrib/ps1_functions\"
-    elif
-      [[ -s \"/usr/local/rvm/contrib/ps1_functions\" ]]
-    then
-      source \"/usr/local/rvm/contrib/ps1_functions\"
-    fi
-
-    if command -v ps1_set >/dev/null 2>&1
-    then ps1_set
-    fi
   fi
 
   # Add \$rvm_bin_path to \$PATH if necessary
@@ -957,13 +944,13 @@ setup_etc_bashrc()
     ! __rvm_grep "PATH=.*${rvm_bin_path}" "${system_bashrc_file}" >/dev/null
   then
     new_content_path="$( mktemp ${TMPDIR:-/tmp}/tmp.XXXXXXXXXXXXXXXXXX )"
-    [[ ! -f "${new_content_path}" ]] || \rm -f "${new_content_path}"
+    [[ ! -f "${new_content_path}" ]] || \command \rm -f "${new_content_path}"
     {
       print_etc_bashrc_change # prepend
       __rvm_grep -v "|| export PATH=\"\${PATH}:\"" < "${system_bashrc_file}"
       true
     } > "${new_content_path}" &&
-    \mv "${new_content_path}" "${system_bashrc_file}" 2>/dev/null ||
+    \command \mv "${new_content_path}" "${system_bashrc_file}" 2>/dev/null ||
       permissions_warning "could not update '${system_bashrc_file}'" $? ||
       return $?
   fi
@@ -991,6 +978,12 @@ setup_etc_rvmrc()
     ! __rvm_grep 'umask' $rvmrc_file >/dev/null
   then
     echo 'umask u=rwx,g=rwx,o=rx' >> $rvmrc_file
+  fi
+  if
+    [[ "${rvm_path}" != "/usr/local/rvm" ]] &&
+    ! __rvm_grep 'rvm_path' $rvmrc_file >/dev/null
+  then
+    echo "rvm_path=\"${rvm_path}\"" >> $rvmrc_file
   fi
   if [[ -s $rvmrc_file ]]
   then install_fix_rights $rvmrc_file
@@ -1026,13 +1019,14 @@ setup_user_profile_check()
 setup_user_profile_detect()
 {
   etc_profile_file="/etc/profile.d/rvm.sh"
+  search_list_mksh=( "$HOME/.mkshrc" "$HOME/.profile" )
   search_list_bash=( "$HOME/.bashrc" "$HOME/.bash_profile" "$HOME/.bash_login" )
   search_list_zsh=( "${ZDOTDIR:-${HOME}}/.zshenv" "${ZDOTDIR:-${HOME}}/.zprofile" "${ZDOTDIR:-${HOME}}/.zshrc" "${ZDOTDIR:-${HOME}}/.zlogin" )
-  search_list=( "$HOME/.profile" "${search_list_bash[@]}" "${search_list_zsh[@]}" )
+  search_list=( "${search_list_mksh[@]}" "${search_list_bash[@]}" "${search_list_zsh[@]}" )
 
-  target_rc=( "$HOME/.profile" "$HOME/.bashrc" "${ZDOTDIR:-${HOME}}/.zshrc" )
+  target_rc=( "$HOME/.profile" "$HOME/.mkshrc" "$HOME/.bashrc" "${ZDOTDIR:-${HOME}}/.zshrc" )
 
-  target_login=()
+  target_login=( "$HOME/.profile" )
   pick_a_file target_login "$HOME/.bash_profile" "$HOME/.bash_login"
   target_login+=( "${ZDOTDIR:-${HOME}}/.zlogin" )
 
@@ -1108,10 +1102,8 @@ setup_user_profile_rc()
 export PATH=\"\$PATH:$local_rvm_path/bin\" # Add RVM to PATH for scripting
 " >> "$profile_file"
     done
-    user_rc_files=( "${target_rc[@]}" )
   else
     setup_user_profile_summary found_rc "PATH"
-    user_rc_files=( "${found_rc[@]}" )
   fi
 }
 
@@ -1139,7 +1131,7 @@ setup_user_profile_login()
       {
         touch "$profile_file"
         if
-          [[ "$profile_file" == "$HOME/.bash_profile" && -f "$HOME/.profile" ]]
+          [[ "$profile_file" == "$HOME/.bash_"* && -f "$HOME/.profile" ]]
         then
           printf "%b" "
 [[ -s \"\$HOME/.profile\" ]] && source \"\$HOME/.profile\" # Load the default .profile
@@ -1150,10 +1142,8 @@ setup_user_profile_login()
 [[ -s \"$local_rvm_path/scripts/rvm\" ]] && source \"$local_rvm_path/scripts/rvm\" # Load RVM into a shell session *as a function*
 " >> "$profile_file"
     done
-    user_login_files=( "${target_login[@]}" )
   else
     setup_user_profile_summary found_login "sourcing"
-    user_login_files=( "${found_login[@]}" )
   fi
 }
 
@@ -1162,8 +1152,7 @@ setup_user_profile()
   setup_user_profile_check || return 0
 
   export user_profile_file
-  export -a user_login_files user_rc_files
-  typeset -a search_list search_list_bash search_list_zsh
+  typeset -a search_list search_list_mksh search_list_bash search_list_zsh
   typeset -a target_rc target_login found_rc found_login
   typeset etc_profile_file profile_file local_rvm_path local_rvm_path_sed
   local_rvm_path="${rvm_path/#$HOME/\$HOME}"
@@ -1203,7 +1192,7 @@ cleanse_old_environments()
           __rvm_grep 'BUNDLE_PATH' "$file" >/dev/null 2>&1
         then
           __rvm_grep -v 'BUNDLE_PATH' "$file" > "$file.new" &&
-          \mv "$file.new" "$file"
+          \command \mv "$file.new" "$file"
         fi
         # regenerate when found broken path :/bin:/bin or missing $PATH
         if
@@ -1228,7 +1217,7 @@ migrate_old_gemsets()
       [[ -d "$gemset" ]] && [[ ! -d "$new_path" ]]
     then
       rvm_out "    Renaming $(basename "$gemset") to $(basename "$new_path") for new gemset separator."
-      \mv "$gemset" "$new_path"
+      \command \mv "$gemset" "$new_path"
     fi
   done
 
@@ -1239,7 +1228,7 @@ migrate_old_gemsets()
       [[ -d "$gemset" && ! -d "$new_path" ]]
     then
       rvm_out "    Renaming $(basename "$gemset") to $(basename "$new_path") for new gemset separator."
-      \mv $gemset $new_path
+      \command \mv $gemset $new_path
     fi
   done
 
@@ -1250,7 +1239,7 @@ migrate_old_gemsets()
       [[ -d "$gemset" && ! -d "$new_path" ]]
     then
       rvm_out "    Fixing: $(basename "$gemset") to $(basename "$new_path") for new gemset separator."
-      \mv "$gemset" "$new_path"
+      \command \mv "$gemset" "$new_path"
     fi
   done
 }
@@ -1284,7 +1273,7 @@ migrate_environments_and_wrappers()
       [[ -f "$environment_file" && ! -L "$environment_file" && -d "${new_path%/*}" && ! -e "$new_path" ]]
     then
       rvm_out "    Migrating environment ${ruby_version} to use with 'gem-wrappers' gem."
-      \mv "$environment_file" "$new_path" && \ln -s "$new_path" "$environment_file"
+      \command \mv "$environment_file" "$new_path" && \command \ln -s "$new_path" "$environment_file"
     fi
   done
 
@@ -1296,11 +1285,11 @@ migrate_environments_and_wrappers()
       [[ -d "$wrappers_path" && ! -L "$wrappers_path" && -d "${new_path%/*}" && ! -e "$new_path" ]]
     then
       rvm_out "    Migrating wrappers ${ruby_version} to use with 'gem-wrappers' gem."
-      \mv "$wrappers_path" "$new_path" && \ln -snf "$new_path" "$wrappers_path"
+      \command \mv "$wrappers_path" "$new_path" && \command \ln -snf "$new_path" "$wrappers_path"
     fi
   done
 
-  grep -rl 'unset GEM_HOME' "$rvm_path/gems"/*/environment "$rvm_path/environments"/ 2>/dev/null |
+  __rvm_grep -rl 'unset GEM_HOME' "$rvm_path/gems"/*/environment "$rvm_path/environments"/ 2>/dev/null |
   while read environment_file
   do
     ruby_version="${environment_file%/environment}"
@@ -1308,6 +1297,42 @@ migrate_environments_and_wrappers()
     rvm_out "    Fixing environment for ${ruby_version}."
     __rvm_with "${ruby_version}" __rvm_ensure_has_environment_files
   done
+}
+
+restore_missing_environments()
+{
+  if
+    [[ -d "$rvm_path/rubies" ]]
+  then
+    [[ -d "$rvm_path/environments" ]] || mkdir -p "$rvm_path/environments"
+
+    for ruby_path in "$rvm_path"/rubies/*
+    do
+      ruby_version="${ruby_path##*/}"
+      environment_path="$rvm_path/environments/${ruby_version}"
+      if
+        [[ "${ruby_version}" == "*" || -e "$environment_path" ]]
+      then
+        true
+      elif
+        [[ "${ruby_version}" == "gems" ]]
+      then
+        rvm_out "    Removing unexpected ruby: ${ruby_version}."
+        \command \rm -rf "${ruby_path}"
+      elif
+        [[ -L "$ruby_path" ]]
+      then
+        ruby_target="$(readlink "$ruby_path")"
+        ruby_target="${ruby_target##*/}"
+        environment_tareget="$rvm_path/environments/${ruby_target}"
+        rvm_out "    Fixing environment link for ${ruby_version}."
+        \command \ln -nsf "$environment_tareget" "$environment_path"
+      else
+        rvm_out "    Fixing environment for ${ruby_version}."
+        __rvm_with "${ruby_version}" __rvm_ensure_has_environment_files
+      fi
+    done
+  fi
 }
 
 record_ruby_configs()
@@ -1357,9 +1382,26 @@ update_gemsets_install_rvm()
         for _iterator in "${missing[@]}"
         do
           __gem_home="${_iterator#*=}"
-          _iterator="${_iterator%%=*}"
           __rvm_with "${__gem_home##*/}" gem_install ${_gem}
         done | __rvm_dotted "    Installing ${_gem} gem in ${#missing[@]} gemsets"
+      fi
+
+      if
+        [[ "${_gem}" == "gem-wrappers" ]] &&
+        (( ${#missing[@]} > 0 ))
+      then
+        for _iterator in "${missing[@]}"
+        do
+          installed="${_iterator#*=}"
+          installed="${installed%@global}"
+          for __gem_home in "${installed}"{,@*}
+          do
+            if [[ "${__gem_home}" == *"@*" ]]
+            then continue
+            fi
+            __rvm_with "${__gem_home##*/}" gem wrappers regenerate
+          done
+        done | __rvm_dotted "    Regenerating gem wrappers in ${#missing[@]} rubies"
       fi
     }
   done
@@ -1376,7 +1418,7 @@ configure_autolibs()
     then
       [[ -w "$rvmrc" ]] &&
       __rvm_sed '/rvm_autolibs_flag=/ d' < "$rvmrc" > "$rvmrc.backup" &&
-      \mv -f "$rvmrc.backup" "$rvmrc" ||
+      \command \mv -f "$rvmrc.backup" "$rvmrc" ||
       rvm_error "    Can not automatically remove lines with 'rvm_autolibs_flag=' from '$rvmrc', please clean it manually."
     fi
   done
@@ -1388,7 +1430,7 @@ configure_autolibs()
     export rvm_autolibs_flag="$( __rvm_awk -F'=' '/rvm_autolibs_flag=/{print $2}' <"$rvmrc" )"
     [[ -w "$rvmrc" ]] &&
     __rvm_sed '/rvm_autolibs_flag/ d' < "$rvmrc" > "$rvmrc.backup" &&
-    \mv -f "$rvmrc.backup" "$rvmrc" || true
+    \command \mv -f "$rvmrc.backup" "$rvmrc" || true
   fi
 
   # migrate SMF settings
@@ -1400,7 +1442,7 @@ configure_autolibs()
     export rvm_autolibs_flag=smf
     [[ -w "$rvmrc" ]] &&
     __rvm_sed '/rvm_configure_env/ d' < "$rvmrc" > "$rvmrc.backup" &&
-    \mv -f "$rvmrc.backup" "$rvmrc" || true
+    \command \mv -f "$rvmrc.backup" "$rvmrc" || true
   fi
 
   [[ -n "${rvm_autolibs_flag:-}" ]] || return 0
@@ -1416,7 +1458,7 @@ configure_autolibs()
   fi
 
   if [[ -x "${rvm_bin_path}/brew" && -L "${rvm_bin_path}/brew" ]]
-  then rm -rf "${rvm_bin_path}/brew"
+  then \command \rm -rf "${rvm_bin_path}/brew"
   fi
 )
 
@@ -1451,7 +1493,7 @@ cleanup_tmp_files()
     (( ${#files[@]} > 0 ))
   then
     rvm_out "    Cleanup any .swp files."
-    \rm -f  "${files[@]}"
+    \command \rm -f  "${files[@]}"
   fi
 }
 
@@ -1501,13 +1543,13 @@ setup_rvm_path_permissions_check_group()
 
 setup_rvm_path_permissions_check_dirs()
 {
-  setup_rvm_path_permissions_check_single 3 "directories with mode different then '775'" \
+  setup_rvm_path_permissions_check_single 3 "directories with mode different than '775'" \
     __rvm_find "$rvm_path" -type d \! -perm -2775
 }
 
 setup_rvm_path_permissions_check_files()
 {
-  setup_rvm_path_permissions_check_single 2 "files with mode different then '664' or '775'" \
+  setup_rvm_path_permissions_check_single 2 "files with mode different than '664' or '775'" \
     __rvm_find "$rvm_path" \! -type d \! -type l \! -perm -775 \! -perm -664
 }
 
@@ -1553,8 +1595,8 @@ display_thank_you()
   : ${name:=${USER:-}}
   : ${name:=$(id | __rvm_sed -e 's/^[^(]*(//' -e 's/).*$//')}
   case "${name}" in
-    (root) name="Administrator" ;;
-    ("")   name="User"          ;;
+    (root)       name="Administrator" ;;
+    (""|vagrant) name="User"          ;;
   esac
 
   rvm_out "

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Geokit::Geocoders::BaseIpGeocoder</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Geokit::Geocoders::BaseIpGeocoder</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../files/lib/geokit/geocoders/base_ip_rb.html">
+                lib/geokit/geocoders/base_ip.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                <a href="Geocoder.html">
+                Geocoder
+               </a>
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000023">ip?</a>&nbsp;&nbsp;
+      <a href="#M000025">private_ip_address?</a>&nbsp;&nbsp;
+      <a href="#M000024">process</a>&nbsp;&nbsp;
+      <a href="#M000022">valid_ip?</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">NON_ROUTABLE_IP_RANGES</td>
+          <td>=</td>
+          <td class="context-item-value">[         IPAddr.new('0.0.0.0/8'),      # &quot;This&quot; Network         IPAddr.new('10.0.0.0/8'),     # Private-Use Networks         IPAddr.new('14.0.0.0/8'),     # Public-Data Networks         IPAddr.new('127.0.0.0/8'),    # Loopback         IPAddr.new('169.254.0.0/16'), # Link local         IPAddr.new('172.16.0.0/12'),  # Private-Use Networks         IPAddr.new('192.0.2.0/24'),   # Test-Net         IPAddr.new('192.168.0.0/16'), # Private-Use Networks         IPAddr.new('198.18.0.0/15'),  # Network Interconnect Device Benchmark Testing         IPAddr.new('224.0.0.0/4'),    # Multicast         IPAddr.new('240.0.0.0/4')</td>
+          <td width="3em">&nbsp;</td>
+          <td class="context-item-desc">
+A number of non-routable IP ranges.
+
+<p>
+&#8212; Sources for these:
+</p>
+<pre>
+  RFC 3330: Special-Use IPv4 Addresses
+  The bogon list: http://www.cymru.com/Documents/bogon-list.html
+</pre>
+</td>
+        </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Class methods</h3>
+
+      <div id="method-M000023" class="method-detail">
+        <a name="M000023"></a>
+
+        <div class="method-heading">
+          <a href="BaseIpGeocoder.src/M000023.html" target="Code" class="method-signature"
+            onclick="popupCode('BaseIpGeocoder.src/M000023.html');return false;">
+          <span class="method-name">ip?</span><span class="method-args">(ip)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000025" class="method-detail">
+        <a name="M000025"></a>
+
+        <div class="method-heading">
+          <a href="BaseIpGeocoder.src/M000025.html" target="Code" class="method-signature"
+            onclick="popupCode('BaseIpGeocoder.src/M000025.html');return false;">
+          <span class="method-name">private_ip_address?</span><span class="method-args">(ip)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Checks whether the IP address belongs to a private address range.
+</p>
+<p>
+This function is used to reduce the number of useless queries made to the
+geocoding service. Such queries can occur frequently during integration
+tests.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000024" class="method-detail">
+        <a name="M000024"></a>
+
+        <div class="method-heading">
+          <a href="BaseIpGeocoder.src/M000024.html" target="Code" class="method-signature"
+            onclick="popupCode('BaseIpGeocoder.src/M000024.html');return false;">
+          <span class="method-name">process</span><span class="method-args">(format, ip)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+      <div id="method-M000022" class="method-detail">
+        <a name="M000022"></a>
+
+        <div class="method-heading">
+          <a href="BaseIpGeocoder.src/M000022.html" target="Code" class="method-signature"
+            onclick="popupCode('BaseIpGeocoder.src/M000022.html');return false;">
+          <span class="method-name">valid_ip?</span><span class="method-args">(ip)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

@@ -18,7 +18,7 @@ ree_install()
   if
     [[ -n "$(echo "$rvm_ruby_version" | __rvm_awk '/^1\.8/{print}')" ]] && (( rvm_head_flag == 0 ))
   then
-    ruby="ruby-1."
+    ruby="ree-|ruby-1.8.|ruby-1.8.7-p|ruby-1.8.7-p374"
     __rvm_ensure_has_mri_ruby "$ruby" &&
     ruby="$(__rvm_mri_ruby "$ruby")"  ||
     return $?
@@ -58,7 +58,7 @@ ree_install()
       esac
 
       __rvm_rm_rf "${rvm_src_path}/$rvm_ruby_string"
-      \mv "${rvm_src_path}/$rvm_ruby_package_file" "${rvm_src_path}/$rvm_ruby_string"
+      \command \mv "${rvm_src_path}/$rvm_ruby_package_file" "${rvm_src_path}/$rvm_ruby_string"
     fi
 
     __rvm_cd "${rvm_src_path}/$rvm_ruby_string"
@@ -74,7 +74,7 @@ ree_install()
     if
       [[ "Darwin" == "${_system_type}" ]] &&
       [[ "1.8.6" == "$rvm_ruby_version" || "1.8.7" == "$rvm_ruby_version" ]] &&
-      [[ ! " ${rvm_ree_options[*]} " =~ " --no-tcmalloc " ]]
+      [[ " ${rvm_ree_options[*]} " != *" --no-tcmalloc "* ]]
     then
       rvm_ree_options+=( --no-tcmalloc )
     fi

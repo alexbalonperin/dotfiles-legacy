@@ -5,25 +5,15 @@
 
 <html>
 <head>
-  <title>checkout (Bundler::Source::Git::GitProxy)</title>
+  <title>branch (Bundler::Source::Git::GitProxy)</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
   <link rel="stylesheet" href="../../../../.././rdoc-style.css" type="text/css" media="screen" />
 </head>
 <body class="standalone-code">
-  <pre><span class="ruby-comment cmt"># File lib/bundler/source/git/git_proxy.rb, line 37</span>
-        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">checkout</span>
-          <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">path</span>.<span class="ruby-identifier">exist?</span>
-            <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">has_revision_cached?</span>
-            <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">ui</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;Updating #{uri}&quot;</span>
-            <span class="ruby-identifier">in_path</span> <span class="ruby-keyword kw">do</span>
-              <span class="ruby-identifier">git</span> <span class="ruby-node">%|fetch --force --quiet --tags #{uri_escaped} &quot;refs/heads/*:refs/heads/*&quot;|</span>
-            <span class="ruby-keyword kw">end</span>
-          <span class="ruby-keyword kw">else</span>
-            <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">ui</span>.<span class="ruby-identifier">info</span> <span class="ruby-node">&quot;Fetching #{uri}&quot;</span>
-            <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span>(<span class="ruby-identifier">path</span>.<span class="ruby-identifier">dirname</span>)
-            <span class="ruby-identifier">clone_command</span> = <span class="ruby-node">%|clone #{uri_escaped} &quot;#{path}&quot; --bare --no-hardlinks|</span>
-            <span class="ruby-identifier">clone_command</span> = <span class="ruby-node">&quot;#{clone_command} --quiet&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Bundler</span>.<span class="ruby-identifier">ui</span>.<span class="ruby-identifier">quiet?</span>
-            <span class="ruby-identifier">git</span> <span class="ruby-identifier">clone_command</span>
+  <pre><span class="ruby-comment cmt"># File lib/bundler/source/git/git_proxy.rb, line 24</span>
+        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">branch</span>
+          <span class="ruby-ivar">@branch</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">allowed_in_path</span> <span class="ruby-keyword kw">do</span>
+            <span class="ruby-identifier">git</span>(<span class="ruby-value str">&quot;branch&quot;</span>) <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^\* (.*)$/</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">$1</span>.<span class="ruby-identifier">strip</span>
           <span class="ruby-keyword kw">end</span>
         <span class="ruby-keyword kw">end</span></pre>
 </body>

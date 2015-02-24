@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 if
-  [[ -s "/Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/environment" ]]
+  [[ -s "/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2/environment" ]]
 then
-  source "/Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/environment"
+  source "/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2/environment"
   exec ruby "$@"
 else
-  echo "ERROR: Missing RVM environment file: '/Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/environment'" >&2
+  echo "ERROR: Missing RVM environment file: '/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2/environment'" >&2
   exit 1
 fi

@@ -1,0 +1,789 @@
+[2014-12-11 22:59:34] /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/bin/ruby
+current path: /Users/abalonperin/dotfiles/rvm/rvm/src/rubygems-2.0.14
+GEM_HOME=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2
+PATH=/Users/abalonperin/dotfiles/rvm/rvm/usr/bin:/usr/local/opt/pkg-config/bin:/usr/local/opt/libtool/bin:/usr/local/opt/automake/bin:/usr/local/opt/autoconf/bin:/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2/bin:/Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/bin:/Users/abalonperin/dotfiles/rvm/rvm/bin:/Users/abalonperin/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/MacGPG2/bin
+GEM_PATH=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2
+command(8): env GEM_HOME=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-1.8.7-head@global GEM_PATH= /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/bin/ruby -d /Users/abalonperin/dotfiles/rvm/rvm/src/rubygems-2.0.14/setup.rb --no-ri --no-rdoc
+Exception `LoadError' at ./lib/rubygems.rb:1087 - no such file to load -- rubygems/defaults/operating_system
+Exception `NoMethodError' at ./lib/rubygems/config_file.rb:63 - undefined method `sysconfdir' for Etc:Module
+Exception `LoadError' at ./lib/rubygems/core_ext/kernel_require.rb:53 - no such file to load -- Win32API
+Exception `LoadError' at ./lib/rubygems/core_ext/kernel_require.rb:121 - no such file to load -- Win32API
+Exception `Gem::LoadError' at ./lib/rubygems/dependency.rb:296 - Could not find 'psych' (>= 1.2.1, ~> 1.2) among 0 total gem(s)
+Exception `LoadError' at ./lib/rubygems/core_ext/kernel_require.rb:53 - no such file to load -- psych
+Exception `LoadError' at ./lib/rubygems/core_ext/kernel_require.rb:121 - no such file to load -- psych
+Exception `NoMethodError' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/rational.rb:78 - undefined method `gcd' for Rational(1, 2):Rational
+Exception `NameError' at ./lib/rubygems/syck_hack.rb:42 - method `to_s' not defined in YAML::Syck::DefaultKey
+Exception `LoadError' at ./lib/rubygems/core_ext/kernel_require.rb:53 - no such file to load -- Win32API
+Exception `LoadError' at ./lib/rubygems/core_ext/kernel_require.rb:121 - no such file to load -- Win32API
+Exception `Errno::EEXIST' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:243 - File exists - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8
+Exception `Errno::EEXIST' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:243 - File exists - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/bin
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/gauntlet_rubygems.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/gauntlet_rubygems.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/available_set.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/available_set.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/command_manager.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/command_manager.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/build_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/build_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/cert_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/cert_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/check_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/check_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/cleanup_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/cleanup_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/contents_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/contents_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/dependency_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/dependency_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/environment_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/environment_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/fetch_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/fetch_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/generate_index_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/generate_index_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/help_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/help_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/install_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/install_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/list_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/list_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/lock_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/lock_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/mirror_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/mirror_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/outdated_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/outdated_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/owner_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/owner_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/pristine_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/pristine_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/push_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/push_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/query_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/query_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/rdoc_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/rdoc_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/search_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/search_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/server_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/server_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/setup_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/setup_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/sources_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/sources_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/specification_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/specification_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/stale_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/stale_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/uninstall_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/uninstall_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/unpack_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/unpack_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/update_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/update_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/which_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/which_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/yank_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/commands/yank_command.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/compatibility.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/compatibility.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/config_file.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/config_file.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/core_ext/kernel_gem.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/core_ext/kernel_gem.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/core_ext/kernel_require.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/core_ext/kernel_require.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/defaults.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/defaults.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/dependency.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/dependency.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/dependency_installer.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/dependency_installer.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/dependency_list.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/dependency_list.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/dependency_resolver.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/dependency_resolver.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/deprecate.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/deprecate.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/doctor.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/doctor.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/errors.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/errors.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/exceptions.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/exceptions.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/ext/builder.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/ext/builder.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/ext/cmake_builder.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/ext/cmake_builder.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/ext/configure_builder.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/ext/configure_builder.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/ext/ext_conf_builder.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/ext/ext_conf_builder.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/ext/rake_builder.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/ext/rake_builder.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/ext.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/ext.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/gem_runner.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/gem_runner.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/gemcutter_utilities.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/gemcutter_utilities.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/indexer.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/indexer.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/install_message.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/install_message.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/install_update_options.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/install_update_options.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/installer.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/installer.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/installer_test_case.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/installer_test_case.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/local_remote_options.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/local_remote_options.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/mock_gem_ui.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/mock_gem_ui.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/name_tuple.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/name_tuple.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/package/digest_io.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/package/digest_io.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/package/old.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/package/old.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/package/tar_header.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/package/tar_header.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/package/tar_reader/entry.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/package/tar_reader/entry.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/package/tar_reader.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/package/tar_reader.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/package/tar_test_case.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/package/tar_test_case.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/package/tar_writer.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/package/tar_writer.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/package.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/package.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/package_task.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/package_task.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/path_support.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/path_support.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/platform.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/platform.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/psych_additions.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/psych_additions.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/psych_tree.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/psych_tree.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/rdoc.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/rdoc.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/remote_fetcher.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/remote_fetcher.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/request_set.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/request_set.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/requirement.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/requirement.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/security/policies.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/security/policies.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/security/policy.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/security/policy.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/security/signer.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/security/signer.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/security/trust_dir.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/security/trust_dir.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/security.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/security.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/server.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/server.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/source.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/source.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/source_list.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/source_list.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/source_local.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/source_local.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/source_specific_file.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/source_specific_file.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/spec_fetcher.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/spec_fetcher.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/specification.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/specification.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/syck_hack.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/syck_hack.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/test_case.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/test_case.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/test_utilities.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/test_utilities.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/text.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/text.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/uninstaller.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/uninstaller.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/user_interaction.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/user_interaction.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/validator.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/validator.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/version.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/version.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/version_option.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/version_option.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/ubygems.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/ubygems.rb
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/ssl_certs/Class3PublicPrimaryCertificationAuthority.pem
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/ssl_certs/Class3PublicPrimaryCertificationAuthority.pem
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/ssl_certs/DigiCertHighAssuranceEVRootCA.pem
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/ssl_certs/DigiCertHighAssuranceEVRootCA.pem
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/ssl_certs/EntrustnetSecureServerCertificationAuthority.pem
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/ssl_certs/EntrustnetSecureServerCertificationAuthority.pem
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/ssl_certs/GeoTrustGlobalCA.pem
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/site_ruby/1.8/rubygems/ssl_certs/GeoTrustGlobalCA.pem
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1427 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/bin/gem
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:1304 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/bin/gem
+Exception `Gem::LoadError' at ./lib/rubygems/dependency.rb:296 - Could not find 'rdoc' (>= 0) among 0 total gem(s)
+Exception `LoadError' at ./lib/rubygems/core_ext/kernel_require.rb:53 - no such file to load -- rdoc/rubygems_hook
+Exception `LoadError' at ./lib/rubygems/core_ext/kernel_require.rb:121 - no such file to load -- rdoc/rubygems_hook
+Exception `Gem::InstallError' at ./lib/rubygems/uninstaller.rb:101 - gem "gemcutter" is not installed
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:243 - No such file or directory - /Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-1.8.7-head@global/build_info
+Exception `Errno::ENOENT' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:243 - No such file or directory - 
+Exception `Errno::EEXIST' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:243 - File exists - /Users
+Exception `Errno::EEXIST' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:243 - File exists - /Users/abalonperin
+Exception `Errno::EEXIST' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:243 - File exists - /Users/abalonperin/dotfiles
+Exception `Errno::EEXIST' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:243 - File exists - /Users/abalonperin/dotfiles/rvm
+Exception `Errno::EEXIST' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:243 - File exists - /Users/abalonperin/dotfiles/rvm/rvm
+Exception `Errno::EEXIST' at /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/lib/ruby/1.8/fileutils.rb:243 - File exists - /Users/abalonperin/dotfiles/rvm/rvm/gems
+RubyGems 2.0.14 installed
+
+=== 2.0.13 / 2013-10-24
+
+Bug fixes:
+
+* Use class check instead of :version method check when creating Gem::Version
+  objects.  Fixes #674 by jkanywhere.
+* Allow installation of gems when the home directory does not exist.  Issue
+  #689 by Laurence Rowe
+* Fix updating gems which have multiple platforms.  Issue #693 by Ookami
+  Kenrou.
+* The gem server now uses user-provided directories.  Issue #696 by Marcelo
+  Alvim.
+
+=== 2.0.12 / 2013-10-14
+
+Bug fixes:
+
+* Proxy usernames and passwords are now escaped properly.  Ruby Bug #8979 and
+  patch by Masahiro Tomita, Issue #668 by Kouhei Sutou.
+
+=== 2.0.11 / 2013-10-08
+
+Bug fixes:
+
+* Added certificates to follow the s3.amazonaws.com certificate change.  Fixes
+  #665 by emeyekayee.  Fixes #671 by jonforums.
+* Remove redundant built-in certificates not needed for https://rubygems.org
+  Fixes #654 by Vít Ondruch.
+* Added test for missing certificates for https://s3.amazonaws.com or
+  https://rubygems.org.  Pull request #673 by Hannes Georg.
+* RubyGems now allows a Pathname for Kernel#require like the built-in
+  Kernel#require.  Pull request #663 by Aaron Patterson.
+* Required rbconfig in Gem::ConfigFile for Ruby 1.9.1 compatibility.  (Ruby
+  1.9.1 is no longer receiving security fixes, so please update to a newer
+  version.)  Issue #676 by Michal Papis.  Issue wayneeseguin/rvm#2262 by
+  Thomas Sänger.
+
+=== 2.0.10 / 2013-09-24
+
+Security fixes:
+
+* RubyGems 2.1.4 and earlier are vulnerable to excessive CPU usage due to a
+  backtracking in Gem::Version validation.  See CVE-2013-4363 for full details
+  including vulnerable APIs.  Fixed versions include 2.1.5, 2.0.10, 1.8.27 and
+  1.8.23.2 (for Ruby 1.9.3).
+
+=== 2.0.9 / 2013-09-13
+
+Bug fixes:
+
+* Gem fetch now fetches the newest (not oldest) gem when --version is given.
+  Issue #643 by Brian Shirai.
+* Fixed credential creation for `gem push` when `--host` is not given.  Pull
+  request #622 by Arthur Nogueira Neves
+
+=== 2.0.8 / 2013-09-09
+
+Security fixes:
+
+* RubyGems 2.0.7 and earlier are vulnerable to excessive CPU usage due to a
+  backtracking in Gem::Version validation.  See CVE-2013-4287 for full details
+  including vulnerable APIs.  Fixed versions include 2.0.8, 1.8.26 and
+  1.8.23.1 (for Ruby 1.9.3).  Issue #626 by Damir Sharipov.
+
+Bug fixes:
+
+* Fixed Gem.clear_paths when Security is defined at top-level.  Pull request
+  #625 by elarkin
+
+=== 2.0.7 / 2013-08-15
+
+* Extensions may now be built in parallel (therefore gems may be installed in
+  parallel).  Bug #607 by Hemant Kumar.
+* Changed broken link to RubyGems Bookshelf to point to RubyGems guides.  Ruby
+  pull request #369 by 謝致邦.
+* Fixed various test failures due to platform differences or poor tests.
+  Patches by Yui Naruse and Koichi Sasada.
+* Fixed documentation for Kernel#require.
+
+=== 2.0.6 / 2013-07-24
+
+Bug fixes:
+
+* Fixed the `--no-install` and `-I` options to `gem list` and friends.  Bug
+  #593 by Blargel.
+* Fixed crash when installing gems with extensions under the `-V` flag.  Bug
+  #601 by Nick Hoffman.
+* Fixed race condition retrieving HTTP connections in Gem::Request on JRuby.
+  Bug #597 by Hemant Kumar.
+* Fixed building extensions on ruby 1.9.3 under mingw.  Bug #594 by jonforums,
+  Bug #599 by Chris Riesbeck
+* Restored default of remote search to `gem search`.
+
+=== 2.0.5 / 2013-07-11
+
+Bug fixes:
+
+* Fixed building of extensions that run ruby in their makefiles.  Bug #589 by
+  Zachary Salzbank.
+
+=== 2.0.4 / 2013-07-09
+
+Bug fixes:
+
+* Fixed error caused by gem install not finding the right platform for your
+  platform. Bug #576 by John Anderson
+* Fixed pushing gems with the default host.  Bug #495 by Utkarsh Kukreti
+* Improved unhelpful error message from `gem owner --remove`.  Bug #488 by
+  Steve Klabnik
+* Fixed typo in `gem spec` help.  Pull request #563 by oooooooo
+* Fixed creation of build_info with --install-dir.  Bug #457 by Vít Ondruch.
+* RubyGems converts non-string dependency names to strings now.  Bug #505 by
+  Terence Lee
+* Outdated prerelease versions are now listed in `gem outdated`.
+* RubyGems now only calls fsync() on the specification when installing, not
+  every file from the gem.  This improves the performance of gem installation
+  on some systems.  Pull Request #556 by Grzesiek Kolodziejczyk
+* Removed surprise search term anchoring in `gem search` to restore 1.8-like
+  search behavior while still defaulting to --remote.  Pull request #562 by
+  Ben Bleything
+* Fixed handling of DESTDIR when building extensions.  Pull request #573 by
+  Akinori MUSHA
+* Fixed documentation of `gem pristine` defaults (--all is not a default).
+  Pull request #577 by Shannon Skipper
+* Fixed a windows extension-building test failure.  Pull request #575 by
+  Hiroshi Shirosaki
+* Fixed issue with `gem update` where it would attempt to use a Version
+  instead of a Requirement to find the latest gem.  Fixes #570 by Nick Cox.
+* RubyGems now ignores an empty but set RUBYGEMS_HOST environment variable.
+  Based on pull request #558 by Robin Dupret.
+* Removed duplicate creation of gem subdirectories in
+  Gem::DependencyInstaller.  Pull Request #456 by Vít Ondruch
+* RubyGems now works with Ruby built with `--with-ruby-version=''`.  Pull
+  Request #455 by Vít Ondruch
+* Fixed race condition when two threads require the same gem.  Ruby bug report
+  #8374 by Joel VanderWerf
+* Cleaned up siteconf between extension build and extension install.  Pull
+  request #587 by Dominic Cleal
+* Fix deprecation warnings when converting gemspecs to yaml.  Ruby commit
+  r41148 by Yui Naruse
+
+=== 2.0.3 / 2013-03-11
+
+* Bug fixes:
+  * Reverted automatic upgrade to HTTPS as it breaks RubyGems APIs.  Fixes
+    #506 by André Arko
+  * Use File.realpath to remove extra / while checking if files are
+    installable.  Issue #508 by Jacob Evans.
+  * When installing RubyGems on JRuby, the standard library is no longer
+    deleted.  Fixes #504 by Juan Sanchez, #507 by Charles Oliver Nutter.
+  * When building extconf.rb extensions use the intermediate destination
+    directory.  This addresses further issues with C extension building.
+  * Use the absolute path to the generated siteconf in case the extension
+    changes directories to run extconf.rb (like memcached).  Fixes #498 by
+    Chris Morris.
+  * Fixed default gem key and cert locations.  Pull request #511 by Samuel
+    Cochran.
+
+=== 2.0.2 / 2013-03-06
+
+* Bug fixes:
+  * HTTPS URLs are preferred over HTTP URLs.  RubyGems will now attempt to
+    upgrade any HTTP source to HTTPS.  Credit to Alex Gaynor.
+  * SSL Certificates are now installed properly.  Fixes #491 by hemanth.hm
+  * Fixed HTTP to HTTPS upgrade for rubygems.org.
+
+=== 2.0.1 / 2013-03-05
+
+* Bug fixes:
+  * Lazily load RubyGems.org API credentials to avoid failure during
+    RubyGems installation.  Bug #465 by Isaac Sanders.
+  * RubyGems now picks the latest prerelease to install.  Fixes bug #468 by
+    Santiago Pastorino.
+  * Improved detection of missing Zlib::GzipReader encoding support.  Works
+    around JRuby-only bug #472 by Matt Beedle.
+  * "Done installing documentation" is no longer displayed when documentation
+    generation is disabled.  Fixes bug #469 by Jeff Sandberg
+  * The existing executable check now respects --format-executable.  Pull
+    request #471 by Jeremy Evans.
+  * RubyGems no longer creates gem subdirectories when fetching gems.  Fixes
+    #482 by Loren Segal.
+  * RubyGems does not require OpenSSL like RubyGems 1.8, but still prefers it.
+    Fixes #481 by André Arko.
+  * RubyGems only fetches specs for list, search and query commands when
+    needed like RubyGems 1.x.  Fixes bug #487 by bitbuerster, Ruby bug #8019
+    by Ike Miller.
+  * Allow specification of mode for gem subdirectory creation.
+    Ruby bug #7713 by nobu
+  * Fix tests when an 'a.rb' exists.  Ruby bug #7749 by nobu.
+
+=== 2.0.0 / 2013-02-24
+
+RubyGems 2.0 includes several new features and many breaking changes.  Some of
+these changes will cause existing software to break.  These changes are a
+result of improvements to the internals of RubyGems that make it more
+maintainable and improve APIs for RubyGems users.
+
+If you are using bundler be sure to install a 1.3.0.prerelease version or
+newer.  Older versions of bundler will not work with RubyGems 2.0.
+
+Changes since RubyGems 1.8.25 (including past pre-releases):
+
+* Breaking changes:
+
+  * Deprecated Gem.unresolved_deps in favor of
+    Gem::Specification.unresolved_deps
+  * Merged Gem::Builder into Gem::Package.  Use Gem::Package.build(spec)
+    instead of Gem::Builder.new(spec).build
+  * Merged Gem::Format into Gem::Package.  Use Gem::Package.new instead
+    of Gem::Format.from_file_by_path
+  * Moved Gem::OldFormat to Gem::Package::Old.  Gem::Package will
+    automatically detect old gems for you, so there is no need to refer to it.
+  * Removed Gem::DocManager, replaced by Gem::RDoc and done_installing hook
+  * Removed Gem::Package::TarInput in favor of Gem::Package
+  * Removed Gem::Package::TarOutput in favor of Gem::Package
+  * Removed Gem::RemoteFetcher#open_uri_or_path. (steveklabnik)
+  * Removed Gem::SSL in favor of using OpenSSL directly
+  * Removed Gem.loaded_path
+  * Removed RSS generation from the gem indexer
+  * Removed benchmark option from .gemrc
+  * Removed broken YAML gemspec support in `gem build`
+  * Removed support for Ruby 1.9.1
+  * Removed many deprecated methods
+
+* Major enhancements:
+
+  * Improved support for default gems shipping with ruby 2.0.0+
+  * A gem can have arbitrary metadata through Gem::Specification#metadata
+  * `gem search` now defaults to --remote and is anchored like gem list.  Fixes
+    #166
+  * Added --document to replace --rdoc and --ri.  Use --no-document to disable
+    documentation, --document=rdoc to only generate rdoc.
+  * Only ri-format documentation is generated by default.
+  * `gem server` uses RDoc::Servlet from RDoc 4.0 to generate HTML
+    documentation.
+  * Add ability to install gems directly from a compatible gemdep
+    file (Gemfile, Isolate, gem.deps.rb)
+    <code>gem install --file path</code>
+  * Add ability to load gem activation information from a gemdeps
+    file (Gemfile, Isolate, gem.deps.rb).
+    Set RUBYGEMS_GEMDEPS=path to have it loaded. Use - as the path
+    to autodetect (current and parent directories are searched).
+
+* Minor enhancements:
+  * Added `gem check --doctor` to clean up after failed uninstallation.  Bug
+    #419 by Erik Hollensbe
+  * RubyGems no longer defaults to uninstalling gems if a dependency would be
+    broken.  Now you must manually say "yes".  Pull Request #406 by Shannon
+    Skipper.
+  * Gem::DependencyInstaller now passes build_args down to the installer.
+    Pull Request #412 by Sam Rawlins.
+  * Added a cmake builder.  Pull request #265 by Allan Espinosa.
+  * Removed rubyforge page from gem list output
+  * Added --only-executables option to `gem pristine`.  Fixes #326
+  * Added -I flag for 'gem query' to exclude installed items
+  * Added Gem.install(name, version=default) for interactive sessions
+  * Added Gem::FilePermissionError#directory
+  * Added Gem::rubygems_version which is like Gem::ruby_version
+  * Added RUBYGEMS_HOST documentation to `gem env`
+  * Added a post_installs hook that runs after Gem::DependencyInstaller
+    finishes installing a set of gems
+  * Added a usage method for Gem::Commands::OwnerCommand. (ffmike)
+  * Added an optional type parameter to Gem::Specification#doc_dir.
+  * Added announcements url and clarified how to file tickets
+  * Added guidance for how to use rdoc and ri in setup command. (jjb)
+  * Attempting to install multiple gems with --version is now an error.  You
+    can specify per-gem versions like <code>rake:0.9.5</code>
+  * Clarified Gem::CommandManager example code to avoid multi load problems.
+    (baroquebobcat)
+  * Corrupt or bad cached specs are now re-downloaded. (cookrn)
+  * Extension build arguments are saved from install and reused for pristine
+  * If the OS allows it, documentation is built in a forked background
+    process. (alexch)
+  * Imported gem yank from the gemcutter gem.  Fixes #177, #343
+  * Packaged gems now contain and verify SHA1 checksums
+  * Removed commas from gem update summary so you can paste it back to
+    cleanup.  (amatsuda)
+  * RubyGems will now warn when building gems with prerelease dependencies.
+    Fixes #255
+  * The RUBYGEMS_HOST environment variable is used to determine appropriate
+    API key for pushing or yanking gems
+  * Uninstall is now performed in reverse topological order.
+  * Users are told what to type when they try to uninstall a gem outside
+    GEM_HOME
+  * When building gems with non-world-readable files a warning is shown.
+
+* Bug fixes:
+  * Gem.refresh now maintains the active gem list.  Clearing the list would
+    cause double-loads which would cause other bugs.  Pull Request #427 by
+    Jeremy Evans
+  * RubyGems now refuses to read the gem push credentials file if it has
+    insecure permissions.  Pull Request #438 by Shannon Skipper
+  * RubyGems now requires a local gem name to end in '.gem'.  Issue #407 by
+    Santiago Pastorino.
+  * Do not allow old-format gems to be installed with a security policy that
+    verifies data.
+  * Gem installation will fail if RubyGems cannot load the specification from
+    the gem.  Bug #419 by Erik Hollensbe
+  * RubyGems tests now run in FIPS mode.  Issue #365 by Vít Ondruch
+  * Only update the spec cache when we have permission.  Ruby Bug #7509
+  * gem install now ignores directories and non .gem files that match the gem
+    to install.  Bug #407 by Santiago Pastorino.
+  * Added PID to setup bin_file while installing RubyGems to protect against
+    errors. Fixes #328 by ConradIrwin
+  * Added missing require in Gem::Uninstaller when format_executable is set.
+    (sakuro)
+  * Exact gem command name matches are now chosen even if a longer command
+    overlaps the exact name
+  * Fixed Gem.loaded_path? with a Pathname instance. (mattetti)
+  * Fixed Gem::Dependency.new mismatch with rubygems.org checks
+  * Fixed SecurityError in Gem::Specification.load when $SAFE=1. (ged)
+  * Fixed SystemStackError with "gem list -r -a" on 1.9 (cldwalker)
+  * Fixed `gem owners` command so that exceptions don't stop the rest of the
+    command from completing
+  * Fixed `gem unpack uninstalled_gem` default version picker.
+  * Fixed defunct rubyforge urls in gem command line help
+  * Fixed documentation for the various hooks collections
+  * Fixed documentation generation on setup when the gem directory does not
+    exist.  Fixes #253
+  * Fixed documentation to reflect where defaults overrides are loaded from.
+    (ferrous26)
+  * Fixed editing of a Makefile with 8-bit characters.  Fixes #181
+  * Fixed gem loading issue caused by dependencies not resolving.
+  * Fixed independent testing of test_gem_package_tar_output.  Ruby Bug #4686
+    by Shota Fukumori
+  * Fixed typo in uninstall message. (sandal)
+  * Gem::Requirement#<=> returns nil on non-requirement arg.
+  * Gem::Requirement.satisfied_by? raises ArgumentError if given a non-version
+    argument
+  * Gem::Version#initialize no longer modifies its parameter. (miaout17)
+  * Group-writable permissions are now allowed for gem repositories. (ctcherry)
+  * Memoized values in Gem::Specification are now reset the version or
+    platform changes. Fixes #78
+  * More specific errors are raised for bad requirements. (arsduo)
+  * Removed reference to 'sources' gem in documentation
+  * Removed unused block arguments to avoid creating Proc objects. (k-tsj)
+  * RubyGems now asks before overwriting executable wrappers.  Ruby Bug #1800
+  * The bindir is now created with mkdir_p during install. (voxik)
+  * URI scheme matching is no longer case-sensitive.  Fixes #322
+  * ext/builder now checks $MAKE as well as $make (okkez)
+
+Changes since RubyGems 2.0.0.rc.2:
+
+* Bug fixes:
+  * Gem.gzip and Gem.gunzip now return strings with BINARY encoding.  Issue
+    #450 by Jeremy Kemper
+  * Fixed placement of executables with --user-install.  Ruby bug #7779 by Jon
+    Forums.
+  * Fixed `gem update` with --user-install.  Ruby bug #7779 by Jon Forums.
+  * Fixed test_initialize_user_install for windows.  Ruby bug #7885 by Luis
+    Lavena.
+  * Create extension destination directory before building extensions.  Ruby
+    Bug #7897 and patch by Kenta Murata.
+  * Fixed verification of gems at LowSecurity due to missing signature.
+    Thanks to André Arko.
+
+=== 2.0.0.rc.2 / 2013-02-08
+
+* Bug fixes:
+  * Fixed signature verification of gems which was broken only on master.
+    Thanks to Brian Buchanan.
+  * Proper exceptions are raised when verifying an unsigned gem.  Thanks to
+    André Arko.
+
+=== 2.0.0.rc.1 / 2013-01-08
+
+* Minor enhancements:
+  * This release of RubyGems can push gems to rubygems.org.  Ordinarily
+    prerelease versions of RubyGems cannot push gems.
+  * Added `gem check --doctor` to clean up after failed uninstallation.  Bug
+    #419 by Erik Hollensbe
+
+* Bug fixes:
+  * Fixed exception raised when attempting to push gems to rubygems.org.  Bug
+    #418 by André Arko
+  * Gem installation will fail if RubyGems cannot load the specification from
+    the gem.  Bug #419 by Erik Hollensbe
+
+=== 2.0.0.preview2.2 / 2012-12-14
+
+* Minor enhancements:
+  * Added a cmake builder.  Pull request #265 by Allan Espinosa.
+  * Removed rubyforge page from gem list output
+
+* Bug fixes:
+  * Restored RubyGems 1.8 packaging behavior of omitting directories.  Bug
+    #413 by Jeremy Kemper.
+
+=== 2.0.0.preview2.1 / 2012-12-08
+
+* Minor enhancements:
+  * Gem::DependencyInstaller now passes build_args down to the installer.
+    Pull Request #412 by Sam Rawlins.
+  * RubyGems no longer defaults to uninstalling gems if a dependency would be
+    broken.  Now you must manually say "yes".  Pull Request #406 by Shannon
+    Skipper.
+
+* Bug fixes:
+  * RubyGems tests now run in FIPS mode.  Issue #365 by Vít Ondruch
+  * Fixed Gem::Specification#base_dir for default gems.  Ruby Bug #7469
+  * Only update the spec cache when we have permission.  Ruby Bug #7509
+  * Restored order of version marking.  Fixes an issue with bundler.  Thanks
+    to Aaron Patterson and Terence Lee.
+  * Gem cleanup now skips default gems.  Pull Request #409 by Kouhei Sutou
+  * gem list, search and query can show remote gems again.  Bug #410 by
+    Henry Maddocks
+  * gem install now ignores directories that match the gem to install.  Bug
+    #407 by Santiago Pastorino.
+
+=== 2.0.0.preview2 / 2012-12-01
+
+This release contains two commits not present in Ruby 2.0.0.preview2.  One
+commit is for ruby 1.8.7 support, the second allows RubyGems to work under
+$SAFE=1.  There is no functional difference compared to Ruby 2.0.0.preview2
+
+* Breaking changes:
+
+  * Deprecated Gem.unresolved_deps in favor of
+    Gem::Specification.unresolved_deps
+  * Merged Gem::Builder into Gem::Package.  Use Gem::Package.build(spec)
+    instead of Gem::Builder.new(spec).build
+  * Merged Gem::Format into Gem::Package.  Use Gem::Package.new instead
+    of Gem::Format.from_file_by_path
+  * Moved Gem::OldFormat to Gem::Package::Old.  Gem::Package will
+    automatically detect old gems for you, so there is no need to refer to it.
+  * Removed Gem::DocManager, replaced by Gem::RDoc and done_installing hook
+  * Removed Gem::Package::TarInput in favor of Gem::Package
+  * Removed Gem::Package::TarOutput in favor of Gem::Package
+  * Removed Gem::RemoteFetcher#open_uri_or_path. (steveklabnik)
+  * Removed Gem::SSL in favor of using OpenSSL directly
+  * Removed Gem.loaded_path
+  * Removed RSS generation from the gem indexer
+  * Removed benchmark option from .gemrc
+  * Removed broken YAML gemspec support in `gem build`
+  * Removed support for Ruby 1.9.1
+  * Removed many deprecated methods
+
+* Major enhancements:
+
+  * Improved support for default gems shipping with ruby 2.0.0+
+  * A gem can have arbitrary metadata through Gem::Specification#metadata
+  * `gem search` now defaults to --remote and is anchored like gem list.  Fixes
+    #166
+  * Added --document to replace --rdoc and --ri.  Use --no-document to disable
+    documentation, --document=rdoc to only generate rdoc.
+  * Only ri-format documentation is generated by default.
+  * `gem server` uses RDoc::Servlet from RDoc 4.0 to generate HTML
+    documentation.
+  * Add ability to install gems directly from a compatible gemdep
+    file (Gemfile, Isolate, gem.deps.rb)
+    <code>gem install --file path</code>
+  * Add ability to load gem activation information from a gemdeps
+    file (Gemfile, Isolate, gem.deps.rb).
+    Set RUBYGEMS_GEMDEPS=path to have it loaded. Use - as the path
+    to autodetect (current and parent directories are searched).
+
+* Minor enhancements:
+
+  * Added --only-executables option to `gem pristine`.  Fixes #326
+  * Added -I flag for 'gem query' to exclude installed items
+  * Added Gem.install(name, version=default) for interactive sessions
+  * Added Gem::FilePermissionError#directory
+  * Added Gem::rubygems_version which is like Gem::ruby_version
+  * Added RUBYGEMS_HOST documentation to `gem env`
+  * Added a post_installs hook that runs after Gem::DependencyInstaller
+    finishes installing a set of gems
+  * Added a usage method for Gem::Commands::OwnerCommand. (ffmike)
+  * Added an optional type parameter to Gem::Specification#doc_dir.
+  * Added announcements url and clarified how to file tickets
+  * Added guidance for how to use rdoc and ri in setup command. (jjb)
+  * Attempting to install multiple gems with --version is now an error.  You
+    can specify per-gem versions like <code>rake:0.9.5</code>
+  * Clarified Gem::CommandManager example code to avoid multi load problems.
+    (baroquebobcat)
+  * Corrupt or bad cached specs are now re-downloaded. (cookrn)
+  * Extension build arguments are saved from install and reused for pristine
+  * If the OS allows it, documentation is built in a forked background
+    process. (alexch)
+  * Imported gem yank from the gemcutter gem.  Fixes #177, #343
+  * Packaged gems now contain and verify SHA1 checksums
+  * Removed commas from gem update summary so you can paste it back to
+    cleanup.  (amatsuda)
+  * RubyGems will now warn when building gems with prerelease dependencies.
+    Fixes #255
+  * The RUBYGEMS_HOST environment variable is used to determine appropriate
+    API key for pushing or yanking gems
+  * Uninstall is now performed in reverse topological order.
+  * Users are told what to type when they try to uninstall a gem outside
+    GEM_HOME
+  * When building gems with non-world-readable files a warning is shown.
+
+* Bug fixes:
+
+  * Added PID to setup bin_file while installing RubyGems to protect against
+    errors. Fixes #328 by ConradIrwin
+  * Added missing require in Gem::Uninstaller when format_executable is set.
+    (sakuro)
+  * Exact gem command name matches are now chosen even if a longer command
+    overlaps the exact name
+  * Fixed Gem.loaded_path? with a Pathname instance. (mattetti)
+  * Fixed Gem::Dependency.new mismatch with rubygems.org checks
+  * Fixed SecurityError in Gem::Specification.load when $SAFE=1. (ged)
+  * Fixed SystemStackError with "gem list -r -a" on 1.9 (cldwalker)
+  * Fixed `gem owners` command so that exceptions don't stop the rest of the
+    command from completing
+  * Fixed `gem unpack uninstalled_gem` default version picker.
+  * Fixed defunct rubyforge urls in gem command line help
+  * Fixed documentation for the various hooks collections
+  * Fixed documentation generation on setup when the gem directory does not
+    exist.  Fixes #253
+  * Fixed documentation to reflect where defaults overrides are loaded from.
+    (ferrous26)
+  * Fixed editing of a Makefile with 8-bit characters.  Fixes #181
+  * Fixed gem loading issue caused by dependencies not resolving.
+  * Fixed independent testing of test_gem_package_tar_output.  Ruby Bug #4686
+    by Shota Fukumori
+  * Fixed typo in uninstall message. (sandal)
+  * Gem::Requirement#<=> returns nil on non-requirement arg.
+  * Gem::Requirement.satisfied_by? raises ArgumentError if given a non-version
+    argument
+  * Gem::Version#initialize no longer modifies its parameter. (miaout17)
+  * Group-writable permissions are now allowed for gem repositories. (ctcherry)
+  * Memoized values in Gem::Specification are now reset the version or
+    platform changes. Fixes #78
+  * More specific errors are raised for bad requirements. (arsduo)
+  * Removed reference to 'sources' gem in documentation
+  * Removed unused block arguments to avoid creating Proc objects. (k-tsj)
+  * RubyGems now asks before overwriting executable wrappers.  Ruby Bug #1800
+  * The bindir is now created with mkdir_p during install. (voxik)
+  * URI scheme matching is no longer case-sensitive.  Fixes #322
+  * ext/builder now checks $MAKE as well as $make (okkez)
+
+
+------------------------------------------------------------------------------
+
+RubyGems installed the following executables:
+	/Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/bin/gem
+

@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Set RUBIES when sourced.
+RUBIES=($( ls -1d "$rvm_path/rubies"/* 2>/dev/null ))
+
 # Install rubies via rvm and reload RUBIES
 function mrvm()
 {
@@ -12,7 +15,7 @@ function mrvm()
     if [[ -n "${BASH_SOURCE:-$_}" && -f "${BASH_SOURCE:-$_}" ]]
     then
       export rvm_path="${BASH_SOURCE:-$_}"
-      rvm_path="$( \cd "${rvm_path%/scripts/extras/chruby.sh}">/dev/null; pwd )"
+      rvm_path="$( \command \cd "${rvm_path%/scripts/extras/chruby.sh}">/dev/null; pwd )"
     elif [[ -x "$HOME/.rvm/bin/rvm" ]]
     then export rvm_path="$HOME/.rvm"
     elif [[ -x "/usr/local/rvm/bin/rvm" ]]

@@ -1,0 +1,22 @@
+[2014-12-11 22:46:38] __rvm_rm_rf
+__rvm_rm_rf () 
+{ 
+    __rvm_rm_rf_verbose "$@"
+}
+current path: /web/gilt
+GEM_HOME=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2
+PATH=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2/bin:/Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/bin:/Users/abalonperin/dotfiles/rvm/rvm/bin:/Users/abalonperin/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/MacGPG2/bin
+GEM_PATH=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2
+command(2): __rvm_rm_rf /Users/abalonperin/dotfiles/rvm/rvm/src/ruby-1.8.7-p374
+++ __rvm_rm_rf_verbose /Users/abalonperin/dotfiles/rvm/rvm/src/ruby-1.8.7-p374
+++ typeset target
+++ target=/Users/abalonperin/dotfiles/rvm/rvm/src/ruby-1.8.7-p374
+++ [[ -n '' ]]
+++ [[ -n 3.2.53(1)-release ]]
+++ builtin shopt -s extglob
+++ case "${target}" in
+++ [[ -z /Users/abalonperin/dotfiles/rvm/rvm/src/ruby-1.8.7-p374 ]]
+++ [[ -d /Users/abalonperin/dotfiles/rvm/rvm/src/ruby-1.8.7-p374 ]]
+++ command rm -rf /Users/abalonperin/dotfiles/rvm/rvm/src/ruby-1.8.7-p374
+++ rm -rf /Users/abalonperin/dotfiles/rvm/rvm/src/ruby-1.8.7-p374
+++ true

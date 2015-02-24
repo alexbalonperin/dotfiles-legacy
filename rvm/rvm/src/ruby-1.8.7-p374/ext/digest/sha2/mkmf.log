@@ -1,6 +1,6 @@
 have_header: checking for sys/cdefs.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -E -I../../.. -I../../../. -I../../.././ext/digest/sha2 -I../../.././ext/digest/sha2/..  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common    conftest.c -o conftest.i"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -E -I../../.. -I../../../. -I../../.././ext/digest/sha2 -I../../.././ext/digest/sha2/..  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common    conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include <sys/cdefs.h>
@@ -10,7 +10,7 @@ checked program was:
 
 have_header: checking for inttypes.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -E -I../../.. -I../../../. -I../../.././ext/digest/sha2 -I../../.././ext/digest/sha2/..  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common    conftest.c -o conftest.i"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -E -I../../.. -I../../../. -I../../.././ext/digest/sha2 -I../../.././ext/digest/sha2/..  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common    conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include <inttypes.h>
@@ -20,7 +20,7 @@ checked program was:
 
 have_header: checking for unistd.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -E -I../../.. -I../../../. -I../../.././ext/digest/sha2 -I../../.././ext/digest/sha2/..  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common    conftest.c -o conftest.i"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -E -I../../.. -I../../../. -I../../.././ext/digest/sha2 -I../../.././ext/digest/sha2/..  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common    conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include <unistd.h>
@@ -30,7 +30,7 @@ checked program was:
 
 have_type: checking for uint64_t in defs.h with -DHAVE_CONFIG_H -DHAVE_SYS_CDEFS_H -DHAVE_INTTYPES_H -DHAVE_UNISTD_H... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -I../../.. -I../../../. -I../../.././ext/digest/sha2 -I../../.././ext/digest/sha2/..  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common    -DHAVE_CONFIG_H -DHAVE_SYS_CDEFS_H -DHAVE_INTTYPES_H -DHAVE_UNISTD_H -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../../.. -I../../../. -I../../.././ext/digest/sha2 -I../../.././ext/digest/sha2/..  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common    -DHAVE_CONFIG_H -DHAVE_SYS_CDEFS_H -DHAVE_INTTYPES_H -DHAVE_UNISTD_H -c conftest.c"
 checked program was:
 /* begin */
 1: #include <defs.h>

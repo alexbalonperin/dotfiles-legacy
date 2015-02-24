@@ -1,0 +1,13 @@
+/Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/bin/ruby extconf.rb
+/Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/gem-wrappers-1.2.7/lib/gem-wrappers/installer.rb:52:in `initialize': Permission denied @ rb_sysopen - /Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2/wrappers/cap (Errno::EACCES)
+	from /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/gem-wrappers-1.2.7/lib/gem-wrappers/installer.rb:52:in `open'
+	from /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/gem-wrappers-1.2.7/lib/gem-wrappers/installer.rb:52:in `install_file'
+	from /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/gem-wrappers-1.2.7/lib/gem-wrappers/installer.rb:37:in `install'
+	from /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/gem-wrappers-1.2.7/lib/gem-wrappers.rb:20:in `block in install'
+	from /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/gem-wrappers-1.2.7/lib/gem-wrappers.rb:19:in `each'
+	from /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/gem-wrappers-1.2.7/lib/gem-wrappers.rb:19:in `install'
+	from /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/gem-wrappers-1.2.7/lib/gem-wrappers/command.rb:62:in `execute_regenerate'
+	from /Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/lib/ruby/gems/2.1.0/gems/gem-wrappers-1.2.7/lib/gem-wrappers/command.rb:37:in `execute'
+	from extconf.rb:21:in `<main>'
+
+extconf failed, exit code 1

@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: OauthUtil#percent_encode
+is_singleton: false
+name: percent_encode
+params: ( string )
+visibility: public

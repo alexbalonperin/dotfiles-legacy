@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Sets the street address after capitalizing each word within the street address.
+full_name: Geokit::GeoLoc#street_address=
+is_singleton: false
+name: street_address=
+params: (address)
+visibility: public

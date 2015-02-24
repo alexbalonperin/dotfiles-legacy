@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Geokit::Geocoders::__define_accessors
+is_singleton: true
+name: __define_accessors
+params: ()
+visibility: public

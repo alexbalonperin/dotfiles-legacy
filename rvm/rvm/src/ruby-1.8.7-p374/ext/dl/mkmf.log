@@ -1,4 +1,4 @@
-"/usr/local/bin/gcc-4.2 -E -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer  conftest.c -o conftest.i"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -E -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer  conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include "config.h"
@@ -7,7 +7,7 @@ checked program was:
 4: #endif
 /* end */
 
-"/usr/local/bin/gcc-4.2 -E -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer  conftest.c -o conftest.i"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -E -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer  conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include "config.h"
@@ -16,7 +16,7 @@ checked program was:
 4: #endif
 /* end */
 
-"/usr/local/bin/gcc-4.2 -E -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer  conftest.c -o conftest.i"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -E -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer  conftest.c -o conftest.i"
 conftest.c:3:2: error: #error void* not needed
 checked program was:
 /* begin */
@@ -28,7 +28,7 @@ checked program was:
 
 have_header: checking for windows.h... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -E -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer  conftest.c -o conftest.i"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -E -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer  conftest.c -o conftest.i"
 conftest.c:1:21: error: windows.h: No such file or directory
 checked program was:
 /* begin */
@@ -39,7 +39,7 @@ checked program was:
 
 have_header: checking for dlfcn.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -E -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer  conftest.c -o conftest.i"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -E -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer  conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include <dlfcn.h>
@@ -49,7 +49,7 @@ checked program was:
 
 have_library: checking for main() in -ldl... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static -ldl  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static -ldl  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -61,7 +61,7 @@ checked program was:
 
 have_func: checking for dlopen()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -ldl  -lruby-static -ldl  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -ldl  -lruby-static -ldl  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘dlopen’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -73,7 +73,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))dlopen; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -ldl  -lruby-static -ldl  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -ldl  -lruby-static -ldl  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -85,7 +85,7 @@ checked program was:
 
 have_func: checking for dlclose()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -ldl  -lruby-static -ldl  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -ldl  -lruby-static -ldl  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘dlclose’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -97,7 +97,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))dlclose; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -ldl  -lruby-static -ldl  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -ldl  -lruby-static -ldl  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -109,7 +109,7 @@ checked program was:
 
 have_func: checking for dlsym()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -ldl  -lruby-static -ldl  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -ldl  -lruby-static -ldl  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘dlsym’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -121,7 +121,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))dlsym; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -ldl  -lruby-static -ldl  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -ldl  -lruby-static -ldl  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -133,7 +133,7 @@ checked program was:
 
 have_func: checking for dlerror()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -ldl  -lruby-static -ldl  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -ldl  -lruby-static -ldl  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘dlerror’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -145,7 +145,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))dlerror; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -ldl  -lruby-static -ldl  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/dl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -I. -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   -fno-defer-pop -fno-omit-frame-pointer conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -ldl  -lruby-static -ldl  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/

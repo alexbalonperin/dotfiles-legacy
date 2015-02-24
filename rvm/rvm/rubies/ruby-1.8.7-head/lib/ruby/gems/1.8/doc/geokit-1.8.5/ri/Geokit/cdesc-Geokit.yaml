@@ -1,0 +1,20 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: require 'forwardable'
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: VERSION
+  value: "'1.8.5'"
+full_name: Geokit
+includes: []
+
+instance_methods: []
+
+name: Geokit
+superclass: 

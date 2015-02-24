@@ -1,0 +1,37 @@
+[2014-12-11 22:46:43] __rvm_remove_path_list_remove
+__rvm_remove_path_list_remove () 
+{ 
+    typeset __item;
+    for __item in "$@";
+    do
+        printf "Removing ${__item} - ";
+        __rvm_rm_rf "${__item}" && printf "ok\n" || { 
+            typeset __res=$?;
+            echo "failed\n";
+            return ${__res}
+        };
+    done
+}
+current path: /web/admin
+PATH=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-2.1.2/bin:/Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-2.1.2/bin:/Users/abalonperin/dotfiles/rvm/rvm/bin:/Users/abalonperin/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/MacGPG2/bin
+command(2): __rvm_remove_path_list_remove /Users/abalonperin/dotfiles/rvm/rvm/wrappers/ruby-1.8.7-p374
+++ typeset __item
+++ for __item in '"$@"'
+++ printf 'Removing /Users/abalonperin/dotfiles/rvm/rvm/wrappers/ruby-1.8.7-p374 - '
+Removing /Users/abalonperin/dotfiles/rvm/rvm/wrappers/ruby-1.8.7-p374 - ++ __rvm_rm_rf /Users/abalonperin/dotfiles/rvm/rvm/wrappers/ruby-1.8.7-p374
+++ __rvm_rm_rf_verbose /Users/abalonperin/dotfiles/rvm/rvm/wrappers/ruby-1.8.7-p374
+++ typeset target
+++ target=/Users/abalonperin/dotfiles/rvm/rvm/wrappers/ruby-1.8.7-p374
+++ [[ -n '' ]]
+++ [[ -n 3.2.53(1)-release ]]
+++ builtin shopt -s extglob
+++ case "${target}" in
+++ [[ -z /Users/abalonperin/dotfiles/rvm/rvm/wrappers/ruby-1.8.7-p374 ]]
+++ [[ -d /Users/abalonperin/dotfiles/rvm/rvm/wrappers/ruby-1.8.7-p374 ]]
+++ [[ -f /Users/abalonperin/dotfiles/rvm/rvm/wrappers/ruby-1.8.7-p374 ]]
+++ [[ -L /Users/abalonperin/dotfiles/rvm/rvm/wrappers/ruby-1.8.7-p374 ]]
+++ command rm -f /Users/abalonperin/dotfiles/rvm/rvm/wrappers/ruby-1.8.7-p374
+++ rm -f /Users/abalonperin/dotfiles/rvm/rvm/wrappers/ruby-1.8.7-p374
+++ true
+++ printf 'ok\n'
+ok

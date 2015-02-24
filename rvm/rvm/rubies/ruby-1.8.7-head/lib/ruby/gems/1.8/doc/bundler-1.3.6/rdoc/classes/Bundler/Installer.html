@@ -88,10 +88,10 @@
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000256">generate_bundler_executable_stubs</a>&nbsp;&nbsp;
-      <a href="#M000253">install</a>&nbsp;&nbsp;
-      <a href="#M000255">install_gem_from_spec</a>&nbsp;&nbsp;
-      <a href="#M000254">run</a>&nbsp;&nbsp;
+      <a href="#M000272">generate_bundler_executable_stubs</a>&nbsp;&nbsp;
+      <a href="#M000269">install</a>&nbsp;&nbsp;
+      <a href="#M000271">install_gem_from_spec</a>&nbsp;&nbsp;
+      <a href="#M000270">run</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -126,12 +126,12 @@
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M000253" class="method-detail">
-        <a name="M000253"></a>
+      <div id="method-M000269" class="method-detail">
+        <a name="M000269"></a>
 
         <div class="method-heading">
-          <a href="Installer.src/M000253.html" target="Code" class="method-signature"
-            onclick="popupCode('Installer.src/M000253.html');return false;">
+          <a href="Installer.src/M000269.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000269.html');return false;">
           <span class="method-name">install</span><span class="method-args">(root, definition, options = {})</span>
           </a>
         </div>
@@ -139,7 +139,7 @@
         <div class="method-description">
           <p>
 Begins the installation process for <a href="../Bundler.html">Bundler</a>.
-For more information see the <a href="Installer.html#M000254">run</a>
+For more information see the <a href="Installer.html#M000270">run</a>
 method on this class.
 </p>
         </div>
@@ -147,12 +147,12 @@ method on this class.
 
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000256" class="method-detail">
-        <a name="M000256"></a>
+      <div id="method-M000272" class="method-detail">
+        <a name="M000272"></a>
 
         <div class="method-heading">
-          <a href="Installer.src/M000256.html" target="Code" class="method-signature"
-            onclick="popupCode('Installer.src/M000256.html');return false;">
+          <a href="Installer.src/M000272.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000272.html');return false;">
           <span class="method-name">generate_bundler_executable_stubs</span><span class="method-args">(spec, options = {})</span>
           </a>
         </div>
@@ -161,12 +161,12 @@ method on this class.
         </div>
       </div>
 
-      <div id="method-M000255" class="method-detail">
-        <a name="M000255"></a>
+      <div id="method-M000271" class="method-detail">
+        <a name="M000271"></a>
 
         <div class="method-heading">
-          <a href="Installer.src/M000255.html" target="Code" class="method-signature"
-            onclick="popupCode('Installer.src/M000255.html');return false;">
+          <a href="Installer.src/M000271.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000271.html');return false;">
           <span class="method-name">install_gem_from_spec</span><span class="method-args">(spec, standalone = false)</span>
           </a>
         </div>
@@ -175,19 +175,19 @@ method on this class.
         </div>
       </div>
 
-      <div id="method-M000254" class="method-detail">
-        <a name="M000254"></a>
+      <div id="method-M000270" class="method-detail">
+        <a name="M000270"></a>
 
         <div class="method-heading">
-          <a href="Installer.src/M000254.html" target="Code" class="method-signature"
-            onclick="popupCode('Installer.src/M000254.html');return false;">
+          <a href="Installer.src/M000270.html" target="Code" class="method-signature"
+            onclick="popupCode('Installer.src/M000270.html');return false;">
           <span class="method-name">run</span><span class="method-args">(options)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p>
-Runs the <a href="Installer.html#M000253">install</a> procedures for a
+Runs the <a href="Installer.html#M000269">install</a> procedures for a
 specific Gemfile.
 </p>
 <p>
@@ -200,17 +200,17 @@ it RVM or at a system path.
 Secondly, it checks if <a href="../Bundler.html">Bundler</a> has been
 configured to be &quot;frozen&quot; Frozen ensures that the Gemfile and the
 Gemfile.lock file are matching. This stops a situation where a developer
-may update the Gemfile but may not <a href="Installer.html#M000254">run</a>
-`bundle <a href="Installer.html#M000253">install</a>`, which leads to the
+may update the Gemfile but may not <a href="Installer.html#M000270">run</a>
+`bundle <a href="Installer.html#M000269">install</a>`, which leads to the
 Gemfile.lock file not being correctly updated. If this file is not
 correctly updated then any other developer running `bundle <a
-href="Installer.html#M000253">install</a>` will potentially not <a
-href="Installer.html#M000253">install</a> the correct gems.
+href="Installer.html#M000269">install</a>` will potentially not <a
+href="Installer.html#M000269">install</a> the correct gems.
 </p>
 <p>
 Thirdly, <a href="../Bundler.html">Bundler</a> checks if there are any
 dependencies specified in the Gemfile using <a
-href="Environment.html#M000271">Bundler::Environment#dependencies</a>. If
+href="Environment.html#M000321">Bundler::Environment#dependencies</a>. If
 there are no dependencies specified then <a
 href="../Bundler.html">Bundler</a> returns a warning message stating so and
 this method returns.
@@ -233,7 +233,7 @@ set earlier.
 <p>
 Sixthly, a new Gemfile.lock is created from the installed gems to ensure
 that the next time that a user runs `bundle <a
-href="Installer.html#M000253">install</a>` they will receive any updates
+href="Installer.html#M000269">install</a>` they will receive any updates
 from this process.
 </p>
 <p>

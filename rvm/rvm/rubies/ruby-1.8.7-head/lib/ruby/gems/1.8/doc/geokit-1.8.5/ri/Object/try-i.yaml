@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: self
+comment: 
+full_name: Object#try
+is_singleton: false
+name: try
+params: (*a, &b) {|self| ...}
+visibility: public

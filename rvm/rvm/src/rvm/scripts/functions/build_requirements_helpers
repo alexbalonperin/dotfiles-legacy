@@ -49,7 +49,7 @@ __rvm_filter_installed_package_from_missing()
   typeset __package
   for __package
   do
-    [[ " ${packages_missing[*]} " =~ " ${__package} " ]] || __rvm_add_once packages_installed "${__package}"
+    [[ " ${packages_missing[*]} " == *" ${__package} "* ]] || __rvm_add_once packages_installed "${__package}"
   done
   case "$rvm_autolibs_flag_number" in
     (0|1|2) # just ignore
@@ -123,7 +123,7 @@ requirements_detect_installed()
 
 requirements_version_minimal()
 {
-  if [[ " ${packages_to_install[*]} " =~ " $1 " ]]
+  if [[ " ${packages_to_install[*]} " == *" $1 "* ]]
   then return 0
   fi
   typeset latest_version="$(
@@ -142,7 +142,8 @@ requirements_version_minimal()
 rvm_requiremnts_fail()
 {
   rvm_$1 "$2
-RVM autolibs is now configured with mode '2' => 'check and stop if missing',
+RVM autolibs is now configured with mode '$rvm_autolibs_flag_number' =>
+  '$(__rvm_autolibs_translate_description; echo $rvm_autolibs_flag_description)',
 please run \`rvm autolibs enable\` to let RVM do its job or run and read \`rvm autolibs [help]\`
 or visit https://rvm.io/rvm/autolibs for more information."
 }

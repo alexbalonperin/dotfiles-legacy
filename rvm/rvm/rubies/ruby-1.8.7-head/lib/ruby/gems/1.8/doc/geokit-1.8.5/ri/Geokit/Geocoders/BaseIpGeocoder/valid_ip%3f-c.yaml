@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Geokit::Geocoders::BaseIpGeocoder::valid_ip?
+is_singleton: true
+name: valid_ip?
+params: (ip)
+visibility: public

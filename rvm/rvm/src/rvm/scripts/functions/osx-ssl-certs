@@ -5,9 +5,20 @@ requirements_osx_update_openssl_cert_old() [[ ! -f "$cert_file" ||
   "$cert_file" -ot /System/Library/Keychains/SystemRootCertificates.keychain
 ]]
 
+requirements_osx_update_openssl_cert_create_dir_sudo()
+{
+  rvm_warn "mkdir -p \"$ssl_dir\" failed, retrying with sudo"
+  if __rvm_try_sudo mkdir -p "$ssl_dir"
+  then rvm_log "and sudo mkdir worked"
+  else return $?
+  fi
+}
+
 requirements_osx_update_openssl_cert_create_dir()
 {
-  [[ -d "$ssl_dir" ]] || mkdir -p "$ssl_dir" || __rvm_try_sudo mkdir -p "$ssl_dir" ||
+  [[ -d "$ssl_dir" ]] ||
+  mkdir -p "$ssl_dir" ||
+  requirements_osx_update_openssl_cert_create_dir_sudo ||
   {
     typeset __ret=$?
     rvm_error "Can not create directory '$ssl_dir' for certificates."
@@ -38,13 +49,25 @@ requirements_osx_update_openssl_cert_create_cert()
 requirements_osx_update_openssl_cert_target_move()
 {
   [[ "$__target" == "$cert_file" ]] ||
-  __rvm_try_sudo \mv -f "$__target" "$cert_file" ||
+  __rvm_try_sudo \command \mv -f "$__target" "$cert_file" ||
   {
     typeset __ret=$?
     rm -f "$__target"
     return ${__ret}
   }
 }
+
+requirements_osx_update_openssl_cert_ensure_readable()
+{
+  __target="$cert_file"
+  while
+    [[ ! -r "$__target" && "$__target" != "" ]]
+  do
+    __rvm_try_sudo \chmod ugo+rX "$__target"
+    __target="${__target%/*}"
+  done
+}
+
 requirements_osx_update_openssl_cert_run()
 {
   typeset __target="$cert_file"
@@ -58,10 +81,10 @@ requirements_osx_update_openssl_cert_run()
 
   rvm_log "Updating certificates in '$cert_file'."
 
-  requirements_osx_update_openssl_cert_create_dir    || return $?
-  requirements_osx_update_openssl_cert_target_select || return $?
-  requirements_osx_update_openssl_cert_create_cert   || return $?
-  requirements_osx_update_openssl_cert_target_move   || return $?
+  requirements_osx_update_openssl_cert_create_dir      || return $?
+  requirements_osx_update_openssl_cert_target_select   || return $?
+  requirements_osx_update_openssl_cert_create_cert     || return $?
+  requirements_osx_update_openssl_cert_target_move     || return $?
 }
 
 requirements_osx_update_openssl_cert()
@@ -94,6 +117,7 @@ requirements_osx_update_openssl_cert()
   else
     rvm_log "Certificates in '$cert_file' are already up to date."
   fi
+  requirements_osx_update_openssl_cert_ensure_readable || return $?
 }
 
 __rvm_osx_ssl_certs_update_for_path()
@@ -127,6 +151,7 @@ __rvm_osx_ssl_certs_update_for_path()
     then printf "%b" "Already up to date.\n"
     fi
   fi
+  requirements_osx_update_openssl_cert_ensure_readable || return $?
 }
 
 __rvm_osx_ssl_certs_status_for_path()
@@ -162,6 +187,7 @@ __rvm_osx_ssl_certs_ensure_for_ruby()
       requirements_osx_update_openssl_cert_run ||
       true # Ignore failure - ruby is already installed
   fi
+  requirements_osx_update_openssl_cert_ensure_readable || return $?
   true # for osx
 }
 
@@ -176,20 +202,25 @@ __rvm_osx_ssl_certs_file_from_openssl()
   cert_file="${cert_file}/cert.pem"
 }
 
+__sm.cron.show()
+{
+  EDITOR="\command \cat" crontab -e 2>/dev/null
+}
+
 __rvm_cron_find()
 {
-  EDITOR=\cat crontab -e 2>/dev/null | __rvm_grep "$1" >/dev/null || return $?
+  __sm.cron.show | __rvm_grep "$1" >/dev/null || return $?
 }
 
 __rvm_cron_uninstall()
 {
-  EDITOR=\cat crontab -e 2>/dev/null | __rvm_grep -v "$1" | crontab -
+  __sm.cron.show | __rvm_grep -v "$1" | crontab -
 }
 
 __rvm_cron_install()
 {
   {
-    EDITOR=\cat crontab -e 2>/dev/null
+    __sm.cron.show
     echo "@daily $1"
   } | crontab -
 }

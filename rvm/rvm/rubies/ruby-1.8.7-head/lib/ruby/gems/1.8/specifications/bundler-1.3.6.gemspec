@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.required_ruby_version = Gem::Requirement.new(">= 1.8.7")
-  s.rubygems_version = "1.8.25"
+  s.rubygems_version = "1.8.29"
   s.summary = "The best way to manage your application's dependencies"
 
   if s.respond_to? :specification_version then

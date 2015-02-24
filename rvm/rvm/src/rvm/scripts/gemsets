@@ -28,21 +28,16 @@ gemset_list_strings()
 gemset_update()
 {
 
-  if [[ -z "$rvm_ruby_strings" ]]
+  if
+    [[ -z "$rvm_ruby_strings" ]]
   then
     rvm_log "Running gem update for all rubies and gemsets."
-    rvm_ruby_strings="$(
-      __rvm_cd "${rvm_gems_path:-"$rvm_path/gems"}" ;
-      __rvm_find . -maxdepth 1 -mindepth 1 -type d -print 2>/dev/null |
-        __rvm_grep -v '^\(doc\|cache\|@\|system\)' | \tr '\n' ','
-    )"
-    rvm_ruby_strings="${rvm_ruby_strings/%,}"
-    rvm_ruby_strings="${rvm_ruby_strings//.\/}"
   else
     rvm_log "Running gem update for the specified rubies."
   fi
-  export rvm_ruby_strings
-  "$rvm_scripts_path/set" gem update
+  export rvm_ruby_strings="${rvm_ruby_strings:-all-gemsets}"
+  export rvm_verbose_flag=1
+  "$rvm_scripts_path/set" do gem update
   return $?
 }
 
@@ -78,7 +73,7 @@ gemset_globalcache()
         && "$(__rvm_readlink "$current_cache_path")" == "$rvm_gems_cache_path" ]]
       then
         rvm_log "Reverting the gem cache for $directory_name to an empty directory."
-        \rm -f "$current_cache_path" 2>/dev/null
+        \command \rm -f "$current_cache_path" 2>/dev/null
         mkdir -p "$current_cache_path" 2>/dev/null
       fi
     done
@@ -97,7 +92,7 @@ gemset_globalcache()
       if [[ -d "$current_cache_path" && ! -L "$current_cache_path" ]]
       then
         rvm_log "Moving the gem cache for $directory_name to the global cache."
-        \mv "$current_cache_path/"*.gem "$rvm_gems_cache_path/" 2>/dev/null
+        \command \mv "$current_cache_path/"*.gem "$rvm_gems_cache_path/" 2>/dev/null
         case "${current_cache_path%\/}" in
           *cache)
             __rvm_rm_rf "$current_cache_path"
@@ -166,11 +161,6 @@ __gemset_list_single()
 
 gemset_list()
 {
-  if [[ ${rvm_ruby_selected_flag:-0} -eq 0 ]]
-  then
-    __rvm_select
-  fi
-
   [[ -d "${rvm_gems_path:-"$rvm_path/gems"}" ]] || {
     rvm_error "${rvm_gems_path:-"$rvm_path/gems"} does not exist!"
     return 1
@@ -203,12 +193,10 @@ gemset_delete_task()
   gemdir=$3
 
   case ${_system_type} in
-    #(OpenBSD|FreeBSD)
-    # dragonfly?
     (BSD)
       # will not find broken links
-      __rvm_find "${rvm_bin_path:=$rvm_path/bin}" -name \*${ruby_at_gemset} -delete
-      __rvm_find -L "${rvm_bin_path:=$rvm_path/bin}" -name \*${ruby_at_gemset} -delete
+      __rvm_find "${rvm_bin_path:=$rvm_path/bin}" -name \*${ruby_at_gemset} -exec rm -rf '{}' \;
+      __rvm_find -L "${rvm_bin_path:=$rvm_path/bin}" -name \*${ruby_at_gemset} -exec rm -rf '{}' \;
       ;;
     (*)
       __rvm_find "${rvm_bin_path:=$rvm_path/bin}" \( -name \*${ruby_at_gemset} -or -lname \*${ruby_at_gemset}/\* \) -delete
@@ -262,9 +250,6 @@ gemset_delete()
 gemset_empty()
 {
   typeset gemdir entry
-  if [[ -z "${rvm_ruby_gem_home:-""}" ]]
-  then __rvm_use
-  fi
   if
     [[ -n "${GEM_HOME}" ]]
   then
@@ -273,7 +258,7 @@ gemset_empty()
       __rvm_ask_for "Are you SURE you wish to remove the installed gems for ${GEM_HOME}?" yes
     then
       gem_install gem-empty &&
-      \gem empty &&
+      \command \gem empty &&
       rvm_log "Removed successfully." ||
       return $?
     else
@@ -297,7 +282,7 @@ gemset_copy()
   if
     [[ -z "$destination_ruby" || -z "$source_ruby" ]]
   then
-    rvm_error "Source and destination must be specified: 'rvm gemset copy X Y'"
+    rvm_help gemset copy
     return 1
   fi
   # Verify the destination gemset exists before attempting to use it.
@@ -366,9 +351,9 @@ gemset_copy()
 # Migrate gemsets from ruby X to ruby Y
 gemset_rename_()
 {
-  \mv "$source_path" "$destination_path" &&
-  \rm "${rvm_wrappers_path:="$rvm_path/wrappers"}/${source_path##*/}" &&
-  \rm "${rvm_environments_path:="$rvm_path/environments"}/${source_path##*/}"
+  \command \mv "$source_path" "$destination_path" &&
+  \command \rm "${rvm_wrappers_path:="$rvm_path/wrappers"}/${source_path##*/}" &&
+  \command \rm "${rvm_environments_path:="$rvm_path/environments"}/${source_path##*/}"
 }
 
 # Migrate gemsets from ruby X to ruby Y
@@ -432,9 +417,9 @@ gemset_unpack()
   while read gem_name version _platforms
   do
     ( command gem unpack "$gem_name" -v"$version" --target "$directory" )&
-  done < <(
+  done <<<"$(
     GEM_PATH="$GEM_HOME" __rvm_list_gems
-  )
+  )"
   wait
   rvm_log "Unpacking into ${directory} complete\n"
   return 0
@@ -453,7 +438,7 @@ gemset_export()
   if
     [[ -n "$rvm_file_name" ]]
   then
-    [[ "${rvm_file_name}" =~ Gemfile ]] || rvm_file_name="${rvm_file_name%.gems}.gems"
+    [[ "${rvm_file_name}" == *Gemfile ]] || rvm_file_name="${rvm_file_name%.gems}.gems"
   else
     if [[ -n "$rvm_gemset_name" ]]
     then rvm_file_name="$rvm_gemset_name.gems"
@@ -462,10 +447,10 @@ gemset_export()
   fi
   rvm_log "Exporting current environments gemset to $rvm_file_name"
   if [[ -f "$rvm_file_name" ]]
-  then \rm -f "$rvm_file_name"
+  then \command \rm -f "$rvm_file_name"
   fi
   if
-    [[ "${rvm_file_name}" =~ Gemfile ]]
+    [[ "${rvm_file_name}" == *Gemfile ]]
   then
     printf "%b" "source 'https://rubygems.org'
 
@@ -484,19 +469,19 @@ Append these after using a ';' field separator
   then
     while read gem_name version _platforms
     do
-      if [[ "${rvm_file_name}" =~ Gemfile ]]
+      if [[ "${rvm_file_name}" == *Gemfile ]]
       then echo "gem '$gem_name', '$version'"
       else echo "$gem_name -v$version"
       fi
-    done < <( GEM_PATH="$GEM_HOME" __rvm_list_gems )
+    done <<<"$( GEM_PATH="$GEM_HOME" __rvm_list_gems )"
   else
     while read gem_name versions
     do
-      if [[ "${rvm_file_name}" =~ Gemfile ]]
+      if [[ "${rvm_file_name}" == *Gemfile ]]
       then echo "gem '$gem_name'"
       else echo "$gem_name"
       fi
-    done < <( GEM_PATH="$GEM_HOME" gem list )
+    done <<<"$( GEM_PATH="$GEM_HOME" gem list )"
   fi >> "$rvm_file_name"
 }
 
@@ -542,15 +527,14 @@ gemset_prune()
     if
       [[ -f "$cached_file_path" ]]
     then
-      \mv "$cached_file_path" "${temporary_cache_path}/${cached_gem_name}"
+      \command \mv "$cached_file_path" "${temporary_cache_path}/${cached_gem_name}"
     fi
-  done < <(
-    GEM_PATH="$GEM_HOME" __rvm_list_gems
-  )
+  done <<<"$( GEM_PATH="$GEM_HOME" __rvm_list_gems )"
+
   rvm_log "Removing live cache and restoring temporary cache..."
   # Switch the cache back.
   __rvm_rm_rf "$live_cache_path"
-  \mv "$temporary_cache_path" "$live_cache_path"
+  \command \mv "$temporary_cache_path" "$live_cache_path"
   return 0
 }
 
@@ -612,24 +596,25 @@ gemset_actions_with_gem=(
   load pristine copy install initial prune rename update unpack
 )
 if
-  [[ " ${gemset_actions_with_gem[*]} " =~ " $action " ]] &&
+  [[ " ${gemset_actions_with_gem[*]} " == *" $action "* ]] &&
   ! builtin command -v gem > /dev/null
 then
   rvm_error "'gem' was not found, cannot perform gem actions (Do you have an RVM ruby selected?)"
   exit 1
 fi
 
-if [[ " $* " =~ " --force " ]]
+if [[ " $* " == *" --force "* ]]
 then export rvm_force_flag=1
 fi
+
 if
-  [[ -z "$rvm_ruby_string" && "${GEM_HOME:-""}" =~ "${rvm_path}" ]]
+  [[ -z "$rvm_ruby_string" && "${GEM_HOME:-""}" == "${rvm_path}"* ]]
 then
   rvm_ruby_string="${GEM_HOME##*/}"
   rvm_ruby_string="${rvm_ruby_string%%@*}"
 fi
 if
-  [[ -z "$rvm_gemset_name" && "${GEM_HOME:-""}" =~ "${rvm_path}" ]]
+  [[ -z "$rvm_gemset_name" && "${GEM_HOME:-""}" == "${rvm_path}"* ]]
 then
   rvm_gemset_name="${GEM_HOME##*/}"
   rvm_gemset_name="${rvm_gemset_name#${rvm_gemset_name%%@*}}"
@@ -662,12 +647,16 @@ case "$action" in
   export|dump)
     gemset_export "$@"
     ;;
-  create)
+  empty)
+    __rvm_use "${1:+@}${1:-${GEM_HOME##*/}}"
+    gemset_$action "$@"
+    ;;
+  create|initial|list)
     __rvm_select
     rvm_gemset_name="${rvm_gemset_name:-${rvm_expected_gemset_name:-}}"
     gemset_$action "$@"
     ;;
-  copy|delete|dir|empty|globalcache|initial|list|list_all|list_strings|pristine|prune|rename|update|unpack|reset_env)
+  copy|delete|dir|globalcache|list_all|list_strings|pristine|prune|rename|update|unpack|reset_env)
     gemset_$action "$@"
     ;;
   name|string)

@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Accepts latitude and longitude or instantiates an empty instance if lat and lng are not provided. Converted to floats if provided
+full_name: Geokit::LatLng::new
+is_singleton: true
+name: new
+params: (lat=nil, lng=nil)
+visibility: public

@@ -4,7 +4,7 @@ export JRUBY_OPTS
 
 jruby_ngserver_is_running()
 {
-  \ps auxww | __rvm_grep '[c]om.martiansoftware.nailgun.NGServer' >/dev/null
+  \command \ps auxww | __rvm_grep '[c]om.martiansoftware.nailgun.NGServer' >/dev/null
 }
 
 jruby_ngserver_start()
@@ -25,7 +25,8 @@ jruby_options_append()
 {
   for param in "$@"
   do
-    if ! [[ " ${JRUBY_OPTS} " =~ " $param " ]]
+    if
+      [[ " ${JRUBY_OPTS} " != *" $param "* ]]
     then
       JRUBY_OPTS="${JRUBY_OPTS} $param"
     fi
@@ -38,7 +39,8 @@ jruby_options_remove()
   JRUBY_OPTS=" ${JRUBY_OPTS} "
   for param in "$@"
   do
-    if [[ "${JRUBY_OPTS}" =~ " $param " ]]
+    if
+      [[ "${JRUBY_OPTS}" == *" $param "* ]]
     then
       JRUBY_OPTS="${JRUBY_OPTS// $param / }"
     fi

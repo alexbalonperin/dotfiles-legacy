@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: returns a two-element array
+full_name: Geokit::LatLng#to_a
+is_singleton: false
+name: to_a
+params: ()
+visibility: public

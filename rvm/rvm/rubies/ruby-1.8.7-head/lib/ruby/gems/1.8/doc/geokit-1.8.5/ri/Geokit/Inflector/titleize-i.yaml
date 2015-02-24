@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Geokit::Inflector#titleize
+is_singleton: false
+name: titleize
+params: (word)
+visibility: public

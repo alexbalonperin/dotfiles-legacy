@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Geokit::Inflector#snake_case
+is_singleton: false
+name: snake_case
+params: (s)
+visibility: public

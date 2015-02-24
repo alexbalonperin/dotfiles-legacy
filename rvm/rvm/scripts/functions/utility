@@ -5,21 +5,6 @@ source "${rvm_scripts_path}/functions/utility_package"
 source "${rvm_scripts_path}/functions/utility_rubygems"
 source "${rvm_scripts_path}/functions/utility_system"
 
-printenv_null()
-{
-  if printenv --null >/dev/null 2>/dev/null
-  then
-    printenv --null
-  else
-    # this messes with escape sequences but allows new lines in variables
-    printenv | __rvm_sed '/=/ { s/=.*$//; p; }; d;' | while read name
-    do
-      zero="\0"
-      eval "eval \"printf '%b' '$name=\$$name$zero'\""
-    done
-  fi
-}
-
 __rvm_strings()
 {
   typeset strings ruby_strings
@@ -73,11 +58,11 @@ __rvm_remove_from_path()
 
   # remove multiple slashes https://github.com/wayneeseguin/rvm/issues/1364
   if
-    [[ "$PATH" =~ "//" || "$PATH" =~ "/:" ]]
+    [[ "$PATH" == *"//"* || "$PATH" == *"/:"* ]]
   then
     if [[ "${_system_type}" = "Darwin" ]]
-    then PATH="$(sed -E -e 's#/+#/#g' -e 's#/:#:#' <<<$PATH)"
-    else PATH="$(sed -r -e 's#/+#/#g' -e 's#/:#:#' <<<$PATH)"
+    then PATH="$(\sed -E -e 's#/+#/#g' -e 's#/:#:#' <<<$PATH)"
+    else PATH="$(\sed -r -e 's#/+#/#g' -e 's#/:#:#' <<<$PATH)"
     fi
   fi
 
@@ -135,7 +120,7 @@ rvm_is_a_shell_function()
     rvm_warn '
 You need to change your terminal emulator preferences to allow login shell.
 Sometimes it is required to use `/bin/bash --login` as the command.
-Please visit https://rvm.io/integration/gnome-terminal/ for a example.
+Please visit https://rvm.io/integration/gnome-terminal/ for an example.
 '
   fi
   return ${rvm_is_not_a_shell_function:-0}
@@ -181,13 +166,13 @@ __rvm_detect_xcode_version_at_least()
 # TODO: better semver support
 __rvm_version_sort()
 {
-  LC_ALL=C \sort -t. -k 1,1n -k 2,2n -k 3,3n -k 4,4n -k 5,5n
+  LC_ALL=C \command \sort -t. -k 1,1n -k 2,2n -k 3,3n -k 4,4n -k 5,5n
 }
 
 __rvm_version_compare()
 {
   typeset first
-  first="$( \printf "%b" "$1\n$3\n" | __rvm_version_sort | \command head -n1 )"
+  first="$( \command \printf "%b" "$1\n$3\n" | __rvm_version_sort | \command \head -n1 )"
   # first is the lower
   case "$2" in
     (-eq|==|=)
@@ -379,7 +364,7 @@ __rvm_try_sudo()
         missing_paths=""
         for sbin_path in /sbin /usr/sbin /usr/local/sbin
         do
-          if [[ -d "${sbin_path}" ]] && [[ ! ":$PATH:" =~ ":${sbin_path}:" ]]
+          if [[ -d "${sbin_path}" ]] && [[ ":$PATH:" != *":${sbin_path}:"* ]]
           then missing_paths+=":${sbin_path}"
           fi
         done
@@ -388,7 +373,7 @@ __rvm_try_sudo()
         fi
         command_to_run=( __rvm_sudo -p "%p password required for '$*': " "${command_to_run[@]}" )
       else
-        rvm_requiremnts_fail error "Running '$*' would require sudo, but 'sudo' is not found!"
+        rvm_error "Running '$*' would require sudo, but 'sudo' is not found!"
         return 1
       fi
       ;;
@@ -402,20 +387,23 @@ __rvm_run_wrapper()
   action="${2:-}"
   shift 2
   rubies_string="${1:-}"
-  export -a args
   args=( $@ )
+  source "$rvm_scripts_path"/base
   source "$rvm_scripts_path"/$file
 )
 
 __rvm_calculate_space_free()
 {
   # OpenBSD does not have 'df -m' param
-  __free_space="$( \df -Pk "$1" | __rvm_awk 'BEGIN{x=4} /Free/{x=3} END{print $x}' )"
-  __free_space="$(( __free_space / 1024 ))"
+  __free_space="$( \command \df -Pk "$1" | __rvm_awk 'BEGIN{x=4} /Free/{x=3} $3=="Avail"{x=3} END{print $x}' )"
+  if [[ "${__free_space}" == *M ]]
+  then __free_space="${__free_space%M}" # some systems ignore -k and print M
+  else __free_space="$(( __free_space / 1024 ))"
+  fi
 }
 
 __rvm_calculate_space_used()
 {
-  __used_space="$( \du -msc "$@" | __rvm_awk 'END {print $1}' )"
+  __used_space="$( \command \du -msc "$@" | __rvm_awk 'END {print $1}' )"
   __used_space="${__used_space%M}"
 }

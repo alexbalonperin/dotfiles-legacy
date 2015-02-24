@@ -1,0 +1,10 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+full_name: Geokit::Geocoders::BaseIpGeocoder::process
+is_singleton: true
+name: process
+params: (format, ip)
+visibility: public

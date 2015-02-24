@@ -1,0 +1,28 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Bing geocoder implementation. Requires the Geokit::Geocoders::bing variable to contain a Bing Maps API key. Conforms to the interface set by the Geocoder class.
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  name: XML_MAPPINGS
+  value: "{         :street_address => 'Address/AddressLine',         :full_address   => 'Address/FormattedAddress',         :city           => 'Address/Locality',         :state          => 'Address/AdminDistrict',         :province       => 'Address/AdminDistrict2',         :zip            => 'Address/PostalCode',         :country        => 'Address/CountryRegion',         :lat            => 'Point/Latitude',         :lng            => 'Point/Longitude'"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: ACCURACY_MAP
+  value: "{         'High'   => 8,         'Medium' => 5,         'Low'    => 2"
+- !ruby/object:RI::Constant 
+  comment: 
+  name: PRECISION_MAP
+  value: "{         'Sovereign'      => 'country',         'CountryRegion'  => 'country',         'AdminDivision1' => 'state',         'AdminDivision2' => 'state',         'PopulatedPlace' => 'city',         'Postcode1'      => 'zip',         'Postcode2'      => 'zip',         'RoadBlock'      => 'street',         'Address'        => 'address'"
+full_name: Geokit::Geocoders::BingGeocoder
+includes: []
+
+instance_methods: []
+
+name: BingGeocoder
+superclass: Geocoder

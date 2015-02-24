@@ -1,0 +1,17 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Error which is thrown in the event a geocoding error occurs.
+constants: []
+
+full_name: Geokit::Geocoders::GeocodeError
+includes: []
+
+instance_methods: []
+
+name: GeocodeError
+superclass: StandardError

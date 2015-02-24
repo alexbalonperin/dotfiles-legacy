@@ -3,9 +3,6 @@
 # Most of the config is in .bashrc
 [[ -r ~/.bashrc ]] && . ~/.bashrc
 
-# Not under version control
-[[ -r ~/.xealrc ]] && . ~/.xealrc
-
 # Aliases
 [[ -r ~/.bash_aliases ]] && . ~/.bash_aliases
 
@@ -22,6 +19,7 @@
 # ####################
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+source ~/.git-prompt.sh
 
 # Prompt
 # ######

@@ -50,7 +50,7 @@ then
   rvm_shell_ruby_string="$1"
   shift
 elif
-  [[ "$1" == "--path" ]] && [[ -d "$2" || "$2" =~ /* ]]
+  [[ "$1" == "--path" ]] && [[ -d "$2" || "$2" == "/"* ]]
 then
   if
     [[ -d "$2" ]]
@@ -68,6 +68,10 @@ if
   [[ -n "$rvm_path" && -f "$rvm_scripts_path/rvm" ]]
 then
   source "$rvm_scripts_path/rvm"
+  typeset -f rvm >/dev/null 2>&1 || {
+    echo "RVM not loaded, aborting." >&2
+    exit 1
+  }
   # Setup as expected.
   if
     [[ -n "$rvm_shell_ruby_string" ]]

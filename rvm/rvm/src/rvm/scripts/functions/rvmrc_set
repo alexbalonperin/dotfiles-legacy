@@ -6,7 +6,7 @@ __rvm_set_versions_conf()
 
   if [[ -s .versions.conf ]]
   then
-    \mv .versions.conf .versions.conf.$(__rvm_date +%m.%d.%Y-%H:%M:%S)
+    \command \mv .versions.conf .versions.conf.$(__rvm_date +%m.%d.%Y-%H:%M:%S)
     rvm_warn ".version.conf is not empty, moving aside to preserve."
   fi
 
@@ -34,7 +34,7 @@ __rvm_set_ruby_version()
   if
     [[ -s .ruby-version ]]
   then
-    \mv .ruby-version .ruby-version.$(__rvm_date +%m.%d.%Y-%H:%M:%S)
+    \command \mv .ruby-version .ruby-version.$(__rvm_date +%m.%d.%Y-%H:%M:%S)
     rvm_warn ".ruby-version is not empty, moving aside to preserve."
   fi
   typeset __version="$(__rvm_env_string)"
@@ -43,7 +43,7 @@ __rvm_set_ruby_version()
       if
         [[ -s .ruby-gemset ]]
       then
-        \mv .ruby-gemset .ruby-gemset.$(__rvm_date +%m.%d.%Y-%H:%M:%S)
+        \command \mv .ruby-gemset .ruby-gemset.$(__rvm_date +%m.%d.%Y-%H:%M:%S)
         rvm_warn ".ruby-gemset is not empty, moving aside to preserve."
       fi
       echo "${__version##*@}" > .ruby-gemset
@@ -52,7 +52,7 @@ __rvm_set_ruby_version()
       if
         [[ -s .ruby-gemset ]]
       then
-        \mv .ruby-gemset .ruby-gemset.$(__rvm_date +%m.%d.%Y-%H:%M:%S)
+        \command \mv .ruby-gemset .ruby-gemset.$(__rvm_date +%m.%d.%Y-%H:%M:%S)
         rvm_warn ".ruby-gemset not needed, moving aside to preserve."
       fi
       ;;
@@ -68,13 +68,12 @@ __rvm_set_rvmrc()
   if [[ "$HOME" != "$PWD" && "${rvm_prefix:-}" != "$PWD" ]]
   then
     if (( rvm_verbose_flag ))
-    then
-      flags="use "
+    then flags="use "
     fi
 
     if [[ -s .rvmrc ]]
     then
-      \mv .rvmrc .rvmrc.$(__rvm_date +%m.%d.%Y-%H:%M:%S)
+      \command \mv .rvmrc .rvmrc.$(__rvm_date +%m.%d.%Y-%H:%M:%S)
       rvm_warn ".rvmrc is not empty, moving aside to preserve."
     fi
 
@@ -125,7 +124,7 @@ then
   done
   unset __hook
 " >> .rvmrc
-    if [[ " $flags " =~ " use " ]]
+    if [[ " $flags " == *" use "* ]]
     then printf "%b" "  if (( \${rvm_use_flag:=1} >= 1 )) # display automatically"    >> .rvmrc
     else printf "%b" "  if (( \${rvm_use_flag:=1} >= 2 )) # display only when forced" >> .rvmrc
     fi
@@ -158,7 +157,7 @@ fi
 # filename=\".gems\"
 # if [[ -s \"\$filename\" ]]
 # then
-#   rvm gemset import \"\$filename\" | GREP_OPTIONS=\"\" \grep -v already | GREP_OPTIONS=\"\" \grep -v listed | GREP_OPTIONS=\"\" \grep -v complete | \sed '/^$/d'
+#   rvm gemset import \"\$filename\" | GREP_OPTIONS=\"\" \command \grep -v already | GREP_OPTIONS=\"\" \command \grep -v listed | GREP_OPTIONS=\"\" \command \grep -v complete | \command \sed '/^$/d'
 # fi
 " >> .rvmrc
     done
@@ -168,7 +167,7 @@ fi
 # If you use bundler, this might be useful to you:
 # if [[ -s Gemfile ]] && {
 #   ! builtin command -v bundle >/dev/null ||
-#   builtin command -v bundle | GREP_OPTIONS=\"\" \grep \$rvm_path/bin/bundle >/dev/null
+#   builtin command -v bundle | GREP_OPTIONS=\"\" \command \grep \$rvm_path/bin/bundle >/dev/null
 # }
 # then
 #   printf \"%b\" \"The rubygem 'bundler' is not installed. Installing it now.\\\\n\"
@@ -176,7 +175,7 @@ fi
 # fi
 # if [[ -s Gemfile ]] && builtin command -v bundle >/dev/null
 # then
-#   bundle install | GREP_OPTIONS=\"\" \grep -vE '^Using|Your bundle is complete'
+#   bundle install | GREP_OPTIONS=\"\" \command \grep -vE '^Using|Your bundle is complete'
 # fi
 " >> .rvmrc
     fi

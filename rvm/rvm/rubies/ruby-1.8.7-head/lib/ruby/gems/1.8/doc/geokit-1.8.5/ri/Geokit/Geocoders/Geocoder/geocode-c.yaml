@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Main method which calls the do_geocode template method which subclasses are responsible for implementing. Returns a populated GeoLoc or an empty one with a failed success code.
+full_name: Geokit::Geocoders::Geocoder::geocode
+is_singleton: true
+name: geocode
+params: (address, *args)
+visibility: public

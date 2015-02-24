@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "Takes two main combinations of arguments to create a bounds: point,point (this is the only one which takes two arguments [point,point] . . . where a point is anything LatLng#normalize can handle (which is quite a lot)"
+- !ruby/struct:SM::Flow::P 
+  body: "NOTE: everything combination is assumed to pass points in the order sw, ne"
+full_name: Geokit::Bounds::normalize
+is_singleton: true
+name: normalize
+params: (thing,other=nil)
+visibility: public

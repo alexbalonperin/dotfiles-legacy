@@ -167,25 +167,6 @@ __rvm_warn_on_rubyopt()
   fi
 }
 
-rubygems_setup_lang_fallback()
-{
-  if
-    [[ -z "${LANG:-}" ]]
-  then
-    LANG="$(
-      {
-        locale -a | __rvm_grep "^en_US.utf8" ||
-        locale -a | __rvm_grep "^en_US" ||
-        locale -a | __rvm_grep "^en" ||
-        locale -a
-      } 2>/dev/null | \command head -n 1
-    )"
-    : LANG=${LANG:=en_US.utf-8}
-    export LANG
-    rvm_warn "\$LANG was empty, setting up LANG=$LANG, if it fails again try setting LANG to something sane and try again."
-  fi
-}
-
 rubygems_setup()
 {
   export version="$1"
@@ -257,7 +238,15 @@ rubygems_setup()
   if [[ ${rvm_debug_flag:-0} == 1 || ${rvm_trace_flag:-0} == 1 ]]
   then __command+=( --verbose )
   fi
-  rubygems_setup_lang_fallback
+  if
+    (( ${rvm_docs_flag:-0} == 0 ))
+  then
+    if __rvm_version_compare "$version" -ge 2.2
+    then __command+=( --no-document )
+    else __command+=( --no-ri --no-rdoc )
+    fi
+  fi
+  __setup_lang_fallback
   __rvm_log_command "rubygems.install" \
     "$rvm_ruby_string - #installing $rvm_gem_package_name" \
     "${__command[@]}" ||
@@ -280,16 +269,16 @@ rubygems_setup()
 
 rubygems_validate_gemfile_extract()
 (
-  \mkdir -p "$2/gem" &&
-  \tar -C "$2" -xf "$1" --touch &&
-  \cd "$2" &&
-  \gzip -d "metadata.gz" &&
-  \tar -C gem -xzf "data.tar.gz" --touch &&
-  \rm "data.tar.gz" ||
+  \command \mkdir -p "$2/gem" &&
+  \command \tar -C "$2" -xf "$1" --touch &&
+  \command \cd "$2" &&
+  \command \gzip -d "metadata.gz" &&
+  \command \tar -C gem -xzf "data.tar.gz" --touch &&
+  \command \rm "data.tar.gz" ||
   {
     typeset ret=$?
     rvm_error "Error extracting '$1' to '$2'."
-    \rm -rf "${rvm_tmp_path}/rg$$"
+    \command \rm -rf "${rvm_tmp_path}/rg$$"
     return $ret
   }
 )
@@ -311,7 +300,7 @@ rubygems_validate_gemfile()
   {
     typeset ret=$?
     rvm_error "Could not download '$gem__url'."
-    \rm -rf "${rvm_tmp_path}/rg$$"
+    \command \rm -rf "${rvm_tmp_path}/rg$$"
     return $ret
   }
 
@@ -322,7 +311,7 @@ rubygems_validate_gemfile()
   diff -ru "$dir_local_copy" "$dir_remote_copy"
 
   # cleanup
-  \rm -rf "${rvm_tmp_path}/rg$$"
+  \command \rm -rf "${rvm_tmp_path}/rg$$"
 )
 
 rubygems_validate_list_gemdirs()

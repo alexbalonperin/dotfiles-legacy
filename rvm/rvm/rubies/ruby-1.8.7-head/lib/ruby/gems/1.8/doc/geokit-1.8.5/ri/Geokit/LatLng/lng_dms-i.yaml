@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: returns longitude as [ degree, minute, second ] array
+full_name: Geokit::LatLng#lng_dms
+is_singleton: false
+name: lng_dms
+params: ()
+visibility: public

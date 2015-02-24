@@ -1,6 +1,6 @@
 have_library: checking for t_open() in -lnsl... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static -lnsl  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static -lnsl  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘t_open’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -12,7 +12,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))t_open; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static -lnsl  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static -lnsl  -ldl -lobjc  "
 ld: library not found for -lnsl
 collect2: ld returned 1 exit status
 checked program was:
@@ -26,7 +26,7 @@ checked program was:
 
 have_library: checking for socket() in -lsocket... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static -lsocket  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static -lsocket  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘socket’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -38,7 +38,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))socket; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static -lsocket  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static -lsocket  -ldl -lobjc  "
 ld: library not found for -lsocket
 collect2: ld returned 1 exit status
 checked program was:
@@ -52,7 +52,7 @@ checked program was:
 
 have_header: checking for assert.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -E -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common    conftest.c -o conftest.i"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -E -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common    conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include <assert.h>
@@ -62,7 +62,7 @@ checked program was:
 
 have_header: checking for openssl/ssl.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -E -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common    conftest.c -o conftest.i"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -E -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common    conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include <openssl/ssl.h>
@@ -72,7 +72,7 @@ checked program was:
 
 have_library: checking for OpenSSL_add_all_digests() in -lcrypto... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘OpenSSL_add_all_digests’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -84,7 +84,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))OpenSSL_add_all_digests; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib     -lruby-static -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -96,7 +96,7 @@ checked program was:
 
 have_library: checking for SSL_library_init() in -lssl... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘SSL_library_init’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -108,7 +108,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))SSL_library_init; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -120,7 +120,7 @@ checked program was:
 
 have_header: checking for openssl/conf_api.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -E -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common    conftest.c -o conftest.i"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -E -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common    conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include <openssl/conf_api.h>
@@ -130,7 +130,7 @@ checked program was:
 
 have_func: checking for rb_str_set_len() in ruby.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: #include <ruby.h>
@@ -144,7 +144,7 @@ checked program was:
 
 have_func: checking for rb_block_call() in ruby.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: #include <ruby.h>
@@ -158,7 +158,7 @@ checked program was:
 
 have_func: checking for ERR_peek_last_error()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘ERR_peek_last_error’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -170,7 +170,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))ERR_peek_last_error; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -182,7 +182,7 @@ checked program was:
 
 have_func: checking for BN_mod_add()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘BN_mod_add’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -194,7 +194,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))BN_mod_add; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -206,7 +206,7 @@ checked program was:
 
 have_func: checking for BN_mod_sqr()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘BN_mod_sqr’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -218,7 +218,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))BN_mod_sqr; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -230,7 +230,7 @@ checked program was:
 
 have_func: checking for BN_mod_sub()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘BN_mod_sub’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -242,7 +242,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))BN_mod_sub; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -254,7 +254,7 @@ checked program was:
 
 have_func: checking for BN_pseudo_rand_range()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘BN_pseudo_rand_range’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -266,7 +266,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))BN_pseudo_rand_range; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -278,7 +278,7 @@ checked program was:
 
 have_func: checking for BN_rand_range()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘BN_rand_range’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -290,7 +290,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))BN_rand_range; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -302,7 +302,7 @@ checked program was:
 
 have_func: checking for CONF_get1_default_config_file()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘CONF_get1_default_config_file’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -314,7 +314,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))CONF_get1_default_config_file; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -326,7 +326,7 @@ checked program was:
 
 have_func: checking for EVP_CIPHER_CTX_copy()... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘EVP_CIPHER_CTX_copy’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -338,10 +338,10 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))EVP_CIPHER_CTX_copy; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 Undefined symbols for architecture x86_64:
   "_EVP_CIPHER_CTX_copy", referenced from:
-      _t in cc528BsV.o
+      _t in ccw3ZD50.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 checked program was:
@@ -355,7 +355,7 @@ checked program was:
 
 have_func: checking for EVP_CIPHER_CTX_set_padding()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘EVP_CIPHER_CTX_set_padding’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -367,7 +367,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))EVP_CIPHER_CTX_set_padding; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -379,7 +379,7 @@ checked program was:
 
 have_func: checking for EVP_CipherFinal_ex()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘EVP_CipherFinal_ex’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -391,7 +391,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))EVP_CipherFinal_ex; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -403,7 +403,7 @@ checked program was:
 
 have_func: checking for EVP_CipherInit_ex()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘EVP_CipherInit_ex’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -415,7 +415,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))EVP_CipherInit_ex; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -427,7 +427,7 @@ checked program was:
 
 have_func: checking for EVP_DigestFinal_ex()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘EVP_DigestFinal_ex’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -439,7 +439,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))EVP_DigestFinal_ex; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -451,7 +451,7 @@ checked program was:
 
 have_func: checking for EVP_DigestInit_ex()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘EVP_DigestInit_ex’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -463,7 +463,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))EVP_DigestInit_ex; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -475,7 +475,7 @@ checked program was:
 
 have_func: checking for EVP_MD_CTX_cleanup()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘EVP_MD_CTX_cleanup’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -487,7 +487,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))EVP_MD_CTX_cleanup; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -499,7 +499,7 @@ checked program was:
 
 have_func: checking for EVP_MD_CTX_create()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘EVP_MD_CTX_create’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -511,7 +511,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))EVP_MD_CTX_create; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -523,7 +523,7 @@ checked program was:
 
 have_func: checking for EVP_MD_CTX_destroy()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘EVP_MD_CTX_destroy’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -535,7 +535,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))EVP_MD_CTX_destroy; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -547,7 +547,7 @@ checked program was:
 
 have_func: checking for EVP_MD_CTX_init()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘EVP_MD_CTX_init’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -559,7 +559,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))EVP_MD_CTX_init; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -571,7 +571,7 @@ checked program was:
 
 have_func: checking for HMAC_CTX_cleanup()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘HMAC_CTX_cleanup’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -583,7 +583,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))HMAC_CTX_cleanup; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -595,7 +595,7 @@ checked program was:
 
 have_func: checking for HMAC_CTX_copy()... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘HMAC_CTX_copy’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -607,10 +607,10 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))HMAC_CTX_copy; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 Undefined symbols for architecture x86_64:
   "_HMAC_CTX_copy", referenced from:
-      _t in ccgvNq0y.o
+      _t in ccwPqQpk.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 checked program was:
@@ -624,7 +624,7 @@ checked program was:
 
 have_func: checking for HMAC_CTX_init()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘HMAC_CTX_init’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -636,7 +636,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))HMAC_CTX_init; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -648,7 +648,7 @@ checked program was:
 
 have_func: checking for PEM_def_callback()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘PEM_def_callback’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -660,7 +660,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))PEM_def_callback; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -672,7 +672,7 @@ checked program was:
 
 have_func: checking for PKCS5_PBKDF2_HMAC()... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘PKCS5_PBKDF2_HMAC’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -684,10 +684,10 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))PKCS5_PBKDF2_HMAC; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 Undefined symbols for architecture x86_64:
   "_PKCS5_PBKDF2_HMAC", referenced from:
-      _t in ccNdrcQt.o
+      _t in cc8cRVCF.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 checked program was:
@@ -701,7 +701,7 @@ checked program was:
 
 have_func: checking for PKCS5_PBKDF2_HMAC_SHA1()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘PKCS5_PBKDF2_HMAC_SHA1’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -713,7 +713,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))PKCS5_PBKDF2_HMAC_SHA1; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -725,7 +725,7 @@ checked program was:
 
 have_func: checking for X509V3_set_nconf()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘X509V3_set_nconf’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -737,7 +737,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))X509V3_set_nconf; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -749,7 +749,7 @@ checked program was:
 
 have_func: checking for X509V3_EXT_nconf_nid()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘X509V3_EXT_nconf_nid’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -761,7 +761,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))X509V3_EXT_nconf_nid; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -773,7 +773,7 @@ checked program was:
 
 have_func: checking for X509_CRL_add0_revoked()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘X509_CRL_add0_revoked’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -785,7 +785,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))X509_CRL_add0_revoked; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -797,7 +797,7 @@ checked program was:
 
 have_func: checking for X509_CRL_set_issuer_name()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘X509_CRL_set_issuer_name’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -809,7 +809,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))X509_CRL_set_issuer_name; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -821,7 +821,7 @@ checked program was:
 
 have_func: checking for X509_CRL_set_version()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘X509_CRL_set_version’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -833,7 +833,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))X509_CRL_set_version; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -845,7 +845,7 @@ checked program was:
 
 have_func: checking for X509_CRL_sort()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘X509_CRL_sort’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -857,7 +857,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))X509_CRL_sort; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -869,7 +869,7 @@ checked program was:
 
 have_func: checking for X509_NAME_hash_old()... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘X509_NAME_hash_old’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -881,10 +881,10 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))X509_NAME_hash_old; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 Undefined symbols for architecture x86_64:
   "_X509_NAME_hash_old", referenced from:
-      _t in cczpepn6.o
+      _t in ccrATRRn.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 checked program was:
@@ -898,7 +898,7 @@ checked program was:
 
 have_func: checking for X509_STORE_get_ex_data()... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘X509_STORE_get_ex_data’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -910,10 +910,10 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))X509_STORE_get_ex_data; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 Undefined symbols for architecture x86_64:
   "_X509_STORE_get_ex_data", referenced from:
-      _t in cc8RMPpi.o
+      _t in ccV8it42.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 checked program was:
@@ -927,7 +927,7 @@ checked program was:
 
 have_func: checking for X509_STORE_set_ex_data()... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘X509_STORE_set_ex_data’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -939,10 +939,10 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))X509_STORE_set_ex_data; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 Undefined symbols for architecture x86_64:
   "_X509_STORE_set_ex_data", referenced from:
-      _t in ccJ7TKVF.o
+      _t in cchpNYaf.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 checked program was:
@@ -956,7 +956,7 @@ checked program was:
 
 have_func: checking for OBJ_NAME_do_all_sorted()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘OBJ_NAME_do_all_sorted’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -968,7 +968,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))OBJ_NAME_do_all_sorted; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -980,7 +980,7 @@ checked program was:
 
 have_func: checking for SSL_SESSION_get_id()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘SSL_SESSION_get_id’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -992,7 +992,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))SSL_SESSION_get_id; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -1004,7 +1004,7 @@ checked program was:
 
 have_func: checking for OPENSSL_cleanse()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘OPENSSL_cleanse’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -1016,7 +1016,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))OPENSSL_cleanse; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -1026,16 +1026,16 @@ checked program was:
 
 --------------------
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 checked program was:
 /* begin */
 1: #define FOO(...) foo(__VA_ARGS__)
 2:  int x(){FOO(1);FOO(1,2);FOO(1,2,3);}
 /* end */
 
-have_func: checking for SSLv2_method()... -------------------- yes
+have_func: checking for SSLv2_method()... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘SSLv2_method’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -1047,7 +1047,12 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))SSLv2_method; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+Undefined symbols for architecture x86_64:
+  "_SSLv2_method", referenced from:
+      _t in cctgDioJ.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
 checked program was:
 /* begin */
 1: /*top*/
@@ -1057,9 +1062,9 @@ checked program was:
 
 --------------------
 
-have_func: checking for SSLv2_server_method()... -------------------- yes
+have_func: checking for SSLv2_server_method()... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘SSLv2_server_method’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -1071,7 +1076,12 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))SSLv2_server_method; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+Undefined symbols for architecture x86_64:
+  "_SSLv2_server_method", referenced from:
+      _t in ccgquvoI.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
 checked program was:
 /* begin */
 1: /*top*/
@@ -1081,9 +1091,9 @@ checked program was:
 
 --------------------
 
-have_func: checking for SSLv2_client_method()... -------------------- yes
+have_func: checking for SSLv2_client_method()... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘SSLv2_client_method’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -1095,7 +1105,12 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))SSLv2_client_method; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+Undefined symbols for architecture x86_64:
+  "_SSLv2_client_method", referenced from:
+      _t in ccjVkKTq.o
+ld: symbol(s) not found for architecture x86_64
+collect2: ld returned 1 exit status
 checked program was:
 /* begin */
 1: /*top*/
@@ -1107,7 +1122,7 @@ checked program was:
 
 have_func: checking for SSL_set_tlsext_host_name() in openssl/ssl.h... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:5: error: ‘SSL_set_tlsext_host_name’ undeclared (first use in this function)
 conftest.c:5: error: (Each undeclared identifier is reported only once
@@ -1121,7 +1136,7 @@ checked program was:
 5: int t() { void ((*volatile p)()); p = (void ((*)()))SSL_set_tlsext_host_name; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c:5:36: error: macro "SSL_set_tlsext_host_name" requires 2 arguments, but only 1 given
 conftest.c: In function ‘t’:
 conftest.c:5: error: ‘SSL_set_tlsext_host_name’ undeclared (first use in this function)
@@ -1140,7 +1155,7 @@ checked program was:
 
 have_macro: checking for SSL_set_tlsext_host_name in openssl/ssl.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 checked program was:
 /* begin */
 1: #include <openssl/ssl.h>
@@ -1155,7 +1170,7 @@ checked program was:
 
 have_header: checking for openssl/engine.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -E -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common    conftest.c -o conftest.i"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -E -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common    conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include <openssl/engine.h>
@@ -1165,7 +1180,7 @@ checked program was:
 
 have_func: checking for ENGINE_add()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘ENGINE_add’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -1177,7 +1192,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))ENGINE_add; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -1189,7 +1204,7 @@ checked program was:
 
 have_func: checking for ENGINE_load_builtin_engines()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘ENGINE_load_builtin_engines’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -1201,7 +1216,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))ENGINE_load_builtin_engines; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -1213,7 +1228,7 @@ checked program was:
 
 have_func: checking for ENGINE_load_openbsd_dev_crypto()... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘ENGINE_load_openbsd_dev_crypto’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -1225,10 +1240,10 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))ENGINE_load_openbsd_dev_crypto; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 Undefined symbols for architecture x86_64:
   "_ENGINE_load_openbsd_dev_crypto", referenced from:
-      _t in cccJPfN6.o
+      _t in cc01o0iH.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 checked program was:
@@ -1242,7 +1257,7 @@ checked program was:
 
 have_func: checking for ENGINE_get_digest()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘ENGINE_get_digest’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -1254,7 +1269,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))ENGINE_get_digest; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -1266,7 +1281,7 @@ checked program was:
 
 have_func: checking for ENGINE_get_cipher()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘ENGINE_get_cipher’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -1278,7 +1293,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))ENGINE_get_cipher; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -1290,7 +1305,7 @@ checked program was:
 
 have_func: checking for ENGINE_cleanup()... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘ENGINE_cleanup’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -1302,7 +1317,7 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))ENGINE_cleanup; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 checked program was:
 /* begin */
 1: /*top*/
@@ -1314,7 +1329,7 @@ checked program was:
 
 have_func: checking for ENGINE_load_4758cca()... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘ENGINE_load_4758cca’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -1326,10 +1341,10 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))ENGINE_load_4758cca; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 Undefined symbols for architecture x86_64:
   "_ENGINE_load_4758cca", referenced from:
-      _t in ccvfRCBt.o
+      _t in ccUjn0pw.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 checked program was:
@@ -1343,7 +1358,7 @@ checked program was:
 
 have_func: checking for ENGINE_load_aep()... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘ENGINE_load_aep’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -1355,10 +1370,10 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))ENGINE_load_aep; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 Undefined symbols for architecture x86_64:
   "_ENGINE_load_aep", referenced from:
-      _t in ccKiSjNq.o
+      _t in cc9RTOS8.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 checked program was:
@@ -1372,7 +1387,7 @@ checked program was:
 
 have_func: checking for ENGINE_load_atalla()... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘ENGINE_load_atalla’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -1384,10 +1399,10 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))ENGINE_load_atalla; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 Undefined symbols for architecture x86_64:
   "_ENGINE_load_atalla", referenced from:
-      _t in ccu5wB1Y.o
+      _t in ccWnK2QN.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 checked program was:
@@ -1401,7 +1416,7 @@ checked program was:
 
 have_func: checking for ENGINE_load_chil()... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘ENGINE_load_chil’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -1413,10 +1428,10 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))ENGINE_load_chil; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 Undefined symbols for architecture x86_64:
   "_ENGINE_load_chil", referenced from:
-      _t in ccDsBO93.o
+      _t in ccvbx7c6.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 checked program was:
@@ -1430,7 +1445,7 @@ checked program was:
 
 have_func: checking for ENGINE_load_cswift()... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘ENGINE_load_cswift’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -1442,10 +1457,10 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))ENGINE_load_cswift; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 Undefined symbols for architecture x86_64:
   "_ENGINE_load_cswift", referenced from:
-      _t in ccmrXgDu.o
+      _t in ccf6DRFp.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 checked program was:
@@ -1459,7 +1474,7 @@ checked program was:
 
 have_func: checking for ENGINE_load_nuron()... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘ENGINE_load_nuron’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -1471,10 +1486,10 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))ENGINE_load_nuron; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 Undefined symbols for architecture x86_64:
   "_ENGINE_load_nuron", referenced from:
-      _t in cc9IECS2.o
+      _t in ccbwDOeW.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 checked program was:
@@ -1488,7 +1503,7 @@ checked program was:
 
 have_func: checking for ENGINE_load_sureware()... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘ENGINE_load_sureware’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -1500,10 +1515,10 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))ENGINE_load_sureware; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 Undefined symbols for architecture x86_64:
   "_ENGINE_load_sureware", referenced from:
-      _t in ccvNDEAK.o
+      _t in ccstEyrk.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 checked program was:
@@ -1517,7 +1532,7 @@ checked program was:
 
 have_func: checking for ENGINE_load_ubsec()... -------------------- no
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 conftest.c: In function ‘t’:
 conftest.c:3: error: ‘ENGINE_load_ubsec’ undeclared (first use in this function)
 conftest.c:3: error: (Each undeclared identifier is reported only once
@@ -1529,10 +1544,10 @@ checked program was:
 3: int t() { void ((*volatile p)()); p = (void ((*)()))ENGINE_load_ubsec; return 0; }
 /* end */
 
-"/usr/local/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -o conftest -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common   conftest.c  -L. -L../.. -L. -L/usr/local/opt/libyaml/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/openssl098/lib    -lssl -lcrypto  -lruby-static -lssl -lcrypto  -ldl -lobjc  "
 Undefined symbols for architecture x86_64:
   "_ENGINE_load_ubsec", referenced from:
-      _t in ccYerNJN.o
+      _t in ccFUn58s.o
 ld: symbol(s) not found for architecture x86_64
 collect2: ld returned 1 exit status
 checked program was:
@@ -1544,7 +1559,7 @@ checked program was:
 
 --------------------
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 checked program was:
 /* begin */
 1: #include <openssl/opensslv.h>
@@ -1555,7 +1570,7 @@ checked program was:
 
 have_header: checking for openssl/ocsp.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -E -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common    conftest.c -o conftest.i"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -E -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common    conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include <openssl/ocsp.h>
@@ -1565,7 +1580,7 @@ checked program was:
 
 have_struct_member: checking for EVP_CIPHER_CTX.flags in openssl/evp.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 checked program was:
 /* begin */
 1: #include <openssl/evp.h>
@@ -1579,7 +1594,7 @@ checked program was:
 
 have_struct_member: checking for EVP_CIPHER_CTX.engine in openssl/evp.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 checked program was:
 /* begin */
 1: #include <openssl/evp.h>
@@ -1593,7 +1608,7 @@ checked program was:
 
 have_struct_member: checking for X509_ATTRIBUTE.single in openssl/x509.h... -------------------- yes
 
-"/usr/local/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
+"/usr/local/opt/apple-gcc42/bin/gcc-4.2 -I../.. -I../../. -I../.././ext/openssl  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -O3 -I/usr/local/opt/libyaml/include -I/usr/local/opt/readline/include -I/usr/local/opt/libksba/include -I/usr/local/opt/openssl098/include  -fno-common -pipe -fno-common     -c conftest.c"
 checked program was:
 /* begin */
 1: #include <openssl/x509.h>

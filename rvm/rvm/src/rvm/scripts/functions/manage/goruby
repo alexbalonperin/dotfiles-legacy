@@ -26,7 +26,7 @@ goruby_install()
     __rvm_log_command "autoreconf" "$rvm_ruby_string - #autoreconf" __rvm_autoreconf
 
   if
-    [[ -s ./Makefile && -z "$rvm_reconfigure_flag" ]]
+    [[ -s ./Makefile ]]
   then
     if (( ${rvm_debug_flag:=0} > 0 ))
     then
@@ -85,7 +85,7 @@ goruby_install()
   export GEM_HOME="$rvm_ruby_gem_home"
   export GEM_PATH="$rvm_ruby_gem_path"
 
-  \rm $rvm_ruby_home/bin/ruby
+  \command \rm $rvm_ruby_home/bin/ruby
   ln -s $rvm_ruby_home/bin/goruby $rvm_ruby_home/bin/ruby
 
   __rvm_initial_gemsets_create "$rvm_ruby_home/bin/ruby" &&

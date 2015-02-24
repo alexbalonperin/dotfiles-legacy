@@ -6,7 +6,7 @@ NULLCMD = :
 srcdir = .
 VPATH = $(srcdir)/missing
 
-CC = /usr/local/bin/gcc-4.2
+CC = /usr/local/opt/apple-gcc42/bin/gcc-4.2
 YACC = bison -y
 PURIFY =
 AUTOCONF = autoconf
@@ -21,8 +21,8 @@ libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 datarootdir = ${prefix}/share
 datadir = ${datarootdir}
-arch = i686-darwin13.3.0
-sitearch = i686-darwin13.3.0
+arch = i686-darwin13.4.0
+sitearch = i686-darwin13.4.0
 sitedir = ${libdir}/ruby/site_ruby
 
 TESTUI = console
@@ -128,7 +128,7 @@ fake.rb:	Makefile
 		  CROSS_COMPILING = RUBY_PLATFORM; \
 		  remove_const :RUBY_PLATFORM; \
 		  remove_const :RUBY_VERSION; \
-		  RUBY_PLATFORM = "i686-darwin13.3.0"; \
+		  RUBY_PLATFORM = "i686-darwin13.4.0"; \
 		  RUBY_VERSION = "1.8.7"; \
 		end; \
 		if RUBY_PLATFORM =~ /mswin|bccwin|mingw/; \

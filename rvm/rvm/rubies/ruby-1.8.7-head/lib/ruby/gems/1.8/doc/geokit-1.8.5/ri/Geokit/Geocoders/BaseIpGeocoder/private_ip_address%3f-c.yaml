@@ -1,0 +1,14 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Checks whether the IP address belongs to a private address range.
+- !ruby/struct:SM::Flow::P 
+  body: This function is used to reduce the number of useless queries made to the geocoding service. Such queries can occur frequently during integration tests.
+full_name: Geokit::Geocoders::BaseIpGeocoder::private_ip_address?
+is_singleton: true
+name: private_ip_address?
+params: (ip)
+visibility: public

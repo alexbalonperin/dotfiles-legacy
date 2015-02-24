@@ -41,8 +41,15 @@ __rvm_setup_compile_environment_movable_early()
       case "$1" in
         ruby-2*|ruby-head*) true ;;
         (*)
-          rvm_error "Only MRI Ruby 2.0+ can be compiled movable with RVM on OSX"
-          return 2
+          if
+            (( ${rvm_force_flag:-0} > 0 ))
+          then
+            true # allow forcing installation of older rubies
+          else
+            rvm_error "Only MRI Ruby 2.0+ can be compiled movable with RVM on OSX,
+use '--force' if the binary will be moved to the same installation path."
+            return 2
+          fi
           ;;
       esac
       [[ "${rvm_autolibs_flag_runner}" == "smf" ]] ||
@@ -340,7 +347,7 @@ __rvm_detect_max_threads()
       fi
       ;;
     (*)
-      \cat /proc/cpuinfo 2>/dev/null | (grep vendor_id || echo 'one';) | wc -l
+      \command \cat /proc/cpuinfo 2>/dev/null | (\command \grep vendor_id || echo 'one';) | wc -l
       ;;
   esac
 }
@@ -357,8 +364,8 @@ __rvm_setup_compile_environment_flags_threads()
       if [[ "${_system_name}" == "FreeBSD" || "${_system_name}" == "DragonFly" ]]
       then rvm_make_flags+=( -B )
       fi
-      if [[ " ${rvm_make_flags[*]}" =~ " -j" ]]
-      then rvm_warn "Found user configured '-j' flag in 'rvm_make_flags', pleae note that RVM can detect number of CPU threads and set the '-j' flag automatically if you do not set it."
+      if [[ " ${rvm_make_flags[*]}" == *" -j"* ]]
+      then rvm_warn "Found user configured '-j' flag in 'rvm_make_flags', please note that RVM can detect number of CPU threads and set the '-j' flag automatically if you do not set it."
       else rvm_make_flags+=( -j$(__rvm_detect_max_threads) )
       fi
       ;;

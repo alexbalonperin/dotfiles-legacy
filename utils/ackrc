@@ -8,3 +8,8 @@
 --type-add=ruby=.ru
 --type-set=text=.txt
 --ignore-file=ext:log
+--ignore-dir=.bundle
+--ignore-dir=.idea
+--ignore-dir=log
+--ignore-dir=share
+--ignore-dir=tmp

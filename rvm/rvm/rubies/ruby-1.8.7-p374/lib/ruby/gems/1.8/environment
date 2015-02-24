@@ -1,3 +1,0 @@
-export PATH="/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-1.8.7-p374/bin:/Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-p374/bin:$PATH"
-export GEM_PATH="/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-1.8.7-p374"
-export GEM_HOME="/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-1.8.7-p374"

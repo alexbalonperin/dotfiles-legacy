@@ -1,0 +1,20 @@
+--- !ruby/object:RI::ClassDescription 
+attributes: []
+
+class_methods: []
+
+comment: 
+constants: 
+- !ruby/object:RI::Constant 
+  comment: 
+  - !ruby/struct:SM::Flow::P 
+    body: these do not map well. Perhaps we should guess better based on size of bounding box where it exists? Does it really matter?
+  name: ACCURACY
+  value: "{         \"ROOFTOP\" => 9,         \"RANGE_INTERPOLATED\" => 8,         \"GEOMETRIC_CENTER\" => 5,         \"APPROXIMATE\" => 4"
+full_name: Geokit::Geocoders::GoogleGeocoder
+includes: []
+
+instance_methods: []
+
+name: GoogleGeocoder
+superclass: Geocoder

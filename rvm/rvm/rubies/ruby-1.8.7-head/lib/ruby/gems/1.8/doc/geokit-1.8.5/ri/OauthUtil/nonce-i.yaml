@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: openssl::random_bytes returns non-word chars, which need to be removed. using alt method to get length ref http://snippets.dzone.com/posts/show/491
+full_name: OauthUtil#nonce
+is_singleton: false
+name: nonce
+params: ()
+visibility: public

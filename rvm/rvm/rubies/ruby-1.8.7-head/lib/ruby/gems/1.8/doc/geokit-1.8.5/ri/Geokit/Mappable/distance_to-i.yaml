@@ -1,0 +1,13 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: 
+- !ruby/object:RI::AliasName 
+  name: distance_from
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: "Returns the distance from another point. The other point parameter is required to have lat and lng attributes. Valid options are: :units - valid values are :miles, :kms, :or :nms (:miles is the default) :formula - valid values are :flat or :sphere (:sphere is the default)"
+full_name: Geokit::Mappable#distance_to
+is_singleton: false
+name: distance_to
+params: (other, options={})
+visibility: public

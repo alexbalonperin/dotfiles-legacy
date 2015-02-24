@@ -1,0 +1,12 @@
+--- !ruby/object:RI::MethodDescription 
+aliases: []
+
+block_params: 
+comment: 
+- !ruby/struct:SM::Flow::P 
+  body: Constructor expects a hash of symbols to correspond with attributes.
+full_name: Geokit::GeoLoc::new
+is_singleton: true
+name: new
+params: (h={})
+visibility: public
