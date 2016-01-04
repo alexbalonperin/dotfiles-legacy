@@ -1,0 +1,50 @@
+[alias]
+  br = branch
+  bv = branch -vv
+  catchup = log -p --reverse --topo-order --first-parent -m
+  ci = commit
+  co = checkout
+  dc = diff --cached
+  ds = diff --staged
+  l = log --pretty='format:%C(yellow)%h %C(cyan)%ai%x09%C(red)%aN%Creset%x09%s'
+  lg = log --graph --pretty='format:%C(yellow)%h%C(green)%d %Creset%s %C(red)%aN %C(cyan)%ar%Creset'
+  lgd = log --oneline --graph --decorate
+  spp = !git stash && git pull && git stash pop
+  ss = status --short
+  st = status
+  unstage = reset HEAD
+  chf = diff-tree --no-commit-id --name-status -r HEAD~5
+[branch]
+  autosetuprebase = always
+[color]
+  branch = auto
+  diff = auto
+  grep = auto
+  interactive = auto
+  status = auto
+  ui = auto
+[color "diff"]
+  whitespace = red reverse
+[core]
+  excludesfile = ~/.gitignore
+  pager = less -FRX
+	editor = mvim -f
+[diff]
+  guitool = gvimdiff
+  tool = gvimdiff
+[difftool]
+  prompt = false
+[gui]
+  fontdiff = -family Menlo -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+[merge]
+  tool = gvimdiff
+[rebase]
+  stat = true
+[user]
+    name = Alexandre Balon-Perin
+	email = abalonperin@gilt.jp
+[push]
+	default = simple
+[help]
+	htmlpath = /usr/local/git/share/doc/git-doc
+	format = html
