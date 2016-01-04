@@ -1,0 +1,5 @@
+--exclude=.git
+--exclude=.svn
+--exclude=tmp
+--langmap=ruby:+.builder.cap.rake.rjs([rR]akefile)
+--languages=-JavaScript
