@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"verbose:ETI"Reek::Rake::Task#verbose;FI"W;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"EUse verbose output. If this is set to true, the task will print ;TI"3the reek command to stdout. Defaults to false.;T:
+@fileI"lib/reek/rake/task.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Reek::Rake::Task;FcRDoc::NormalClass0

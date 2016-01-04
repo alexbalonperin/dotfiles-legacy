@@ -13,3 +13,4 @@
 --ignore-dir=log
 --ignore-dir=share
 --ignore-dir=tmp
+--ignore-dir=target

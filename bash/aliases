@@ -1,6 +1,48 @@
-alias ll="ls -la"
+alias ll="ls -lah"
 alias psql_start="pg_ctl -l /tmp/postgres.log -D /usr/local/var/postgres start"
 alias psql_stop="pg_ctl -l /tmp/postgres.log -D /usr/local/var/postgres stop"
 alias psql_status="pg_ctl -D /usr/local/var/postgres status"
+alias psql-report="psql -h dw1.nrt.gilt.jp gilt_report"
 alias psql-qa="psql -d gilt -h qadb1.nrt.gilt.jp"
 alias psql-qa-csv="psql -d gilt -h qadb1.nrt.gilt.jp -A -F',' -c"
+
+alias path='echo -e ${PATH//:/\\n}'
+alias now='date +"%T"'
+alias nowdate='date +"%d-%m-%Y"'
+alias ports='netstat -tulanp'
+
+# reboot / halt / poweroff
+alias reboot='sudo /sbin/reboot'
+alias poweroff='sudo /sbin/poweroff'
+alias halt='sudo /sbin/halt'
+alias shutdown='sudo /sbin/shutdown'
+
+## pass options to free ## 
+alias meminfo='free -m -l -t'
+ 
+## get top process eating memory
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+ 
+## get top process eating cpu ##
+alias pscpu='ps auxf | sort -nr -k 3'
+alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
+ 
+## Get server cpu info ##
+alias cpuinfo='lscpu'
+ 
+## older system use /proc/cpuinfo ##
+##alias cpuinfo='less /proc/cpuinfo' ##
+ 
+## get GPU ram on desktop / laptop## 
+alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
+
+## a quick way to get out of current directory ##
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+
+alias top="top -o cpu"
