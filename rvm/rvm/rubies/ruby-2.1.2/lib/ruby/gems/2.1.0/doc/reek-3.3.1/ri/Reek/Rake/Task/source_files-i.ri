@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"source_files:ETI""Reek::Rake::Task#source_files;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I")Glob pattern to match source files. ;TI"?Setting the REEK_SRC environment variable overrides this. ;TI"Defaults to 'lib   /*.rb'.;T:
-@fileI"lib/reek/rake/task.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Reek::Rake::Task;FcRDoc::NormalClass0

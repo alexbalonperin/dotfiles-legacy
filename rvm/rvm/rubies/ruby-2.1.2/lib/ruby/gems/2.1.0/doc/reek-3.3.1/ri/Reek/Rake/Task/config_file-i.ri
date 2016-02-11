@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"config_file:ETI"!Reek::Rake::Task#config_file;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"!Path to reek's config file. ;TI">Setting the REEK_CFG environment variable overrides this.;T:
-@fileI"lib/reek/rake/task.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Reek::Rake::Task;FcRDoc::NormalClass0

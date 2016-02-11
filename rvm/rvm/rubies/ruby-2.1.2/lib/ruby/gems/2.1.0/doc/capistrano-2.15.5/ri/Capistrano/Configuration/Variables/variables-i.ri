@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"variables:ETI"3Capistrano::Configuration::Variables#variables;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"HThe hash of variables that have been defined in this configuration ;TI"instance.;T:
-@fileI".lib/capistrano/configuration/variables.rb;T:0@omit_headings_from_table_of_contents_below0F@I")Capistrano::Configuration::Variables;FcRDoc::NormalModule0

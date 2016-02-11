@@ -1,3 +1,0 @@
-U:RDoc::Attr[iI"
-tasks:ETI"0Capistrano::Configuration::Namespaces#tasks;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"2The hash of tasks defined for this namespace.;T:
-@fileI"/lib/capistrano/configuration/namespaces.rb;T:0@omit_headings_from_table_of_contents_below0F@I"*Capistrano::Configuration::Namespaces;FcRDoc::NormalModule0

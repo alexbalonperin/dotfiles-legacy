@@ -61,7 +61,6 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/s
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export RAILS_ENV=development
-export PATH="$PATH:$HOME/dotfiles/rvm/rvm/bin" # Add RVM to PATH for scripting
 export SCALA_ENV=dev
 export GILT_DEFAULT_SUBSITE=jp
 export PLAIN_JAVASCRIPTS=true

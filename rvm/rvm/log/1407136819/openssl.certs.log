@@ -1,25 +1,0 @@
-[2014-08-04 16:20:19] update_openssl_certs
-update_openssl_certs () 
-{ 
-    ( __rvm_cd "$rvm_usr_path/ssl" && command curl -O http://curl.haxx.se/ca/cacert.pem && \mv cacert.pem cert.pem )
-}
-current path: /web/admin_us/gilt
-GEM_HOME=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-1.8.7-head
-PATH=/usr/local/opt/pkg-config/bin:/usr/local/opt/libtool/bin:/usr/local/opt/automake/bin:/usr/local/opt/autoconf/bin:/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-1.8.7-head/bin:/Users/abalonperin/dotfiles/rvm/rvm/rubies/ruby-1.8.7-head/bin:/Users/abalonperin/dotfiles/rvm/rvm/bin:/Users/abalonperin/.rbenv/shims:/Users/abalonperin/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-GEM_PATH=/Users/abalonperin/dotfiles/rvm/rvm/gems/ruby-1.8.7-head
-command(1): update_openssl_certs
-+ __rvm_cd /Users/abalonperin/dotfiles/rvm/rvm/usr/ssl
-+ typeset old_cdpath ret
-+ ret=0
-+ old_cdpath=
-+ CDPATH=.
-+ chpwd_functions=
-+ builtin cd /Users/abalonperin/dotfiles/rvm/rvm/usr/ssl
-+ CDPATH=
-+ return 0
-+ command curl -O http://curl.haxx.se/ca/cacert.pem
-+ curl -O http://curl.haxx.se/ca/cacert.pem
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0 16  244k   16 40976    0     0  15824      0  0:00:15  0:00:02  0:00:13 15820100  244k  100  244k    0     0  77927      0  0:00:03  0:00:03 --:--:-- 77945
-+ mv cacert.pem cert.pem

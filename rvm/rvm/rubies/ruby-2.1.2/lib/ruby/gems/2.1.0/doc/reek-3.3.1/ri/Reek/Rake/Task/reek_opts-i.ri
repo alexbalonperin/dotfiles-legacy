@@ -1,2 +1,0 @@
-U:RDoc::Attr[iI"reek_opts:ETI"Reek::Rake::Task#reek_opts;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"AString containing commandline options to be passed to Reek. ;TI"FSetting the REEK_OPTS environment variable overrides this value. ;TI"Defaults to ''.;T:
-@fileI"lib/reek/rake/task.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Reek::Rake::Task;FcRDoc::NormalClass0
