@@ -29,15 +29,16 @@
   excludesfile = ~/.gitignore
   pager = less -FRX
 	editor = mvim -f
+	autocrlf = input
 [diff]
-  guitool = gvimdiff
-  tool = gvimdiff
+  guitool = kdiff3
+  tool = kdiff3
 [difftool]
   prompt = false
 [gui]
   fontdiff = -family Menlo -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 [merge]
-  tool = gvimdiff
+  tool = kdiff3
 [rebase]
   stat = true
 [user]
