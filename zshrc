@@ -115,10 +115,7 @@ function __git_files {
 
 export RAILS_ENV=development
 export SCALA_ENV=dev
-export GILT_DEFAULT_SUBSITE=jp
-export PLAIN_JAVASCRIPTS=true
-export PLAIN_STYLESHEETS=true
-export PGDATABASE=gilt_jp_development
+export PGDATABASE=finance_development
 export SCALA_HOME=/usr/local/share/scala
 export PATH=$PATH:$SCALA_HOME/bin
 
@@ -136,16 +133,9 @@ alias psql_start="pg_ctl -l /tmp/postgres.log -D /usr/local/var/postgres start"
 alias psql_stop="pg_ctl -l /tmp/postgres.log -D /usr/local/var/postgres stop"
 alias psql_status="pg_ctl -D /usr/local/var/postgres status"
 
-# Professional
-alias psql-report="psql -h dw1.nrt.gilt.jp gilt_report"
-alias psql-qa="psql -d gilt -h qadb1.nrt.gilt.jp"
-alias psql-qa-csv="psql -d gilt -h qadb1.nrt.gilt.jp -A -F',' -c"
-alias psql-qa-tailor="psql -h qadb1 -U tailorqa tailorqa"
-alias psql-tailor="psql -h db1 -U tailor tailor"
-
 # Personal
-alias psql-finance="psql finance_development"
-alias psql-finance-test="psql finance_test"
+alias psql-fin="psql finance_development"
+alias psql-fin-test="psql finance_test"
 
 alias path='echo -e ${PATH//:/\\n}'
 alias now='date +"%T"'
