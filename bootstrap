@@ -13,12 +13,6 @@ fi
 
 cd ~/Downloads/
 
-echo "Downloading iTerm"
-curl -o ~/Downloads/iterm.zip https://iterm2.com/downloads/stable/iTerm2-3_0_10.zip
-unzip iterm.zip
-mv iTerm.app /Applications/
-rm -f iterm.zip
-
 echo "Downloading Spectacle"
 curl -o ~/Downloads/spectacle.zip https://s3.amazonaws.com/spectacle/downloads/Spectacle+1.1.zip
 unzip spectacle.zip
@@ -51,6 +45,12 @@ xcode-select --install
 echo "Installing homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+echo "Installing cask"
+brew install cask
+
+echo "Downloading iTerm"
+brew cask install iterm2
+
 echo "Installing macvim"
 brew install macvim
 
@@ -80,6 +80,17 @@ ssh -T git@github.com
 echo "Downloading the darcula theme for mvim"
 cd ~/.vim/bundle && \
     git clone git@github.com:blueshirts/darcula.git
+
+echo "Install Powerline fonts"
+git clone git@github.com:powerline/fonts.git ~/Downloads/fonts
+cd fonts
+./install.sh
+echo "Install the font in iterm2 iTerm > preferences > profiles > text"
+read -p "When you are done type enter"
+
+
+echo "Installing Oh-my-zsh"
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
 echo "Setting keyboard repeat rate"
 defaults write NSGlobalDomain KeyRepeat -int 1
