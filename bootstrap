@@ -1,0 +1,95 @@
+#!/bin/bash
+
+################################################################
+#
+# This script install the basic tools that I use for development
+#
+################################################################  
+
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root, use sudo "$0" instead" 1>&2
+   exit 1
+fi
+
+cd ~/Downloads/
+
+echo "Downloading iTerm"
+curl -o ~/Downloads/iterm.zip https://iterm2.com/downloads/stable/iTerm2-3_0_10.zip
+unzip iterm.zip
+mv iTerm.app /Applications/
+rm -f iterm.zip
+
+echo "Downloading Spectacle"
+curl -o ~/Downloads/spectacle.zip https://s3.amazonaws.com/spectacle/downloads/Spectacle+1.1.zip
+unzip spectacle.zip
+mv Spectacle.app /Applications/
+rm -f spectacle.zip
+
+echo "Downloading Alfred"
+curl -o ~/Downloads/alfred.dmg https://cachefly.alfredapp.com/Alfred_3.1.1_737.dmg
+sudo hdiutil attach alfred.dmg
+cp -R /Volumes/Alfred/Alfred\ 3.app /Applications/
+sudo hdiutil detach /Volumes/Alfred
+rm -f alfred.dmg
+
+echo "Downloading Atom"
+curl -o ~/Downloads/atom.zip https://atom-installer.github.com/v1.11.2/atom-mac.zip
+unzip atom.zip
+mv Atom.app /Applications/
+rm -f atom.zip
+
+echo "Downloading VLC"
+curl -o ~/Downloads/vlc.dmg http://videolan-sea.defaultroute.com/vlc/2.2.4/macosx/vlc-2.2.4.dmg
+sudo hdiutil attach vlc.dmg
+cp -R /Volumes/vlc-2.2.4/VLC.app /Applications/
+sudo hdiutil detach /Volumes/vlc-2.2.4
+rm -f vlc.dmg
+
+echo "Installing command line tools"
+xcode-select --install
+
+echo "Installing homebrew"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+echo "Installing macvim"
+brew install macvim
+
+echo "Installing bash completion"
+brew install bash-completion
+
+echo "Installing git prompt"
+curl -o ~/.git-prompt.sh \
+    https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+
+echo "Downloading Pathogen"
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+echo "Generating ssh keys"
+ssh-keygen -t rsa -b 4096 -C "alexbp13@gmail.com"
+ssh-add ~/.ssh/id_rsa
+
+pbcopy < ~/.ssh/id_rsa.pub
+
+echo "Please add the already copied key to github"
+read -p "When you are done type enter"
+
+echo "Testing the connection"
+ssh -T git@github.com
+
+echo "Downloading the darcula theme for mvim"
+cd ~/.vim/bundle && \
+    git clone git@github.com:blueshirts/darcula.git
+
+echo "Setting keyboard repeat rate"
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 1
+
+echo "#######################################"
+echo "Next steps: "
+echo "------> Go Download Chrome && Drive"
+echo "------> Change trackpad scrolling direction"
+echo "------> Change keyboard shortcut to move between windows of the same app (in Settings > Keyboard > Shortcuts > Keyboard > Move focus to the next window)"
+echo "------> Add Japanese as Input Source in Keyboard settings"
+echo "------> Set caps lock key to esc"
+echo ""
