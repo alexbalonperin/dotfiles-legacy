@@ -57,6 +57,12 @@ brew install macvim
 echo "Installing bash completion"
 brew install bash-completion
 
+echo "Installing postgresql"
+brew install postgres
+
+echo "Starting postgresql"
+brew services start postgresql
+
 echo "Installing git prompt"
 curl -o ~/.git-prompt.sh \
     https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
