@@ -8,23 +8,22 @@
 
 dir=$HOME/dotfiles                    # dotfiles directory
 olddir=$HOME/dotfiles_old             # old dotfiles backup directory
-files="utils/ackrc bash/bash_aliases bash/bash_profile bash/bashrc ctags git/gitconfig vim/gvimrc irb/irbrc psql/psqlrc
-rvm/rvmrc vim/vimrc vim/vim"    # list of files/folders to symlink in homedir
+files="ackrc aliases bash_profile bashrc gitconfig gvimrc irbrc psqlrc rvmrc vimrc zshrc"    # list of files/folders to symlink in homedir
 
 ##########
 
- echo "making /usr/local writable to group"
- chmod -R g+w /usr/local
+echo "making /usr/local writable to group"
+chmod -R g+w /usr/local
 
 # create dotfiles_old in homedir
- echo "Creating $olddir for backup of any existing dotfiles in ~"
- mkdir -p $olddir
- echo "...done"
+echo "Creating $olddir for backup of any existing dotfiles in ~"
+mkdir -p $olddir
+echo "...done"
 
 # change to the dotfiles directory
- echo "Changing to the $dir directory"
- cd $dir
- echo "...done"
+echo "Changing to the $dir directory"
+cd $dir
+echo "...done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do
