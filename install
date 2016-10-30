@@ -26,13 +26,6 @@ rvm/rvmrc vim/vimrc vim/vim"    # list of files/folders to symlink in homedir
  cd $dir
  echo "...done"
 
-echo "Installing bash completion"
-brew install bash-completion
-
-echo "Installing git prompt"
-curl -o ~/.git-prompt.sh \
-    https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
-
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
@@ -40,25 +33,4 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
-
-echo "Downloading Pathogen"
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
-
-# echo "Generating ssh keys"
-# ssh-keygen -t rsa -b 4096 -C "alexbp13@gmail.com"
-# ssh-add ~/.ssh/id_rsa
-
-# pbcopy < ~/.ssh/id_rsa.pub
-
-# echo "Please add the already copied key to github"
-# read -p "When you are done type enter"
-
-# testing the connection
-# ssh -T git@github.com
-
-echo "Downloading the darcula theme for mvim"
-cd ~/.vim/bundle && \
-    git clone git@github.com:blueshirts/darcula.git
 
