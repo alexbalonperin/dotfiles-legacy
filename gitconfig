@@ -14,6 +14,9 @@
   st = status
   unstage = reset HEAD
   chf = diff-tree --no-commit-id --name-status -r HEAD~5
+  cl = "!f() { REPO_URL=`git remote show -n origin | grep Fetch | cut -d: -f2- | cut -d. -f1,2`; git log --after=\"$1\" --pretty=format:'* %C(yellow)%h %Creset%s - %CblueREPO_URL/commit/%H' --reverse | sed \"s|REPO_URL|${REPO_URL}|g\"; }; f"
+  cls = "!f() { REPO_URL=`git remote show -n origin | grep Fetch | cut -d: -f2- | sed 's|\\.git||g'`; git log --since=\"$1\" --pretty=format:'* %Creset%s - %CblueREPO_URL/commit/%h' --reverse | sed \"s|REPO_URL|${REPO_URL}|g\"; }; f"
+  clss = "!f() { git log --since=\"$1\" --pretty=format:'* %Creset%s' --reverse;}; f"
 [branch]
   autosetuprebase = always
 [color]
@@ -42,10 +45,12 @@
 [rebase]
   stat = true
 [user]
-    name = Alexandre Balon-Perin
-	email = abalonperin@gilt.jp
+  name = Alexandre Balon-Perin
+  email = abalonperin@exchange.co.jp
 [push]
-	default = simple
+  default = simple
 [help]
-	htmlpath = /usr/local/git/share/doc/git-doc
-	format = html
+  htmlpath = /usr/local/git/share/doc/git-doc
+  format = html  
+[credential]
+	helper = osxkeychain
