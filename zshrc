@@ -16,7 +16,7 @@ ZSH_THEME="agnoster"
 
 #ZSH_THEME="robbyrussell"
 
-setopt NO_NOMATCH
+#setopt NO_NOMATCH
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -108,8 +108,6 @@ function __git_files {
 #antigen theme https://github.com/agnoster/agnoster-zsh-theme agnoster
 #antigen apply
 
-export PGDATABASE=finance_development
-
 #export LSCOLORS="gxfxcxdxdxegedabagacad"
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
@@ -119,7 +117,14 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 #
 #########################################
 
-alias ssh=/usr/local/bin/ssh_color.sh
+alias acktestless='ack --ignore-dir=testkits'
+alias haskell='ghci'
+alias mvim=nvim
+alias vim=nvim
+
+alias dc=docker-compose
+alias dcl='docker-compose logs'
+
 alias psql_start="pg_ctl -l /tmp/postgres.log -D /usr/local/var/postgres start"
 alias psql_stop="pg_ctl -l /tmp/postgres.log -D /usr/local/var/postgres stop"
 alias psql_status="pg_ctl -D /usr/local/var/postgres status"
@@ -161,6 +166,5 @@ alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
 
 alias top="top -o cpu"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-#if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-#if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export CSCOPE_DB=~/.nvim-cscope/cscope.out
