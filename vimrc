@@ -32,7 +32,7 @@ set showcmd				    " show current command
 set showmode				" show current mode (insert etc.)
 set incsearch				" search while typing
 set bg=dark				    " used with color scheme
-set textwidth=120			" generate newline at col 120
+set textwidth=220			" generate newline at col 120
 set formatoptions+=ro
 set smartindent				" indenting
 set cindent				    " indenting
@@ -55,22 +55,19 @@ set splitright
 set ignorecase
 set showmatch
 set fileencodings=ucs-bom,utf-8,sjis,default
+set autochdir
 
-let path='/web/admin'
 let g:tagbar_usearrows = 1
+let mapleader=","
 
 inoremap jk <esc>
 
-"noremap <leader>o <Esc>:CommandT /web/admin<CR>
-"noremap <leader>O <Esc>:CommandTFlush /web/admin<CR>
-"noremap <leader>m <Esc>:CommandTBuffer /web/admin<CR>
-noremap <leader>F <Esc>:CtrlP /web/admin<CR>
 noremap <leader>f <Esc>:CtrlPMixed<CR>
 noremap <leader>b <Esc>:Gblame<CR>
 noremap <leader>l <Esc>:TagbarToggle<CR>
 nnoremap <D-F> :Ack<Space> /web/admin/app<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-nnoremap <D-N> :NERDTree /web/admin<CR>
-nnoremap <D-X> :NERDTreeFind<CR>
+nmap <leader>ne :NERDTreeToggle<cr>
+nnoremap <C-x> :NERDTreeFind<CR>
 noremap <D-K> :wincmd k<CR>
 noremap <D-J> :wincmd j<CR>
 noremap <D-H> :wincmd h<CR>
@@ -86,9 +83,23 @@ nmap <M-]> :vsp <CR>:exec("tjump ".expand("<cword>"))<CR>
 " left indent in Insert mode
 imap <S-Tab> <C-O><<
 
+fun! SetupCommandAlias(from, to)
+    exec 'cnoreabbrev <expr> '.a:from
+            \ .' ((getcmdtype() is# ":" && getcmdline() is# "'.a:from.'")'
+            \ .'? ("'.a:to.'") : ("'.a:from.'"))'
+endfun
+call SetupCommandAlias("nt","NERDTree")
+
+"Open NERDTree if no files specified
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+
 "Manage file extensions directly inside Vim
 command! -nargs=1 AddExt execute "saveas ".expand("%:p").<q-args>
 command! -nargs=1 ChgExt execute "saveas ".expand("%:p:r").<q-args>
+
+set tags=./tags;$HOME
 
 " ** FILETYPE SPECIFIC **
 " ***********************
