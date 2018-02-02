@@ -65,9 +65,7 @@ plugins=(common-aliases)
 
 # User configuration
 
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/MacGPG2/bin:/usr/local/texlive/2016basic/bin/universal-darwin"
-# export MANPATH="/usr/local/man:$MANPATH"
-export PATH=${PATH}:/usr/local/sbin
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -110,16 +108,9 @@ function __git_files {
 #antigen theme https://github.com/agnoster/agnoster-zsh-theme agnoster
 #antigen apply
 
-# RVM (https://rvm.io)
-# ####################
-
-export RAILS_ENV=development
-export SCALA_ENV=dev
 export PGDATABASE=finance_development
-export SCALA_HOME=/usr/local/share/scala
-export PATH=$PATH:$SCALA_HOME/bin
 
-export LSCOLORS="gxfxcxdxdxegedabagacad"
+#export LSCOLORS="gxfxcxdxdxegedabagacad"
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 ##########################################
@@ -169,7 +160,6 @@ alias cpuinfo='lscpu'
 alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
 
 alias top="top -o cpu"
-export PATH="/usr/local/bin:$PATH"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi

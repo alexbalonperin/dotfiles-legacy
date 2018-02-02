@@ -46,7 +46,6 @@
   stat = true
 [user]
   name = Alexandre Balon-Perin
-  email = abalonperin@exchange.co.jp
 [push]
   default = simple
 [help]

@@ -11,54 +11,54 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-cd ~/Downloads/
-
-echo "Downloading Spectacle"
-curl -o ~/Downloads/spectacle.zip https://s3.amazonaws.com/spectacle/downloads/Spectacle+1.1.zip
-unzip spectacle.zip
-mv Spectacle.app /Applications/
-rm -f spectacle.zip
-
-echo "Downloading Alfred"
-curl -o ~/Downloads/alfred.dmg https://cachefly.alfredapp.com/Alfred_3.1.1_737.dmg
-sudo hdiutil attach alfred.dmg
-cp -R /Volumes/Alfred/Alfred\ 3.app /Applications/
-sudo hdiutil detach /Volumes/Alfred
-rm -f alfred.dmg
-
-echo "Downloading Atom"
-curl -o ~/Downloads/atom.zip https://atom-installer.github.com/v1.11.2/atom-mac.zip
-unzip atom.zip
-mv Atom.app /Applications/
-rm -f atom.zip
-
-echo "Downloading VLC"
-curl -o ~/Downloads/vlc.dmg http://videolan-sea.defaultroute.com/vlc/2.2.4/macosx/vlc-2.2.4.dmg
-sudo hdiutil attach vlc.dmg
-cp -R /Volumes/vlc-2.2.4/VLC.app /Applications/
-sudo hdiutil detach /Volumes/vlc-2.2.4
-rm -f vlc.dmg
-
 echo "Installing command line tools"
 xcode-select --install
 
 echo "Installing homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-echo "Installing cask"
-brew install cask
-
-echo "Downloading iTerm"
-brew cask install iterm2
-
-echo "Installing macvim"
 brew install macvim
-
-echo "Installing bash completion"
 brew install bash-completion
-
-echo "Installing postgresql"
 brew install postgres
+brew install ack
+brew install tree
+brew install youtube-dl
+brew install speedtest-cli
+brew install trash
+brew install thefuck
+brew install watch
+brew install nmap
+brew install rdiff-backup
+
+brew install cask
+brew cask install java
+brew cask install f-lux
+brew cask install atom
+brew cask install spectacle
+brew cask install the-unarchiver
+brew cask install sublime-text
+brew cask install dash
+brew cask install google-chrome
+brew cask install alfred
+brew cask alfred link
+brew cask install vlc
+brew cask install iterm2
+brew cask install google-drive
+brew cask install utorrent
+brew cask install caffeine
+brew cask install spotify
+brew cask install limechat
+brew cask install lastpass
+brew cask install qlcolorcode
+brew cask install qlstephen
+brew cask install qlmarkdown
+brew cask install quicklook-json
+brew cask install quicklook-csv
+brew cask install betterzipql
+brew cask cleanup
+
+brew install scala
+brew install sbt
 
 echo "Starting postgresql"
 brew services start postgresql
@@ -99,12 +99,11 @@ echo "Installing Oh-my-zsh"
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
 echo "Setting keyboard repeat rate"
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 1
+#defaults write NSGlobalDomain KeyRepeat -int 1
+#defaults write NSGlobalDomain InitialKeyRepeat -int 1
 
 echo "#######################################"
 echo "Next steps: "
-echo "------> Go Download Chrome && Drive"
 echo "------> Change trackpad scrolling direction"
 echo "------> Change keyboard shortcut to move between windows of the same app (in Settings > Keyboard > Shortcuts > Keyboard > Move focus to the next window)"
 echo "------> Add Japanese as Input Source in Keyboard settings"
